@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="bloque2" />
+<Content type="html"><![CDATA[
+<style> 
+#bloque2 {
+	width: 485px;
+	height: 290px;
+	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/cuadro2.png);	
+	margin:0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
+
+</style>
+<div id="bloque2">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+]]></Content>
+</Module>
