@@ -6,7 +6,7 @@
 #bloque1 {
 	width: 485px;
 	height: 290px;
-	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/cuadro1.png) left top;	
+	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/cuadro1.png);	
 	margin:0;
 	padding: 0;
 	background-repeat: no-repeat;
