@@ -40,6 +40,56 @@
 	width: 75px;
 	height:35px;
 }  
+#button li a.op2 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 75px;
+	height:35px;
+} 
+#button li a.op3 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 75px;
+	height:35px;
+}
+#button li a.op4 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 75px;
+	height:35px;
+}
+#button li a.op5 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 75px;
+	height:35px;
+}
+#button li a.op6 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #fff;  
+	width: 75px;
+	height:35px;
+}
 #button li a:hover {  
 	background-color: #2586d7;  
 }  
@@ -50,11 +100,11 @@
 <div id="cabeceramenu">
 <ul id="button">  
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent">Home</a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Global Sales</a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Clientes</a></li> 
-<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Global Customer Support</a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Producto</a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Comunicaciones</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" class="op2" target="_parent">Global Sales</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" class="op3" target="_parent">Clientes</a></li> 
+<li><a href="https://sites.google.com/site/bbvagcs/" class="op4" target="_parent">Global Customer Support</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" class="op5" target="_parent">Producto</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" class="op6" target="_parent">Comunicaciones</a></li>  
 </ul>  
 </div>
 ]]></Content>
