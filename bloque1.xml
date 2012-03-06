@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="menu" />
+<Content type="html"><![CDATA[
+<style> 
+#bloque1 {
+	width: 485px;
+	height: 290px;
+	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/cuadro1.png) left top;	
+	margin:0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
+
+</style>
+<div id="bloque1">
+<br/> 
+
+<br/> 
+
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+<br/> 
+</div>
+]]></Content>
+</Module>
