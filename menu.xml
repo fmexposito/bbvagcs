@@ -47,7 +47,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 149px;
 	height:35px;
 } 
 #button li a.op3 {  
@@ -57,7 +57,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 118px;
 	height:35px;
 }
 #button li a.op4 {  
@@ -67,7 +67,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 237px;
 	height:35px;
 }
 #button li a.op5 {  
@@ -77,7 +77,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 129px;
 	height:35px;
 }
 #button li a.op6 {  
@@ -87,7 +87,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 159px;
 	height:35px;
 }
 #button li a:hover {  
