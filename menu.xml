@@ -6,7 +6,7 @@
 #cabeceramenu {
 	width: 970px;
 	height: 61px;
-	background-image:url(http://bbvatravellersgadgets.googlecode.com/svn/trunk/fondomenu.png);	
+	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/fondomenu.png);	
 	margin:0;
 	padding: 0;
 	background-repeat: no-repeat;
@@ -49,11 +49,12 @@
 </style>
 <div id="cabeceramenu">
 <ul id="button">  
-<li><a href="https://sites.google.com/a/bbva.com/travellers/" class="first" target="_parent">Home</a></li>  
-<li><a href="https://sites.google.com/a/bbva.com/travellers/home/Future-Travels" target="_parent">Future Travels</a></li>  
-<li><a href="https://sites.google.com/a/bbva.com/travellers/home/past-travels" target="_parent">Past Travels</a></li> 
-<li><a href="https://sites.google.com/a/bbva.com/travellers/home/contribute" target="_parent">Contribute</a></li>  
-<li><a href="https://sites.google.com/a/bbva.com/travellers/home/traveller-agenda" target="_parent">Traveller's Agenda</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent">Home</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Global Sales</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Clientes</a></li> 
+<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Global Customer Support</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Producto</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/" target="_parent">Comunicaciones</a></li>  
 </ul>  
 </div>
 ]]></Content>
