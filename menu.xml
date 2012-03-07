@@ -101,10 +101,10 @@
 <ul id="button">  
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent">Home</a></li>  
 <li><a href="https://sites.google.com/site/bbvagcs/globalsales" class="op2" target="_parent">Global Sales</a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/" class="op3" target="_parent">Clientes</a></li> 
-<li><a href="https://sites.google.com/site/bbvagcs/" class="op4" target="_parent">Global Customer Support</a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/" class="op5" target="_parent">Producto</a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/" class="op6" target="_parent">Comunicaciones</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/clientes" class="op3" target="_parent">Clientes</a></li> 
+<li><a href="https://sites.google.com/site/bbvagcs/globalcustomersupport" class="op4" target="_parent">Global Customer Support</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/producto" class="op5" target="_parent">Producto</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/comunicaciones" class="op6" target="_parent">Comunicaciones</a></li>  
 </ul>  
 </div>
 ]]></Content>
