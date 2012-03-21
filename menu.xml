@@ -121,7 +121,7 @@
 #button li a.op5:hover,
 #button li a.op7:hover,
 #button li a.op8:hover {  
-	background-color: #0058A0;  
+	background-color: #0058A0;
 }
 #button li a:hover {  
 	background-color: #2586d7;  
