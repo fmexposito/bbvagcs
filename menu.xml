@@ -31,9 +31,9 @@
 	height: 34px;
 } 
 #button li a.barralateral {  
-	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png);
-	background-repeat: no-repeat;
-	backgorund-position: right;
+	background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png");
+    background-position: right 0;
+    background-repeat: no-repeat;
 } 
 #button li a.first {  
 	font-family: Arial;  
@@ -126,13 +126,13 @@
 <div id="cabeceramenu">
 <ul id="button">  
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="op2 barralateral" target="_parent">Onboarding Clientes</a></li>
-<li><a href="#" class="op3 barralateral" target="_parent">Clientes</a></li> 
-<li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class="op4" target="_parent">Informes Gestión</a></li>  
-<li><a href="#" class="op5" target="_parent">Global Sales</a></li>  
-<li><a href="#" class="op6" target="_parent">Global Product</a></li>  
-<li><a href="#" class="op7" target="_parent">Servicing</a></li> 
-<li><a href="#" class="op8" target="_parent">Metodología</a></li> 
+<li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="barralateral op2" target="_parent">Onboarding Clientes</a></li>
+<li><a href="#" class="barralateral op3" target="_parent">Clientes</a></li> 
+<li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class=barralateral "op4" target="_parent">Informes Gestión</a></li>  
+<li><a href="#" class="barralateral op5" target="_parent">Global Sales</a></li>  
+<li><a href="#" class="barralateral op6" target="_parent">Global Product</a></li>  
+<li><a href="#" class="barralateral op7" target="_parent">Servicing</a></li> 
+<li><a href="#" class="barralateral op8" target="_parent">Metodología</a></li> 
 </ul>  
 </div>
 ]]></Content>
