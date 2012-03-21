@@ -4,8 +4,8 @@
 <Content type="html"><![CDATA[
 <style> 
 #cabeceramenu {
-	width: 970px;
-	height: 61px;
+	width: 960px;
+	height: 65px;
 	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/fondomenu.png);	
 	margin:0;
 	padding: 0;
