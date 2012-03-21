@@ -61,7 +61,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
-	color: #ccc;  
+	color: #999;  
 	width: 125px;
 	height:34px;
 }
@@ -71,7 +71,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 9px 0 0 0;     
-	color: #ccc;  
+	color: #999;  
 	width: 125px;
 	height:44px;
 }
@@ -81,7 +81,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 9px 0 0 0;     
-	color: #ccc;  
+	color: #999;  
 	width: 125px;
 	height:44px;
 }
@@ -102,7 +102,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
-	color: #ccc;  
+	color: #999;  
 	width: 125px;
 	height:34px;
 }
@@ -112,7 +112,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
-	color: #ccc;  
+	color: #999;  
 	width: 125px;
 	height:34px;
 }
@@ -134,12 +134,12 @@
 <ul id="button">  
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>  
 <li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="barralateral op2" target="_parent">Onboarding<br/>Clientes</a></li>
-<li><a href="#" class="barralateral op3" target="_parent">Clientes</a></li> 
+<li><a href="#" class="barralateral op3" >Clientes</a></li> 
 <li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class="barralateral op4" target="_parent">Informes<br/>Gestión</a></li>  
-<li><a href="#" class="barralateral op5" target="_parent">Global<br/>Sales</a></li>  
-<li><a href="#" class="barralateral op6" target="_parent">Global<br/>Product</a></li>  
-<li><a href="#" class="barralateral op7" target="_parent">Servicing</a></li> 
-<li><a href="#" class="op8" target="_parent">Metodología</a></li> 
+<li><a href="#" class="barralateral op5" >Global<br/>Sales</a></li>  
+<li><a href="#" class="barralateral op6" >Global<br/>Product</a></li>  
+<li><a href="#" class="barralateral op7" >Servicing</a></li> 
+<li><a href="#" class="op8" >Metodología</a></li> 
 </ul>  
 </div>
 ]]></Content>
