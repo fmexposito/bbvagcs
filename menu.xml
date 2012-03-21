@@ -29,7 +29,12 @@
 	color: #fff;  
 	width: 187px;
 	height: 34px;
-}  
+} 
+#button li a.barralateral {  
+	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png);
+	background-repeat: no-repeat;
+	backgorund-position: right;
+} 
 #button li a.first {  
 	font-family: Arial;  
 	font-size:15px;  
@@ -57,7 +62,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 50px;
+	width: 80px;
 	height:35px;
 }
 #button li a.op4 {  
@@ -67,7 +72,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 140px;
 	height:35px;
 }
 #button li a.op5 {  
@@ -77,9 +82,10 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 100px;
+	width: 110px;
 	height:35px;
 }
+
 #button li a.op6 {  
 	font-family: Arial;  
 	font-size:15px;  
@@ -87,7 +93,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 130px;
 	height:35px;
 }
 #button li a.op7 {  
@@ -97,7 +103,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 90px;
 	height:35px;
 }
 #button li a.op8 {  
@@ -107,7 +113,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 75px;
+	width: 140px;
 	height:35px;
 }
 #button li a:hover {  
