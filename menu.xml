@@ -137,7 +137,7 @@
 gadgets.util.registerOnLoadHandler(datospagina);
 function datospagina()
 {
-	window.top.parent.document.getElementById("sites-page-title-header").style.display = "none";	
+	//window.top.parent.document.getElementById("sites-page-title-header").style.display = "none";	
 }
 </script>
 
