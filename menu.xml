@@ -50,10 +50,10 @@
 	font-size:15px;  
 	text-decoration: none;  
 	float:left;  
-	padding: 19px 0 0 0;     
+	padding: 9px 0 0 0;     
 	color: #fff;  
 	width: 125px;
-	height:34px;
+	height:44px;
 } 
 #button li a.op3 {  
 	font-family: Arial;  
@@ -70,20 +70,20 @@
 	font-size:15px;  
 	text-decoration: none;  
 	float:left;  
-	padding: 19px 0 0 0;     
+	padding: 9px 0 0 0;     
 	color: #fff;  
 	width: 125px;
-	height:34px;
+	height:44px;
 }
 #button li a.op5 {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
 	float:left;  
-	padding: 19px 0 0 0;     
+	padding: 9px 0 0 0;     
 	color: #fff;  
 	width: 125px;
-	height:34px;
+	height:44px;
 }
 
 #button li a.op6 {  
@@ -91,10 +91,10 @@
 	font-size:15px;  
 	text-decoration: none;  
 	float:left;  
-	padding: 19px 0 0 0;     
+	padding: 9px 0 0 0;     
 	color: #fff;  
 	width: 125px;
-	height:34px;
+	height:44px;
 }
 #button li a.op7 {  
 	font-family: Arial;  
