@@ -53,7 +53,7 @@
 	padding: 19px 0 0 0;     
 	color: #fff;  
 	width: 149px;
-	height:35px;
+	height:34px;
 } 
 #button li a.op3 {  
 	font-family: Arial;  
@@ -63,7 +63,7 @@
 	padding: 19px 0 0 0;     
 	color: #fff;  
 	width: 80px;
-	height:35px;
+	height:34px;
 }
 #button li a.op4 {  
 	font-family: Arial;  
@@ -73,7 +73,7 @@
 	padding: 19px 0 0 0;     
 	color: #fff;  
 	width: 140px;
-	height:35px;
+	height:34px;
 }
 #button li a.op5 {  
 	font-family: Arial;  
@@ -83,7 +83,7 @@
 	padding: 19px 0 0 0;     
 	color: #fff;  
 	width: 110px;
-	height:35px;
+	height:34px;
 }
 
 #button li a.op6 {  
@@ -94,7 +94,7 @@
 	padding: 19px 0 0 0;     
 	color: #fff;  
 	width: 130px;
-	height:35px;
+	height:34px;
 }
 #button li a.op7 {  
 	font-family: Arial;  
@@ -104,7 +104,7 @@
 	padding: 19px 0 0 0;     
 	color: #fff;  
 	width: 90px;
-	height:35px;
+	height:34px;
 }
 #button li a.op8 {  
 	font-family: Arial;  
@@ -114,7 +114,7 @@
 	padding: 19px 0 0 0;     
 	color: #fff;  
 	width: 140px;
-	height:35px;
+	height:34px;
 }
 #button li a:hover {  
 	background-color: #2586d7;  
@@ -128,7 +128,7 @@
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>  
 <li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="barralateral op2" target="_parent">Onboarding Clientes</a></li>
 <li><a href="#" class="barralateral op3" target="_parent">Clientes</a></li> 
-<li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class=barralateral "op4" target="_parent">Informes Gestión</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class="barralateral op4" target="_parent">Informes Gestión</a></li>  
 <li><a href="#" class="barralateral op5" target="_parent">Global Sales</a></li>  
 <li><a href="#" class="barralateral op6" target="_parent">Global Product</a></li>  
 <li><a href="#" class="barralateral op7" target="_parent">Servicing</a></li> 
