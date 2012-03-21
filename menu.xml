@@ -126,7 +126,7 @@
 <div id="cabeceramenu">
 <ul id="button">  
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="op2 barralateral" target="_parent">Onboarding Clientes</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="op2 barralateral" target="_parent">Onboarding Clientes</a></li>
 <li><a href="#" class="op3 barralateral" target="_parent">Clientes</a></li> 
 <li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class="op4" target="_parent">Informes Gestión</a></li>  
 <li><a href="#" class="op5" target="_parent">Global Sales</a></li>  
