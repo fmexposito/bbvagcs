@@ -130,6 +130,17 @@
 	background-color: #2586d7;  
 }
 </style>
+
+
+
+<script type="text/javascript">
+gadgets.util.registerOnLoadHandler(datospagina);
+function datospagina()
+{
+	window.top.parent.document.getElementById("sites-page-title-header").style.display = "none";	
+}
+</script>
+
 <div id="cabeceramenu">
 <ul id="button">
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
