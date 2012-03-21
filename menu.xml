@@ -42,7 +42,7 @@
 	float:left;  
 	padding: 5px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 60px;
 	height:48px;
 }  
 #button li a.op2 {  
@@ -52,7 +52,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 125px;
 	height:34px;
 } 
 #button li a.op3 {  
@@ -62,7 +62,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 125px;
 	height:34px;
 }
 #button li a.op4 {  
@@ -72,7 +72,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 125px;
 	height:34px;
 }
 #button li a.op5 {  
@@ -82,7 +82,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 125px;
 	height:34px;
 }
 
@@ -93,7 +93,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 125px;
 	height:34px;
 }
 #button li a.op7 {  
@@ -103,7 +103,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 125px;
 	height:34px;
 }
 #button li a.op8 {  
@@ -113,7 +113,7 @@
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 120px;
+	width: 125px;
 	height:34px;
 }
 #button li a:hover {  
@@ -126,11 +126,11 @@
 <div id="cabeceramenu">
 <ul id="button">  
 <li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>  
-<li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="barralateral op2" target="_parent">Onboarding Clientes</a></li>
+<li><a href="https://sites.google.com/site/bbvagcs/OnboardingClientes" class="barralateral op2" target="_parent">Onboarding<br/>Clientes</a></li>
 <li><a href="#" class="barralateral op3" target="_parent">Clientes</a></li> 
-<li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class="barralateral op4" target="_parent">Informes Gestión</a></li>  
-<li><a href="#" class="barralateral op5" target="_parent">Global Sales</a></li>  
-<li><a href="#" class="barralateral op6" target="_parent">Global Product</a></li>  
+<li><a href="https://sites.google.com/site/bbvagcs/informesGestion" class="barralateral op4" target="_parent">Informes<br/>Gestión</a></li>  
+<li><a href="#" class="barralateral op5" target="_parent">Global<br/>Sales</a></li>  
+<li><a href="#" class="barralateral op6" target="_parent">Global<br/>Product</a></li>  
 <li><a href="#" class="barralateral op7" target="_parent">Servicing</a></li> 
 <li><a href="#" class="op8" target="_parent">Metodología</a></li> 
 </ul>  
