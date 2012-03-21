@@ -61,7 +61,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
-	color: #666;  
+	color: #ccc;  
 	width: 125px;
 	height:34px;
 }
@@ -71,7 +71,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 9px 0 0 0;     
-	color: #666;  
+	color: #ccc;  
 	width: 125px;
 	height:44px;
 }
@@ -81,7 +81,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 9px 0 0 0;     
-	color: #666;  
+	color: #ccc;  
 	width: 125px;
 	height:44px;
 }
@@ -102,7 +102,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
-	color: #666;  
+	color: #ccc;  
 	width: 125px;
 	height:34px;
 }
@@ -112,7 +112,7 @@
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
-	color: #666;  
+	color: #ccc;  
 	width: 125px;
 	height:34px;
 }
