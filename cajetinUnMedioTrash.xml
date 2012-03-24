@@ -105,7 +105,7 @@
 				width: 300px;
 			}
 			input#VarImagenDestacada {
-				width: 500px;
+				width: 575px;
 			}
 			input#VarBoton1Texto,
 			input#VarBoton2Texto,
@@ -148,7 +148,7 @@
 				</td>
 			</tr>
 		</table>
-		<table width="100%" height="200px;" border="1" id="tablaconfig1">			
+		<table width="100%" height="170px;" border="1" id="tablaconfig1">			
 			<tr>		
 				<td>
 					Texto (admite bbcode):<br/>
