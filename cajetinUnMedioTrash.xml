@@ -45,18 +45,34 @@
 				margin: 0 0 10px 0;
 				color: #3F78B2;
 			}
+			a.enlaceboton1 {
+				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png");
+				background-repeat: no-repeat;
+				color: #FFFFFF;
+				display: block;
+				float: right;
+				font-size: 16px;
+				font-weight: bold;
+				height: 41px;
+				margin-top: 7px;
+				padding-top: 20px;
+				text-align: center;
+				text-decoration: none;
+				width: 271px;
+			}
 			a.enlaceboton {
 				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png");
 				background-repeat: no-repeat;
 				color: #FFFFFF;
-				font-size: 16px;
-				font-weight: bold;
-				text-decoration: none;
 				display: block;
 				float: right;
-				height: 51px;
+				font-size: 16px;
+				font-weight: bold;
+				height: 41px;
+				margin-top: 0px;
 				padding-top: 20px;
 				text-align: center;
+				text-decoration: none;
 				width: 271px;
 			}
 		</style>
@@ -91,7 +107,7 @@
 				var html="";
 				if ((VarBoton1Texto!="")&&(VarBoton1URL!=""))
 				{
-					html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton\">' + VarBoton1Texto + '</a>';
+					html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton1\">' + VarBoton1Texto + '</a>';
 				}
 				if ((VarBoton2Texto!="")&&(VarBoton2URL!=""))
 				{
