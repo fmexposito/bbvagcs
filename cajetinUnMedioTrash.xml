@@ -55,6 +55,7 @@
 			var VarColorBorde="#fff";
 			var VarSize=prefs.getString("VarSize");
 			var VarImagenFondo="Neutro";
+			var VarImagenDestacada=prefs.getString("VarImagenDestacada");
 			switch(VarImagenFondo)
 			{
 				case "Neutro": document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
@@ -71,7 +72,7 @@
 			html+='<tr><td>';  
 			html+='<div style="padding: 20px; font-size:';
 			html+=VarSize + '; color:' + VarColorLetra + ';\">';
-			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\"\\>';			
+			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';			
 			html+=bbcode2html(VarComent);
 			html+='</div>';
 			html+='</td></tr></table>';
