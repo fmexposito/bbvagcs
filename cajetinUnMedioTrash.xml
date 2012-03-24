@@ -19,6 +19,10 @@
 	<UserPref name="VarImagenDestacada" display_name="Imagen destacada:" default_value=""/>
 	<UserPref name="VarBoton1Texto" display_name="Texto boton 1:" default_value="Acceder"/>
 	<UserPref name="VarBoton1URL" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarBoton2Texto" display_name="Texto boton 2:" default_value=""/>
+	<UserPref name="VarBoton2URL" display_name="URL boton 2:" default_value=""/>
+	<UserPref name="VarBoton3Texto" display_name="Texto boton 3:" default_value=""/>
+	<UserPref name="VarBoton4URL" display_name="URL boton 3:" default_value=""/>
 	<UserPref name="VarComent" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#666"/>
 	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
@@ -86,12 +90,13 @@
 			#tablaconfig1 td, 
 			#tablaconfig2 td {
 				color: #000;
-				font-size: 12px;
+				font-size: 11px;
 				font-weight: bold;
 			}
-			table td input {
+			table td input,
+			textarea {
 				color: #000;
-				font-size: 10px;				
+				font-size: 11px;				
 			}
 			#tablaconfig2 input {
 				width: 50%;				
@@ -103,12 +108,14 @@
 				width: 500px;
 			}
 			input#VarBoton1Texto,
-			input#VarBoton2Texto			{
+			input#VarBoton2Texto,
+			input#VarBoton3Texto			{
 				width: 200px;
 			}
 			input#VarBoton1URL,
-			input#VarBoton2URL {
-				width: 350px;
+			input#VarBoton2URL,
+			nput#VarBoton3URL {
+				width: 345px;
 			}
 		</style>
 		<table width="100%" border="1" id="tablaconfig">			
