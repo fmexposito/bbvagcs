@@ -81,6 +81,7 @@
 	<![CDATA[
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/editorbbcode.js"></script>
 		<style>
+			#tablaconfig td, 
 			#tablaconfig1 td, 
 			#tablaconfig2 td {
 				color: #000;
@@ -93,10 +94,17 @@
 			}
 			
 		</style>
-		<table width="100%" height="350px;" border="0" id="tablaconfig1">
-			<tr><td>Texto (admite bbcode):</td></tr>
+		<table width="100%" border="1" id="tablaconfig">			
 			<tr>		
 				<td>
+					T&iacute;tulo: <input type="text" id="VarTituloBloque" value="__UP_VarTituloBloque__" onchange="registra('VarTituloBloque')">					
+				</td>
+			</tr>
+		</table>
+		<table width="100%" height="350px;" border="1" id="tablaconfig1">			
+			<tr>		
+				<td>
+					Texto (admite bbcode):<br/>
 					<script language="Javascript">
 					<!--
 						editor_para("VarComent");
@@ -106,7 +114,7 @@
 				</td>
 			</tr>
 		</table>
-		<table width="100%" border="0" id="tablaconfig2">			
+		<table width="100%" border="1" id="tablaconfig2">			
 			<tr>
 				<td>Tamaño del texto por defecto:</td>
 				<td><input type="text" id="VarSize" value="__UP_VarSize__" onchange="registra('VarSize')"></td>   
