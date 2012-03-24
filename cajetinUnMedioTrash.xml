@@ -31,6 +31,9 @@
 			#content_div img {
 				padding: 0 15px 10px 0;
 			}
+			#content_div {
+				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png');
+			}
 			#content_div a img {
 				padding: 0;
 			}
@@ -67,6 +70,7 @@
 			var VarBoton3Texto=prefs.getString("VarBoton3Texto");
 			var VarBoton3URL=prefs.getString("VarBoton3URL");
 			
+			/*
 			switch(VarImagenFondo)
 			{
 				case "Neutro": document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
@@ -76,19 +80,17 @@
 				case "None": document.getElementById('content_div').style.backgroundImage="none"; break;    	
 				default: document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
 			}
-			document.body.style.backgroundColor="#fff";// VarFondoGadget;			
-			html+='<table style="border-style: none;';			
-			html+='"';				
-			html+=' width=100%>';
+			*/
+			document.body.style.backgroundColor="#fff";			
+			html+='<table style=\"border-style: none;\" width=\"100%\">';
 			html+='<tr><td>';  
-			html+='<div style="padding: 20px; font-size:';
-			html+=VarSize + '; color:' + VarColorLetra + ';\">';
+			html+='<div style=\"padding: 20px; font-size:' + VarSize + '; color:' + VarColorLetra + ';\">';
 			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
-			html='<h2 class=\"titulobloque\">'+VarTituloBloque+'</h2>';
+			html='<h2 class=\"titulobloque\">' + VarTituloBloque + '</h2>';
 			html+=bbcode2html(VarComent);
 			html+='</div>';
 			html+='</td></tr></table>';
-			document.getElementById("content_div").innerHTML = html;
+			document.getElementById("content_div").innerHTML = html;			document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')";
 			gadgets.window.adjustHeight();
 		</script>
 	]]>  
