@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-	<ModulePrefs title="Cajetin personalizado un medio GCS"
+	<ModulePrefs title="Cajetin personalizado un medio GCS trash"
 		title_url=""
 		height="650"
 		author=""
@@ -14,9 +14,13 @@
 		<Require feature="dynamic-height"/>
 		<Require feature="setprefs"/>
 	</ModulePrefs>  
-	<UserPref name="VarComent" display_name="Comentario (admite bbcode)" default_value="Comentario"/>  	
-	<UserPref name="VarColorLetra" display_name="Color de la letra" default_value="#666"/>
-	<UserPref name="VarSize" display_name="grosor del texto" default_value="12"/>
+	<UserPref name="VarTituloBloque" display_name="Título:" default_value="Global Customer Solutions"/>
+	<UserPref name="VarImagenDestacada" display_name="Imagen destacada:" default_value=""/>
+	<UserPref name="VarBoton1Texto" display_name="Texto boton 1:" default_value="Acceder"/>
+	<UserPref name="VarBoton1URL" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarComent" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
+	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#666"/>
+	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
 	<Content type="html" view="home"><![CDATA[
 		<style>		
 			#content_div img {
@@ -32,7 +36,7 @@
 	
 		<div id="content_div"  style="height:330px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
-		<script type="text/javascript" src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/bbcode2html.js"></script>
+		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
 		<script type="text/javascript">
 			var html="";
@@ -75,7 +79,7 @@
 	</Content>  
 	<Content type="html" view="configuration"  preferred_height="480">
 	<![CDATA[
-		<script type="text/javascript" src="https://bbvatravellersgadgets.googlecode.com/svn/trunk/editorbbcode.js"></script>
+		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/editorbbcode.js"></script>
 		<style>
 			#tablaconfig1 td, 
 			#tablaconfig2 td {
