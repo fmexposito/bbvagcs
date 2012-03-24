@@ -1,0 +1,4 @@
+# Project members authenticate over HTTPS to allow committing changes.
+svn checkout https://bbvagcs.googlecode.com/svn/trunk/ bbvagcs --username drac.jose@gmail.com
+
+Kg6VY2Gw8HE2
