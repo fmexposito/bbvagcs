@@ -72,17 +72,16 @@
 			var VarBoton3Texto=prefs.getString("VarBoton3Texto");
 			var VarBoton3URL=prefs.getString("VarBoton3URL");
 			
-			/*
-			switch(VarImagenFondo)
+			function insertarBoton()
 			{
-				case "Neutro": document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
-				case "Amarillo": document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
-				case "Verde": document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
-				case "Azul": document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;    	
-				case "None": document.getElementById('content_div').style.backgroundImage="none"; break;    	
-				default: document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
+				var html="";
+				if ((VarBoton1Texto!="")&&(VarBoton1URL!=""))
+				{
+					html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton\">' + VarBoton1Texto + '</a>';
+				}
+				return html;
 			}
-			*/
+			
 			document.body.style.backgroundColor="#fff";			
 			html+='<table style=\"border-style: none;\" width=\"100%\">';
 			html+='<tr><td>';  
@@ -90,7 +89,8 @@
 			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
 			html+='<h2 class=\"titulobloque\">' + VarTituloBloque + '</h2>';
 			html+=bbcode2html(VarComent);
-			html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" >' + VarBoton1Texto + '</a>';
+			//html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton\">' + VarBoton1Texto + '</a>';
+			html+=insertarBoton();			
 			html+='</div>';
 			html+='</td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;			document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')";
