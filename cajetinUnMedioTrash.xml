@@ -118,7 +118,7 @@
 				width: 345px;
 			}
 		</style>
-		<table width="100%" border="1" id="tablaconfig">			
+		<table width="100%" border="0" id="tablaconfig">			
 			<tr>		
 				<td>
 					T&iacute;tulo: <input type="text" id="VarTituloBloque" value="__UP_VarTituloBloque__" onchange="registra('VarTituloBloque')">					
@@ -148,7 +148,7 @@
 				</td>
 			</tr>
 		</table>
-		<table width="100%" height="170px;" border="1" id="tablaconfig1">			
+		<table width="100%" height="170px;" border="0" id="tablaconfig1">			
 			<tr>		
 				<td>
 					Texto (admite bbcode):<br/>
@@ -161,15 +161,14 @@
 				</td>
 			</tr>
 		</table>
-		<table width="100%" border="1" id="tablaconfig2">			
+		<table width="100%" border="0" id="tablaconfig2">			
 			<tr>
-				<td>Tamaño del texto por defecto:</td>
-				<td><input type="text" id="VarSize" value="__UP_VarSize__" onchange="registra('VarSize')"></td>   
-				<td>Color de texto por defecto:</td>
-				<td><input type="text" id="VarColorLetra" value="__UP_VarColorLetra__" onchange="registra('VarColorLetra')"></td>		     
+				<td>Tamaño del texto por defecto: <input type="text" id="VarSize" value="__UP_VarSize__" onchange="registra('VarSize')"></td>   
+			</tr>
+				<td>Color de texto por defecto: <input type="text" id="VarColorLetra" value="__UP_VarColorLetra__" onchange="registra('VarColorLetra')"></td>		     
 			</tr>
 			<tr>
-				<td colspan="4" style="color:red;font-size:20px;font-weight:bold;"><br/><br/>No modificar la altura y el ancho del gadget</td>
+				<td style="color:red;font-size:20px;font-weight:bold;"><br/><br/>No modificar la altura y el ancho del gadget</td>
 			</tr>
 		</table>		
 		<script type="text/javascript">
