@@ -67,13 +67,16 @@
 			document.body.style.backgroundColor="#fff";// VarFondoGadget;			
 			html+='<table style="border-style: none;';			
 			html+='"';				
-			html+=" width=100%>";
+			html+=' width=100%>';
 			html+='<tr><td>';  
 			html+='<div style="padding: 20px; font-size:';
 			html+=VarSize;
 			html+='; color:';
 			html+=VarColorLetra;
 			html+=';">';
+			html+='<img style=/"float: left; /" src=/"';
+			html+=VarImagenDestacada;
+			html+='/">';			
 			html+=bbcode2html(VarComent);
 			html+="</div>";
 			html+='</td></tr></table>';
