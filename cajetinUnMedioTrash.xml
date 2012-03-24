@@ -70,15 +70,10 @@
 			html+=' width=100%>';
 			html+='<tr><td>';  
 			html+='<div style="padding: 20px; font-size:';
-			html+=VarSize;
-			html+='; color:';
-			html+=VarColorLetra;
-			html+=';">';
-			html+='<img style=/"float: left; /" src=/"';
-			html+=VarImagenDestacada;
-			html+='/">';			
+			html+=VarSize + '; color:' + VarColorLetra + ';\">';
+			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\"\\>';			
 			html+=bbcode2html(VarComent);
-			html+="</div>";
+			html+='</div>';
 			html+='</td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;
 			gadgets.window.adjustHeight();
