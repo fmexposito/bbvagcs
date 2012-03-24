@@ -109,12 +109,12 @@
 			}
 			input#VarBoton1Texto,
 			input#VarBoton2Texto,
-			input#VarBoton3Texto			{
+			input#VarBoton3Texto {
 				width: 200px;
 			}
 			input#VarBoton1URL,
 			input#VarBoton2URL,
-			nput#VarBoton3URL {
+			input#VarBoton3URL {
 				width: 345px;
 			}
 		</style>
