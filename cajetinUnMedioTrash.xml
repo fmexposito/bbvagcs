@@ -84,7 +84,7 @@
 			html+='<div style="padding: 20px; font-size:';
 			html+=VarSize + '; color:' + VarColorLetra + ';\">';
 			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
-			html='<h2 class=\"titulobloque\">'+VarTituloBloque</h2>;
+			html='<h2 class=\"titulobloque\">'+VarTituloBloque+'</h2>';
 			html+=bbcode2html(VarComent);
 			html+='</div>';
 			html+='</td></tr></table>';
