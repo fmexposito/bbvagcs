@@ -3,6 +3,7 @@
 	<ModulePrefs title="Cajetin personalizado un medio GCS trash"
 		title_url=""
 		height="650"
+		width="850"
 		author=""
 		author_email=""
 		description="GadGet para Google Sites que muestra textos en una caja con formato."
@@ -90,13 +91,19 @@
 			}
 			#tablaconfig2 input {
 				width: 50%;
-				font-size: 12px;
+				font-size: 10px;
 			}
 			input#VarTituloBloque {
-				width: 200px;
+				width: 300px;
 			}
 			input#VarImagenDestacada {
-				width: 400px;
+				width: 500px;
+			}
+			input#VarBoton1Texto {
+				width: 300px;
+			}
+			input#VarBoton1URL {
+				width: 500px;
 			}
 		</style>
 		<table width="100%" border="1" id="tablaconfig">			
