@@ -48,8 +48,10 @@
 			.enlaceboton {
 				display: block;
 				background-image: url(https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png);
-				height:71px;
-				width:261px;
+				height: 71px;
+				width: 261px;
+				float: right;
+				background-repeat: none;
 			}
 		</style>
 	
