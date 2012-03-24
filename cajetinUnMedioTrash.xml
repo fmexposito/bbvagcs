@@ -89,9 +89,12 @@
 				font-size: 12px;
 				font-weight: bold;
 			}
+			table td input {
+				color: #000;
+				font-size: 10px;				
+			}
 			#tablaconfig2 input {
-				width: 50%;
-				font-size: 10px;
+				width: 50%;				
 			}
 			input#VarTituloBloque {
 				width: 300px;
@@ -99,11 +102,13 @@
 			input#VarImagenDestacada {
 				width: 500px;
 			}
-			input#VarBoton1Texto {
-				width: 300px;
+			input#VarBoton1Texto,
+			input#VarBoton2Texto			{
+				width: 200px;
 			}
-			input#VarBoton1URL {
-				width: 500px;
+			input#VarBoton1URL,
+			input#VarBoton2URL {
+				width: 350px;
 			}
 		</style>
 		<table width="100%" border="1" id="tablaconfig">			
@@ -121,6 +126,12 @@
 				<td>
 					Bot&oacute;n 1 - Texto: <input type="text" id="VarBoton1Texto" value="__UP_VarBoton1Texto__" onchange="registra('VarBoton1Texto')">		
 					Bot&oacute;n 1- URL: <input type="text" id="VarBoton1URL" value="__UP_VarBoton1URL__" onchange="registra('VarBoton1URL')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 2 - Texto: <input type="text" id="VarBoton2Texto" value="__UP_VarBoton2Texto__" onchange="registra('VarBoton2Texto')">		
+					Bot&oacute;n 2 - URL: <input type="text" id="VarBoton2URL" value="__UP_VarBoton2URL__" onchange="registra('VarBoton2URL')">					
 				</td>
 			</tr>
 		</table>
