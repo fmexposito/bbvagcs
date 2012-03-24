@@ -132,13 +132,19 @@
 			<tr>		
 				<td>
 					Bot&oacute;n 1 - Texto: <input type="text" id="VarBoton1Texto" value="__UP_VarBoton1Texto__" onchange="registra('VarBoton1Texto')">		
-					Bot&oacute;n 1- URL: <input type="text" id="VarBoton1URL" value="__UP_VarBoton1URL__" onchange="registra('VarBoton1URL')">					
+					Bot&oacute;n 1 - URL: <input type="text" id="VarBoton1URL" value="__UP_VarBoton1URL__" onchange="registra('VarBoton1URL')">					
 				</td>
 			</tr>
 			<tr>		
 				<td>
 					Bot&oacute;n 2 - Texto: <input type="text" id="VarBoton2Texto" value="__UP_VarBoton2Texto__" onchange="registra('VarBoton2Texto')">		
 					Bot&oacute;n 2 - URL: <input type="text" id="VarBoton2URL" value="__UP_VarBoton2URL__" onchange="registra('VarBoton2URL')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 3 - Texto: <input type="text" id="VarBoton3Texto" value="__UP_VarBoton3Texto__" onchange="registra('VarBoton3Texto')">		
+					Bot&oacute;n 3 - URL: <input type="text" id="VarBoton3URL" value="__UP_VarBoton3URL__" onchange="registra('VarBoton3URL')">					
 				</td>
 			</tr>
 		</table>
