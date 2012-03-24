@@ -79,6 +79,10 @@
 				{
 					html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton\">' + VarBoton1Texto + '</a>';
 				}
+				if ((VarBoton2Texto!="")&&(VarBoton2URL!=""))
+				{
+					html+='<a href=\"' + VarBoton2URL + '\" title=\"' + VarBoton2Texto + '\" class=\"enlaceboton\">' + VarBoton2Texto + '</a>';
+				}
 				return html;
 			}
 			
