@@ -1,0 +1,29 @@
+<NotepadPlus>
+    <Project name="bbvagcs">
+        <File name="bbcode2html.js" />
+        <File name="cajetinHome - Copy (2).xml" />
+        <File name="cajetinHome - Copy (3).xml" />
+        <File name="cajetinHome - Copy (4).xml" />
+        <File name="cajetinHome - Copy (5).xml" />
+        <File name="cajetinHome - Copy.xml" />
+        <File name="cajetinHome.xml" />
+        <File name="cajetinjdll.xml" />
+        <File name="cajetinOriginal - Copy.xml" />
+        <File name="cajetinOriginal.xml" />
+        <File name="datos_proyecto.txt" />
+        <File name="editorbbcode - Copy.js" />
+        <File name="editorbbcode.js" />
+        <File name="ejecutiva-redondeada.jpg" />
+        <File name="evento-1-redondeado.jpg" />
+        <File name="evento-2-redondeado.jpg" />
+        <File name="fondomenu.png" />
+        <File name="fondotexto.png" />
+        <File name="fondotextoAmarillo.png" />
+        <File name="fondotextoAmarilo.png" />
+        <File name="fondotextoAzul.png" />
+        <File name="fondotextoVerde.png" />
+        <File name="menu.xml" />
+        <File name="retrato-redondeado.jpg" />
+        <File name="viaje.xml" />
+    </Project>
+</NotepadPlus>
