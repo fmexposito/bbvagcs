@@ -92,7 +92,9 @@
 				width: 50%;
 				font-size: 12px;
 			}
-			
+			input#VarTituloBloque {
+				width: 200px;
+			}
 		</style>
 		<table width="100%" border="1" id="tablaconfig">			
 			<tr>		
