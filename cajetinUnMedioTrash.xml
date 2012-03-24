@@ -37,6 +37,9 @@
 			.sites-adminfooter {
 				display:none;
 			}
+			h2.titulobloque {
+				font-size: 20px;
+			}
 		</style>
 	
 		<div id="content_div"  style="height:330px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
@@ -56,6 +59,14 @@
 			var VarSize=prefs.getString("VarSize");
 			var VarImagenFondo="Neutro";
 			var VarImagenDestacada=prefs.getString("VarImagenDestacada");
+			var VarTituloBloque=prefs.getString("VarTituloBloque");
+			var VarBoton1Texto=prefs.getString("VarBoton1Texto");
+			var VarBoton1URL=prefs.getString("VarBoton1URL");
+			var VarBoton2Texto=prefs.getString("VarBoton2Texto");
+			var VarBoton2URL=prefs.getString("VarBoton2URL");
+			var VarBoton3Texto=prefs.getString("VarBoton3Texto");
+			var VarBoton3URL=prefs.getString("VarBoton3URL");
+			
 			switch(VarImagenFondo)
 			{
 				case "Neutro": document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')"; break;
@@ -72,7 +83,8 @@
 			html+='<tr><td>';  
 			html+='<div style="padding: 20px; font-size:';
 			html+=VarSize + '; color:' + VarColorLetra + ';\">';
-			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';			
+			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
+			html='<h2 class=\"titulobloque\">'+VarTituloBloque</h2>;
 			html+=bbcode2html(VarComent);
 			html+='</div>';
 			html+='</td></tr></table>';
