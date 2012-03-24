@@ -102,8 +102,13 @@
 					T&iacute;tulo: <input type="text" id="VarTituloBloque" value="__UP_VarTituloBloque__" onchange="registra('VarTituloBloque')">					
 				</td>
 			</tr>
+			<tr>		
+				<td>
+					Im&aacutegen destacada: <input type="text" id="VarImagenDestacada" value="__UP_VarImagenDestacada__" onchange="registra('VarImagenDestacada')">					
+				</td>
+			</tr>
 		</table>
-		<table width="100%" height="350px;" border="1" id="tablaconfig1">			
+		<table width="100%" height="300px;" border="1" id="tablaconfig1">			
 			<tr>		
 				<td>
 					Texto (admite bbcode):<br/>
