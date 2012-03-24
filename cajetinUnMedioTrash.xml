@@ -93,8 +93,9 @@
 			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
 			html+='<h2 class=\"titulobloque\">' + VarTituloBloque + '</h2>';
 			html+=bbcode2html(VarComent);
-			//html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton\">' + VarBoton1Texto + '</a>';
-			html+=insertarBoton();			
+			html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton\">' + VarBoton1Texto + '</a>';
+			html+='<a href=\"' + VarBoton2URL + '\" title=\"' + VarBoton2Texto + '\" class=\"enlaceboton\">' + VarBoton2Texto + '</a>';
+			//html+=insertarBoton();			
 			html+='</div>';
 			html+='</td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;			document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')";
