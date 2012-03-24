@@ -43,6 +43,7 @@
 			h2.titulobloque {
 				font-size: 20px;
 				margin: 0 0 10px 0;
+				color: #3F78B2;
 			}
 		</style>
 	
