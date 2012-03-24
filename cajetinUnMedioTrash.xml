@@ -113,6 +113,17 @@
 			.btnURL {
 				width: 345px;
 			}
+			.destacado {
+				color:red;
+				font-size:20px;
+				font-weight:bold;
+			}
+			.textodefecto {
+				width: 20px;
+			}
+			.textocolor {
+				width: 20px;
+			}
 		</style>
 		<table width="100%" border="0" id="tablaconfig">			
 			<tr>		
@@ -159,12 +170,11 @@
 		</table>
 		<table width="100%" border="0" id="tablaconfig2">			
 			<tr>
-				<td>Tamaño del texto por defecto: <input type="text" id="VarSize" value="__UP_VarSize__" onchange="registra('VarSize')"></td>   
-			</tr>
-				<td>Color de texto por defecto: <input type="text" id="VarColorLetra" value="__UP_VarColorLetra__" onchange="registra('VarColorLetra')"></td>		     
+				<td>Tamaño del texto por defecto: <input type="text" class="textodefecto" id="VarSize" value="__UP_VarSize__" onchange="registra('VarSize')"><br/>   
+				Color de texto por defecto: <input type="text" class="textocolor" id="VarColorLetra" value="__UP_VarColorLetra__" onchange="registra('VarColorLetra')"></td>		     
 			</tr>
 			<tr>
-				<td style="color:red;font-size:20px;font-weight:bold;"><br/><br/>No modificar la altura y el ancho del gadget</td>
+				<td class="destacado"><br/><br/>No modificar la altura y el ancho del gadget</td>
 			</tr>
 		</table>		
 		<script type="text/javascript">
