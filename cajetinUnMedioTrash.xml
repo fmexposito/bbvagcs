@@ -22,7 +22,7 @@
 	<UserPref name="VarBoton2Texto" display_name="Texto boton 2:" default_value=""/>
 	<UserPref name="VarBoton2URL" display_name="URL boton 2:" default_value=""/>
 	<UserPref name="VarBoton3Texto" display_name="Texto boton 3:" default_value=""/>
-	<UserPref name="VarBoton4URL" display_name="URL boton 3:" default_value=""/>
+	<UserPref name="VarBoton3URL" display_name="URL boton 3:" default_value=""/>
 	<UserPref name="VarComent" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#666"/>
 	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
