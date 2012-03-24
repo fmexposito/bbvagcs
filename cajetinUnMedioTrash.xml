@@ -45,13 +45,17 @@
 				margin: 0 0 10px 0;
 				color: #3F78B2;
 			}
-			.enlaceboton {
+			a.enlaceboton {
+				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png");
+				background-repeat: no-repeat;
+				color: #FFFFFF;
+				text-decoration: none;
 				display: block;
-				background-image: url(https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png);
-				height: 71px;
-				width: 261px;
 				float: right;
-				background-repeat: none;
+				height: 51px;
+				padding-top: 20px;
+				text-align: center;
+				width: 271px;
 			}
 		</style>
 	
