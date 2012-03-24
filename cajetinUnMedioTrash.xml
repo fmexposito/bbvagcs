@@ -45,21 +45,6 @@
 				margin: 0 0 10px 0;
 				color: #3F78B2;
 			}
-			a.enlaceboton1 {
-				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png");
-				background-repeat: no-repeat;
-				color: #FFFFFF;
-				display: block;
-				float: right;
-				font-size: 16px;
-				font-weight: bold;
-				height: 41px;
-				margin-top: 7px;
-				padding-top: 20px;
-				text-align: center;
-				text-decoration: none;
-				width: 271px;
-			}
 			a.enlaceboton {
 				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png");
 				background-repeat: no-repeat;
@@ -69,12 +54,16 @@
 				font-size: 16px;
 				font-weight: bold;
 				height: 41px;
-				margin-top: 0px;
+				margin: 0px;
 				padding-top: 20px;
 				text-align: center;
 				text-decoration: none;
 				width: 271px;
 			}
+			.margintop {
+				margin: 7px;
+			}
+			
 		</style>
 	
 		<div id="content_div"  style="height:330px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
@@ -107,7 +96,7 @@
 				var html="";
 				if ((VarBoton1Texto!="")&&(VarBoton1URL!=""))
 				{
-					html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton1\">' + VarBoton1Texto + '</a>';
+					html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton margintop\">' + VarBoton1Texto + '</a>';
 				}
 				if ((VarBoton2Texto!="")&&(VarBoton2URL!=""))
 				{
@@ -127,12 +116,10 @@
 			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
 			html+='<h2 class=\"titulobloque\">' + VarTituloBloque + '</h2>';
 			html+=bbcode2html(VarComent);
-			//html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" class=\"enlaceboton\">' + VarBoton1Texto + '</a>';
-			//html+='<a href=\"' + VarBoton2URL + '\" title=\"' + VarBoton2Texto + '\" class=\"enlaceboton\">' + VarBoton2Texto + '</a>';
 			html+=insertarBoton();			
 			html+='</div>';
 			html+='</td></tr></table>';
-			document.getElementById("content_div").innerHTML = html;			//document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')";
+			document.getElementById("content_div").innerHTML = html;
 			gadgets.window.adjustHeight();
 		</script>
 	]]>  
