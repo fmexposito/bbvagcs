@@ -45,6 +45,12 @@
 				margin: 0 0 10px 0;
 				color: #3F78B2;
 			}
+			.enlaceboton {
+				display: block;
+				background-image: url(https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png);
+				height:71px;
+				width:261px;
+			}
 		</style>
 	
 		<div id="content_div"  style="height:330px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
@@ -83,6 +89,10 @@
 				{
 					html+='<a href=\"' + VarBoton2URL + '\" title=\"' + VarBoton2Texto + '\" class=\"enlaceboton\">' + VarBoton2Texto + '</a>';
 				}
+				if ((VarBoton3Texto!="")&&(VarBoton3URL!=""))
+				{
+					html+='<a href=\"' + VarBoton3URL + '\" title=\"' + VarBoton3Texto + '\" class=\"enlaceboton\">' + VarBoton3Texto + '</a>';
+				}
 				return html;
 			}
 			
@@ -98,7 +108,7 @@
 			html+=insertarBoton();			
 			html+='</div>';
 			html+='</td></tr></table>';
-			document.getElementById("content_div").innerHTML = html;			document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')";
+			document.getElementById("content_div").innerHTML = html;			//document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')";
 			gadgets.window.adjustHeight();
 		</script>
 	]]>  
