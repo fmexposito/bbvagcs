@@ -95,10 +95,7 @@
 			textarea {
 				color: #000;
 				font-size: 11px;				
-			}
-			#tablaconfig2 input {
-				width: 50%;				
-			}
+			}			
 			input#VarTituloBloque {
 				width: 300px;
 			}
@@ -117,10 +114,10 @@
 				font-weight:bold;
 			}
 			.textodefecto {
-				width: 20px;
+				width: 40px;
 			}
 			.textocolor {
-				width: 20px;
+				width: 70px;
 			}
 		</style>
 		<table width="100%" border="0" id="tablaconfig">			
