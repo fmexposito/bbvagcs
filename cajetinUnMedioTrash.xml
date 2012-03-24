@@ -95,6 +95,9 @@
 			input#VarTituloBloque {
 				width: 200px;
 			}
+			input#VarImagenDestacada {
+				width: 400px;
+			}
 		</style>
 		<table width="100%" border="1" id="tablaconfig">			
 			<tr>		
@@ -104,11 +107,17 @@
 			</tr>
 			<tr>		
 				<td>
-					Im&aacutegen destacada: <input type="text" id="VarImagenDestacada" value="__UP_VarImagenDestacada__" onchange="registra('VarImagenDestacada')">					
+					Im&aacutegen destacada (URL): <input type="text" id="VarImagenDestacada" value="__UP_VarImagenDestacada__" onchange="registra('VarImagenDestacada')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 1 - Texto: <input type="text" id="VarBoton1Texto" value="__UP_VarBoton1Texto__" onchange="registra('VarBoton1Texto')">		
+					Bot&oacute;n 1- URL: <input type="text" id="VarBoton1URL" value="__UP_VarBoton1URL__" onchange="registra('VarBoton1URL')">					
 				</td>
 			</tr>
 		</table>
-		<table width="100%" height="300px;" border="1" id="tablaconfig1">			
+		<table width="100%" height="200px;" border="1" id="tablaconfig1">			
 			<tr>		
 				<td>
 					Texto (admite bbcode):<br/>
@@ -117,7 +126,7 @@
 						editor_para("VarComent");
 					//-->
 					</script>
-					<textarea id="VarComent" style="height: 245px; width: 100%" onchange="registra('VarComent')" >__UP_VarComent__</textarea>
+					<textarea id="VarComent" style="height: 150px; width: 100%" onchange="registra('VarComent')" >__UP_VarComent__</textarea>
 				</td>
 			</tr>
 		</table>
