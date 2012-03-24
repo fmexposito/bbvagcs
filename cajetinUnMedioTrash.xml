@@ -90,6 +90,7 @@
 			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
 			html+='<h2 class=\"titulobloque\">' + VarTituloBloque + '</h2>';
 			html+=bbcode2html(VarComent);
+			html+='<a href=\"' + VarBoton1URL + '\" title=\"' + VarBoton1Texto + '\" >' + VarBoton1Texto + '</a>';
 			html+='</div>';
 			html+='</td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;			document.getElementById('content_div').style.backgroundImage="url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio.png')";
