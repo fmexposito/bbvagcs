@@ -1,109 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="menu travellers" />
+<ModulePrefs title="menu" />
 <Content type="html"><![CDATA[
 <style> 
 #cabeceramenu {
-	width: 970px;
-	height: 61px;
-	background-image:url(https://bbvatravellersgadgets.googlecode.com/svn/trunk/fondomenu.png);	
+	width: 960px;
+	height: 65px;
+	background-image:url(http://bbvagcs.googlecode.com/svn/trunk/fondomenu.png);	
 	margin:0;
 	padding: 0;
 	background-repeat: no-repeat;
 }
 #button {  
-	padding: 4px 0 0 73px;  
+	padding: 5px 0 0 5px;
 	height:60px;
 	margin: 0 0 0 0px;
 }  
 #button li {  
 	display: inline; 
-	text-align: center;
+	text-align: center; 
 }  
 #button li a {  
 	font-family: Arial;  
-	font-size:18px;
+	font-size:15px;  
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;   
 	color: #fff;  
-	width: 187px;
-	height: 35px;
-}  
+	width: 120px;
+	height: 34px;
+} 
+#button li a.barralateral {  
+	background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png");
+    background-position: right 0;
+    background-repeat: no-repeat;
+} 
 #button li a.first {  
 	font-family: Arial;  
-	font-size:18px;
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 5px 0 0 0;     
+	color: #fff;  
+	width: 60px;
+	height:48px;
+}  
+#button li a.op2 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
+	color: #fff;  
+	width: 125px;
+	height:44px;
+} 
+#button li a.op3 {  
+	font-family: Arial;  
+	font-size:15px;  
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
+	color: #999;  
+	width: 125px;
+	height:34px;
+}
+#button li a.op4 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
+	color: #999;  
+	width: 125px;
+	height:44px;
+}
+#button li a.op5 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
+	color: #999;  
+	width: 125px;
+	height:44px;
+}
+
+#button li a.op6 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
 	color: #fff;  
-	width: 112px;
-	height:35px;
-}  
+	width: 125px;
+	height:44px;
+}
+#button li a.op7 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #999;  
+	width: 125px;
+	height:34px;
+}
+#button li a.op8 {  
+	font-family: Arial;  
+	font-size:15px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 19px 0 0 0;     
+	color: #999;  
+	width: 125px;
+	height:34px;
+}
+#button li a.op3:hover, 
+#button li a.op4:hover,
+#button li a.op5:hover,
+#button li a.op7:hover,
+#button li a.op8:hover {  
+	background-color: transparent;
+}
 #button li a:hover {  
 	background-color: #2586d7;  
 }  
 #button li a:active {  
 	background-color: #2586d7;  
 }
-.sites-adminfooter {
-	display:none !important;
-}
-
-#button li a#past-travels:hover {  
-	background-color: #FEBB60;  
-} 
-
-#button li a#Future-Travels:hover {  
-	background-color: #7ABD5E;  
-} 
-
-#button li a#traveller-agenda:hover {  
-	background-color: #00BEBD;  
-} 
-
 </style>
-<div id="cabeceramenu">
-<ul id="button">  
-<li><a id="home" href="https://sites.google.com/a/bbva.com/travellers/" class="first" target="_parent">Home</a></li>  
-<li><a id="Future-Travels" href="https://sites.google.com/a/bbva.com/travellers/home/Future-Travels" target="_parent">Future Travels</a></li>  
-<li><a id="past-travels" href="https://sites.google.com/a/bbva.com/travellers/home/past-travels" target="_parent">Past Travels</a></li> 
-<li><a id="contribute" href="https://sites.google.com/a/bbva.com/travellers/home/contribute" target="_parent">Contribute</a></li>  
-<li><a id="traveller-agenda" href="https://sites.google.com/a/bbva.com/travellers/home/traveller-agenda" target="_parent">Traveller's Agenda</a></li>  
-</ul>  
-</div>
+
+
+
 <script type="text/javascript">
 gadgets.util.registerOnLoadHandler(datospagina);
 function datospagina()
 {
-	var parametros = gadgets.util.getUrlParameters()["parent"];	
-	if (parametros.indexOf("future-travel")!=-1)
-	{
-		document.getElementById("Future-Travels").style.backgroundColor = "#7ABD5E";
-	}
-	if (parametros.indexOf("Future-Travels")!=-1)
-	{
-		document.getElementById("Future-Travels").style.backgroundColor = "#7ABD5E";
-	}
-	if (parametros.indexOf("past-travels")!=-1)
-	{
-		document.getElementById("past-travels").style.backgroundColor = "#FEBB60";
-	}
-	if (parametros.indexOf("traveller-agenda")!=-1)
-	{
-		document.getElementById("traveller-agenda").style.backgroundColor = "#00BEBD";
-	}
-	if (parametros.indexOf("contribute")!=-1)
-	{
-		document.getElementById("contribute").style.backgroundColor = "#2586d7";
-	}
-	if (gadgets.util.getUrlParameters()["parent"].indexOf("Future-Travels")!=-1)
-	{
-		document.getElementById("Future-Travels").style.backgroundColor = "#7ABD5E";
-	}	
-
-	
+	//window.top.parent.document.getElementById("sites-page-title-header").style.display = "none";	
 }
 </script>
+
+<div id="cabeceramenu">
+<ul id="button">
+<li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
+<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral op2" target="_parent">Onboarding<br/>Clientes</a></li>
+<li><a href="#" class="barralateral op3" >Clientes</a></li>
+<li><a href="#" class="barralateral op4" >Informes<br/>Gestión</a></li>  
+<li><a href="#" class="barralateral op5" >Global<br/>Sales</a></li>
+<li><a href="https://sites.google.com/site/bbvagcs/globalProduct" class="barralateral op6" target="_parent">Global<br/>Product</a></li>
+<li><a href="#" class="barralateral op7" >Servicing</a></li> 
+<li><a href="#" class="op8" >Metodología</a></li> 
+</ul>  
+</div>
 ]]></Content>
 </Module>
