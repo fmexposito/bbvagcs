@@ -110,15 +110,13 @@
 			}
 			
 			document.body.style.backgroundColor="#fff";			
-			html+='<table style=\"border-style: none;\" width=\"100%\">';
-			html+='<tr><td>';  
+			html+='<table style=\"border-style: none;\" width=\"100%\"><tr><td>';  
 			html+='<div style=\"padding: 20px; font-size:' + VarSize + '; color:' + VarColorLetra + ';\">';
 			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
 			html+='<h2 class=\"titulobloque\">' + VarTituloBloque + '</h2>';
 			html+=bbcode2html(VarComent);
 			html+=insertarBoton();			
-			html+='</div>';
-			html+='</td></tr></table>';
+			html+='</div></td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;
 			gadgets.window.adjustHeight();
 		</script>
