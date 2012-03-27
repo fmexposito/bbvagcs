@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-	<ModulePrefs title="Cajetin personalizado un medio portal Global Customer Solutions"
+	<ModulePrefs title="Cajetin personalizado un tercio portal Global Customer Solutions"
 		title_url=""
 		height="300"
 		width="465"
@@ -32,7 +32,7 @@
 				padding: 0 15px 10px 0;
 			}
 			#content_div {
-				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondounmedio.png');
+				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondountercio.png');
 			}
 			#content_div a img {
 				padding: 0;
@@ -46,7 +46,7 @@
 				color: #3F78B2;
 			}
 			a.enlaceboton {
-				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoboton.png");
+				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondobotonuntercio.png");
 				background-repeat: no-repeat;
 				color: #FFFFFF;
 				display: block;
@@ -66,7 +66,7 @@
 			
 		</style>
 	
-		<div id="content_div"  style="height:330px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondounmedio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_div"  style="height:330px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondobotonuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
