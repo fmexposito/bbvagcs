@@ -109,11 +109,22 @@
 				return html;
 			}
 			
+			function insertarImagenDestacada()
+			{
+				var html="";
+				if (VarImagenDestacada!="")
+				{
+					html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
+				}
+				
+				return html;
+			}
+			
 			document.body.style.backgroundColor="#fff";			
 			html+='<table style=\"border-style: none;\" width=\"100%\">';
 			html+='<tr><td>';  
 			html+='<div style=\"padding: 20px; font-size:' + VarSize + '; color:' + VarColorLetra + ';\">';
-			html+='<img style=\"float: left;\" src=\"' + VarImagenDestacada + '\">';	
+			html+=insertarImagenDestacada();
 			html+='<h2 class=\"titulobloque\">' + VarTituloBloque + '</h2>';
 			html+=bbcode2html(VarComent);
 			html+=insertarBoton();			
