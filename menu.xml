@@ -45,7 +45,7 @@
 	width: 60px;
 	height:48px;
 }  
-#button li #onboarding-clients a {  
+#button li a#onboarding-clients {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
@@ -55,7 +55,7 @@
 	width: 125px;
 	height:44px;
 } 
-#button li #clientes a {  
+#button li a#clientes {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
@@ -65,7 +65,7 @@
 	width: 125px;
 	height:34px;
 }
-#button li #informes a {  
+#button li a#informes {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
@@ -75,7 +75,7 @@
 	width: 125px;
 	height:44px;
 }
-#button li #global-sales a {  
+#button li a#global-sales {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
@@ -86,7 +86,7 @@
 	height:44px;
 }
 
-#button li #global-product a {  
+#button li a#global-product {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
@@ -96,7 +96,7 @@
 	width: 125px;
 	height:44px;
 }
-#button li #servicing a {  
+#button li a#servicing  {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
@@ -106,7 +106,7 @@
 	width: 125px;
 	height:34px;
 }
-#button li #metodologia a {  
+#button li a#metodologia {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
