@@ -130,28 +130,17 @@
 	background-color: #2586d7;  
 }
 </style>
-
-
-
-<script type="text/javascript">
-gadgets.util.registerOnLoadHandler(datospagina);
-function datospagina()
-{
-	//window.top.parent.document.getElementById("sites-page-title-header").style.display = "none";	
-}
-</script>
-
 <div id="cabeceramenu">
-<ul id="button">
-<li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
-<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral op2" target="_parent">Onboarding<br/>Clientes</a></li>
-<li><a href="#" class="barralateral op3" >Clientes</a></li>
-<li><a href="#" class="barralateral op4" >Informes<br/>Gestión</a></li>  
-<li><a href="#" class="barralateral op5" >Global<br/>Sales</a></li>
-<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral op6" target="_parent">Global<br/>Product</a></li>
-<li><a href="#" class="barralateral op7" >Servicing</a></li> 
-<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia" class="op8" target="_parent">Metodología</a></li> 
-</ul>  
+	<ul id="button">
+		<li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
+		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral op2" target="_parent">Onboarding<br/>Clientes</a></li>
+		<li><a href="#" class="barralateral op3" >Clientes</a></li>
+		<li><a href="#" class="barralateral op4" >Informes<br/>Gestión</a></li>  
+		<li><a href="#" class="barralateral op5" >Global<br/>Sales</a></li>
+		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral op6" target="_parent">Global<br/>Product</a></li>
+		<li><a href="#" class="barralateral op7" >Servicing</a></li> 
+		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia" class="op8" target="_parent">Metodología</a></li> 
+	</ul>  
 </div>
 <script type="text/javascript">
 gadgets.util.registerOnLoadHandler(datospagina);
@@ -160,13 +149,13 @@ function datospagina()
 	var parametros = gadgets.util.getUrlParameters()["parent"];	
 	if (parametros.indexOf("onboarding-clients")!=-1)
 	{
-		document.getElementById("onboarding-clients").style.backgroundColor = "#2586d7";
+		document.getElementById("onboarding-clients").style.backgroundColor = "#2586D7";
 	}
 	if (parametros.indexOf("global-product")!=-1)
 	{
 		document.getElementById("global-product").style.backgroundColor = "#2586d7";
 	}
-	if (parametros.indexOf("metodologia)!=-1)
+	if (parametros.indexOf("metodologia")!=-1)
 	{
 		document.getElementById("metodologia").style.backgroundColor = "#2586d7";
 	}
