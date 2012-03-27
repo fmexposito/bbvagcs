@@ -41,7 +41,7 @@
 				display:none;
 			}
 			h2.titulobloque {
-				font-size: 20px;
+				font-size: 16px;
 				margin: 0 0 10px 0;
 				color: #3F78B2;
 			}
@@ -51,7 +51,7 @@
 				color: #FFFFFF;
 				display: block;
 				float: right;
-				font-size: 16px;
+				font-size: 13px;
 				font-weight: bold;
 				height: 41px;
 				margin: 0px;
