@@ -135,7 +135,7 @@
 </style>
 <div id="cabeceramenu">
 	<ul id="button">
-		<li><a href="https://sites.google.com/site/bbvagcs/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
+		<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
 		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral op2" target="_parent">Onboarding<br/>Clientes</a></li>
 		<li><a id="clientes" href="#" class="barralateral desactivado" >Clientes</a></li>
 		<li><a id="informes" href="#" class="barralateral desactivado" >Informes<br/>Gestión</a></li>  
