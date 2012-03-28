@@ -66,7 +66,7 @@
 			
 		</style>
 	
-		<div id="content_div"  style="height:330px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_div"  style="height:185px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
@@ -81,7 +81,7 @@
 			var VarColorLetra=prefs.getString("VarColorLetra");
 			var VarColorBorde="#fff";
 			var VarSize=prefs.getString("VarSize");
-			var VarImagenFondo="Neutro";
+			
 			var VarImagenDestacada=prefs.getString("VarImagenDestacada");
 			var VarTituloBloque=prefs.getString("VarTituloBloque");
 			var VarBoton1Texto=prefs.getString("VarBoton1Texto");
