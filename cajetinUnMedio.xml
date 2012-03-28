@@ -62,8 +62,7 @@
 			}
 			.margintop {
 				margin-top: 7px !important;
-			}
-			
+			}			
 		</style>
 	
 		<div id="content_div"  style="height:270px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio2.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
