@@ -51,14 +51,14 @@
 				color: #FFFFFF;
 				display: block;
 				float: right;
-				font-size: 13px;
+				font-size: 12px;
 				font-weight: bold;
-				height: 41px;
+				height: 31px;
 				margin: 0px;
-				padding-top: 20px;
+				padding-top: 10px;
 				text-align: center;
 				text-decoration: none;
-				width: 255px;
+				width: 170px;
 			}
 			.margintop {
 				margin-top: 7px !important;
