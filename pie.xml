@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+	<ModulePrefs title="Cajetin personalizado para el pie del portal Global Customer Solutions"
+		title_url=""
+		height="300"
+		width="465"
+		author=""
+		author_email=""
+		description="Cajetin personalizado para el pie del portal Global Customer Solutions"
+		screenshot=""
+		thumbnail=""  
+		scrolling="false"
+		author_location="Madrid, Spain"
+		scaling="false">
+		<Require feature="dynamic-height"/>
+		<Require feature="setprefs"/>
+	</ModulePrefs>  
+	<UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value=""/>
+	<UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value=""/>
+	<UserPref name="VarEnlace2Texto" display_name="Texto Enlace 2:" default_value=""/>
+	<UserPref name="VarEnlace2URL" display_name="URL Enlace 2:" default_value=""/>
+	<UserPref name="VarEnlace3Texto" display_name="Texto Enlace 3:" default_value=""/>
+	<UserPref name="VarEnlace3URL" display_name="URL Enlace 3:" default_value=""/>
+	<UserPref name="VarEnlace4Texto" display_name="Texto Enlace 4:" default_value=""/>
+	<UserPref name="VarEnlace4URL" display_name="URL Enlace 4:" default_value=""/>	
+	<UserPref name="VarEnlace5Texto" display_name="Texto Enlace 5:" default_value=""/>
+	<UserPref name="VarEnlace5URL" display_name="URL Enlace 5:" default_value=""/>	
+	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#666"/>
+	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
+	<Content type="html" view="home"><![CDATA[
+		<style>		
+			#content_div img {
+				padding: 0 15px 10px 0;
+			}
+			#content_div {
+				
+			}
+			#content_div a img {
+				padding: 0;
+			}
+			.sites-adminfooter {
+				display:none;
+			}
+			h2.titulobloque {
+				font-size: 16px;
+				margin: 0 0 10px 0;
+				color: #3F78B2;
+			}
+			a.enlaceEnlace {
+				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoEnlaceuntercio.png");
+				background-repeat: no-repeat;
+				color: #FFFFFF;
+				display: block;
+				float: right;
+				font-size: 12px;
+				font-weight: bold;
+				height: 31px;
+				margin: 0px;
+				padding-top: 10px;
+				text-align: center;
+				text-decoration: none;
+				width: 165px;
+			}
+			.margintop {
+				margin-top: 7px !important;
+			}
+			
+		</style>
+	
+		<div id="content_div"  style="height:180px; "></div>
+
+		
+
+		<script type="text/javascript">
+			var html="";
+			// Obtener userprefs
+			var prefs = new gadgets.Prefs();			
+			var VarBorde="0";
+			var VarAlign="left";
+			var VarColorFondo="transparent";
+			var VarColorLetra=prefs.getString("VarColorLetra");
+			var VarColorBorde="#fff";
+			var VarSize=prefs.getString("VarSize");
+			
+			var VarEnlace1Texto=prefs.getString("VarEnlace1Texto");
+			var VarEnlace1URL=prefs.getString("VarEnlace1URL");
+			var VarEnlace2Texto=prefs.getString("VarEnlace2Texto");
+			var VarEnlace2URL=prefs.getString("VarEnlace2URL");
+			var VarEnlace3Texto=prefs.getString("VarEnlace3Texto");
+			var VarEnlace3URL=prefs.getString("VarEnlace3URL");
+			var VarEnlace4Texto=prefs.getString("VarEnlace4Texto");
+			var VarEnlace4URL=prefs.getString("VarEnlace4URL");
+			var VarEnlace5Texto=prefs.getString("VarEnlace5Texto");
+			var VarEnlace5URL=prefs.getString("VarEnlace5URL");
+			
+			function insertarEnlace()
+			{
+				var html="";
+				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
+				{
+					html+='<a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" target=\"_parent\" class=\"enlaceEnlace margintop\">' + VarEnlace1Texto + '</a>';
+				}
+				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
+				{
+					html+='<a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" class=\"enlaceEnlace\">' + VarEnlace2Texto + '</a>';
+				}
+				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
+				{
+					html+='<a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" class=\"enlaceEnlace\">' + VarEnlace3Texto + '</a>';
+				}
+				return html;
+			}
+						
+			document.body.style.backgroundColor="#fff";			
+			html+='<table style=\"border-style: none;\" width=\"100%\">';
+			html+='<tr><td>';  
+			html+='<div style=\"padding: 10px; font-size:' + VarSize + '; color:' + VarColorLetra + ';\">';					
+			html+=insertarEnlace();			
+			html+='</div>';
+			html+='</td></tr></table>';
+			document.getElementById("content_div").innerHTML = html;
+			gadgets.window.adjustHeight();
+		</script>
+	]]>  
+	</Content>  
+	<Content type="html" view="configuration"  preferred_height="480">
+	<![CDATA[
+		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/editorbbcode.js"></script>
+		<style>
+			table td {
+				color: #000;
+				font-size: 11px;
+				font-weight: bold;
+			}
+			table td input,
+			textarea {
+				color: #000;
+				font-size: 11px;				
+			}			
+			input#VarTituloBloque {
+				width: 300px;
+			}
+			input#VarImagenDestacada {
+				width: 575px;
+			}
+			.btnTexto {
+				width: 200px;
+			}
+			.btnURL {
+				width: 345px;
+			}
+			.destacado {
+				color:red;
+				font-size:20px;
+				font-weight:bold;
+			}
+			.textodefecto {
+				width: 40px;
+			}
+			.textocolor {
+				width: 57px;
+			}
+		</style>
+		<table width="100%" border="0" id="tablaconfig">		
+			
+			<tr>		
+				<td>
+					Enlace 1 - Texto: <input type="text" id="VarEnlace1Texto" class="btnTexto" value="__UP_VarEnlace1Texto__" onchange="registra('VarEnlace1Texto')">		
+					Enlace 1 - URL: <input type="text" id="VarEnlace1URL" class="btnURL" value="__UP_VarEnlace1URL__" onchange="registra('VarEnlace1URL')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Enlace 2 - Texto: <input type="text" id="VarEnlace2Texto" class="btnTexto" value="__UP_VarEnlace2Texto__" onchange="registra('VarEnlace2Texto')">		
+					Enlace 2 - URL: <input type="text" id="VarEnlace2URL" class="btnURL" value="__UP_VarEnlace2URL__" onchange="registra('VarEnlace2URL')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Enlace 3 - Texto: <input type="text" id="VarEnlace3Texto" class="btnTexto" value="__UP_VarEnlace3Texto__" onchange="registra('VarEnlace3Texto')">		
+					Enlace 3 - URL: <input type="text" id="VarEnlace3URL" class="btnURL" value="__UP_VarEnlace3URL__" onchange="registra('VarEnlace3URL')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Enlace 4 - Texto: <input type="text" id="VarEnlace4Texto" class="btnTexto" value="__UP_VarEnlace4Texto__" onchange="registra('VarEnlace4Texto')">		
+					Enlace 4 - URL: <input type="text" id="VarEnlace4URL" class="btnURL" value="__UP_VarEnlace4URL__" onchange="registra('VarEnlace4URL')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Enlace 5 - Texto: <input type="text" id="VarEnlace5Texto" class="btnTexto" value="__UP_VarEnlace5Texto__" onchange="registra('VarEnlace5Texto')">		
+					Enlace 5 - URL: <input type="text" id="VarEnlace5URL" class="btnURL" value="__UP_VarEnlace5URL__" onchange="registra('VarEnlace5URL')">					
+				</td>
+			</tr>
+		</table>		
+		<table width="100%" border="0" id="tablaconfig2">			
+			<tr>
+				<td>Tamaño del texto por defecto: <input type="text" class="textodefecto" id="VarSize" value="__UP_VarSize__" onchange="registra('VarSize')"></td>   
+			</tr>
+			<tr>
+				<td>Color de texto por defecto: <input type="text" class="textocolor" id="VarColorLetra" value="__UP_VarColorLetra__" onchange="registra('VarColorLetra')"></td>		     
+			</tr>			
+		</table>		
+		<script type="text/javascript">			
+			// Get userprefs
+			var prefs = new gadgets.Prefs();			
+			function registra(variable)
+			{
+				prefs.set(variable,document.getElementById(variable).value);
+			}	
+			gadgets.window.adjustHeight();
+		</script>   
+	]]>
+	</Content>
+</Module>
