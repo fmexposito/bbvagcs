@@ -199,6 +199,11 @@
 			.textocolor {
 				width: 57px;
 			}
+			ul.gadget-config-list {
+				list-style: none outside none;
+				margin: 0 !important;
+				padding-left: 5px;
+			}
 		</style>
 		<table width="100%" border="0" id="tablaconfig">			
 			<tr>		
