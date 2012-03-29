@@ -50,14 +50,10 @@
 			}			
 			ul#botoneraPie li {  
 				display: inline; 
-				text-align: center; 				
-				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
-				background-position: right 0;
-				background-repeat: no-repeat;									
+				text-align: center; 									
 			}		
 			ul#botoneraPie li a {  
-				color: #0064B7;
-				float: left;
+				color: #0064B7;				
 				font-family: Arial;
 				font-size: 14px;
 				height: 19px;
@@ -67,9 +63,9 @@
 				width: 125px;
 			}			
 			ul#botoneraPie .barralateral {  
-				/*background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
+				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
 				background-position: right 0;
-				background-repeat: no-repeat;*/
+				background-repeat: no-repeat;
 			}							
 			ul#botoneraPie li a:hover {  
 				text-decoration:underline;
@@ -133,27 +129,27 @@
 
 				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
 				{	
-					html+='<li>&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" class=\"' + claseEnlace1 +'\" target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
 				{
 					var claseEnlace1 = "barralateral";				
-					html+='<li>&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" class=\"' + claseEnlace2 +'\" target=\"_parent\" >' + VarEnlace2Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace2 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" >' + VarEnlace2Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
 				{
 					var claseEnlace2 = "barralateral";	
-					html+='<li>&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" class=\"' + claseEnlace3 +'\" target=\"_parent\" >' + VarEnlace3Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" >' + VarEnlace3Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace4Texto!="")&&(VarEnlace4URL!=""))
 				{
 					var claseEnlace3 = "barralateral";	
-					html+='<li>&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" class=\"' + claseEnlace4 +'\" target=\"_parent\" >' + VarEnlace4Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" target=\"_parent\" >' + VarEnlace4Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace5Texto!="")&&(VarEnlace5URL!=""))
 				{
 					var claseEnlace4 = "barralateral";	
-					html+='<li>&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" class=\"' + claseEnlace5 +'\" target=\"_parent\" >' + VarEnlace5Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace4 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" target=\"_parent\" >' + VarEnlace5Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				return html;
 			}	
