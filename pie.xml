@@ -51,6 +51,11 @@
 			ul#botoneraPie li {  
 				display: inline; 
 				text-align: center; 
+				
+				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
+				background-position: right 0;
+				background-repeat: no-repeat;
+			}							
 			}		
 			ul#botoneraPie li a {  
 				color: #0064B7;
@@ -64,9 +69,9 @@
 				width: 125px;
 			}			
 			ul#botoneraPie .barralateral {  
-				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
+				/*background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
 				background-position: right 0;
-				background-repeat: no-repeat;
+				background-repeat: no-repeat;*/
 			}							
 			ul#botoneraPie li a:hover {  
 				text-decoration:underline;
