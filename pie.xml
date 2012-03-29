@@ -147,32 +147,33 @@
 			
 			function insertarEnlace()
 			{
-				var html="";			
+				var claseEnlace1,claseEnlace2,claseEnlace3,claseEnlace3,claseEnlace5,html="";	
 				
-				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
-				{	
-					html+='<li><a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" class=\"' + claseEnlace1 +'\" target=\"_parent\" >' + VarEnlace1Texto + '</a></li>';
-				}
-				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
+				if ((VarEnlace5Texto!="")&&(VarEnlace5URL!=""))
 				{
-					var claseEnlace1 = "barralateral";				
-					html+='<li><a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" class=\"' + claseEnlace2 +'\" target=\"_parent\" >' + VarEnlace2Texto + '</a></li>';
-				}
-				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
-				{
-					var claseEnlace2 = "barralateral";	
-					html+='<li><a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" class=\"' + claseEnlace3 +'\" target=\"_parent\" >' + VarEnlace3Texto + '</a></li>';
+					var claseEnlace4 = "barralateral";	
+					html+='<li><a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" class=\"' + claseEnlace5 +'\" target=\"_parent\" >' + VarEnlace5Texto + '</a></li>';
 				}
 				if ((VarEnlace4Texto!="")&&(VarEnlace4URL!=""))
 				{
 					var claseEnlace3 = "barralateral";	
 					html+='<li><a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" class=\"' + claseEnlace4 +'\" target=\"_parent\" >' + VarEnlace4Texto + '</a></li>';
 				}
-				if ((VarEnlace5Texto!="")&&(VarEnlace5URL!=""))
+				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
 				{
-					var claseEnlace4 = "barralateral";	
-					html+='<li><a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" class=\"' + claseEnlace5 +'\" target=\"_parent\" >' + VarEnlace5Texto + '</a></li>';
+					var claseEnlace2 = "barralateral";	
+					html+='<li><a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" class=\"' + claseEnlace3 +'\" target=\"_parent\" >' + VarEnlace3Texto + '</a></li>';
 				}
+				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
+				{
+					var claseEnlace1 = "barralateral";				
+					html+='<li><a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" class=\"' + claseEnlace2 +'\" target=\"_parent\" >' + VarEnlace2Texto + '</a></li>';
+				}
+				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
+				{	
+					html+='<li><a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" class=\"' + claseEnlace1 +'\" target=\"_parent\" >' + VarEnlace1Texto + '</a></li>';
+				}
+				
 				return html;
 			}	
 			
