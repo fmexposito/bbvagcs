@@ -136,12 +136,12 @@
 <div id="cabeceramenu">
 	<ul id="button">
 		<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/" class="first" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
-		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral op2" target="_parent">Onboarding<br/>Clientes</a></li>
-		<li><a id="clientes" href="#" class="barralateral desactivado" >Clientes</a></li>
-		<li><a id="informes" href="#" class="barralateral desactivado" >Informes<br/>Gestión</a></li>  
-		<li><a id="global-sales" href="#" class="barralateral" >Global<br/>Sales</a></li>
+		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral" target="_parent">Onboarding<br/>Clientes</a></li>
+		<li><a id="clientes" href="#" class="barralateral desactivado" target="_parent">Clientes</a></li>
+		<li><a id="informes" href="#" class="barralateral desactivado" target="_parent">Informes<br/>Gestión</a></li>  
+		<li><a id="global-sales" href="#" class="barralateral" target="_parent">Global<br/>Sales</a></li>
 		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral" target="_parent">Global<br/>Product</a></li>
-		<li><a id="servicing" href="#" class="barralateral desactivado" >Servicing</a></li> 
+		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 
 		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia"  target="_parent">Metodología</a></li> 
 	</ul>  
 </div>
@@ -161,6 +161,10 @@ function datospagina()
 	if (parametros.indexOf("metodologia")!=-1)
 	{
 		document.getElementById("metodologia").style.backgroundColor = "#2586d7";
+	}
+	if (parametros.indexOf("servicing")!=-1)
+	{
+		document.getElementById("servicing").style.backgroundColor = "#2586d7";
 	}
 	
 }
