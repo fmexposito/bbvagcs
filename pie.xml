@@ -29,40 +29,16 @@
 	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
 	<Content type="html" view="home"><![CDATA[
 		<style>		
-			#content_div img {
-				padding: 0;
+			
+			#content_div {
 				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
 				background-repeat: repeat-x;
 				background-position: bottom;
 			}
 			
-			#content_div {
-				
-			}
-			
-			#content_div a img {
-				padding: 0;
-			}
-
 			.sites-adminfooter {
 				display:none;
-			}
-			
-			a.enlaceEnlace {
-				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondoEnlaceuntercio.png");
-				background-repeat: no-repeat;
-				color: #0064B7;
-				display: block;
-				float: right;
-				font-size: 12px;
-				font-weight: bold;
-				height: 31px;
-				margin: 0px;
-				padding-top: 10px;
-				text-align: center;
-				text-decoration: none;
-				width: 165px;
-			}
+			}			
 			
 			.margintop {
 				margin-top: 7px !important;
