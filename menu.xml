@@ -45,18 +45,10 @@
 	width: 60px;
 	height:48px;
 }  
-#button li a#onboarding-clients {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 9px 0 0 0;     
-	color: #fff;  
-	width: 125px;
-	height:44px;
-} 
+
 #button li a#clientes,
-#button li a#metodologia {  
+#button li a#metodologia,
+#button li a#servicing {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
@@ -68,23 +60,14 @@
 }
 #button li a#informes,
 #button li a#global-product,
-#button li a#servicing {  
+#button li a#global-sales,
+#button li a#onboarding-clients {  
 	font-family: Arial;  
 	font-size:15px;  
 	text-decoration: none;  
 	float:left;  
 	padding: 9px 0 0 0;     
 	color: #fff;  
-	width: 125px;
-	height:44px;
-}
-#button li a#global-sales {  
-	font-family: Arial;  
-	font-size:15px;  
-	text-decoration: none;  
-	float:left;  
-	padding: 9px 0 0 0;     
-	color: #999;  
 	width: 125px;
 	height:44px;
 }
@@ -106,7 +89,7 @@
 		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral" target="_parent">Onboarding<br/>Clientes</a></li>
 		<li><a id="clientes" href="#" class="barralateral desactivado" target="_parent">Clientes</a></li>
 		<li><a id="informes" href="#" class="barralateral desactivado" target="_parent">Informes<br/>Gestión</a></li>  
-		<li><a id="global-sales" href="#" class="barralateral" target="_parent">Global<br/>Sales</a></li>
+		<li><a id="global-sales" href="#" class="barralateral desactivado" target="_parent">Global<br/>Sales</a></li>
 		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral" target="_parent">Global<br/>Product</a></li>
 		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 
 		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia"  target="_parent">Metodología</a></li> 
