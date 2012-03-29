@@ -15,12 +15,12 @@
 		<Require feature="dynamic-height"/>
 		<Require feature="setprefs"/>
 	</ModulePrefs>  
-	<UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value=""/>
-	<UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value=""/>
-	<UserPref name="VarEnlace2Texto" display_name="Texto Enlace 2:" default_value=""/>
-	<UserPref name="VarEnlace2URL" display_name="URL Enlace 2:" default_value=""/>
-	<UserPref name="VarEnlace3Texto" display_name="Texto Enlace 3:" default_value=""/>
-	<UserPref name="VarEnlace3URL" display_name="URL Enlace 3:" default_value=""/>
+	<UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value="Usabilidad"/>
+	<UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
+	<UserPref name="VarEnlace2Texto" display_name="Texto Enlace 2:" default_value="Contacto"/>
+	<UserPref name="VarEnlace2URL" display_name="URL Enlace 2:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
+	<UserPref name="VarEnlace3Texto" display_name="Texto Enlace 3:" default_value="Comunicaciones"/>
+	<UserPref name="VarEnlace3URL" display_name="URL Enlace 3:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
 	<UserPref name="VarEnlace4Texto" display_name="Texto Enlace 4:" default_value=""/>
 	<UserPref name="VarEnlace4URL" display_name="URL Enlace 4:" default_value=""/>	
 	<UserPref name="VarEnlace5Texto" display_name="Texto Enlace 5:" default_value=""/>
@@ -79,7 +79,7 @@
 				width: 120px;
 				height: 34px;
 			} 
-			ul#botoneraPie li a.barralateral {  
+			ul#botoneraPie .barralateral {  
 				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png");
 				background-position: right 0;
 				background-repeat: no-repeat;
@@ -107,11 +107,11 @@
 			}
 			
 			ul#botoneraPie li a:hover {  
-				background-color: #2586d7;  
+				text-decoration:underline;
 			}  
 			
 			ul#botoneraPie li a:active {  
-				background-color: #2586d7;   
+				/*background-color: #2586d7; */  
 			}
 
 			#cabeceramenu ul#botoneraPie li a.desactivado {
@@ -143,28 +143,35 @@
 			var VarEnlace5Texto=prefs.getString("VarEnlace5Texto");
 			var VarEnlace5URL=prefs.getString("VarEnlace5URL");
 			
+			
+			
 			function insertarEnlace()
 			{
-				var html="";
+				var html="";			
+				
 				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
-				{
-					html+='<li><a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a></li>';
+				{	
+					html+='<li><a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" class=\"' + claseEnlace1 +'\" target=\"_parent\" >' + VarEnlace1Texto + '</a></li>';
 				}
 				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" >' + VarEnlace2Texto + '</a></li>';
+					var claseEnlace1 = "barralateral";				
+					html+='<li><a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" class=\"' + claseEnlace2 +'\" target=\"_parent\" >' + VarEnlace2Texto + '</a></li>';
 				}
 				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" >' + VarEnlace3Texto + '</a></li>';
+					var claseEnlace2 = "barralateral";	
+					html+='<li><a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" class=\"' + claseEnlace3 +'\" target=\"_parent\" >' + VarEnlace3Texto + '</a></li>';
 				}
 				if ((VarEnlace4Texto!="")&&(VarEnlace4URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" target=\"_parent\" >' + VarEnlace4Texto + '</a></li>';
+					var claseEnlace3 = "barralateral";	
+					html+='<li><a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" class=\"' + claseEnlace4 +'\" target=\"_parent\" >' + VarEnlace4Texto + '</a></li>';
 				}
 				if ((VarEnlace5Texto!="")&&(VarEnlace5URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" target=\"_parent\" >' + VarEnlace5Texto + '</a></li>';
+					var claseEnlace4 = "barralateral";	
+					html+='<li><a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" class=\"' + claseEnlace5 +'\" target=\"_parent\" >' + VarEnlace5Texto + '</a></li>';
 				}
 				return html;
 			}	
