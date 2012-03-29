@@ -33,7 +33,7 @@
 				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
 				background-repeat: repeat-x;
 				background-position: bottom;
-				height:20px;
+				height:21px;
 			}			
 			.sites-adminfooter {
 				display:none;
