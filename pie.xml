@@ -111,7 +111,7 @@
 			}  
 			
 			ul#botoneraPie li a:active {  
-				background-color: #2586d7;  
+				background-color: #2586d7;   
 			}
 
 			#cabeceramenu ul#botoneraPie li a.desactivado {
