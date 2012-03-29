@@ -148,23 +148,23 @@
 				var html="";
 				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" target=\"_parent\" class=\"enlaceEnlace margintop\">' + VarEnlace1Texto + '</a></li>';
+					html+='<li><a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a></li>';
 				}
 				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" class=\"enlaceEnlace\">' + VarEnlace2Texto + '</a></li>';
+					html+='<li><a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" >' + VarEnlace2Texto + '</a></li>';
 				}
 				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" class=\"enlaceEnlace\">' + VarEnlace3Texto + '</a></li>';
+					html+='<li><a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" >' + VarEnlace3Texto + '</a></li>';
 				}
 				if ((VarEnlace4Texto!="")&&(VarEnlace4URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" target=\"_parent\" class=\"enlaceEnlace\">' + VarEnlace4Texto + '</a></li>';
+					html+='<li><a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" target=\"_parent\" >' + VarEnlace4Texto + '</a></li>';
 				}
 				if ((VarEnlace5Texto!="")&&(VarEnlace5URL!=""))
 				{
-					html+='<li><a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" target=\"_parent\" class=\"enlaceEnlace\">' + VarEnlace5Texto + '</a></li>';
+					html+='<li><a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" target=\"_parent\" >' + VarEnlace5Texto + '</a></li>';
 				}
 				return html;
 			}	
