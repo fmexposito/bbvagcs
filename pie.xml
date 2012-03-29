@@ -30,7 +30,10 @@
 	<Content type="html" view="home"><![CDATA[
 		<style>		
 			#content_div img {
-				padding: 0 15px 10px 0;
+				padding: 0;
+				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
+				background-repeat: repeat-x;
+				background-position: bottom;
 			}
 			
 			#content_div {
@@ -67,11 +70,9 @@
 
 			ul#botoneraPie {  
 				padding: 5px 0 0 5px;
-				height:60px;
+				height:30px;
 				margin: 0 0 0 0px;
-				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
-				background-repeat: repeat-x;
-				background-position: bottom;
+				float: right;
 			}  
 			
 			ul#botoneraPie li {  
