@@ -57,14 +57,15 @@
 			}  
 			
 			ul#botoneraPie li a {  
-				font-family: Arial;  
-				font-size:15px;  
-				text-decoration: none;  
-				float:left;  
-				padding: 19px 0 0 0;   
-				color: #0064B7;  
-				width: 120px;
-				height: 34px;
+				border: 1px solid;
+				color: #0064B7;
+				float: left;
+				font-family: Arial;
+				font-size: 15px;
+				height: 30px;
+				padding: 9px 0 0;
+				text-decoration: none;
+				width: 125px;
 			} 
 			
 			ul#botoneraPie .barralateral {  
