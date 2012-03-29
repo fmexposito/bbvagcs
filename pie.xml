@@ -169,7 +169,7 @@
 				return html;
 			}	
 			
-			html+='<ul id=\"botonera\">';						
+			html+='<ul id=\"botoneraPie\">';						
 			html+=insertarEnlace();			
 			html+='</ul>';	
 			
