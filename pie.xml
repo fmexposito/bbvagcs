@@ -60,16 +60,16 @@
 				margin-top: 7px !important;
 			}	
 
-			#botonera {  
+			ul#botoneraPie {  
 				padding: 5px 0 0 5px;
 				height:60px;
 				margin: 0 0 0 0px;
 			}  
-			#botonera li {  
+			ul#botoneraPie li {  
 				display: inline; 
 				text-align: center; 
 			}  
-			#botonera li a {  
+			ul#botoneraPie li a {  
 				font-family: Arial;  
 				font-size:15px;  
 				text-decoration: none;  
@@ -79,12 +79,12 @@
 				width: 120px;
 				height: 34px;
 			} 
-			#botonera li a.barralateral {  
+			ul#botoneraPie li a.barralateral {  
 				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png");
 				background-position: right 0;
 				background-repeat: no-repeat;
 			} 
-			#botonera li a.first {  
+			ul#botoneraPie li a.first {  
 				font-family: Arial;  
 				font-size:15px;  
 				text-decoration: none;  
@@ -94,23 +94,8 @@
 				width: 60px;
 				height:48px;
 			}  
-
-			#botonera li a#clientes,
-			#botonera li a#metodologia,
-			#botonera li a#servicing {  
-				font-family: Arial;  
-				font-size:15px;  
-				text-decoration: none;  
-				float:left;  
-				padding: 19px 0 0 0;     
-				color: #0064B7;  
-				width: 125px;
-				height:34px;
-			}
-			#botonera li a#informes,
-			#botonera li a#global-product,
-			#botonera li a#global-sales,
-			#botonera li a#onboarding-clients {  
+			
+			ul#botoneraPie li a {  
 				font-family: Arial;  
 				font-size:15px;  
 				text-decoration: none;  
@@ -120,15 +105,16 @@
 				width: 125px;
 				height:44px;
 			}
-
-			#botonera li a:hover {  
+			
+			ul#botoneraPie li a:hover {  
 				background-color: #2586d7;  
 			}  
-			#botonera li a:active {  
+			
+			ul#botoneraPie li a:active {  
 				background-color: #2586d7;  
 			}
 
-			#cabeceramenu #botonera li a.desactivado {
+			#cabeceramenu ul#botoneraPie li a.desactivado {
 				color: #999;
 			}			
 		</style>
