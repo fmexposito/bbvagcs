@@ -28,34 +28,28 @@
 	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#0064B7"/>
 	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
 	<Content type="html" view="home"><![CDATA[
-		<style>		
-			
+		<style>				
 			#content_div {
 				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
 				background-repeat: repeat-x;
 				background-position: bottom;
-			}
-			
+			}			
 			.sites-adminfooter {
 				display:none;
 			}			
-			
 			.margintop {
 				margin-top: 7px !important;
-			}	
-
+			}
 			ul#botoneraPie {  
 				padding: 5px 0 0 5px;
 				height:30px;
 				margin: 0 0 0 0px;
 				float: right;
-			}  
-			
+			}			
 			ul#botoneraPie li {  
 				display: inline; 
 				text-align: center; 
-			}  
-			
+			}		
 			ul#botoneraPie li a {  
 				border: 1px solid;
 				color: #0064B7;
@@ -67,14 +61,12 @@
 				margin: 0;
 				text-decoration: none;
 				width: 125px;
-			} 
-			
+			}			
 			ul#botoneraPie .barralateral {  
 				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
 				background-position: right 0;
 				background-repeat: no-repeat;
-			} 
-			
+			}			
 			ul#botoneraPie li a.first {  
 				font-family: Arial;  
 				font-size:15px;  
@@ -84,16 +76,13 @@
 				color: #0064B7;  
 				width: 60px;
 				height:48px;
-			}  
-						
+			}						
 			ul#botoneraPie li a:hover {  
 				text-decoration:underline;
-			}  
-			
+			}			
 			ul#botoneraPie li a:active {  
 				/*background-color: #2586d7; */  
 			}
-
 			#cabeceramenu ul#botoneraPie li a.desactivado {
 				color: #999;
 			}			
@@ -122,8 +111,6 @@
 			var VarEnlace4URL=prefs.getString("VarEnlace4URL");
 			var VarEnlace5Texto=prefs.getString("VarEnlace5Texto");
 			var VarEnlace5URL=prefs.getString("VarEnlace5URL");
-			
-			
 			
 			function insertarEnlace()
 			{
