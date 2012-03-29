@@ -50,12 +50,10 @@
 			}			
 			ul#botoneraPie li {  
 				display: inline; 
-				text-align: center; 
-				
+				text-align: center; 				
 				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
 				background-position: right 0;
-				background-repeat: no-repeat;
-									
+				background-repeat: no-repeat;									
 			}		
 			ul#botoneraPie li a {  
 				color: #0064B7;
