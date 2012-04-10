@@ -102,6 +102,19 @@
 			var VarEnlace5Texto=prefs.getString("VarEnlace5Texto");
 			var VarEnlace5URL=prefs.getString("VarEnlace5URL");
 			
+			function SendGmail()
+			{
+				var to ='';
+				var subject ='Petición de Información';
+				var message ='Nombre proyecto\n Nombre y apellido del reponsable \n	Número de teléfono \n Correo';
+				var str = 'http://mail.google.com/mail/?view=cm&fs=1'+
+				'&to=' + to +
+				'&su=' + subject +
+				'&body=' + message.replace(/\n/g,'%0A') +
+				'&ui=1';
+				window.open (str,"send mail");
+			}			
+			
 			function insertarEnlace()
 			{
 				var claseEnlace1,claseEnlace2,claseEnlace3,claseEnlace3,claseEnlace5,html="";	
