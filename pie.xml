@@ -15,12 +15,12 @@
 		<Require feature="dynamic-height"/>
 		<Require feature="setprefs"/>
 	</ModulePrefs>  
-	<UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value="Usabilidad"/>
-	<UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
-	<UserPref name="VarEnlace2Texto" display_name="Texto Enlace 2:" default_value="Contacto"/>
-	<UserPref name="VarEnlace2URL" display_name="URL Enlace 2:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
-	<UserPref name="VarEnlace3Texto" display_name="Texto Enlace 3:" default_value="Comunicaciones"/>
-	<UserPref name="VarEnlace3URL" display_name="URL Enlace 3:" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/"/>
+	<UserPref name="VarEnlace1Texto" display_name="Texto enlace 1:" default_value=""/>
+	<UserPref name="VarEnlace1URL" display_name="enlace 1:" default_value=""/>
+	<UserPref name="VarEnlace2Texto" display_name="Texto Enlace 2:" default_value=""/>
+	<UserPref name="VarEnlace2URL" display_name="URL Enlace 2:" default_value=""/>
+	<UserPref name="VarEnlace3Texto" display_name="Texto Enlace 3:" default_value=""/>
+	<UserPref name="VarEnlace3URL" display_name="URL Enlace 3:" default_value=""/>
 	<UserPref name="VarEnlace4Texto" display_name="Texto Enlace 4:" default_value=""/>
 	<UserPref name="VarEnlace4URL" display_name="URL Enlace 4:" default_value=""/>	
 	<UserPref name="VarEnlace5Texto" display_name="Texto Enlace 5:" default_value=""/>
@@ -30,7 +30,7 @@
 	<Content type="html" view="home"><![CDATA[
 		<style>				
 			#content_div {
-				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
+				background-image: url("http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/puntobarra.png");
 				background-repeat: repeat-x;
 				background-position: bottom;
 				height:21px;
@@ -63,7 +63,7 @@
 				width: 125px;
 			}			
 			ul#botoneraPie .barralateral {  
-				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
+				background-image: url("http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barraSeparadora.png");
 				background-position: right 0;
 				background-repeat: no-repeat;
 			}							
@@ -102,22 +102,38 @@
 			var VarEnlace5Texto=prefs.getString("VarEnlace5Texto");
 			var VarEnlace5URL=prefs.getString("VarEnlace5URL");
 			
-			function SendGmail()
+			function sendGmail()
 			{
 				var to ='';
 				var subject ='Petición de Información';
-				var message ='Nombre proyecto\n Nombre y apellido del reponsable \n	Número de teléfono \n Correo';
-				var str = 'http://mail.google.com/mail/?view=cm&fs=1'+
-				'&to=' + to +
-				'&su=' + subject +
-				'&body=' + message.replace(/\n/g,'%0A') +
-				'&ui=1';
-				window.open (str,"send mail");
+				var message ='Nombre proyecto Nombre y apellido del reponsable Número de teléfono Correo';
+				var str = 'http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to + '&su=' + subject + '&body=' + message.replace(/\n/g,'%0A') + '&ui=1';
+				window.open(str,"send mail");
 			}			
 			
+			function devuelveEnlace(varEnlace)
+			{
+				var link = "";
+				if (varEnlace.indexOf("javascript:")!=-1)
+				{
+					var link = 'href=\"#\" onclick=\"' + varEnlace + '\"';
+				}
+				else
+				{
+					var link = 'href=\"'+ varEnlace +'\"';
+				}
+				return link;
+			}
+						
 			function insertarEnlace()
 			{
-				var claseEnlace1,claseEnlace2,claseEnlace3,claseEnlace3,claseEnlace5,html="";	
+				var claseEnlace1 = "";
+				var claseEnlace2 = "";
+				var claseEnlace3 = "";
+				var claseEnlace4 = ""; 
+				var claseEnlace5 = "";
+				var html = "";
+				var strLink = "";	
 				
 				if (VarEnlace1Texto!="")
 				{
@@ -142,27 +158,34 @@
 
 				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
 				{	
-					html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace1URL + '\" title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					var strLink = devuelveEnlace(VarEnlace1URL);
+					//html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					alert(html);
 				}
 				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
 				{
+					var strLink = devuelveEnlace(VarEnlace2URL);
 					var claseEnlace1 = "barralateral";				
-					html+='<li class=\"' + claseEnlace2 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace2URL + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" >' + VarEnlace2Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace2 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" >' + VarEnlace2Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
 				{
+					var strLink = devuelveEnlace(VarEnlace3URL);
 					var claseEnlace2 = "barralateral";	
-					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace3URL + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" >' + VarEnlace3Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a '  + strLink + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" >' + VarEnlace3Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace4Texto!="")&&(VarEnlace4URL!=""))
 				{
+					var strLink = devuelveEnlace(VarEnlace4URL);
 					var claseEnlace3 = "barralateral";	
-					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace4URL + '\" title=\"' + VarEnlace4Texto + '\" target=\"_parent\" >' + VarEnlace4Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace4Texto + '\" target=\"_parent\" >' + VarEnlace4Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace5Texto!="")&&(VarEnlace5URL!=""))
 				{
-					var claseEnlace4 = "barralateral";	
-					html+='<li class=\"' + claseEnlace4 +'\" >&nbsp;&nbsp;&nbsp;<a href=\"' + VarEnlace5URL + '\" title=\"' + VarEnlace5Texto + '\" target=\"_parent\" >' + VarEnlace5Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					var strLink = devuelveEnlace(VarEnlace5URL);
+					var claseEnlace5 = "barralateral";	
+					html+='<li class=\"' + claseEnlace4 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace5Texto + '\" target=\"_parent\" >' + VarEnlace5Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				return html;
 			}	
