@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+	<ModulePrefs title="Cajetin personalizado CONTACTOS portal Global Customer Solutions"
+		title_url=""
+		height="125"
+		width="220"
+		author=""
+		author_email=""
+		description="Cajetin personalizado CONTACTOS portal Global Customer Solutions"
+		screenshot=""
+		thumbnail=""  
+		scrolling="false"
+		author_location="Madrid, Spain"
+		scaling="false">
+		<Require feature="dynamic-height"/>
+		<Require feature="setprefs"/>
+	</ModulePrefs>  
+	<UserPref name="VarNombreProyecto" display_name="Nombre proyecto:" default_value="International Transaction Services"/>
+	<UserPref name="VarNombreResponsable" display_name="Nombre y apellidos del reponsable:" default_value="Jesús Andión Acedos"/>
+	<UserPref name="VarTelefono" display_name="Número de teléfono:" default_value=""/>
+	<UserPref name="VarCargo" display_name="VarCargo:" default_value="Managing Director"/>	
+	<UserPref name="Varemail" display_name="Correo:" default_value="jesus.acedos@grupobbva.com"/>		
+	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#002B45"/>
+	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
+	<Content type="html">
+	<![CDATA[
+		<style>		
+			#content_div img {
+				padding: 0 15px 10px 0;
+			}
+			#content_div {
+				background-image: url('http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/contactos/fondoCajetinContacto.png');
+			}
+			#content_div a img {
+				padding: 0;
+			}			
+			h1, h2, h3, h4, h5 {
+				color: #3F78B2;
+			}
+			h1 {
+				font-size: 13px; 
+				font-weight: normal;
+				margin: 0 0 7px;
+				color: #009EE5;
+			}
+			h2 {
+				font-size: 11px;
+				font-weight: normal;
+				margin: 0 0 7px;
+			}	
+			h3 {
+				font-size: 11px;
+				margin: 0 0 7px 0;	
+				font-weight: normal;				
+			}	
+			h4 {
+				font-size: 11px;
+				margin: 0 0 7px 0;
+				color: #009EE5;
+				font-weight: normal;
+			}	
+			h4 a, 
+			h4 a:visited,
+			h4 a:active {
+				color: #009EE5;
+				font-weight: normal;
+				text-decoration: none;
+			}			
+			h4 a:hover {				
+				color: #009EE5;
+				font-weight: normal;
+				text-decoration: underline;
+			}
+			h5 {
+				font-size: 10px;
+				margin: 0 0 10px 0;
+				color: #3F78B2;
+				font-weight: normal;
+			}				
+			.margintop {
+				margin-top: 7px !important;
+			}
+			
+		</style>
+	
+		<div id="content_div"  style="height:180px; background-image:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/contactos/fondoCajetinContacto.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+
+		<script type="text/javascript">
+			var html="";
+			
+			// Obtener userprefs
+			var prefs = new gadgets.Prefs();
+			var VarBorde="0";
+			var VarAlign="left";
+			var VarColorFondo="transparent";
+			
+			var VarNombreProyecto=prefs.getString("VarNombreProyecto");
+			var VarNombreResponsable=prefs.getString("VarNombreResponsable");
+			var VarTelefono=prefs.getString("VarTelefono");
+			var Varemail=prefs.getString("Varemail");
+			var VarCargo=prefs.getString("VarCargo");
+			
+			var VarColorBorde="#fff";
+			var VarSize=prefs.getString("VarSize");
+			var VarColorLetra=prefs.getString("VarColorLetra");
+						
+			document.body.style.backgroundColor="#fff";		
+			
+			function sendGmail(Varemail)
+			{
+				var to = Varemail;
+				var subject ='Peticion de Informacion';
+				var message ='';
+				var str = 'window.open(\"http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to + '&su=' + subject + '&body=' + message.replace(/\n/g,'%0A') + '&ui=1\",\"send mail\")';				
+				return str;
+			}	
+
+			var strMail = sendGmail(Varemail);
+			
+			html+='<table style=\"border-style: none;\" width=\"100%\">';
+			html+='<tr><td>';  
+			html+='<div style=\"padding: 10px; font-size:' + VarSize + '; color:' + VarColorLetra + ';\">';
+			
+			html+='<h2>'+VarNombreProyecto+'</h2>';	
+			html+='<h1>'+VarNombreResponsable+'</h1>';	
+			html+='<h3>'+VarCargo+'</h3>';				
+			html+='<h4><a href=\'#\' onclick=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';
+
+			html+='</div>';
+			html+='</td></tr></table>';
+			document.getElementById("content_div").innerHTML = html;
+			
+			gadgets.window.adjustHeight();
+			
+		</script>
+	]]>  
+	</Content>  
+	<Content type="html" view="configuration"  preferred_height="480">
+	<![CDATA[
+				
+		<style>
+			table td {
+				color: #000;
+				font-size: 11px;
+				font-weight: bold;
+			}
+			table td input,
+			textarea {
+				color: #000;
+				font-size: 11px;				
+			}			
+			input {
+				width: 300px;
+			}
+			input#VarImagenDestacada {
+				width: 575px;
+			}
+			.btnTexto {
+				width: 200px;
+			}
+			.btnURL {
+				width: 345px;
+			}
+			.destacado {
+				color:red;
+				font-size:20px;
+				font-weight:bold;
+			}
+			.textodefecto {
+				width: 40px;
+			}
+			.textocolor {
+				width: 57px;
+			}
+		</style>
+		
+		<table width="100%" border="0" id="tablaconfig">			
+			<tr>		
+				<td>
+					Nombre del proyecto: <input type="text" id="VarNombreProyecto" value="__UP_VarNombreProyecto__" onchange="registra('VarNombreProyecto')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Nombre y apellidos del responsable: <input type="text" id="VarNombreResponsable" value="__UP_VarNombreResponsable__" onchange="registra('VarNombreResponsable')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Cargo: <input type="text" id="VarCargo" value="__UP_VarCargo__" onchange="registra('VarCargo')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Correo: <input type="text" id="Varemail" value="__UP_Varemail__" onchange="registra('Varemail')">					
+				</td>
+			</tr>			
+		</table>
+			
+		<script type="text/javascript">			
+			// Get userprefs
+			var prefs = new gadgets.Prefs();			
+			function registra(variable)
+			{
+				prefs.set(variable,document.getElementById(variable).value);
+			}	
+			gadgets.window.adjustHeight();
+		</script>   
+	]]>
+	</Content>
+</Module>
