@@ -29,7 +29,7 @@
 				padding: 0 15px 10px 0;
 			}
 			#content_div {
-				background-image: url('http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/contactos/fondoCajetinContacto.png');
+				background-image: url('http://bbvagcs.googlecode.com/svn/trunk/fondoCajetinContacto.png');
 			}
 			#content_div a img {
 				padding: 0;
@@ -83,7 +83,7 @@
 			
 		</style>
 	
-		<div id="content_div"  style="height:180px; background-image:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/contactos/fondoCajetinContacto.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_div"  style="height:180px; background-image:url(http://bbvagcs.googlecode.com/svn/trunk/fondoCajetinContacto.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		<script type="text/javascript">
 			var html="";
