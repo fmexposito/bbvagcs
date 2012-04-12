@@ -30,7 +30,7 @@
 	<Content type="html" view="home"><![CDATA[
 		<style>				
 			#content_div {
-				background-image: url("http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/puntobarra.png");
+				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/puntobarra.png");
 				background-repeat: repeat-x;
 				background-position: bottom;
 				height:21px;
@@ -63,7 +63,7 @@
 				width: 125px;
 			}			
 			ul#botoneraPie .barralateral {  
-				background-image: url("http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/barraSeparadora.png");
+				background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barraSeparadora.png");
 				background-position: right 0;
 				background-repeat: no-repeat;
 			}							
@@ -106,7 +106,7 @@
 			{
 				var to ='';
 				var subject ='Petición de Información';
-				var message ='Nombre proyecto Nombre y apellido del reponsable Número de teléfono Correo';
+				var message ='';
 				var str = 'http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to + '&su=' + subject + '&body=' + message.replace(/\n/g,'%0A') + '&ui=1';
 				window.open(str,"send mail");
 			}			
@@ -116,11 +116,11 @@
 				var link = "";
 				if (varEnlace.indexOf("javascript:")!=-1)
 				{
-					var link = 'href=\"#\" onclick=\"' + varEnlace + '\"';
+					var link = 'href=\"#\" onclick=\"' + varEnlace + '\" ';
 				}
 				else
 				{
-					var link = 'href=\"'+ varEnlace +'\"';
+					var link = 'href=\"'+ varEnlace +'\"  target=\"_parent\" ';
 				}
 				return link;
 			}
@@ -159,33 +159,31 @@
 				if ((VarEnlace1Texto!="")&&(VarEnlace1URL!=""))
 				{	
 					var strLink = devuelveEnlace(VarEnlace1URL);
-					//html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace1Texto + '\" target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
-					html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' target=\"_parent\" >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
-					alert(html);
+					html+='<li class=\"' + claseEnlace1 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + ' title=\"' + VarEnlace1Texto + '\"  >' + VarEnlace1Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace2Texto!="")&&(VarEnlace2URL!=""))
 				{
 					var strLink = devuelveEnlace(VarEnlace2URL);
 					var claseEnlace1 = "barralateral";				
-					html+='<li class=\"' + claseEnlace2 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace2Texto + '\" target=\"_parent\" >' + VarEnlace2Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace2 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace2Texto + '\"  >' + VarEnlace2Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace3Texto!="")&&(VarEnlace3URL!=""))
 				{
 					var strLink = devuelveEnlace(VarEnlace3URL);
 					var claseEnlace2 = "barralateral";	
-					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a '  + strLink + '\" title=\"' + VarEnlace3Texto + '\" target=\"_parent\" >' + VarEnlace3Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a '  + strLink + '\" title=\"' + VarEnlace3Texto + '\"  >' + VarEnlace3Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace4Texto!="")&&(VarEnlace4URL!=""))
 				{
 					var strLink = devuelveEnlace(VarEnlace4URL);
 					var claseEnlace3 = "barralateral";	
-					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace4Texto + '\" target=\"_parent\" >' + VarEnlace4Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace3 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace4Texto + '\"  >' + VarEnlace4Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				if ((VarEnlace5Texto!="")&&(VarEnlace5URL!=""))
 				{
 					var strLink = devuelveEnlace(VarEnlace5URL);
 					var claseEnlace5 = "barralateral";	
-					html+='<li class=\"' + claseEnlace4 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace5Texto + '\" target=\"_parent\" >' + VarEnlace5Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
+					html+='<li class=\"' + claseEnlace4 +'\" >&nbsp;&nbsp;&nbsp;<a ' + strLink + '\" title=\"' + VarEnlace5Texto + '\"  >' + VarEnlace5Texto + '</a>&nbsp;&nbsp;&nbsp;</li>';
 				}
 				return html;
 			}	
