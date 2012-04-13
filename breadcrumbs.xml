@@ -38,7 +38,7 @@
 		function showBreadcrumbs()
 		{			
 			var rootSite="home";
-			var s ="";
+			var s = "";
 			var i,j,k = 0;
 			var base = "";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
