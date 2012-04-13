@@ -11,7 +11,7 @@
 	<div id="title-crumbs">valor de title</div>
 	
 	<style>		
-		#title-breadcrumbs {
+		#title-crumbs {
 			font-size:13px;
 			color:#3F78B2;
 			text-transform: capitalize;
@@ -42,7 +42,7 @@
 		function showBreadcrumbs()
 		{
 			//Construct the breadcrumb string
-			var rootSite="gsiteslabscapgeminivalencia";
+			var rootSite="home";
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
