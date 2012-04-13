@@ -52,10 +52,10 @@
 				}
 				if (parametros[i] == rootSite) 
 				{	
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "/" + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";				
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "/" + "\' target=\'_parent\' title=\'" + parametros[i] + "\'>home</a>";				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + "/" + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + "/" + "\' target=\'_parent\' title=\'" + parametros[j] + "\'>" + parametros[j] + "</a>";      
 						rootSite = rootSite + "/" + parametros[j];
 					}	
 				}
