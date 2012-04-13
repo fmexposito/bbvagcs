@@ -37,7 +37,7 @@
 
 		function showBreadcrumbs()
 		{			
-			var rootSite="portal-gcs";
+			var rootSite="home";
 			var s ="";
 			var i,j,k = 0;
 			var base = "";
