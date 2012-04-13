@@ -14,6 +14,7 @@
 		#title-breadcrumbs {
 			font-size:13px;
 			color:#3F78B2;
+			text-transform: capitalize;
 		}
 		a.linkBreadCrumb,
 		a:visited.linkBreadCrumb {
@@ -21,6 +22,7 @@
 			font-size:13px;
 			color:#3F78B2;
 			text-decoration:none;
+			text-transform: capitalize;
 		}
 		a:hover.linkBreadCrumb,
 		a:active.linkBreadCrumb {
@@ -29,6 +31,7 @@
 			color:#009EE5;
 			fon-weight: normal;
 			text-decoration:none;		
+			text-transform: capitalize;
 		} 
 	</style>
 	
