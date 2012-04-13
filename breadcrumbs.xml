@@ -62,7 +62,7 @@
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						var aux = parametros[j].replace("-"," ");
+						var aux = parametros[j].replace(/-/g," ");
 						if (aux.indexOf("?")>1)
 						{
 							var auxMov = aux.split("?");
