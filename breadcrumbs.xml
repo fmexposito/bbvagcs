@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs
+   title="breadcrumbs"
+   height="25"
+   description="Script que genera los breadcrumbs de forma automática"
+   />
+ <Content type="html">
+ <![CDATA[
+ 
+	<div id="title-breadcrumbs"></div>
+	
+	<style>
+		#title-breadcrumbs {
+			font-size:13px;
+			color:#3F78B2;
+		}
+		a.linkBreadCrumb,
+		a:visited.linkBreadCrumb {
+			fon-weight: normal;
+			font-size:13px;
+			color:#3F78B2;
+			text-decoration:none;
+		}
+		a:hover.linkBreadCrumb,
+		a:active.linkBreadCrumb {
+			font-style: normal;
+			font-size:13px;
+			color:#009EE5;
+			fon-weight: normal;
+			text-decoration:none;		
+		} 
+	</style>
+	
+	<script type="text/javascript">
+		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+
+		function showBreadcrumbs()
+		{			
+			var rootSite="portal-gcs";
+			var s ="";
+			var i,j,k = 0;
+			var base = "";
+			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+			var indexroot = parametros.indexOf(rootSite);
+			
+			for (i=0;i<parametros.length;i++)
+			{				
+				if(i<indexroot)
+				{
+					base = base + parametros[i]+ "/";				
+				}
+				if (parametros[i] == rootSite) 
+				{	
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "/" + "\' target=\'_parent\' title=\' " + parametros[i] + "  \'>home</a>";				
+					for(j=i+1;j<parametros.length;++j)
+					{   
+						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + "/" + "\' target=\'_parent\' title=\' " + parametros[j] + "  \'>" + parametros[j] + "</a>";      
+						rootSite = rootSite + "/" + parametros[j];
+					}	
+				}
+			}			
+			document.getElementById("title-breadcrumbs").innerHTML = s;    
+		}
+	</script>
+ ]]> 
+ </Content>
+</Module>
