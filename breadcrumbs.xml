@@ -2,15 +2,15 @@
 <Module>
 <ModulePrefs
    title="breadcrumbs"
-   height="25"
+   height="50"
    description="Script que genera los breadcrumbs de forma automática"
    />
  <Content type="html">
  <![CDATA[
  
-	<div id="title-breadcrumbs"></div>
+	<div id="title-crumbs">valor de title</div>
 	
-	<style>
+	<style>		
 		#title-breadcrumbs {
 			font-size:13px;
 			color:#3F78B2;
@@ -33,39 +33,52 @@
 			text-decoration:none;		
 			text-transform: capitalize;
 		} 
+		
 	</style>
 	
 	<script type="text/javascript">
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 
 		function showBreadcrumbs()
-		{			
-			var rootSite="home";
-			var s = "";
+		{
+			//Construct the breadcrumb string
+			var rootSite="gsiteslabscapgeminivalencia";
+			var s ="";
 			var i,j,k = 0;
 			var base = "";
+			var barra = "/";
 			var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
 			var indexroot = parametros.indexOf(rootSite);
+			// alert (parametros.length());
+			
 			
 			for (i=0;i<parametros.length;i++)
-			{				
-				if(i<indexroot)
-				{
-					base = base + parametros[i]+ "/";				
+			{
+				// alert("Entro en bucle FOR "+parametros[i]);
+				if(i<indexroot){
+				base = base + parametros[i]+ "/";
+				//alert(base);
 				}
 				if (parametros[i] == rootSite) 
-				{	
-					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + "/" + "\' target=\'_parent\' title=\'" + parametros[i] + "\'>home</a>";				
+				{	// alert("Entro en bucle IF");
+					s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace("-"," ") + "  \'>home</a>";
+				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						s = s + "  >  <a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + "/"  + parametros[j] + "/" + "\' target=\'_parent\' title=\'" + parametros[j] + "\'>" + parametros[j] + "</a>";      
+						var aux = parametros[j].replace("-"," ");
+						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\' " + aux + "  \'> >&nbsp;" + aux + "</a>";
 						rootSite = rootSite + "/" + parametros[j];
-					}	
+					}
+				
+				
 				}
-			}			
-			document.getElementById("title-breadcrumbs").innerHTML = s;    
+				
+			}
+			
+			document.getElementById("title-crumbs").innerHTML = s;    
 		}
 	</script>
- ]]> 
+ ]]>
+ 
  </Content>
 </Module>
