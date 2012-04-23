@@ -3,12 +3,12 @@
 <ModulePrefs
    title="breadcrumbs"
    height="50"
-   description="Script que genera los breadcrumbs de forma automática"
+   description="Script que genera los breadcrumbs de forma automatica"
    />
  <Content type="html">
  <![CDATA[
  
-	<div id="title-crumbs">valor de title</div>
+	<div id="titleCrumbs">breadcrumb</div>
 	
 	<style>		
 		#title-crumbs {
@@ -77,7 +77,7 @@
 					}
 				}
 			}
-			document.getElementById("title-crumbs").innerHTML = s;    
+			document.getElementById("titleCrumbs").innerHTML = s;    
 		}
 	</script>
  ]]>
