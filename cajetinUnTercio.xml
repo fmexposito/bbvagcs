@@ -44,7 +44,7 @@
 				font-size: 16px;
 				margin: 0 0 10px 0;
 				color: #3F78B2;
-			}
+			}			
 			a.enlaceboton {
 				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondobotonuntercio.png");
 				background-repeat: no-repeat;
@@ -59,6 +59,11 @@
 				text-align: center;
 				text-decoration: none;
 				width: 165px;
+			}	
+			a:hover.enlaceboton, 
+			a:active.enlaceboton,
+			a:visited.enlaceboton {
+				color: #FFFFFF;
 			}
 			.margintop {
 				margin-top: 7px !important;
