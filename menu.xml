@@ -48,7 +48,6 @@
 	width: 60px;
 	height:48px;
 }  
-
 #button li a#clientes,
 #button li a#metodologia,
 #button li a#servicing {  
@@ -64,7 +63,6 @@
 #button li a#informes,
 #button li a#global-product,
 #button li a#global-sales,
-#button li a#onboarding-clients,
 #button li a#global-customer {  
 	font-family: Arial;  
 	font-size:14px;  
@@ -75,14 +73,22 @@
 	width: 110px;
 	height:44px;
 }
-
+#button li a#global-customer {  
+	font-family: Arial;  
+	font-size:14px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 4px 0 0 0;     
+	color: #fff;  
+	width: 110px;
+	height:44px;
+}
 #button li a:hover {  
 	background-color: #2586d7;  
 }  
 #button li a:active {  
 	background-color: #2586d7;  
 }
-
 #cabeceramenu #button li a.desactivado {
 	color: #999;
 }
