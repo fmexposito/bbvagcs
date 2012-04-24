@@ -60,6 +60,7 @@
 	width: 110px;
 	height: 34px;
 } 
+#button li a#onboarding-clients,
 #button li a#informes-gestion,
 #button li a#global-product,
 #button li a#global-sales,
