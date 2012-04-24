@@ -125,7 +125,8 @@
 			html+='<h1>'+VarNombreResponsable+'</h1>';	
 			html+='<h3>'+VarCargo+'</h3>';				
 			html+='<h4><a href=\'#\' onclick=\'javascript:' + strMail + '\'>' + Varemail + '</a></h4>';
-
+			html+='<h3>'+VarTelefono+'</h3>';		
+			
 			html+='</div>';
 			html+='</td></tr></table>';
 			document.getElementById("content_div").innerHTML = html;
@@ -194,7 +195,12 @@
 				<td>
 					Correo: <input type="text" id="Varemail" value="__UP_Varemail__" onchange="registra('Varemail')">					
 				</td>
-			</tr>			
+			</tr>	
+			<tr>		
+				<td>
+					Teléfono: <input type="text" id="VarTelefono" value="__UP_VarTelefono__" onchange="registra('VarTelefono')">					
+				</td>
+			</tr>					
 		</table>
 			
 		<script type="text/javascript">			
