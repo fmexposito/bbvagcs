@@ -101,15 +101,15 @@
 </style>
 <div id="cabeceramenu">
 	<ul id="button">
-		<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/" class="first barralateral" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>
-		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral" target="_parent">Onboarding<br/>Clientes</a></li>
-		<li><a id="clientes" href="#" class="barralateral desactivado" >Clientes</a></li>
-		<li><a id="informes-gestion" href="#" class="barralateral desactivado" >Informes<br/>Gestión</a></li>  
-		<li><a id="global-sales" href="#" class="barralateral desactivado" >Global<br/>Sales</a></li>
+		<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/" class="first barralateral" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>		
+		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral" target="_parent">Onboarding<br/>Clientes</a></li>		
+		<li><a id="clientes" href="#" class="barralateral desactivado" >Clientes</a></li>		
+		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 		
+		<li><a id="informes-gestion" href="#" class="barralateral desactivado" >Informes<br/>Gestión</a></li>  	
+		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia"  target="_parent">Metodología</a></li> 
 		<li><a id="global-customer-services" href="#" class="barralateral desactivado" target="_parent">Global<br>Custormer<br>Services</a></li>
 		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral" target="_parent">Global<br/>Product</a></li>
-		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 
-		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia"  target="_parent">Metodología</a></li> 
+		<li><a id="global-sales" href="#" class="barralateral desactivado" >Global<br/>Sales</a></li>
 	</ul>  
 </div>
 <script type="text/javascript">
