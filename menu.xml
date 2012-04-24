@@ -12,7 +12,7 @@
 	background-repeat: no-repeat;
 }
 #button {  
-	padding: 5px 0 0 5px;
+	padding: 6px 0 0 5px;
 	height:60px;
 	margin: 0 0 0 0px;
 }  
@@ -60,7 +60,16 @@
 	width: 110px;
 	height:34px;
 }
-#button li a#informes,
+#button li a#informes {  
+	font-family: Arial;  
+	font-size:14px;  
+	text-decoration: none;  
+	float:left;  
+	padding: 9px 0 0 0;     
+	color: #fff;  
+	width: 110px;
+	height:43px;
+}
 #button li a#global-product,
 #button li a#global-sales,
 #button li a#global-customer {  
@@ -71,9 +80,9 @@
 	padding: 9px 0 0 0;     
 	color: #fff;  
 	width: 110px;
-	height:44px;
+	height:42px;
 }
-#button li a#global-customer {  
+#button li a#global-customer-services {  
 	font-family: Arial;  
 	font-size:14px;  
 	text-decoration: none;  
@@ -81,8 +90,13 @@
 	padding: 4px 0 0 0;     
 	color: #fff;  
 	width: 110px;
-	height:44px;
+	height:42px;
 }
+#button li a#global-customer-services.barralateral {  
+	background-image: url("http://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png");
+    background-position: right 5px;
+    background-repeat: no-repeat;
+} 
 #button li a:hover {  
 	background-color: #2586d7;  
 }  
@@ -100,7 +114,7 @@
 		<li><a id="clientes" href="#" class="barralateral desactivado" >Clientes</a></li>
 		<li><a id="informes" href="#" class="barralateral desactivado" >Informes<br/>Gestión</a></li>  
 		<li><a id="global-sales" href="#" class="barralateral desactivado" >Global<br/>Sales</a></li>
-		<li><a id="global-customer" href="#" class="barralateral desactivado" target="_parent">Global<br>Custormer<br>Services</a></li>
+		<li><a id="global-customer-services" href="#" class="barralateral desactivado" target="_parent">Global<br>Custormer<br>Services</a></li>
 		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral" target="_parent">Global<br/>Product</a></li>
 		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 
 		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia"  target="_parent">Metodología</a></li> 
