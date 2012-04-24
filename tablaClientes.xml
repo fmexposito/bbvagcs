@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+  <ModulePrefs title="TablaPaginada"
+  description="Tabla cargada desde docs con paginacion y parametrizada."
+  author_affiliation="Capgemini">
+<Require feature="idi"/>
+<Require feature="locked-domain" />
+</ModulePrefs>
+  
+<UserPref name="_table_query_url" display_name="Data source url" required="true"/>
+<UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
+<UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
+  
+<Content type="html"><![CDATA[
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+<div id="tablediv" style="overflow: auto;">
+	<img src="http://www.google.com/ig/images/spinner.gif"/>
+</div>
+
+<style type="text/css">
+        .header{ background: blue; color: white; font-size:18px; font-family: Arial, Helvetica, sans-serif;}
+        .filaPar{background: white; border-bottom: solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaImpar{background: #D3D3D3; border-bottom:solid #E2E2E2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaSeleccionada{background: white; border-bottom: solid #A22E212; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+        .filaHover{background: white; border-bottom: solid #B2B2B2; height: 50px; font-family: Arial, Helvetica, sans-serif;}
+</style>
+
+<script>
+    
+    var gadgetHelper = null;
+    _IG_RegisterOnloadHandler(loadVisualizationAPI);
+    var numElePag = 8;
+    var _Col = 3;
+	
+    function loadVisualizationAPI() {
+        google.load("visualization", "1", {"packages": ["table"]});
+        google.setOnLoadCallback(sendQuery);
+    }
+
+    function sendQuery() {
+        var prefs = new _IG_Prefs(); // User preferences
+        //var urlTable = prefs.getString("_table_query_url");
+        numElePag = prefs.getInt("_NumElemPorPagina");
+        _Col = prefs.getInt("_Col");
+        gadgetHelper = new google.visualization.GadgetHelper();
+        var query = gadgetHelper.createQueryFromPrefs(prefs);
+        query.send(handleQueryResponse);
+    }
+
+    function enlace(data, rowNum) {
+        return '<span class="jajajaja">'+ data.getValue(rowNum, 0) +'</span>';
+    }
+
+
+    function handleQueryResponse(response) {
+        if (!gadgetHelper.validateResponse(response)) { return; }
+            data = response.getDataTable();
+        var view = new google.visualization.DataView(data);
+//alert('25 _Col:'+_Col);
+        var columnasAmostrar = [];
+        for(i=0 ; i < _Col ; i++) { columnasAmostrar.push(i); }
+        
+//        columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
+        
+        view.setColumns(columnasAmostrar);
+
+    var cssClassNames = {
+        'headerRow': 'header',
+        'tableRow': 'filaPar',
+        'oddTableRow': 'filaImpar',
+        'selectedTableRow': 'filaSeleccionada',
+        'hoverTableRow': 'filaHover',
+        'headerCell': '',
+        'tableCell': '',
+        'rowNumberCell': ''};
+        
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));
+        var options = {'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
+        
+        chart.draw(view, options);
+    }
+</script>
+]]>
+</Content>
+</Module>
