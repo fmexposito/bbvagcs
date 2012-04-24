@@ -22,12 +22,12 @@
 }  
 #button li a {  
 	font-family: Arial;  
-	font-size:15px;  
+	font-size:14px;  
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;   
 	color: #fff;  
-	width: 120px;
+	width: 110px;
 	height: 34px;
 } 
 #button li a img {
@@ -40,7 +40,7 @@
 } 
 #button li a.first {  
 	font-family: Arial;  
-	font-size:15px;  
+	font-size:14px;  
 	text-decoration: none;  
 	float:left;  
 	padding: 5px 0 0 0;     
@@ -53,12 +53,12 @@
 #button li a#metodologia,
 #button li a#servicing {  
 	font-family: Arial;  
-	font-size:15px;  
+	font-size:14px;  
 	text-decoration: none;  
 	float:left;  
 	padding: 19px 0 0 0;     
 	color: #fff;  
-	width: 125px;
+	width: 115px;
 	height:34px;
 }
 #button li a#informes,
@@ -67,12 +67,12 @@
 #button li a#onboarding-clients,
 #button li a#global-customer {  
 	font-family: Arial;  
-	font-size:15px;  
+	font-size:14px;  
 	text-decoration: none;  
 	float:left;  
 	padding: 9px 0 0 0;     
 	color: #fff;  
-	width: 125px;
+	width: 115px;
 	height:44px;
 }
 
