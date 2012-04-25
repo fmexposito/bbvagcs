@@ -9,7 +9,7 @@
 	<Require feature="setprefs" />   
 </ModulePrefs>  
 	
-<UserPref name="VarrootSite" display_name="Root del Site" required="true" default_value="portal-gcs" />
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" default_value="home" />
 <Content type="html" view="configuration" preferred_height="480">
 
  <![CDATA[
