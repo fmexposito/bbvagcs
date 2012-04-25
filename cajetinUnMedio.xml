@@ -32,7 +32,7 @@
 				padding: 0 15px 10px 0;
 			}
 			#content_div {
-				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio2.png');
+				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio3.png');
 			}
 			#content_div a img {
 				padding: 0;
@@ -70,7 +70,7 @@
 			}			
 		</style>
 	
-		<div id="content_div"  style="height:270px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio2.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_div"  style="height:270px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio3.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
