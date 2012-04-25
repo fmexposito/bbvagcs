@@ -25,7 +25,7 @@
 	<UserPref name="VarBoton3URL" display_name="URL boton 3:" default_value=""/>
 	<UserPref name="VarComent" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetra" display_name="Color texto por defecto" default_value="#666"/>
-	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="13"/>
+	<UserPref name="VarSize" display_name="Tamaño de texto por defecto" default_value="12"/>
 	<Content type="html" view="home"><![CDATA[
 		<style>		
 			#content_div img {
@@ -42,7 +42,7 @@
 			}
 			h2.titulobloque {
 				font-size: 20px;
-				margin: 0 0 10px 0;
+				margin: 0 0 5px 0;
 				color: #3F78B2;
 			}
 			a.enlaceboton {
