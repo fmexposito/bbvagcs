@@ -10,6 +10,7 @@
 <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
 <UserPref name="_NumElemPorPagina" default_value="8" display_name="Número de elementos por página:" required="true"/>
 <UserPref name="_Col" default_value="4" display_name="Escoger primeras n columnas:" required="true"/>
+<UserPref name="varURLdetallePagina" default_value="https://sites.google.com/a/bbva.com/portal-gcs/clientes/detalleCliente" display_name="URL al detalle de la pagina:" required="true"/>
   
 <Content type="html"><![CDATA[
 
@@ -75,6 +76,14 @@
 			font-family: Arial, Helvetica, sans-serif;
 			height: 35px;
 		}
+		a.enlaceTabla,
+		a:active.enlaceTabla,
+		a:visited.enlaceTabla {
+			color: #3F78B2;
+		}
+		a:hover.enlaceTabla {
+			color: #009EE5;
+		}
 </style>
 <!--[if gte IE 9]>
 <style type="text/css">
@@ -89,6 +98,7 @@
     _IG_RegisterOnloadHandler(loadVisualizationAPI);
     var numElePag = 8;
     var _Col = 3;
+	//var detallePagina = prefs.getInt("varURLdetallePagina");
 	
     function loadVisualizationAPI() 
 	{
@@ -100,18 +110,18 @@
 	{
         var prefs = new _IG_Prefs(); // User preferences
         //var urlTable = prefs.getString("_table_query_url");
-        numElePag = prefs.getInt("_NumElemPorPagina");
+        numElePag = prefs.getInt("_NumElemPorPagina");		
         _Col = prefs.getInt("_Col");
         gadgetHelper = new google.visualization.GadgetHelper();
         var query = gadgetHelper.createQueryFromPrefs(prefs);
         query.send(handleQueryResponse);
     }
-
+/*
     function enlace(data, rowNum) 
 	{
         return '<span class="enlace">'+ data.getValue(rowNum, 0) +'</span>';
     }
-
+*/
 
     function handleQueryResponse(response) 
 	{
@@ -121,16 +131,31 @@
 		}
         
 		data = response.getDataTable();
-        var view = new google.visualization.DataView(data);
+        
+        
+		// columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
+		/* */
+		//https://developers.google.com/chart/interactive/docs/reference#DataView
+		//https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-CLIGLOBAL001
+		//https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-cliglobal001
+		//https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-CLIGLOBAL001
+
+		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/detallecliente-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
+		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
+		
+		//var formatterArrow = new google.visualization.PatternFormat('{2} <img src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JDLL/flecha_puntos_tabla.png" />');
+		//formatterArrow.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
+ 
+  		var view = new google.visualization.DataView(data);
+		
         var columnasAmostrar = [];
         
 		for(i=0 ; i < _Col ; i++) 
 		{ 
-			columnasAmostrar.push(i); 
+			columnasAmostrar.push(i);
 		}
-        
-		// columnasAmostrar.push("{ calc: enlace, type: 'string', label: 'blabla'}");
-        
+  
         view.setColumns(columnasAmostrar);
 
 		var cssClassNames = {
@@ -143,9 +168,9 @@
 			'tableCell': 'formateoCelda',
 			'rowNumberCell': ''
 		};
-        
+         
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
-        var options = {'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
+        var options = {'sortColumn': 1, 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};
         
         chart.draw(view, options);
     }
