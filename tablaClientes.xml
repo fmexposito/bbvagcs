@@ -11,7 +11,7 @@
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
 
 	<Content type="html">
 		<![CDATA[
