@@ -11,7 +11,7 @@
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
 
 	<Content type="html">
 		<![CDATA[
@@ -91,22 +91,15 @@
 
 		<script type="text/javascript"> 
 			
-			var gadgetHelper = null;
-			
+			var gadgetHelper = null;			
 			var varListaColumnas = "";
-			var	_Col = ""; 
-			
+			var	_Col = ""; 			
 			var prefs = new _IG_Prefs(); // User preferences	
 			var	_Col = prefs.getInt("_Col");
 			var urlTable = prefs.getString("_table_query_url");
 			var	numElePag = prefs.getInt("_NumElemPorPagina");
-			var varListaColumnas = prefs.getString("VarListaColumnas");
-			
+			var varListaColumnas = prefs.getString("VarListaColumnas");			
 			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
-			
-			//var urlDetalleFicha = "https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-";
-			//var urlDetalleFicha = "https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-";
-			//var urlDetalleFicha = "https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-";
 			
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
@@ -119,33 +112,23 @@
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
-				//var query = gadgetHelper.createQueryFromPrefs(prefs);			  
-				
+				//var query = gadgetHelper.createQueryFromPrefs(prefs);	
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("ficha-");				
 				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-				console.debug('querytosend: '+querytosend);
-				console.debug(idCliquery.toUpperCase());
-				//query.setQuery("select * where A like 'CLIGLOBAL001'");
-				
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
 			function indiceCadena (parametros, cadena)
-			{		
-				console.debug('indiceCadena <--');
-				console.debug('parametros: '+ parametros);
-				console.debug('cadena: '+ cadena);
+			{	
 				for(var i=0; i<parametros.length; i++)
 				{					
-					console.debug('parametros['+i+'].indexOf(cadena):' + parametros[i].indexOf(cadena));
 					if(parametros[i].indexOf(cadena)>-1)
 					{
 						return i;
-						console.debug('indiceCadena -->');
 					} 
 				}	
 			}
@@ -161,14 +144,9 @@
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 			function paramtoquery(param)
 			{
-				console.debug('idCliente <--');		
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
-				console.debug('arrayParametros:' + arrayParametros);		
 				var indexFicha = indiceCadena(arrayParametros,param);		
-				console.debug('indexFicha:' + indexFicha);		
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
-				console.debug('arrayidCliente:' + arrayidCliente);		
-				console.debug('idCliente -->');		
 				return arrayidCliente[1];		
 			}
 			
@@ -195,7 +173,7 @@
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
-				console.debug('version 48');
+				console.debug('tablaFichaCliente.xml version 48');
 				
 				if (_Col!="")
 				{
@@ -205,12 +183,10 @@
 					{ 
 						columnasAmostrar.push(i);
 					}
-					//console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
 					view.setColumns(columnasAmostrar);
 				}
 				else if (varListaColumnas!="")
 					{
-						//console.debug('varListaColumnas: '+varListaColumnas);	
 						var listaColumnas = varListaColumnas.split(",");
 							
 						if (listaColumnas.length > 0)
@@ -218,13 +194,9 @@
 							var arrayColumnas = [];
 							for(j=0; j<listaColumnas.length; j++)
 							{
-								//console.debug('extrayendo lista columnas');		
 								indexaux = parseInt(listaColumnas[j]);
-								//console.debug('indexaux: '+indexaux);
 								arrayColumnas.push(indexaux);
-								//console.debug('arrayColumnas['+j+']: '+arrayColumnas[j]);
 							}
-							//console.debug('varListaColumnas!="" , arrayColumnas: '+arrayColumnas);			
 							view.setColumns(arrayColumnas);
 						}
 					}
