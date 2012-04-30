@@ -113,28 +113,29 @@
 	</ul>  
 </div>
 <script type="text/javascript">
-gadgets.util.registerOnLoadHandler(datospagina);
-function datospagina()
-{
-	var parametros = gadgets.util.getUrlParameters()["parent"];	
-	if (parametros.indexOf("onboarding-clients")!=-1)
-	{
-		document.getElementById("onboarding-clients").style.backgroundColor = "#2586D7";
-	}
-	if (parametros.indexOf("global-product")!=-1)
-	{
-		document.getElementById("global-product").style.backgroundColor = "#2586d7";
-	}
-	if (parametros.indexOf("metodologia")!=-1)
-	{
-		document.getElementById("metodologia").style.backgroundColor = "#2586d7";
-	}
-	if (parametros.indexOf("servicing")!=-1)
-	{
-		document.getElementById("servicing").style.backgroundColor = "#2586d7";
-	}
+	gadgets.util.registerOnLoadHandler(datospagina);
 	
-}
+	function datospagina()
+	{
+		var parametros = gadgets.util.getUrlParameters()["parent"];	
+		if (parametros.indexOf("onboarding-clients")!=-1)
+		{
+			document.getElementById("onboarding-clients").style.backgroundColor = "#2586D7";
+		}
+		if (parametros.indexOf("global-product")!=-1)
+		{
+			document.getElementById("global-product").style.backgroundColor = "#2586d7";
+		}
+		if (parametros.indexOf("metodologia")!=-1)
+		{
+			document.getElementById("metodologia").style.backgroundColor = "#2586d7";
+		}
+		if (parametros.indexOf("servicing")!=-1)
+		{
+			document.getElementById("servicing").style.backgroundColor = "#2586d7";
+		}
+		
+	}
 </script>
 ]]></Content>
 </Module>
