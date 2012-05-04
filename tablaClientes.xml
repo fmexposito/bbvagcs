@@ -87,7 +87,7 @@
 	}
 </style>
 
-<div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+<div id="tablediv"><!--<img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/>--></div>
 
 <script type="text/javascript"> 
     
