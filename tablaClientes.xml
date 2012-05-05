@@ -83,11 +83,11 @@
 		color: #009EE5;
 	}
 	img.loading {
-		margin: 5% 0 0 40%;
+		margin: 5% 0 0 0;
 	}
 </style>
 
-<div id="tablediv"><!--<img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/>--></div>
+<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
     
@@ -128,7 +128,7 @@
 
 	function handleQueryResponse(response) 
 	{
-		console.debug('handleQueryResponse <-- 2');
+		console.debug('handleQueryResponse <-- 3');
 		
 		if (!gadgetHelper.validateResponse(response)) { return; }
 	
