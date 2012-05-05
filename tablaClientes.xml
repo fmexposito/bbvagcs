@@ -1,211 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla desde docs"
-	description="Tabla cargada con paginacion y parametrizada."
-	author_affiliation="Capgemini">
-	<Require feature="idi"/>
-	<Require feature="locked-domain" />
-</ModulePrefs>
-  
-	<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />	
+	<ModulePrefs title="Tabla listado de clientes"
+		description="Tabla cargada con paginacion y parametrizada."
+		author_affiliation="Capgemini">
+		<Require feature="idi"/>
+		<Require feature="locked-domain" />
+	</ModulePrefs>
+	
+	<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
-	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar, el rango de filas comienza por 1 (Formato: número fila-número fila):" />
-	
-<Content type="html"><![CDATA[
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
 
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<Content type="html">
+		<![CDATA[
 
-<style type="text/css">
-	 .filaPar {
-		background: white; 
-		border-bottom: 1px solid #E2E2E2; 
-		height: 45px; 
-		font-family:  Arial, Helvetica, sans-serif;
-		font-size:13px;
-	}
-	.filaImpar {
-		background: #DFE3E5; 
-		border-bottom: 1px solid #E2E2E2; 
-		height: 45px; 
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:13px;
-	}
-	.filaSeleccionada{
-		background: white; 
-		border-bottom: 1px solid #A22E212; 
-		height: 45px; 
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:13px;
-	}
-	.filaHover{
-		background: #F0EEE2; 
-		border-bottom: 1px solid #B2B2B2; 
-		height: 45px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-size:13px;
-	}
-	#tablediv table,
-	#tablediv table tr,
-	#tablediv table	tr td {
-		font-family: Arial, Helvetica, sans-serif !important;
-	}		
-	.formateoCelda {
-		font-family: Arial, Helvetica, sans-serif !important;
-		padding-left: 5px !important;
-		font-size: 12px;
-	}
-	.header {
-		background: #1e5799; /* Old browsers */
-		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-		background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
-		background: linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
-		color: white; 
-		font-size:14px; 
-		font-weight: bold;
-		text-align: center;
-		font-family: Arial, Helvetica, sans-serif;
-		height: 35px;
-	}
-	a.enlaceTabla,
-	a:active.enlaceTabla,
-	a:visited.enlaceTabla {
-		color: #3F78B2;
-	}
-	a:hover.enlaceTabla {
-		color: #009EE5;
-	}
-	img.loading {
-		margin: 5% 0 0 7%;
-	}
-</style>
+		<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+		<style type="text/css">
+			 .filaPar {
+				background: white; 
+				border-bottom: 1px solid #E2E2E2; 
+				height: 45px; 
+				font-family:  Arial, Helvetica, sans-serif;
+				font-size:14px;
+			}
+			.filaImpar {
+				background: #DFE3E5; 
+				border-bottom: 1px solid #E2E2E2; 
+				height: 45px; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:14px;
+			}
+			.filaSeleccionada{
+				background: white; 
+				border-bottom: 1px solid #A22E212; 
+				height: 45px; 
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:14px;
+			}
+			.filaHover{
+				background: #F0EEE2; 
+				border-bottom: 1px solid #B2B2B2; 
+				height: 45px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size:14px;
+			}
+			#tablediv table,
+			#tablediv table tr,
+			#tablediv table	tr td {
+				font-family: Arial, Helvetica, sans-serif !important;
+			}		
+			.formateoCelda {
+				font-family: Arial, Helvetica, sans-serif !important;
+				padding-left: 5px !important;
+			}
+			.header {
+				background: #1e5799; /* Old browsers */
+				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+				background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+				background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+				background: linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
+				color: white; 
+				font-size:15px; 
+				font-weight: bold;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+				height: 35px;
+			}
+			a.enlaceTabla,
+			a:active.enlaceTabla,
+			a:visited.enlaceTabla {
+				color: #3F78B2;
+			}
+			a:hover.enlaceTabla {
+				color: #009EE5;
+			}
+			img.loading {
+				margin: 5% 0 0 7%;
+			}
+		</style>
 
-<script type="text/javascript"> 
-    
-	var gadgetHelper = null;
-	
-	var varListaColumnas = "";
-	var	_Col = ""; 
-	var varListaFilas = "";
-	var	_Row = ""; 
-	
-	var prefs = new _IG_Prefs(); // User preferences
-	//var _filaDescartadas = prefs.getInt("_filaDescartadas");
-	var	_Col = prefs.getInt("_Col");
-	var	_Row = prefs.getInt("_Row");
-	var urlTable = prefs.getString("_table_query_url");
-	var	numElePag = prefs.getInt("_NumElemPorPagina");
-	var varListaColumnas = prefs.getString("VarListaColumnas");
-	var varListaFilas = prefs.getString("VarListaFilas");
-	
-	_IG_RegisterOnloadHandler(loadVisualizationAPI);
-	
-	function loadVisualizationAPI() 
-	{
-		google.load("visualization", "1", {"packages": ["table"]});
-		google.setOnLoadCallback(sendQuery);
-	}
+		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
-	function sendQuery() 
-	{
-		gadgetHelper = new google.visualization.GadgetHelper();
-		//var query = gadgetHelper.createQueryFromPrefs(prefs);	  
-		var opts = {dataType:'jsonp'};		
-		var query = new google.visualization.Query(urlTable, opts);
-		//query.setQuery("select A,B ");
-		query.setQuery("select * ");	  
-		query.send(handleQueryResponse);
-	}
-
-	function handleQueryResponse(response) 
-	{
-		console.debug('handleQueryResponse <-- 5');
-		
-		if (!gadgetHelper.validateResponse(response)) { return; }
-	
-		data = response.getDataTable();
-		
-		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{1}</a> ');
-		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
-		formatter.format(data, [0,1,2,3], 1); // Apply formatter and set the formatted value of the first column.
-		
-		var cssClassNames = {
-			'headerRow': 'header',
-			'tableRow': 'filaPar',
-			'oddTableRow': 'filaImpar',
-			'selectedTableRow': 'filaSeleccionada',
-			'hoverTableRow': 'filaHover',
-			'headerCell': '',
-			'tableCell': 'formateoCelda',
-			'rowNumberCell': ''
-		};
-         
-        var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-
-        var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
-		var view = new google.visualization.DataView(data);
-		
-		if (_Col!="")
-		{
-			var columnasAmostrar = [];
+		<script type="text/javascript"> 
 			
-			for(i=0 ; i < _Col ; i++) 
-			{ 
-				columnasAmostrar.push(i);
-			}			
-			view.setColumns(columnasAmostrar);
-		}
-		else if (varListaColumnas!="")
+			var gadgetHelper = null;
+			
+			var varListaColumnas = "";
+			var	_Col = ""; 
+			
+			var prefs = new _IG_Prefs(); // User preferences	
+			var	_Col = prefs.getInt("_Col");
+			var urlTable = prefs.getString("_table_query_url");
+			var	numElePag = prefs.getInt("_NumElemPorPagina");
+			var varListaColumnas = prefs.getString("VarListaColumnas");
+			
+			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+			
+			//var urlDetalleFicha = "https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-";
+			//var urlDetalleFicha = "https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-";
+			//var urlDetalleFicha = "https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-";
+			
+			_IG_RegisterOnloadHandler(loadVisualizationAPI);
+			
+			function loadVisualizationAPI() 
+			{
+				google.load("visualization", "1", {"packages": ["table"]});
+				google.setOnLoadCallback(sendQuery);
+			}
+
+			function sendQuery() 
+			{
+				gadgetHelper = new google.visualization.GadgetHelper();
+				//var query = gadgetHelper.createQueryFromPrefs(prefs);			  
+				
+				var opts = {dataType:'jsonp'};				
+				var query = new google.visualization.Query(urlTable, opts);		
+				
+				//var idCliquery = paramtoquery("ficha-");				
+				//var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";				
+				//query.setQuery("select * where A like 'CLIGLOBAL001'");
+				
+				var querytosend = "select *";
+				query.setQuery(querytosend);			  
+				query.send(handleQueryResponse);
+			}
+
+			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
+			function indiceCadena (parametros, cadena)
+			{		
+				console.debug('indiceCadena <-- ' +' parametros: '+ parametros + ' cadena: '+ cadena);
+				for(var i=0; i<parametros.length; i++)
+				{					
+					console.debug('parametros['+i+'].indexOf(cadena):' + parametros[i].indexOf(cadena));
+					if(parametros[i].indexOf(cadena)>-1)
+					{
+						return i;
+						console.debug('indiceCadena -->');
+					} 
+				}	
+			}
+			
+			// Abre el detalle de la url
+			function detalle(id)
 			{				
-				var listaColumnas = varListaColumnas.split(",");
-					
-				if (listaColumnas.length > 0)
+				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
+			}
+			
+			//obtiene el valor del parametro que le pasamos por url: 
+			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
+			function paramtoquery(param)
+			{
+				console.debug('idCliente <--');		
+				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
+				console.debug('arrayParametros:' + arrayParametros);		
+				var indexFicha = indiceCadena(arrayParametros,param);		
+				console.debug('indexFicha:' + indexFicha);		
+				var arrayidCliente = arrayParametros[indexFicha].split("-");		
+				console.debug('arrayidCliente:' + arrayidCliente);		
+				console.debug('idCliente -->');		
+				return arrayidCliente[1];		
+			}
+			
+			function handleQueryResponse(response) 
+			{
+				if (!gadgetHelper.validateResponse(response)) { return; }
+			
+				data = response.getDataTable();
+				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {1}">{1}</a> ');
+				formatter.format(data, [0,1,2,3], 1); // Apply formatter and set the formatted value of the first column.
+				
+				var cssClassNames = {
+					'headerRow': 'header',
+					'tableRow': 'filaPar',
+					'oddTableRow': 'filaImpar',
+					'selectedTableRow': 'filaSeleccionada',
+					'hoverTableRow': 'filaHover',
+					'headerCell': '',
+					'tableCell': 'formateoCelda',
+					'rowNumberCell': ''
+				};
+				 
+				var chart = new google.visualization.Table(document.getElementById('tablediv'));
+				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var view = new google.visualization.DataView(data);
+				
+				console.debug('version 45');
+				
+				if (_Col!="")
 				{
-					var arrayColumnas = [];
-					for(j=0; j<listaColumnas.length; j++)
-					{						
-						indexaux = parseInt(listaColumnas[j]);						
-						arrayColumnas.push(indexaux);
+					var columnasAmostrar = [];					
+					for(i=0 ; i < _Col ; i++) 
+					{ 
+						columnasAmostrar.push(i);
+					}
+					//console.debug('_Col es diferente de "": view.setColumns(columnasAmostrar) : '+columnasAmostrar);
+					view.setColumns(columnasAmostrar);
+				}
+				else if (varListaColumnas!="")
+					{
+						//console.debug('varListaColumnas: '+varListaColumnas);	
+						var listaColumnas = varListaColumnas.split(",");							
+						if (listaColumnas.length > 0)
+						{
+							var arrayColumnas = [];
+							for(j=0; j<listaColumnas.length; j++)
+							{
+								//console.debug('extrayendo lista columnas');		
+								indexaux = parseInt(listaColumnas[j]);
+								//console.debug('indexaux: '+indexaux);
+								arrayColumnas.push(indexaux);
+								//console.debug('arrayColumnas['+j+']: '+arrayColumnas[j]);
+							}
+							//console.debug('varListaColumnas!="" , arrayColumnas: '+arrayColumnas);			
+							view.setColumns(arrayColumnas);
+						}
+					}
+					
+				if (_Row!="")
+				{
+					var filasAmostrar = [];
+					
+					for(i=0 ; i < _Row ; i++) 
+					{ 
+						filasAmostrar.push(i);
 					}
 
-					view.setColumns(arrayColumnas);
+					view.setRows(filasAmostrar);
 				}
-			}
-		
-		if (_Row!="")
-		{
-			var filasAmostrar = [];
-			
-			for(i=0 ; i < _Row ; i++) 
-			{ 
-				filasAmostrar.push(i);
+				else if (varListaFilas!="")
+					{				
+						var listaFilas = varListaFilas.split("-");
+						if (listaFilas.length > 0)
+						{   
+							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
+						}
+					}
+						chart.draw(view, options);
 			}
 
-			view.setRows(filasAmostrar);
-		}
-		else if (varListaFilas!="")
-			{				
-				var listaFilas = varListaFilas.split("-");
-				if (listaFilas.length > 0)
-				{   
-					view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
-				}
-			}
-		
-		chart.draw(view, options);
-	}
-
-</script>
-]]>
-</Content>
+		</script>
+		]]>
+	</Content>
 </Module>
