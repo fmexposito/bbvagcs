@@ -97,13 +97,14 @@
 			
 			var varListaColumnas = "";
 			var	_Col = ""; 
+			var	_Row = ""; 
 			
 			var prefs = new _IG_Prefs(); // User preferences	
 			var	_Col = prefs.getInt("_Col");
 			var urlTable = prefs.getString("_table_query_url");
 			var	numElePag = prefs.getInt("_NumElemPorPagina");
 			var varListaColumnas = prefs.getString("VarListaColumnas");
-			
+			var	_Row = prefs.getInt("_Row");
 			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 			
 			//var urlDetalleFicha = "https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-";
