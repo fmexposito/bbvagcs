@@ -128,7 +128,7 @@
 
 	function handleQueryResponse(response) 
 	{
-		console.debug('handleQueryResponse <-- 1');
+		console.debug('handleQueryResponse <-- 2');
 		
 		if (!gadgetHelper.validateResponse(response)) { return; }
 	
