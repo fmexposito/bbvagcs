@@ -178,7 +178,7 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }
 			
 				data = response.getDataTable();
-				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {1}">{1}</a> ');
+				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" title="Ver detalle de {1}">{1}</a> ');
 				formatter.format(data, [0,1,2,3], 1); // Apply formatter and set the formatted value of the first column.
 				
 				var cssClassNames = {
