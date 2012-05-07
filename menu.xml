@@ -106,7 +106,7 @@
 		<li><a id="clientes" href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes" class="barralateral" target="_parent">Clientes</a></li>		
 		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 		
 		<li><a id="informes-gestion" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion" class="barralateral" target="_parent">Informes<br/>Gestión</a></li>  	
-		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia"  target="_parent">Metodología</a></li> 
+		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia" class="barralateral" target="_parent">Metodología</a></li> 
 		<li><a id="global-customer-services" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services " class="barralateral" target="_parent">Global<br>Custormer<br>Services</a></li>
 		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral" target="_parent">Global<br/>Product</a></li>
 		<li><a id="global-sales" href="#" class="barralateral desactivado" >Global<br/>Sales</a></li>
