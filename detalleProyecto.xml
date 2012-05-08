@@ -49,8 +49,8 @@
 			ul#datosFicha {
 				border-collapse: collapse;
 				color: #666666;
-				font-family: arial,sans-serif;
-				font-size: 13px;
+				font-family: trebuchet ms,sans-serif;
+				font-size: 12px;
 				font-style: normal;
 				font-variant: normal;
 				font-weight: normal;
@@ -65,8 +65,8 @@
 			ul#datosFicha li {
 				border-collapse: collapse;
 				color: #0b5394;
-				font-family: arial,sans-serif;
-				font-size: 13px;
+				font-family: trebuchet ms,sans-serif;
+				font-size: 12px;
 				font-style: normal;
 				font-variant: normal;
 				font-weight: normal;
