@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
 <ModulePrefs
-   title="breadcrumbs"
-   height="30"
-   description="Script que genera los breadcrumbs de forma automatica"
->
-	<Require feature="dynamic-height"/>   
-	<Require feature="setprefs" />   
+   title="breadcrumbs. breadcrumbs.xml"
+   height="35"
+   description="Script que genera los breadcrumbs de forma automatica">
+
+   <Require feature="dynamic-height"/>   	
+   
 </ModulePrefs>  
 	
 <UserPref name="VarrootSite" display_name="Root del Site" required="true" default_value="home" />
-<Content type="html" view="configuration" preferred_height="480">
 
- <![CDATA[
- <style>
-    input#VarrootSite 
-	{
-        width: 300px;
-    }		  
-  </style>
-  
-  <table width="100%" border="0" id="tablaconfig">           
-		<tr>       
-			<td>
-				Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
-			</td>
-		</tr>
-  </table>	
-  
-<script type="text/javascript">           
-	// Get userprefs
-	var prefs = new gadgets.Prefs();           
-	function registra(variable)
-	{	
-		prefs.set(variable,document.getElementById(variable).value);
-	}  	
-	gadgets.window.adjustHeight();
-</script>   
- ]]>
- </Content>
  <Content type="html">
  <![CDATA[
  
@@ -80,6 +52,8 @@
 		var prefs = new gadgets.Prefs();
 		gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 		
+		//console.debug('breadcrumbs.xml version 6');
+		
 		function indice (parametros, rootSite)
 		{	
 			for(var i=0; i<parametros.length; i++){
@@ -113,15 +87,27 @@
 				
 					for(j=i+1;j<parametros.length;++j)
 					{   
-						var aux = parametros[j].replace(/-/g," ");
+						var aux = parametros[j].replace(/-/g," ");						
+						
 						if (aux.indexOf("?")>1)
 						{
 							var auxMov = aux.split("?");
-							var litEnlace = auxMov[0]
+							var litEnlace = auxMov[0];
 						}
 						else
-						{
-							var litEnlace = aux;
+						{							
+							if (aux.indexOf("ficha")>-1)
+							{								
+								var litEnlace = "Ficha";
+							}
+							else if (aux.indexOf("detalle proyecto")>-1)
+							{								
+								var litEnlace = "Detalle Proyecto";
+							}							
+							else
+							{								
+								var litEnlace = aux;
+							}
 						}
 						if (j<parametros.length-1)
 						{
