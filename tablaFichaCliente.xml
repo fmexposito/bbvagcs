@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla listado de clientes"
+	<ModulePrefs title="Tabla listado de clientes. tablaFichaCliente.xml"
 		description="Tabla cargada con paginacion y parametrizada."
 		author_affiliation="Capgemini">
 		<Require feature="idi"/>
 		<Require feature="locked-domain" />
 	</ModulePrefs>
 	
-	<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
 	<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 	<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 	<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
+	<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
+	<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
 	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
 
 	<Content type="html">
@@ -77,10 +79,12 @@
 				margin: 5% 0 0 40%;
 			}
 		</style>
-
+v0
 		<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<script type="text/javascript"> 
+			
+			console.debug('tablaFichaCliente.xml version 53');
 			
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
@@ -91,6 +95,9 @@
 			var	numElePag = prefs.getInt("_NumElemPorPagina");
 			var varListaColumnas = prefs.getString("VarListaColumnas");			
 			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+			var	_Row = prefs.getInt("_Row");
+			var varListaFilas = prefs.getString("VarListaFilas"); 
+			
 			
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
@@ -147,7 +154,7 @@
 			
 				data = response.getDataTable();				
 				var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" >{0}</a> ');
-				formatter.format(data, [8,8]); // Apply formatter and set the formatted value of the first column.
+				formatter.format(data, [10,10]); // Apply formatter and set the formatted value of the first column.
 				
 				var cssClassNames = {
 					'headerRow': 'header',
@@ -163,8 +170,6 @@
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
-				
-				console.debug('tablaFichaCliente.xml version 48');
 				
 				if (_Col!="")
 				{
@@ -189,6 +194,27 @@
 								arrayColumnas.push(indexaux);
 							}
 							view.setColumns(arrayColumnas);
+						}
+					}
+					
+				if (_Row!="")
+				{
+					var filasAmostrar = [];
+					
+					for(i=0 ; i < _Row ; i++) 
+					{ 
+						filasAmostrar.push(i);
+					}
+
+					view.setRows(filasAmostrar);
+				}
+				
+				else if (varListaFilas!="")
+					{				
+						var listaFilas = varListaFilas.split("-");
+						if (listaFilas.length > 0)
+						{   
+							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 						}
 					}
 				
