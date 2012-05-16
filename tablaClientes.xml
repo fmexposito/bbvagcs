@@ -84,13 +84,13 @@
 		<div id="tablediv"><img class="loading" width="50" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 		<script type="text/javascript"> 
-			
-			var gadgetHelper = null;
-			
+		
+			console.debug('tablaClientes.xml v 46');
+		
+			var gadgetHelper = null;			
 			var varListaColumnas = "";
 			var	_Col = ""; 
-			var	_Row = ""; 
-			
+			var	_Row = ""; 			
 			var prefs = new _IG_Prefs(); // User preferences	
 			var	_Col = prefs.getInt("_Col");
 			var urlTable = prefs.getString("_table_query_url");
@@ -187,9 +187,7 @@
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));
 				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
-				
-				console.debug('version 45');
-				
+											
 				if (_Col!="")
 				{
 					var columnasAmostrar = [];					
@@ -239,7 +237,9 @@
 							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 						}
 					}
-						chart.draw(view, options);
+			
+				data.setColumnLabel(1,"");			
+				chart.draw(view, options);
 			}
 
 		</script>
