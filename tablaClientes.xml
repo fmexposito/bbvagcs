@@ -59,7 +59,7 @@
 				padding-left: 5px !important;
 			}
 			.header {
-				background-color: #2966B0;		
+				background-color: #fff;		
 				color: white; 
 				font-size:14px; 
 				font-weight: bold;
