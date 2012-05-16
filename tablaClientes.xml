@@ -68,7 +68,10 @@
 				height: 35px;
 				border: 1px solid #fff !important;
 			}
-			
+			google-visualization-table-th, 
+			google-visualization-table-sorthdr {
+				border: 1px solid #fff !important;
+			}
 			a.enlaceTabla,
 			a:active.enlaceTabla,
 			a:visited.enlaceTabla {
