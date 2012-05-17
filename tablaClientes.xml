@@ -53,6 +53,7 @@
 			#tablediv table tr,
 			#tablediv table	tr td {
 				font-family: Arial, Helvetica, sans-serif !important;
+				border: none !important;
 			}		
 			.formateoCelda {
 				font-family: Arial, Helvetica, sans-serif !important;
@@ -67,6 +68,7 @@
 				font-family: Arial, Helvetica, sans-serif;
 				height: 35px;
 				border: 1px solid #fff !important;
+				border: none !important;
 			}
 			google-visualization-table-th, 
 			google-visualization-table-sorthdr {
@@ -183,7 +185,7 @@
 					'oddTableRow': 'filaImpar',
 					'selectedTableRow': 'filaSeleccionada',
 					'hoverTableRow': 'filaHover',
-					'headerCell': '',
+					'headerCell': 'header',
 					'tableCell': 'formateoCelda',
 					'rowNumberCell': ''
 				};
