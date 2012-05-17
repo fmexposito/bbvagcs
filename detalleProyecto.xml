@@ -88,24 +88,28 @@
 		</style>
 		
 		<h2>
-			Detalle Proyecto <span id="nombreProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
+			Detalle Proyecto <span id="codigoProyectoTitulo"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span>
 			<hr>
 		</h2>			
 
 		<div id="detalleFicha">			
-			<ul id="datosFicha">
-				<li>Fecha: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+			<ul id="datosFicha">				
+				
+				<li>Código de proyecto: <span id="codigoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				
+				<li>Gestor Negocio: <span id="gestorNegocio"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				
+				<li>Gestor IT: <span id="gestorIT"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				
 				<li>Estado: <span id="estadoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Descripcion: <span id="descripcionProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Gestor de proyecto: <span id="gestorProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Responsable de Negocio: <span id="negocioProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Responsable de IT: <span id="responsableNegocio"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				
+				<li>Fecha: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 1');
+			console.debug('detalleProyecto.xml version 6');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -125,8 +129,10 @@
 				//var query = gadgetHelper.createQueryFromPrefs(prefs);	
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
-				var idCliquery = paramtoquery("ficha-");				
-				var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+				var idCliquery = paramtoquery("detalle-proyecto-");				
+				//console.debug('detalleProyecto.xml idCliquery: '+ idCliquery);
+				var querytosend = "select *  where K like '" + idCliquery.toUpperCase() + "'";
+				//var querytosend = "select *  where K like 'PROY0001' ";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 			}
@@ -150,7 +156,7 @@
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
 				var indexFicha = indiceCadena(arrayParametros,param);		
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
-				return arrayidCliente[1];		
+				return arrayidCliente[2];		
 			}
 			
 			function handleQueryResponse(response) 
@@ -162,15 +168,13 @@
 			
 				data = response.getDataTable();		
 								
-				document.getElementById('nombreProyecto').innerHTML = data.getValue(0,1);
-				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,2);
-				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,3);
-				document.getElementById('descripcionProyecto').innerHTML = data.getValue(0,4);				
-				document.getElementById('gestorProyecto').innerHTML = data.getValue(0,5);
-				document.getElementById('negocioProyecto').innerHTML = data.getValue(0,6);
-				document.getElementById('responsableNegocio').innerHTML = data.getValue(0,7);						
+				document.getElementById('codigoProyectoTitulo').innerHTML = data.getValue(0,1);
+				document.getElementById('codigoProyecto').innerHTML = data.getValue(0,10);
+				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
+				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
+				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
+				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);							
 			}
-
 		</script>
 		]]>
 	</Content>
