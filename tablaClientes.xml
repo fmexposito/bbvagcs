@@ -53,7 +53,7 @@
 			#tablediv table tr,
 			#tablediv table	tr td {
 				font-family: Arial, Helvetica, sans-serif !important;
-				border: none !important;
+				border: 1px solid #fff !important;
 			}		
 			.formateoCelda {
 				font-family: Arial, Helvetica, sans-serif !important;
@@ -67,11 +67,11 @@
 				text-align: center;
 				font-family: Arial, Helvetica, sans-serif;
 				height: 35px;
-				border: 1px solid #fff !important;
-				border: none !important;
+				border: 1px solid #fff !important;				
 			}
-			google-visualization-table-th, 
-			google-visualization-table-sorthdr {
+			
+			tr.header td.google-visualization-table-th, 
+			tr.header td.google-visualization-table-sorthdr {
 				border: 1px solid #fff !important;
 			}
 			a.enlaceTabla,
@@ -91,7 +91,7 @@
 
 		<script type="text/javascript"> 
 		
-			console.debug('tablaClientes.xml v 46');
+			console.debug('tablaClientes.xml v 47');
 		
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
