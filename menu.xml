@@ -229,54 +229,54 @@
 
 			<ul id="dropline">
 				<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
-				<li class="top"><a style="color:#fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients">Onboarding Clientes</a>
+				<li class="top"><a style="color:#fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" target="_parent">Onboarding Clientes</a>
 					<ul style="left: -99999px; display: none;" class="sub">
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/cuestionarios-ventas">Cuestionarios Ventas</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-servicios-visualizacion">Catálogo Conexiones H2H</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes">Guías Implementación de Clientes</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones">Plantillas de peticiones</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios">Catálogo de Servicios</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/cuestionarios-ventas" target="_parent">Cuestionarios Ventas</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-servicios-visualizacion" target="_parent">Catálogo Conexiones H2H</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes" target="_parent">Guías Implementación de Clientes</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones" target="_parent">Plantillas de peticiones</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios" target="_parent">Catálogo de Servicios</a></li>
 					</ul>
 				</li>
-				<li class="top"><a style="color:#fff;"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes">Clientes</a>
-				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing">Servicing</a>
+				<li class="top"><a style="color:#fff;"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes" target="_parent">Clientes</a>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" target="_parent">Servicing</a>
 					<ul style="left: -99999px; display: none;" class="sub">
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/informes-incidencias">Informes Servicing</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/enlaces-a-herramientas-servicing">Herramientas Servicing</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/gestion-del-servicio">Gestión del Servicio</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/infomes-servicios-contratados">Informes Servicios contratados</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/informes-incidencias" target="_parent">Informes Servicing</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/enlaces-a-herramientas-servicing" target="_parent">Herramientas Servicing</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/gestion-del-servicio" target="_parent">Gestión del Servicio</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/infomes-servicios-contratados" target="_parent">Informes Servicios contratados</a></li>
 					</ul>
 				</li>
-				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion">Informes Gestión</a>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion"target="_parent">Informes Gestión</a>
 					<ul style="left: -99999px; display: none;" class="sub">
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador">Resumen Ejecutivo Implementaciones 2012</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes">Resumen Ejecutivo Seguimiento de Clientes</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador" target="_parent">Resumen Ejecutivo Implementaciones 2012</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes" target="_parent">Resumen Ejecutivo Seguimiento de Clientes</a></li>
 					</ul>
 				</li>
-				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia">IT C&IB - GTB</a>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia" target="_parent">IT C&IB - GTB</a>
 					<ul style="left:-99999px; display: none;" class="sub floatRight">
-						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones">Plantillas Peticiones</a></li>
-						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/escenarios-de-implementacion">Escenarios de implementación</a></li>
-						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/circuitos">Circuitos</a></li>
-						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/documentacion">Documentación</a></li>
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones" target="_parent">Plantillas Peticiones</a></li>
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/escenarios-de-implementacion" target="_parent">Escenarios de implementación</a></li>
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/circuitos" target="_parent">Circuitos</a></li>
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/documentacion" target="_parent">Documentación</a></li>
 					</ul>
 				</li>
-				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services">Global Customer Services</a>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services" target="_parent">Global Customer Services</a>
 					<ul style="left: -99999px; display: none;" class="sub floatRight">				
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio">Enlaces a productos</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio">Enlaces a informes de gestión</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/clientes">Clientes</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/proyectos">Proyectos</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/plantillas-implementacion">Plantillas Implementación</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/metodologia">Metodología</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio" target="_parent">Enlaces a productos</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio" target="_parent">Enlaces a informes de gestión</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/clientes" target="_parent">Clientes</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/proyectos" target="_parent">Proyectos</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/plantillas-implementacion" target="_parent">Plantillas Implementación</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/metodologia" target="_parent">Metodología</a></li>
 					</ul>
 				</li>
-				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product">Global Product</a>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" target="_parent">Global Product</a>
 					<ul style="left: -99999px; display: none;" class="sub floatRight">
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/helpdesk">Helpdesk</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/otros-servicios">Otros servicios</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/one-format">One format</a></li>
-						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/canales">Canales</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/helpdesk" target="_parent">Helpdesk</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/otros-servicios" target="_parent">Otros servicios</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/one-format" target="_parent">One format</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/canales" target="_parent">Canales</a></li>
 					</ul>
 				</li>
 				<li class="top"><a style="color: #fff;" href="#" id="privacy">Global Sales</a></li>
