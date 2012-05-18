@@ -1,141 +1,336 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="menu portal Global Customer Solutions" />
+<ModulePrefs title="menu portal BBVA1" >
+	<Require feature="dynamic-height"/>   
+	<Require feature="setprefs" />  
+</ModulePrefs>  
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
+<Content type="html" view="configuration" preferred_height="50" style="margin-bottom:-250px;">
+<![CDATA[
+	<style>
+		input#VarrootSite {
+           width: 300px;
+          }		  
+	</style>
+  
+	<table width="100%" border="0" id="tablaconfig">           
+		<tr>       
+			<td>
+				Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
+			</td>
+		</tr>
+	</table>	
+  
+	<script type="text/javascript">           
+		// Get userprefs
+		var prefs = new gadgets.Prefs();           
+		function registra(variable)
+		{	
+			prefs.set(variable,document.getElementById(variable).value);
+		}  
+		gadgets.window.adjustHeight();
+	</script>   
+]]>
+</Content>
+
 <Content type="html"><![CDATA[
-<style> 
-	#cabeceramenu {
-		width: 960px;
-		height: 65px;
-		background-image:url(http://bbvagcs.googlecode.com/svn/trunk/fondomenu.png);	
-		margin:0;
-		padding: 0;
-		background-repeat: no-repeat;
+
+<style type="text/css">
+	/*
+	This copyright notice must be kept untouched in the stylesheet at all times.
+	The original version of this stylesheet and the associated (x)html
+	is available at http://www.stunicholls.com/menu/jquery-dropline-7.html
+	Copyright (c) 2005-2008 Stu Nicholls. All rights reserved.
+	This stylesheet and the associated (x)html may be modified in any 
+	way to fit your requirements.
+	*/
+
+	#menu {margin-top:20px; position:relative; height:38px;}
+	#dropline {position:relative; font-size:12px; height:38px; background:url(https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/fondomenuhome38.png) no-repeat;}
+	#dropline, #dropline ul {padding:0px; margin:0; list-style:none; width:948px;}
+	#dropline table {border-collapse:collapse; margin:-1px -10px; 0 0; padding:0; width:0; height:0; font-size:12px;}
+	#dropline li {float:left; height:38px;}
+	#dropline li a {float:left; display:block; height:37px; line-height:38px; padding:0 20px 0 10px; font-family:arial, sans-serif; font-size:11px; color:#fff; text-decoration:none; font-weight:bold;padding:0px 19px 0px 10px;}
+	#dropline li ul li a {color:#fff;}
+	#dropline li a.down {background:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/down.gif) no-repeat right center;}
+	#dropline li ul li a.down {font-size:14px; font-weight:bold;}
+	#dropline li ul {position:absolute; top:38px; left:-9999px; z-index:10; background:url(http://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/fade.png);}
+	#dropline li ul.floatRight li {float:right;}
+
+	#title-crumbs {
+			font-size:13px;
+			color:#3F78B2;
+			text-transform: capitalize;
+			margin-top: 5px;
+		}
+	a.linkBreadCrumb,
+	a:visited.linkBreadCrumb {
+		fon-weight: normal;
+		font-size:13px;
+		color:#3F78B2;
+		text-decoration:none;
+		text-transform: capitalize;
 	}
-	#button {  
-		padding: 6px 0 0 5px;
-		height:60px;
-		margin: 0 0 0 0px;
-	}  
-	#button li {  
-		display: inline; 
-		text-align: center; 
-	}  
-	#button li a {  
-		font-family: Arial;  
-		font-size:13px;  
-		text-decoration: none;  
-		float:left;  
-		padding: 19px 0 0 0;   
-		color: #fff;  
-		width: 105px;
-		height: 34px;
+	a:hover.linkBreadCrumb,
+	a:active.linkBreadCrumb {
+		font-style: normal;
+		font-size:13px;
+		color:#009EE5;
+		fon-weight: normal;
+		text-decoration:none;		
+		text-transform: capitalize;
 	} 
-	#button li a img {
-		border: none;
-	}
-	#button li a.barralateral {  
-		background-image: url("https://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png");
-		background-position: right 0;
-		background-repeat: no-repeat;
-	} 
-	#button li a.first {  
-		font-family: Arial;  
-		font-size: 13px;  
-		text-decoration: none;  
-		float: left;  
-		padding: 5px 0 0 0;     
-		color: #fff;  
-		width: 60px;
-		height:48px;
-	}  
-	#button li a#clientes,
-	#button li a#metodologia,
-	#button li a#servicing {  
-		font-family: Arial;  
-		font-size: 13px;  
-		text-decoration: none;  
-		float: left;  
-		padding: 19px 0 0 0;     
-		color: #fff;  
-		width: 110px;
-		height: 34px;
-	} 
-	#button li a#onboarding-clients,
-	#button li a#informes-gestion,
-	#button li a#global-product,
-	#button li a#global-sales,
-	#button li a#global-customer {  
-		font-family: Arial;  
-		font-size: 13px;  
-		text-decoration: none;  
-		float: left;  
-		padding: 9px 0 0 0;     
-		color: #fff;  
-		width: 110px;
-		height: 44px;
-	}
-	#button li a#global-customer-services {  
-		font-family: Arial;  
-		font-size: 13px;  
-		text-decoration: none;  
-		float: left;  
-		padding: 4px 0 0 0;     
-		color: #fff;  
-		width: 110px;
-		height: 49px;
-	}
-	#button li a#global-customer-services.barralateral {  
-		background-image: url("https://bbvagcs.googlecode.com/svn/trunk/barralateralmenu.png");
-		background-position: right 0px;
-		background-repeat: no-repeat;
-	} 
-	#button li a:hover {  
-		background-color: #2586d7;  
-	}  
-	#button li a:active {  
-		background-color: #2586d7;  
-	}
-	#cabeceramenu #button li a.desactivado {
-		color: #999;
-	}
+	.currentBreadCrumb {
+		fon-weight: bold;
+		font-size:13px;
+		color:#009EE5;
+		text-decoration:none;
+		text-transform: capitalize;		
+	}		
 </style>
-<div id="cabeceramenu">
-	<ul id="button">
-		<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/" class="first barralateral" target="_parent" title="home"><img src="https://bbvagcs.googlecode.com/svn/trunk/enlacehometrasp.png" alt="Home"/></a></li>		
-		<li><a id="onboarding-clients" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" class="barralateral" target="_parent">Onboarding<br/>Clientes</a></li>		
-		<li><a id="clientes" href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes" class="barralateral" target="_parent">Clientes</a></li>		
-		<li><a id="servicing" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" class="barralateral" target="_parent">Servicing</a></li> 		
-		<li><a id="informes-gestion" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion" class="barralateral" target="_parent">Informes<br/>Gestión</a></li>  	
-		<li><a id="metodologia" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia" class="barralateral" target="_parent">IT C&IB - GTB</a></li> 
-		<li><a id="global-customer-services" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services " class="barralateral" target="_parent">Global<br>Custormer<br>Services</a></li>
-		<li><a id="global-product" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" class="barralateral" target="_parent">Global<br/>Product</a></li>
-		<li><a id="global-sales" href="#" class="barralateral desactivado" >Global<br/>Sales</a></li>
-	</ul>  
-</div>
+
+<script src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/jquery-1.js" type="text/javascript"></script>
+
 <script type="text/javascript">
-	gadgets.util.registerOnLoadHandler(datospagina);
-	
-	function datospagina()
+
+	$(document).ready(function()
 	{
-		var parametros = gadgets.util.getUrlParameters()["parent"];	
-		if (parametros.indexOf("onboarding-clients")!=-1)
+		$("#dropline li.current").children("ul").css("left", "0px").show();
+		$("#dropline li.current").children(":first-child").css("color", "#c00");
+		$("#dropline li").hover(function()
 		{
-			document.getElementById("onboarding-clients").style.backgroundColor = "#2586D7";
-		}
-		if (parametros.indexOf("global-product")!=-1)
-		{
-			document.getElementById("global-product").style.backgroundColor = "#2586d7";
-		}
-		if (parametros.indexOf("metodologia")!=-1)
-		{
-			document.getElementById("metodologia").style.backgroundColor = "#2586d7";
-		}
-		if (parametros.indexOf("servicing")!=-1)
-		{
-			document.getElementById("servicing").style.backgroundColor = "#2586d7";
-		}
+			if(this.className.indexOf("current") == -1)  
+			{
+				getCurrent = $(this).parent().children("li.current:eq(0)");
+				if(this.className.indexOf("top") != -1)  
+				{
+					$(this).children("a:eq(0)").css("background-color","#2586d7");
+				}
+				else 
+				{
+					$(this).children("a:eq(0)").css("color","#000");
+				}
+
+				if (getCurrent = 1) 
+				{
+					$(this).parent().children("li.current:eq(0)").children("ul").hide();
+				}
+
+				$(this).children("ul:eq(0)").css("left", "0px").show();
+			}
+		},function()
+			{
+				if(this.className.indexOf("current") == -1)  
+				{
+					getCurrent = $(this).parent().children("li.current:eq(0)");
+
+					if(this.className.indexOf("top") != -1) 
+					{
+						$(this).children("a:eq(0)").css("color","#fff");
+						$(this).children("a:eq(0)").css("background-color","transparent");
+					}
+					else 
+					{					
+						$(this).children("a:eq(0)").css("color","#666");
+					}
+
+					if (getCurrent = 1 ) 
+					{				    
+						$(this).parent().children("li.current:eq(0)").children("ul").show();
+					}
+					
+					$(this).children("ul:eq(0)").css("left", "-99999px").hide();
+				}
+			}
+		);
+	});
+
+	var prefs = new gadgets.Prefs();
+	gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+	
+	//console.debug('breadcrumbs.xml version 6');
+	
+	function indice (parametros, rootSite)
+	{	
+		for(var i=0; i<parametros.length; i++){
+			if(parametros[i]== rootSite)
+			{
+			return i;
+			} 
+		}	
+	}
+	
+	function showBreadcrumbs()
+	{
+		// Construct the breadcrumb string
+		var rootSite = prefs.getString("VarrootSite");
+		var s ="";
+		var i,j,k = 0;
+		var base = "";
+		var barra = "/";
+		var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+		var indexroot = indice(parametros, rootSite);   
 		
+		for (i=0;i<parametros.length;i++)
+		{				
+			if(i<indexroot)
+			{
+				base = base + parametros[i]+ "/";				
+			}
+			if (parametros[i] == rootSite) 
+			{	
+				s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
+			
+				for(j=i+1;j<parametros.length;++j)
+				{   
+					var aux = parametros[j].replace(/-/g," ");						
+					
+					if (aux.indexOf("?")>1)
+					{
+						var auxMov = aux.split("?");
+						var litEnlace = auxMov[0];
+					}
+					else
+					{							
+						if (aux.indexOf("ficha")>-1)
+						{								
+							var litEnlace = "Ficha";
+						}
+						else if (aux.indexOf("detalle proyecto")>-1)
+						{								
+							var litEnlace = "Detalle Proyecto";
+						}							
+						else
+						{								
+							var litEnlace = aux;
+						}
+					}
+					if (j<parametros.length-1)
+					{
+						s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
+						rootSite = rootSite + "/" + parametros[j];
+					}
+					else
+					{						
+						s = s + " ><span class=\'currentBreadCrumb\' + parametros[j] + barra + \' >&nbsp;" + litEnlace + "</span>";
+					}
+				}
+			}
+		}
+		document.getElementById("title-crumbs").innerHTML = s;     
 	}
 </script>
+
+<!--<body id="www-stunicholls-com">
+
+<div id="wrapper">-->
+	<div id="content">
+		<div id="menu">
+
+			<ul id="dropline">
+				<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" onclick="mark"></a></li>
+				<li class="top"><a style="color:#fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients">Onboarding Clientes</a>
+					<ul style="left: -99999px; display: none;" class="sub">
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/cuestionarios-ventas">Cuestionarios Ventas</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-servicios-visualizacion">Catálogo Conexiones H2H</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes">Guías Implementación de Clientes</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones">Plantillas de peticiones</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios">Catálogo de Servicios</a></li>
+					</ul>
+				</li>
+				<li class="top"><a style="color:#fff;"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes">Clientes</a>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing">Servicing</a>
+					<ul style="left: -99999px; display: none;" class="sub">
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/informes-incidencias">Informes Servicing</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/enlaces-a-herramientas-servicing">Herramientas Servicing</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/gestion-del-servicio">Gestión del Servicio</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing/infomes-servicios-contratados">Informes Servicios contratados</a></li>
+					</ul>
+				</li>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion">Informes Gestión</a>
+					<ul style="left: -99999px; display: none;" class="sub">
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador">Resumen Ejecutivo Implementaciones 2012</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes">Resumen Ejecutivo Seguimiento de Clientes</a></li>
+					</ul>
+				</li>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia">IT C&IB - GTB</a>
+					<ul style="left:-99999px; display: none;" class="sub floatRight">
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/plantillas-peticiones">Plantillas Peticiones</a></li>
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/escenarios-de-implementacion">Escenarios de implementación</a></li>
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/circuitos">Circuitos</a></li>
+						<li><a style="color: rgb(102, 102, 102);"  href="https://sites.google.com/a/bbva.com/portal-gcs/home/metodologia/documentacion">Documentación</a></li>
+					</ul>
+				</li>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services">Global Customer Services</a>
+					<ul style="left: -99999px; display: none;" class="sub floatRight">				
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio">Enlaces a productos</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio">Enlaces a informes de gestión</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/clientes">Clientes</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/proyectos">Proyectos</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/plantillas-implementacion">Plantillas Implementación</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/metodologia">Metodología</a></li>
+					</ul>
+				</li>
+				<li class="top"><a style="color: #fff;" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product">Global Product</a>
+					<ul style="left: -99999px; display: none;" class="sub floatRight">
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/helpdesk">Helpdesk</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/otros-servicios">Otros servicios</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/one-format">One format</a></li>
+						<li><a style="color: rgb(102, 102, 102);" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/canales">Canales</a></li>
+					</ul>
+				</li>
+				<li class="top"><a style="color: #fff;" href="#" id="privacy">Global Sales</a></li>
+			</ul>
+		</div>
+
+		<!-- breadcrumbs-->
+		<div id="title-crumbs">breadcrumbs</div>
+
+<!-- Elemento de menú set visited -->
+<script type="text/javascript">
+/*
+gadgets.util.registerOnLoadHandler(datospagina);
+function datospagina()
+{
+	var parametros = gadgets.util.getUrlParameters()["parent"];	
+	if (parametros.indexOf("gadgets")!=-1)
+	{
+		document.getElementById("gadgets").style.color = "#999";
+	}
+	if (parametros.indexOf("tutoriales")!=-1)
+	{
+		document.getElementById("tutoriales").style.color = "#999";
+	}
+	if (parametros.indexOf("gas")!=-1)
+	{
+		document.getElementById("gas").style.color = "#999";
+	}
+	if (parametros.indexOf("noticias")!=-1)
+	{
+		document.getElementById("noticias").style.color = "#999";
+	}
+	if (parametros.indexOf("enlaces")!=-1)
+	{
+		document.getElementById("enlaces").style.color = "#999";
+	}
+	if (parametros.indexOf("/labs")!=-1)
+	{
+		document.getElementById("labs").style.color = "#999";
+	}
+
+}
+*/
+</script>
+
+
+
+
+
+<!--Fin of the Breadcrumbs-->
+</div> <!-- end of content -->
+
+
+
+
 ]]></Content>
 </Module>
