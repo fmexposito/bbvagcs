@@ -4,7 +4,7 @@
 	<Require feature="dynamic-height"/>   
 	<Require feature="setprefs" />  
 </ModulePrefs>  
-<UserPref name="VarrootSite" display_name="Root del Site" required="true" />
+<UserPref name="VarrootSite" display_name="Root del Site" required="true" default_value="home"/>
 <Content type="html" view="configuration" preferred_height="50" style="margin-bottom:-250px;">
 <![CDATA[
 	<style>
