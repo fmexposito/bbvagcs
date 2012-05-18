@@ -45,7 +45,7 @@
 	way to fit your requirements.
 	*/
 
-	#menu {margin-top:20px; position:relative; height:38px;}
+	#menu {margin-top:0px; position:relative; height:38px;}
 	#dropline {position:relative; font-size:12px; height:38px; background:url(https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/JMCtemp/images/fondomenuhome38.png) no-repeat;}
 	#dropline, #dropline ul {padding:0px; margin:0; list-style:none; width:948px;}
 	#dropline table {border-collapse:collapse; margin:-1px -10px; 0 0; padding:0; width:0; height:0; font-size:12px;}
@@ -61,7 +61,7 @@
 			font-size:13px;
 			color:#3F78B2;
 			text-transform: capitalize;
-			margin-top: 5px;
+			margin-top: 7px;
 		}
 	a.linkBreadCrumb,
 	a:visited.linkBreadCrumb {
