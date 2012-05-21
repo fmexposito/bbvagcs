@@ -90,7 +90,7 @@
 			}
 </style>
 <div id="tablediv2"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
-<br>692<br>
+<br>693<br>
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -181,8 +181,11 @@
 					
 					//dataAux.setCell(fila,col,dataAux.setFormattedValue(fila,col,data.getFormattedValue(aux,1)));
 					//dataAux.setCell(fila,col-1,dataAux.setFormattedValue(fila,col-1,data.getFormattedValue(aux,0)));
-					dataAux.setCell(fila,col,data.getFormattedValue(aux,1));
-					dataAux.setCell(fila,col-1,data.getFormattedValue(aux,0));
+					dataAux.setCell(fila,col,data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+					dataAux.setCell(fila,col-1,data.getFormattedValue(aux,0),data.getProperties(aux, 0));
+					
+					
+					
 					
 					aux++;			
 				}
