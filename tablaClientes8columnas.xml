@@ -89,7 +89,8 @@
 				color: #00008B;
 			}
 </style>
-687
+<div id="tablediv2"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+<br>688<br>
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -146,10 +147,12 @@
 		};
          
         var chart = new google.visualization.Table(document.getElementById('tablediv'));
+		var chart2 = new google.visualization.Table(document.getElementById('tablediv2'));
 		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var dataAux = new google.visualization.DataTable();
 		//Create DataView
 		var view = new google.visualization.DataView(dataAux);
+		var view2 = new google.visualization.DataView(data);
 		
 		var aux = 1;
 	    dataAux.addRows(total);
@@ -200,7 +203,9 @@
 		//Select the Columns to DataView
 		view.setColumns([1,5,9,13,17,21,25,29]);	
 		dataAux.setColumnLabel(1,"");		
-		chart.draw(view,options);	  	
+		chart.draw(view,options);	
+		
+		chart2.draw(view2,options);	
 	}
 		
 </script>
