@@ -168,8 +168,13 @@
 			{
 				try
 				{
-					dataAux.setCell(fila,col,data.getValue(aux,1));
-					dataAux.setCell(fila,col-1,data.getValue(aux,0));
+				
+					//dataAux.setCell(fila,col,data.getValue(aux,1));
+					//dataAux.setCell(fila,col-1,data.getValue(aux,0));
+					
+					dataAux.setCell(fila,col,data.getFormattedValue(aux,1));
+					dataAux.setCell(fila,col-1,data.getFormattedValue(aux,0));
+					
 					aux++;			
 				}
 				catch (err)
