@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+	<ModulePrefs title="Tabla desde docs"
+	description="Tabla cargada con paginacion y parametrizada."
+	author_affiliation="Capgemini">
+	<Require feature="idi"/>
+	<Require feature="locked-domain" />
+</ModulePrefs>
+  
+<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
+
+<Content type="html"><![CDATA[
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+
+<style type="text/css">
+	 .filaPar {
+		background: white; 
+		border-bottom: 1px solid #E2E2E2; 
+		height: 45px; 
+		font-family:  Arial, Helvetica, sans-serif;
+		font-size:14px;
+	}
+	.filaImpar {
+		background: #DFE3E5; 
+		border-bottom: 1px solid #E2E2E2; 
+		height: 45px; 
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+	}
+	.filaSeleccionada{
+		background: white; 
+		border-bottom: 1px solid #A22E212; 
+		height: 45px; 
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+	}
+	.filaHover{
+		background: #F0EEE2; 
+		border-bottom: 1px solid #B2B2B2; 
+		height: 45px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+	}
+	#tablediv table,
+	#tablediv table tr,
+	#tablediv table	tr td {
+		font-family: Arial, Helvetica, sans-serif !important;
+	}		
+	.formateoCelda {
+		font-family: Arial, Helvetica, sans-serif !important;
+		padding-left: 5px !important;
+	}
+	.header {
+		background: #1e5799; /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+		background: linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-8 */
+		color: white; 
+		font-size:15px; 
+		font-weight: bold;
+		text-align: center;
+		font-family: Arial, Helvetica, sans-serif;
+		height: 35px;
+	}
+	a.enlaceTabla,
+	a:active.enlaceTabla,
+	a:visited.enlaceTabla {
+		color: #3F78B2;
+	}
+	a:hover.enlaceTabla {
+		color: #009EE5;
+	}
+	img.loading {
+		margin: 5% 0 0 40%;
+	}
+</style>
+682
+<div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
+<script type="text/javascript"> 
+    
+	var gadgetHelper = null;
+	
+	
+	
+	var prefs = new _IG_Prefs(); // User preferences
+	var urlTable = prefs.getString("_table_query_url");
+	var	numElePag = prefs.getInt("_NumElemPorPagina");
+	
+	
+	
+	_IG_RegisterOnloadHandler(loadVisualizationAPI);
+	
+	function loadVisualizationAPI() 
+	{
+		google.load("visualization", "1", {"packages": ["table"]});
+		google.setOnLoadCallback(sendQuery);
+	}
+
+	function sendQuery() 
+	{
+		gadgetHelper = new google.visualization.GadgetHelper();
+		//var query = gadgetHelper.createQueryFromPrefs(prefs);
+	  
+		var opts = {dataType:'jsonp'};
+		
+		var query = new google.visualization.Query(urlTable, opts);
+		//query.setQuery("select A,B ");
+		query.setQuery("select * ");
+	  
+		query.send(handleQueryResponse);
+	}
+
+	function handleQueryResponse(response) 
+	{
+		if (!gadgetHelper.validateResponse(response)) { return; }
+	
+		data = response.getDataTable();
+		
+		var count = (data.getNumberOfRows())/8;
+		var roundCount = Math.ceil(count);
+		var resto = (data.getNumberOfRows())%64;
+		var result = (data.getNumberOfRows())%8;
+		var total = roundCount+result;
+		//alert(total+" prueba");
+
+		var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/tabla-clientes/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
+		//var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="https://sites.google.com/a/bbva.com/portal-gcs/listaclientespruebas/ficha-{0}" target="_parent" title="Ver detalle de {1}">{0}</a> ');
+		formatter.format(data, [0,0]); // Apply formatter and set the formatted value of the first column.
+		
+		
+		var cssClassNames = {
+			'headerRow': 'header',
+			'tableRow': 'filaPar',
+			'oddTableRow': 'filaImpar',
+			'selectedTableRow': 'filaSeleccionada',
+			'hoverTableRow': 'filaHover',
+			'headerCell': '',
+			'tableCell': 'formateoCelda',
+			'rowNumberCell': ''
+		};
+         
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));		
+
+        var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+		
+		var dataAux = new google.visualization.DataTable();
+		
+		var aux = 1;
+	    dataAux.addRows(total);
+		
+	
+	for (var columna=0;columna<8;columna++){
+		
+		for(var j=0;j<4;j++){
+			
+		    dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+		   
+			
+			 
+		}
+		
+	}	
+	/*
+	for(var fila=0;fila<total;fila++)
+	{
+		for (var col=0; col<4; col++)
+		{	 
+				
+				 dataAux.setCell(fila,col+4*0,data.getValue(fila,col));
+				 
+				
+			for(var i=0;i<roundCount;i++){	
+			
+					try{
+						dataAux.setCell(fila,col+4*i,data.getValue(1+(fila+(roundCount*i)),col));
+				}catch (err){
+					break;
+				}
+				
+			}
+		}
+			
+	}*/
+	
+	for (var fila=0; fila<total; fila++){
+		
+			for(var col=1; col<=29; col+=4){
+		
+			try{
+			//for(var aux=1; aux<9;aux++){
+			dataAux.setCell(fila,col,data.getValue(aux,1));
+			aux++;
+			//}
+			}catch (err){
+					break;
+				}
+			}
+		}
+	
+	//alert(aux);
+	
+	
+		// Apply formatter and set the formatted value.
+     	var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+		
+		formatter.format(dataAux,[1,0]); 
+		formatter.format(dataAux,[5,4]); 
+		formatter.format(dataAux,[9,8]); 
+		formatter.format(dataAux,[13,12]); 
+		formatter.format(dataAux,[17,16]); 
+		formatter.format(dataAux,[21,20]); 
+		formatter.format(dataAux,[25,24]); 
+		formatter.format(dataAux,[29,28]); 
+		
+
+		//Create DataView
+		var view = new google.visualization.DataView(dataAux);
+		//Select the Columns to DataView
+		view.setColumns([1,5,9,13,17,21,25,29]);
+		
+		function detalle(id)
+			{				
+				window.parent.location.href = urlDetalleFicha + id.toLowerCase();
+				
+			}
+		
+		chart.draw(view,options);	  
+	
+	}
+	
+</script>
+]]>
+</Content>
+</Module>
