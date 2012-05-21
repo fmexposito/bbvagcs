@@ -89,7 +89,7 @@
 	}
 </style>
 
-689
+690
 
 <div id="tablediv"><img class="loading" width="100" src="https://gsites-labs-capgemini-valencia.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
@@ -170,8 +170,9 @@
 			for(var col=1; col<=29; col+=4)
 			{
 				try 
-				{				
+				{	
 					dataAux.setCell(fila,col,data.getValue(aux,1));
+					dataAux.setCell(fila,col-1,data.getValue(aux,0));					
 					aux++;			
 				}
 				catch (err)
