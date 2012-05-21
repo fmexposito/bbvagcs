@@ -9,7 +9,7 @@
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
-<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/site/gsiteslabscapgeminivalencia/home/labs/jose/listado-clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
+<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
 
 <Content type="html"><![CDATA[
 
@@ -80,10 +80,12 @@
 		a.enlaceTabla,
 		a:active.enlaceTabla,
 		a:visited.enlaceTabla {
-			color: #00008B;			
+			color: #00008B;	
+			font-size:12px; 			
 		}
 		a:hover.enlaceTabla {
 			color: #009EE5;
+			font-size:12px;
 		}
 		img.loading {
 			margin: 5% 0 0 7%;
