@@ -180,7 +180,7 @@
 					
 					
 					dataAux.setCell(fila,col,dataAux.setFormattedValue(fila,col,data.getFormattedValue(aux,1)));
-					dataAux.setCell(fila,col-1,dataAux.setFormattedValue(fila,col,data.getFormattedValue(aux,0)));
+					dataAux.setCell(fila,col-1,dataAux.setFormattedValue(fila,col-1,data.getFormattedValue(aux,0)));
 					//dataAux.setFormattedValue(fila,col,data.getFormattedValue(aux,1));
 					//dataAux.setFormattedValue(fila,col-1,data.getFormattedValue(aux,0));
 					
