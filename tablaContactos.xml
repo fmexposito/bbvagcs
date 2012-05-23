@@ -59,7 +59,8 @@
 		font-size:12px;		
 	}
 	.header {
-		background: #1e5799; 
+		background: rgb(00, 158, 229);
+		/*#1e5799; */
 		color: white; 
 		font-size:12px; 
 		font-weight: bold;
@@ -80,6 +81,19 @@
 	}
 </style>
 
+<table border="0" cellspacing="0" style="border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-color:rgb(255,255,255);border-right-color:rgb(255,255,255);border-bottom-color:rgb(255,255,255);border-left-color:rgb(255,255,255);color:rgb(11,83,148);line-height:25px;font-family:trebuchet ms,sans-serif;font-size:large;border-collapse:collapse">
+<tbody>
+<tr>
+<td style="width:43px;height:37px"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/_/rsrc/1335189561412/home/onboarding-clients/plantillas-peticiones/articulos_de_prensa_32x32.png" style="display:inline;float:left;margin-top:5px;margin-right:10px;margin-bottom:0px;margin-left:0px"></td>
+<td style="width:541px;height:37px"><span style="border-collapse:separate">
+<div style="line-height:18px;font-size:x-large"><br>
+<font size="5">Datos cliente <span id="nombrecliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span><br>
+</font></div>
+</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -206,7 +220,8 @@
 						view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 					}
 				}
-		
+				
+		document.getElementById('nombrecliente').innerHTML = data.getValue(0,1);	
 		chart.draw(view,options);	
 	}
 </script>
