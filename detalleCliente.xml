@@ -20,7 +20,7 @@
 			}
 			h2 {
 				color: #0B5394;
-				font-family: trebuchet ms,sans-serif;
+				font-family: arial,sans-serif;
 				font-size: x-large;
 				line-height:18px;
 				margin-left: 5px;
@@ -49,7 +49,7 @@
 			ul#datosFicha {
 				border-collapse: collapse;
 				color: #666666;
-				font-family: trebuchet ms,sans-serif;
+				font-family: arial,sans-serif;
 				font-size: 12px;
 				font-style: normal;
 				font-variant: normal;
@@ -65,7 +65,7 @@
 			ul#datosFicha li {
 				border-collapse: collapse;
 				color: #0b5394;
-				font-family: trebuchet ms,sans-serif;
+				font-family: arial,sans-serif;
 				font-size: 12px;
 				font-style: normal;
 				font-variant: normal;
@@ -81,8 +81,8 @@
 			
 			ul#datosFicha li span,
 			ul#listaproductos span li  {
-				font-family: trebuchet ms,sans-serif;
-				font-size: small;
+				font-family: arial,sans-serif;
+				font-size: 12px;
 				line-height: 17px;
 				text-align: justify;
 				color: #666666;
@@ -207,8 +207,7 @@
 				{
 					productos += "<li>"+data.getValue(i,2) + " - " + data.getValue(i,1) + "</li>";
 				}
-					
-				
+								
 				document.getElementById('idProducto').innerHTML = productos;				
 			}
 			
