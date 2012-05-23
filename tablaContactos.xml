@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Gadget Contactos"
+	<ModulePrefs title="Contactos cliente"
 	description="Tabla que visualiza los datos del Cliente"
 	author_affiliation="Capgemini">
 	<Require feature="idi"/>
