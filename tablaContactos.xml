@@ -8,7 +8,7 @@
 </ModulePrefs>
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
-<UserPref name="columna_a_formatear" default_value="" display_name="Columna a formatear" required="true" />
+<!--<UserPref name="columna_a_formatear" default_value="" display_name="Columna a formatear" required="true" />-->
 <UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
 <UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 <UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
@@ -87,17 +87,17 @@
 </style>
 
 <table border="0" cellspacing="0" style="border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-color:rgb(255,255,255);border-right-color:rgb(255,255,255);border-bottom-color:rgb(255,255,255);border-left-color:rgb(255,255,255);color:rgb(11,83,148);line-height:25px;font-family:trebuchet ms,sans-serif;font-size:large;border-collapse:collapse">
-<tbody>
-	<tr>
-		<td style="width:43px;height:37px"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/_/rsrc/1335189561412/home/onboarding-clients/plantillas-peticiones/articulos_de_prensa_32x32.png" style="display:inline;float:left;margin-top:5px;margin-right:10px;margin-bottom:0px;margin-left:0px"></td>
-		<td style="width:541px;height:37px"><span style="border-collapse:separate">
-		<div style="line-height:18px;font-size:x-large"><br>
-		<font size="5">Datos cliente <span id="nombrecliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span><br>
-		</font></div>
-		</span>
-		</td>
-	</tr>
-</tbody>
+	<tbody>
+		<tr>
+			<td style="width:43px;height:37px"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/_/rsrc/1335189561412/home/onboarding-clients/plantillas-peticiones/articulos_de_prensa_32x32.png" style="display:inline;float:left;margin-top:5px;margin-right:10px;margin-bottom:0px;margin-left:0px"></td>
+			<td style="width:541px;height:37px"><span style="border-collapse:separate">
+				<div style="line-height:18px;font-size:x-large"><br>
+				<font size="5">Datos cliente <span id="nombrecliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span><br>
+				</font></div>
+				</span>
+			</td>
+		</tr>
+	</tbody>
 </table>
 <hr>
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
@@ -107,7 +107,7 @@
 	var prefs = new _IG_Prefs(); // User preferences
 	var urlTable = prefs.getString("_table_query_url");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
-	var aformatear = prefs.getInt("columna_a_formatear");
+	//var aformatear = prefs.getInt("columna_a_formatear");
 	//var Varemail = prefs.getString("{}");
 	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 	var	numElePag = prefs.getInt("_NumElemPorPagina");
