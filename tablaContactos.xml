@@ -51,10 +51,12 @@
 	#tablediv table tr,
 	#tablediv table	tr td {
 		font-family: Arial, Helvetica, sans-serif !important;
+		font-size:12px;
 	}		
 	.formateoCelda {
 		font-family: Arial, Helvetica, sans-serif !important;
 		padding-left: 5px !important;
+		font-size:12px;
 	}
 	.header {
 		background: #1e5799; 
@@ -132,22 +134,7 @@
 		var indexFicha = indiceCadena(arrayParametros,param);						
 		var arrayidCliente = arrayParametros[indexFicha].split("-");		
 		return arrayidCliente[1];		
-	}
-		
-			
-	
-	function sendGmail(Varemail)
-	{
-		var to = Varemail;
-		var subject ='Peticion de Informacion';
-		var message ='';
-		var str = 'window.open(\"http://mail.google.com/mail/?view=cm&fs=1' + '&to=' + to + '&su=' + subject + '&body=' + message.replace(/\n/g,'%0A') + '&ui=1\",\"send mail\")';				
-		return str;
-	}
-	
-	
-	
-	
+	}	
 	
 	function handleQueryResponse(response) 
 	{
@@ -155,13 +142,9 @@
 		
 		data = response.getDataTable();
 		
-		var formatter = new google.visualization.PatternFormat('<a href=\"#\" class=\"enlaceTabla\" onclick=\'window.open(\"http://mail.google.com/mail/?view=cm&fs=1&to={1}&ui=1\",\"send mail\")\'>{1}</a>');
-		
+		var formatter = new google.visualization.PatternFormat('<a href=\"#\" class=\"enlaceTabla\" onclick=\'window.open(\"http://mail.google.com/mail/?view=cm&fs=1&to={1}&ui=1\",\"send mail\")\'>{1}</a>');		
 		formatter.format(data, [6,6]);
-	
 		
-		
-	
 		var cssClassNames = {
 			'headerRow': 'header',
 			'tableRow': 'filaPar',
@@ -177,60 +160,55 @@
 		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var view = new google.visualization.DataView(data);
 		
-		
-		
-		
-			if (_Col!="")
-				{
-					var columnasAmostrar = [];
-					
-					for(i=0 ; i < _Col ; i++) 
-					{ 
-						columnasAmostrar.push(i);
-					}
-					view.setColumns(columnasAmostrar);
+		if (_Col!="")
+			{
+				var columnasAmostrar = [];
+				
+				for(i=0 ; i < _Col ; i++) 
+				{ 
+					columnasAmostrar.push(i);
 				}
-				else if (varListaColumnas!="")
-					{
-						var listaColumnas = varListaColumnas.split(",");
-							
-						if (listaColumnas.length > 0)
-						{
-							var arrayColumnas = [];
-							for(j=0; j<listaColumnas.length; j++)
-							{
-								indexaux = parseInt(listaColumnas[j]);
-								arrayColumnas.push(indexaux);
-							}
-							view.setColumns(arrayColumnas);
-						}
-					}
-					
-				if (_Row!="")
+				view.setColumns(columnasAmostrar);
+			}
+			else if (varListaColumnas!="")
 				{
-					var filasAmostrar = [];
-					
-					for(i=0 ; i < _Row ; i++) 
-					{ 
-						filasAmostrar.push(i);
+					var listaColumnas = varListaColumnas.split(",");
+						
+					if (listaColumnas.length > 0)
+					{
+						var arrayColumnas = [];
+						for(j=0; j<listaColumnas.length; j++)
+						{
+							indexaux = parseInt(listaColumnas[j]);
+							arrayColumnas.push(indexaux);
+						}
+						view.setColumns(arrayColumnas);
 					}
-
-					view.setRows(filasAmostrar);
 				}
 				
-				else if (varListaFilas!="")
-					{				
-						var listaFilas = varListaFilas.split("-");
-						if (listaFilas.length > 0)
-						{   
-							view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
-						}
+			if (_Row!="")
+			{
+				var filasAmostrar = [];
+				
+				for(i=0 ; i < _Row ; i++) 
+				{ 
+					filasAmostrar.push(i);
+				}
+
+				view.setRows(filasAmostrar);
+			}
+			
+			else if (varListaFilas!="")
+				{				
+					var listaFilas = varListaFilas.split("-");
+					if (listaFilas.length > 0)
+					{   
+						view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
 					}
+				}
 		
-	chart.draw(view,options);	  
-	
+		chart.draw(view,options);	
 	}
-	
 </script>
 ]]>
 </Content>
