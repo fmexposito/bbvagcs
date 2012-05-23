@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Gadget Contactos"
+	<ModulePrefs title=""
 	description="Tabla que visualiza los datos del Cliente"
 	author_affiliation="Capgemini">
 	<Require feature="idi"/>
@@ -8,7 +8,7 @@
 </ModulePrefs>
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
-<!--<UserPref name="columna_a_formatear" default_value="" display_name="Columna a formatear" required="true" />-->
+
 <UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
 <UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
 <UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
@@ -92,7 +92,7 @@
 			<td style="width:43px;height:37px"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/_/rsrc/1335189561412/home/onboarding-clients/plantillas-peticiones/articulos_de_prensa_32x32.png" style="display:inline;float:left;margin-top:5px;margin-right:10px;margin-bottom:0px;margin-left:0px"></td>
 			<td style="width:541px;height:37px"><span style="border-collapse:separate">
 				<div style="line-height:18px;font-size:x-large"><br>
-				<font size="5">Contacto BBVA<br>
+				<font size="5">Contactos BBVA<br>
 				</font></div>
 				</span>
 			</td>
@@ -227,7 +227,6 @@
 					}
 				}
 				
-		document.getElementById('nombrecliente').innerHTML = data.getValue(0,1);	
 		chart.draw(view,options);	
 	}
 </script>
