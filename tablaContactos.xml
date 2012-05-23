@@ -15,39 +15,37 @@
 <UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
 <UserPref name="_NumElemPorPagina" default_value="" display_name="Numero de elementos por pagina:" required="true" />
 
-
 <Content type="html"><![CDATA[
-
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
 <style type="text/css">
 	 .filaPar {
 		background: white; 
 		border-bottom: 1px solid #E2E2E2; 
-		height: 45px; 
+		height: 30px; 
 		font-family:  Arial, Helvetica, sans-serif;
 		font-size:14px;
 	}
 	.filaImpar {
 		background: #DFE3E5; 
 		border-bottom: 1px solid #E2E2E2; 
-		height: 45px; 
+		height: 30px; 
 		font-family: Arial, Helvetica, sans-serif;
 		font-size:14px;
 	}
 	.filaSeleccionada{
 		background: white; 
 		border-bottom: 1px solid #A22E212; 
-		height: 45px; 
+		height: 30px; 
 		font-family: Arial, Helvetica, sans-serif;
 		font-size:14px;
 	}
 	.filaHover{
 		background: #F0EEE2; 
 		border-bottom: 1px solid #B2B2B2; 
-		height: 45px;
+		height: 30px;
 		font-family: Arial, Helvetica, sans-serif;
-		font-size:14px;
+		font-size:12px;
 	}
 	#tablediv table,
 	#tablediv table tr,
@@ -61,11 +59,11 @@
 	.header {
 		background: #1e5799; 
 		color: white; 
-		font-size:15px; 
+		font-size:12px; 
 		font-weight: bold;
 		text-align: center;
 		font-family: Arial, Helvetica, sans-serif;
-		height: 35px;
+		height: 30px;
 	}
 	a.enlaceTabla,
 	a:active.enlaceTabla,
@@ -79,7 +77,6 @@
 		margin: 5% 0 0 40%;
 	}
 </style>
-
 
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
@@ -117,16 +114,15 @@
 	}
 	
 	function indiceCadena (parametros, cadena)
-			{	
-				for(var i=0; i<parametros.length; i++)
-				{					
-					if(parametros[i].indexOf(cadena)>-1)
-					{
-						return i;
-					} 
-				}	
-			}	
-	
+	{	
+		for(var i=0; i<parametros.length; i++)
+		{					
+			if(parametros[i].indexOf(cadena)>-1)
+			{
+				return i;
+			} 
+		}	
+	}	
 	
 	//obtiene el valor del parametro que le pasamos por url: 
 	// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
