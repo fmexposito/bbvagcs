@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+	<ModulePrefs title="Gadget Contactos"
+	description="Tabla que visualiza los datos del Cliente"
+	author_affiliation="Capgemini">
+	<Require feature="idi"/>
+	<Require feature="locked-domain" />
+</ModulePrefs>
+  
+<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+<!--<UserPref name="columna_a_formatear" default_value="" display_name="Columna a formatear" required="true" />-->
+<UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
+<UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />	
+<UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />	
+<UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
+<UserPref name="_NumElemPorPagina" default_value="" display_name="Numero de elementos por pagina:" required="true" />
+
+<Content type="html"><![CDATA[
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+
+<style type="text/css">
+	 .filaPar {
+		background: white; 
+		border-bottom: 1px solid #E2E2E2; 
+		height: 35px; 
+		font-family:  Arial, Helvetica, sans-serif;
+		font-size:12px;
+	}
+	.filaImpar {
+		background: #DFE3E5; 
+		border-bottom: 1px solid #E2E2E2; 
+		height: 35px; 
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:12px;
+	}
+	.filaSeleccionada{
+		background: white; 
+		border-bottom: 1px solid #A22E212; 
+		height: 35px; 
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:12px;
+	}
+	.filaHover{
+		background: #F0EEE2; 
+		border-bottom: 1px solid #B2B2B2; 
+		height: 35px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:12px;
+	}
+	#tablediv table,
+	#tablediv table tr,
+	#tablediv table	tr td {
+		font-family: Arial, Helvetica, sans-serif !important;
+		font-size:12px;
+	}		
+	.formateoCelda {
+		font-family: Arial, Helvetica, sans-serif !important;
+		padding-left: 5px !important;
+		font-size:12px;		
+	}
+	.header {
+		background: rgb(00, 158, 229);
+		/*#1e5799; */
+		color: white; 
+		font-size:12px; 
+		font-weight: bold;
+		text-align: center;
+		font-family: Arial, Helvetica, sans-serif;
+		height: 30px;
+	}
+	a.enlaceTabla,
+	a:active.enlaceTabla,
+	a:visited.enlaceTabla {
+		color: #3F78B2;
+	}
+	a:hover.enlaceTabla {
+		color: #009EE5;
+	}
+	img.loading {
+		margin: 5% 0 0 40%;
+	}
+	hr {
+		border: 0;
+		background-color: #CCC;
+		height: 1px;
+	}
+</style>
+
+<table border="0" cellspacing="0" style="border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-color:rgb(255,255,255);border-right-color:rgb(255,255,255);border-bottom-color:rgb(255,255,255);border-left-color:rgb(255,255,255);color:rgb(11,83,148);line-height:25px;font-family:trebuchet ms,sans-serif;font-size:large;border-collapse:collapse">
+	<tbody>
+		<tr>
+			<td style="width:43px;height:37px"><img border="0" src="https://sites.google.com/a/bbva.com/portal-gcs/_/rsrc/1335189561412/home/onboarding-clients/plantillas-peticiones/articulos_de_prensa_32x32.png" style="display:inline;float:left;margin-top:5px;margin-right:10px;margin-bottom:0px;margin-left:0px"></td>
+			<td style="width:541px;height:37px"><span style="border-collapse:separate">
+				<div style="line-height:18px;font-size:x-large"><br>
+				<font size="5">Contacto BBVA<br>
+				</font></div>
+				</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<hr>
+<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
+<script type="text/javascript"> 
+	var gadgetHelper = null;
+	var prefs = new _IG_Prefs(); // User preferences
+	var urlTable = prefs.getString("_table_query_url");
+	var	numElePag = prefs.getInt("_NumElemPorPagina");
+	//var aformatear = prefs.getInt("columna_a_formatear");
+	//var Varemail = prefs.getString("{}");
+	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+	var	numElePag = prefs.getInt("_NumElemPorPagina");
+	var varListaColumnas = prefs.getString("VarListaColumnas");			
+	var	_Row = prefs.getInt("_Row");
+	var	_Col = prefs.getInt("_Col");
+	var varListaFilas = prefs.getString("VarListaFilas"); 
+	
+	_IG_RegisterOnloadHandler(loadVisualizationAPI);
+	
+	function loadVisualizationAPI() 
+	{
+		google.load("visualization", "1", {"packages": ["table"]});
+		google.setOnLoadCallback(sendQuery);
+	}
+
+	function sendQuery() 
+	{
+		gadgetHelper = new google.visualization.GadgetHelper();
+	    var opts = {dataType:'jsonp'};
+		var query = new google.visualization.Query(urlTable, opts);
+		var idCliquery = paramtoquery("contactos-");
+		var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+		query.setQuery(querytosend);
+		query.send(handleQueryResponse);
+	}
+	
+	function indiceCadena (parametros, cadena)
+	{	
+		for(var i=0; i<parametros.length; i++)
+		{					
+			if(parametros[i].indexOf(cadena)>-1)
+			{
+				return i;
+			} 
+		}	
+	}	
+	
+	//obtiene el valor del parametro que le pasamos por url: 
+	// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
+	function paramtoquery(param)
+	{
+		var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");						
+		var indexFicha = indiceCadena(arrayParametros,param);						
+		var arrayidCliente = arrayParametros[indexFicha].split("-");		
+		return arrayidCliente[1];		
+	}	
+	
+	function handleQueryResponse(response) 
+	{
+		if (!gadgetHelper.validateResponse(response)) { return; }		
+		
+		data = response.getDataTable();
+		
+		var formatter = new google.visualization.PatternFormat('<a href=\"#\" class=\"enlaceTabla\" onclick=\'window.open(\"http://mail.google.com/mail/?view=cm&fs=1&to={1}&ui=1\",\"send mail\")\'>{1}</a>');		
+		formatter.format(data, [11,11]);
+		
+		var cssClassNames = {
+			'headerRow': 'header',
+			'tableRow': 'filaPar',
+			'oddTableRow': 'filaImpar',
+			'selectedTableRow': 'filaSeleccionada',
+			'hoverTableRow': 'filaHover',
+			'headerCell': '',
+			'tableCell': 'formateoCelda',
+			'rowNumberCell': ''
+		};
+         
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));		
+		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+		var view = new google.visualization.DataView(data);
+		
+		if (_Col!="")
+			{
+				var columnasAmostrar = [];
+				
+				for(i=0 ; i < _Col ; i++) 
+				{ 
+					columnasAmostrar.push(i);
+				}
+				view.setColumns(columnasAmostrar);
+			}
+			else if (varListaColumnas!="")
+				{
+					var listaColumnas = varListaColumnas.split(",");
+						
+					if (listaColumnas.length > 0)
+					{
+						var arrayColumnas = [];
+						for(j=0; j<listaColumnas.length; j++)
+						{
+							indexaux = parseInt(listaColumnas[j]);
+							arrayColumnas.push(indexaux);
+						}
+						view.setColumns(arrayColumnas);
+					}
+				}
+				
+			if (_Row!="")
+			{
+				var filasAmostrar = [];
+				
+				for(i=0 ; i < _Row ; i++) 
+				{ 
+					filasAmostrar.push(i);
+				}
+
+				view.setRows(filasAmostrar);
+			}
+			
+			else if (varListaFilas!="")
+				{				
+					var listaFilas = varListaFilas.split("-");
+					if (listaFilas.length > 0)
+					{   
+						view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
+					}
+				}
+				
+		document.getElementById('nombrecliente').innerHTML = data.getValue(0,1);	
+		chart.draw(view,options);	
+	}
+</script>
+]]>
+</Content>
+</Module>
