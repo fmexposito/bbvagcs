@@ -92,7 +92,8 @@
 			<hr>
 		</h2>			
 
-		<div id="detalleFicha">			
+		<div id="detalleFicha">	
+			<div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">				
 				
 				<li>Código de proyecto: <span id="codigoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
@@ -103,13 +104,13 @@
 				
 				<li>Estado: <span id="estadoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				
-				<li>Fecha: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>Fecha implantación: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
-			console.debug('detalleProyecto.xml version 6');
+			
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -126,15 +127,13 @@
 			function sendQuery() 
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
-				//var query = gadgetHelper.createQueryFromPrefs(prefs);	
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);				
 				var idCliquery = paramtoquery("detalle-proyecto-");				
-				//console.debug('detalleProyecto.xml idCliquery: '+ idCliquery);
 				var querytosend = "select *  where K like '" + idCliquery.toUpperCase() + "'";
-				//var querytosend = "select *  where K like 'PROY0001' ";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
+				
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -153,11 +152,12 @@
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 			function paramtoquery(param)
 			{
-				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
-				var indexFicha = indiceCadena(arrayParametros,param);		
-				var arrayidCliente = arrayParametros[indexFicha].split("-");		
-				return arrayidCliente[2];		
+				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");
+				var indexFicha = indiceCadena(arrayParametros,param);
+				var arrayidCliente = arrayParametros[indexFicha].split("-");
+				return arrayidCliente[2];	
 			}
+				
 			
 			function handleQueryResponse(response) 
 			{
@@ -167,14 +167,19 @@
 				}
 			
 				data = response.getDataTable();		
-								
+				
+				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,15) +'">';									
+				
 				document.getElementById('codigoProyectoTitulo').innerHTML = data.getValue(0,1);
 				document.getElementById('codigoProyecto').innerHTML = data.getValue(0,10);
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,11);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
-				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);							
+				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);
+				
+				
 			}
+			
 		</script>
 		]]>
 	</Content>
