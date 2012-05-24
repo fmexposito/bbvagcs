@@ -204,8 +204,10 @@
 				console.debug(' data.getNumberOfRows(): ' + data.getNumberOfRows());
 				
 				for (var i=0;i<data.getNumberOfRows();i++)
-				{
+				{	
+					if(!((data.getValue(i,2))in productos)){
 					productos += "<li>"+data.getValue(i,2) + " - " + data.getValue(i,1) + "</li>";
+					}
 				}
 								
 				document.getElementById('idProducto').innerHTML = productos;				
