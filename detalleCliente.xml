@@ -142,7 +142,7 @@
 				
 				var query2 = new google.visualization.Query(urlTable, opts);	
 				//var querytosend2 = "select max(B),C,D,F where A like 'IDGLOBAL0016' group by C,D,F";
-				var querytosend2 = "select distinct D,max(B),C,F where A like '" + idCliquery.toUpperCase() + "' group by C,D,F";
+				var querytosend2 = "select max(B),C,D,F where A like '" + idCliquery.toUpperCase() + "' group by C,D,F";
 				query2.setQuery(querytosend2);			  
 				query2.send(handleQueryResponse2);
 				
