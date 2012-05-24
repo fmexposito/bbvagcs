@@ -325,7 +325,6 @@
 				<ul style="left: -99999px; display: none;" class="sub floatRight">				
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio" target="_parent">Enlaces a productos</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/modulosuntercio" target="_parent">Enlaces a informes de gestión</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/clientes" target="_parent">Clientes</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/proyectos" target="_parent">Proyectos</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/plantillas-implementacion" target="_parent">Plantillas Implementación</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/metodologia" target="_parent">Metodología</a></li>
@@ -333,6 +332,7 @@
 			</li>
 			<li class="top"><a id="global-product" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" target="_parent">Global Product</a>
 				<ul style="left: -99999px; display: none;" class="sub floatRight">
+					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/coming-soon" target="_parent">Cooming soon</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/helpdesk" target="_parent">Helpdesk</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/otros-servicios" target="_parent">Otros servicios</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/one-format" target="_parent">One format</a></li>
