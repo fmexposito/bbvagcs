@@ -205,7 +205,8 @@
 				
 				for (var i=0;i<data.getNumberOfRows();i++)
 				{	
-					if(!((data.getValue(i,2))in productos)){
+					var Aux = data.getValue(i,2);
+					if(!(Aux in productos)){
 					productos += "<li>"+data.getValue(i,2) + " - " + data.getValue(i,1) + "</li>";
 					}
 				}
