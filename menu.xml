@@ -258,7 +258,11 @@
 						else if (aux.indexOf("detalle proyecto")>-1)
 						{								
 							var litEnlace = "Detalle Proyecto";
-						}							
+						}
+						else if (aux.indexOf("Contactos")>-1)
+						{
+							var litEnlace = "Contactos";
+						}
 						else
 						{								
 							var litEnlace = aux;
