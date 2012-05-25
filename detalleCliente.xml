@@ -102,7 +102,8 @@
 			<div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">
 				<li>Criticidad: <span id="idCriticidad"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Estado: <span id="idEstado"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>En Producción: <span id="idProduccion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>En Implementación: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Producto: <ul id="listaproductos"><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
 			</ul>
@@ -221,7 +222,14 @@
 				
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,3);
-				document.getElementById('idEstado').innerHTML = data.getValue(0,2);				
+				var estado = data.getValue(0,2);
+				if(estado == 'Producción'){
+					document.getElementById('idProduccion').innerHTML = "Sí"; 
+				}else { document.getElementById('idProduccion').innerHTML = "No";} 
+				
+				if (estado == 'Implementación'){
+					document.getElementById('idImplementacion').innerHTML = "Sí";
+				}else { document.getElementById('idImplementacion').innerHTML = "No";} 		
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,4) +'">';				
 			}
 			
