@@ -223,11 +223,11 @@
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,3);
 				var estado = data.getValue(0,2);
-				if(estado == 'Producción'){
+				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
 				}else { document.getElementById('idProduccion').innerHTML = "No";} 
 				
-				if (estado == 'Implementación'){
+				if (estado.indexOf('Implementación')>-1){
 					document.getElementById('idImplementacion').innerHTML = "Sí";
 				}else { document.getElementById('idImplementacion').innerHTML = "No";} 		
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,4) +'">';				
