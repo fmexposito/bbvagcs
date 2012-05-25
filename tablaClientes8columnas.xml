@@ -130,7 +130,7 @@
 	
 		data = response.getDataTable();
 		
-		var count = (data.getNumberOfRows())/8;
+		var count = (data.getNumberOfRows()-1)/8;
 		var roundCount = Math.ceil(count);
 		var resto = (data.getNumberOfRows())%64;
 		var result = (data.getNumberOfRows())%8;
