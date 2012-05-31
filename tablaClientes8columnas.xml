@@ -199,7 +199,6 @@
 		
 		//Select the Columns to DataView
 		view.setColumns([1,5,9,13,17,21,25,29]);	
-		view.hideRows([0]);
 		dataAux.setColumnLabel(1,"");				
 		chart.draw(view,options);	
 	}
