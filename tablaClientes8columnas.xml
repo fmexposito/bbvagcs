@@ -167,7 +167,7 @@
 			}		
 		}
 	
-		for (var fila=1; fila<total; fila++)
+		for (var fila=2; fila<total; fila++)
 		{	
 			for(var col=1; col<=29; col+=4)
 			{
