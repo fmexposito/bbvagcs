@@ -173,8 +173,8 @@
 			{
 				try
 				{				
-					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
-					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
+					dataAux.setCell(fila+1,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+					dataAux.setCell(fila+1,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
 					aux++;			
 				}
 				catch (err)
