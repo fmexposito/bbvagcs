@@ -72,7 +72,7 @@
 			border: 1px solid #fff !important;				
 		}
 		
-		tr.header td.google-visualization-table-th, 
+		//tr.header td.google-visualization-table-th, 
 		tr.header td.google-visualization-table-sorthdr {
 			border: 1px solid #fff !important;
 			color: #00008B;
