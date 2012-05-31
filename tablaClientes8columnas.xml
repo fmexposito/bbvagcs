@@ -163,11 +163,11 @@
 		{		
 			for(var j=0;j<4;j++)
 			{			
-				dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+				dataAux.addColumn('string',"").setVisible(false); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
 			}		
 		}
 	
-		for (var fila=-1; fila<total; fila++)
+		for (var fila=0; fila<total; fila++)
 		{	
 			for(var col=1; col<=29; col+=4)
 			{
