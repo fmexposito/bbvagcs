@@ -222,7 +222,7 @@
 				data = response.getDataTable();		
 				
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
-				document.getElementById('idCriticidad').innerHTML = data.getValue(0,3);
+				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 				var estado = data.getValue(0,2);
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
