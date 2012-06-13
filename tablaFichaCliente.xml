@@ -168,7 +168,7 @@
 				};
 				 
 				var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-				var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+				var options = { 'page': 'enable', 'pageSize': '600px', 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 				var view = new google.visualization.DataView(data);
 				
 				if (_Col!="")
