@@ -225,6 +225,7 @@
 				for (var i=0;i<filas.length;i++){
 				      estado += data.getValue(0,2);
 					}
+			    console.debug('estado');
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 				//for(var i=0;document.getElementById('nombreCliente');i++)
