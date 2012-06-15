@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml');
-			console.debug('version 11');
+			console.debug('version 12');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -224,7 +224,7 @@
 				console.debug(filas);
 				var estado="";
 				for (var i=0;i<filas.length;i++){
-				      estado += estado + data.getValue(0,2).ToString();
+				      estado += estado + data.getValue(0,2).toString();
 					}
 			    console.debug(estado);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
