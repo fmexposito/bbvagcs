@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml');
-			console.debug('version 1');
+			console.debug('version 2');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -150,7 +150,7 @@
 				
 				var query3 = new google.visualization.Query(urlTable, opts);	
 				//var querytosend3 = "select max(A), B ,J, N,O where A like 'IDGLOBAL0016' group  by B,J,N,O";
-				var querytosend3 = "select max(A), B ,J, N,O,P where A like '" + idCliquery.toUpperCase() + "' group  by B,J,N,O,P";
+				var querytosend3 = "select max(A), B ,J, N,O,P where A like '" + idCliquery.toUpperCase() + "' ";//group  by B,J,N,O,P";
 				query3.setQuery(querytosend3);			  
 				query3.send(handleQueryResponse3);
 			}
@@ -223,9 +223,10 @@
 				
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
+				for(var i=0;document.getElementById('nombreCliente');i++)
 				var estado = data.getValue(0,2);
 				if(estado.indexOf('Producción')>-1){
-					document.getElementById('idProduccion').innerHTML = "Sí"+data.getValue(0,2); 
+					document.getElementById('idProduccion').innerHTML = "Sí"; 
 				}else { document.getElementById('idProduccion').innerHTML = "No";} 
 				
 				if (estado.indexOf('Implementación')>-1){
