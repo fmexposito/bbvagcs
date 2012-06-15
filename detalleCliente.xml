@@ -50,7 +50,7 @@
 				border-collapse: collapse;
 				color: #666666;
 				font-family: arial,sans-serif;
-				font-size: 12px;
+				font-size: 13px;
 				font-style: normal;
 				font-variant: normal;
 				font-weight: normal;
@@ -224,7 +224,7 @@
 				console.debug(filas);
 				var estado="";
 				for (var i=0;i<filas.length;i++){
-				      estado += estado + data.getValue(0,2).toString();
+				      estado = estado + data.getValue(0,2).toString();
 					}
 			    console.debug(estado);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
