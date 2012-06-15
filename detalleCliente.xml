@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml');
-			console.debug('version 15');
+			console.debug('version 16');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -227,13 +227,13 @@
 				for (var i=0;i<filas.length;i++){
 				 
 				      estado = estado + data.getValue(0,2);
-					  alert(estado);
+					  console.debug(estado+"Estoy dentro!!");
 					}
 			    console.debug(estado);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,1);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 				//for(var i=0;document.getElementById('nombreCliente');i++)
-				// var estado = data.getValue(0,2);
+				//var estado = data.getValue(0,2);
 				// console.debug(estado);
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
