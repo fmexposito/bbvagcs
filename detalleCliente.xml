@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml');
-			console.debug('version 17');
+			console.debug('version 18');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -226,7 +226,7 @@
 				alert(data.getValue(0,2));
 				for (var i=0;i<filas.length;i++){
 				 
-				      estado += estado + data.getValue(0,2).toString();
+				      estado += data.getValue(0,2).toString();
 					  console.debug(estado+"Estoy dentro!!");
 					}
 			    console.debug(estado);
