@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml');
-			console.debug('version 6');
+			console.debug('version 7');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -220,7 +220,7 @@
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();		
-				var filas=data.getRows();
+				var filas=data.getNumberOfRows();
 				var estado="";
 				for (var i=0;i<filas.length;i++){
 				      estado += data.getValue(0,2);
