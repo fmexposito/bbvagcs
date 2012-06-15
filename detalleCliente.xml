@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml');
-			console.debug('version 4');
+			console.debug('version 5');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -150,7 +150,7 @@
 				
 				var query3 = new google.visualization.Query(urlTable, opts);	
 				//var querytosend3 = "select max(A), B ,J, N,O where A like 'IDGLOBAL0016' group  by B,J,N,O";
-				var querytosend3 = "select max(A), B ,J, N,O,P where A like '" + idCliquery.toUpperCase() + "' ";//group  by B,J,N,O,P";
+				var querytosend3 = "select max(A), B ,J, N,O,P where A like '" + idCliquery.toUpperCase() + "' group  by B,J,N,O,P";
 				query3.setQuery(querytosend3);			  
 				query3.send(handleQueryResponse3);
 			}
