@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			console.debug('detalleCliente.xml');
-			console.debug('version 20');
+			console.debug('version 21');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -148,11 +148,16 @@
 				query2.setQuery(querytosend2);			  
 				query2.send(handleQueryResponse2);
 				
-				var query3 = new google.visualization.Query(urlTable, opts);	
+				/*var query3 = new google.visualization.Query(urlTable, opts);	
 				//var querytosend3 = "select max(A), B ,J, N,O where A like 'IDGLOBAL0016' group  by B,J,N,O";
 				var querytosend3 = "select max(A), B ,J, N,O,P where A like '" + idCliquery.toUpperCase() + "' group  by B,J,N,O,P";
 				query3.setQuery(querytosend3);			  
-				query3.send(handleQueryResponse3);
+				query3.send(handleQueryResponse3);*/
+				
+				var query4= new.google.visualization.Query(urlTable, opts);
+				var querytosend4 = "select max(J), max(A),B,N,O,P where A like '" + idCliquery.toUpperCase() + "' group by B,N,O,P";
+				query4.setQuery(querytosend4);
+				query4.send(handleQueryResponse4);
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -216,7 +221,7 @@
 				document.getElementById('idProducto').innerHTML = productos;				
 			}
 			
-			function handleQueryResponse3(response) 
+			/*function handleQueryResponse3(response) 
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();		
@@ -232,6 +237,26 @@
 				}else { document.getElementById('idProduccion').innerHTML = "No";} 
 				
 				if (estado.indexOf('Implementación')>-1){
+					document.getElementById('idImplementacion').innerHTML = "Sí";
+				}else { document.getElementById('idImplementacion').innerHTML = "No";} 		
+				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';				
+			}*/
+			function handleQueryResponse4(response) 
+			{
+				if (!gadgetHelper.validateResponse(response)) { return; }			
+				data = response.getDataTable();		
+				
+			   // console.debug(estado);
+				document.getElementById('nombreCliente').innerHTML = data.getValue(0,2);				
+				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
+			
+				 var estado = data.getValue(0,0);
+				// console.debug(estado);
+				if(estado.indexOf('Producción')>-1){
+					document.getElementById('idProduccion').innerHTML = "Sí"; 
+				}else { document.getElementById('idProduccion').innerHTML = "No";} 
+				
+				if (estado.indexOf('Producción')=-1){
 					document.getElementById('idImplementacion').innerHTML = "Sí";
 				}else { document.getElementById('idImplementacion').innerHTML = "No";} 		
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';				
