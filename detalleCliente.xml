@@ -225,7 +225,7 @@
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 			
 				 var estado = data.getValue(0,0);
-				 console.debug(estado);
+				 
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
 				}else { document.getElementById('idProduccion').innerHTML = "No";} 
