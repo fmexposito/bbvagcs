@@ -155,7 +155,7 @@
 				query3.send(handleQueryResponse3);*/
 				
 				var query4= new.google.visualization.Query(urlTable, opts);
-				var querytosend4 = "select max(J), max(A),B,N,O,P where A like '" + idCliquery.toUpperCase() + "' group by B,N,O,P";
+				var querytosend4 = "select max(J), A,B,N,O,P where A like '" + idCliquery.toUpperCase() + "' group by A,B,N,O,P";
 				query4.setQuery(querytosend4);
 				query4.send(handleQueryResponse4);
 			}
@@ -246,12 +246,11 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();		
 				
-			   // console.debug(estado);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,2);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 			
 				 var estado = data.getValue(0,0);
-				// console.debug(estado);
+				 console.debug(estado);
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
 				}else { document.getElementById('idProduccion').innerHTML = "No";} 
