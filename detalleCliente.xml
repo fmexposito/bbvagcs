@@ -234,7 +234,7 @@
 						
 				} 
 				
-				if ((estado.indexOf('Desarrollo')>-1) || (estado.indexOf('En pruebas - Pte Cliente')>-1) || (estado.indexOf('Pte. Negocio')>-1) || (estado.indexOf('Parado')>-1) || (estado.indexOf('Pte. Cliente')>-1 ) || (estado.indexOf('Pte.Cliente')>-1 ) || (estado.indexOf('En pruebas')>-1 ) || (estado.indexOf('Penny test')>-1 ) || (estado.indexOf('No localizado')>-1 ) || (estado.indexOf('En Cartera')>-1 ) || (estado.indexOf('pte. IT')>-1 )){
+				if ((estado.indexOf('Desarrollo')>-1) || (estado.indexOf('En pruebas - Pte Cliente')>-1) || (estado.indexOf('Pte. Negocio')>-1) || (estado.indexOf('Parado')>-1) || (estado.indexOf('Pte. Cliente')>-1 ) || (estado.indexOf('Pte.Cliente')>-1 ) || (estado.indexOf('En pruebas')>-1 ) || (estado.indexOf('Penny test')>-1 ) || (estado.indexOf('No localizado')>-1 ) || (estado.indexOf('En Cartera')>-1 ) || (estado.indexOf('pte. IT')>-1 ) && (estado.indexOf('Producción')==-1 )){
 					document.getElementById('idImplementacion').innerHTML = "Sí";
 				}else { document.getElementById('idImplementacion').innerHTML = "No";}	
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';				
