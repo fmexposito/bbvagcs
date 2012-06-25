@@ -228,11 +228,14 @@
 				 
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
-				}else { document.getElementById('idProduccion').innerHTML = "No";} 
+					document.getElementById('idImplementacion').innerHTML = "No";
+				}else { document.getElementById('idProduccion').innerHTML = "No";
+						document.getElementById('idImplementacion').innerHTML = "Sí";
+				} 
 				
-				if (estado.indexOf('Producción')== -1){
-					document.getElementById('idImplementacion').innerHTML = "Sí";
-				}else { document.getElementById('idImplementacion').innerHTML = "No";} 		
+				/*if (estado.indexOf('Producción')>-1){
+					document.getElementById('idImplementacion').innerHTML = "No";
+				}else { document.getElementById('idImplementacion').innerHTML = "Sí";} 	*/	
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';				
 			}
 			
