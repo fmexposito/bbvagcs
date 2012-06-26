@@ -222,12 +222,12 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();	
 				var filas = data.getNumberOfRows();
-				alert(filas);
+				
 				var estado = "";				
 				for(var i=0;i<filas;i++){
 			    estado += data.getValue(i,1);
 				} 
-				alert(estado);
+				
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,2);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 				if(estado.indexOf('Producción')>-1){
