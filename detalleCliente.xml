@@ -182,7 +182,7 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();		
 				var paises="";
-				console.debug('data.getNumberOfRows(): ' + data.getNumberOfRows());
+				//console.debug('data.getNumberOfRows(): ' + data.getNumberOfRows());
 				
 				if (data.getNumberOfRows() == 1 )
 				{
