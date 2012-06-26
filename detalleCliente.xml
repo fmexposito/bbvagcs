@@ -186,7 +186,7 @@
 				
 				if (data.getNumberOfRows() == 1 )
 				{
-					 paises = data.getValue(0,1);					
+					 paises += data.getValue(0,1);					
 				}
 				else
 				{
