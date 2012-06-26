@@ -192,7 +192,8 @@
 				{
 					for (var i=0;i<data.getNumberOfRows();i++)
 					{
-						paises += data.getValue(i,1) + ", ";
+						//paises += data.getValue(i,1) + ", ";
+						document.getElementById('idPaises').innerHTML = data.getValue(i,1) + ", ";
 					}
 				}	
 				//alert(paises);
@@ -203,7 +204,7 @@
 
 				//document.getElementById('idPaises').appendChild( myDiv );
 				
-				document.getElementById('idPaises').value = paises;
+				
 			}
 			
 			function handleQueryResponse2(response) 
