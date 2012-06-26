@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 34');
+			console.debug('version 35');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -149,7 +149,7 @@
 				query2.send(handleQueryResponse2);
 				
 				var query3= new google.visualization.Query(urlTable, opts);
-				var querytosend3 = "select max(J), A , B , N , O , P where A like '" + idCliquery.toUpperCase() + "' group by A,B,N,O,P";
+				var querytosend3 = "select distinct(J), A , B , N , O , P where A like '" + idCliquery.toUpperCase() + "' group by A,B,N,O,P";
 				query3.setQuery(querytosend3);
 				query3.send(handleQueryResponse3);
 			}
