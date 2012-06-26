@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 28');
+			console.debug('version 29');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -226,7 +226,7 @@
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 			
 				var estado = data.getValue(0,0);
-				 
+				alert(estado); 
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
 					
