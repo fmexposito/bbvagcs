@@ -195,7 +195,12 @@
 					}
 				}	
 			//	alert(paises);
-				document.getElementById('idPaises').innerHTML = paises;
+				//document.getElementById('idPaises').innerHTML = paises;
+				var myDiv = document.createElement("span");
+				myDiv.innerHTML = '<span>'+paises+'</span>';
+
+
+				document.getElementById('idPaises').appendChild( myDiv );
 			}
 			
 			function handleQueryResponse2(response) 
