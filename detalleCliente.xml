@@ -186,14 +186,13 @@
 				
 				if (data.getNumberOfRows() == 1 )
 				{
-					var paises = data.getValue(0,1);					
+					 paises = data.getValue(0,1);					
 				}
 				else
 				{
 					for (var i=0;i<data.getNumberOfRows();i++)
 					{
-						//paises += data.getValue(i,1) + ", ";
-						document.getElementById('idPaises').innerHTML = data.getValue(i,1) + ", ";
+						paises += data.getValue(i,1) + ", ";
 					}
 				}	
 				//alert(paises);
@@ -204,7 +203,7 @@
 
 				//document.getElementById('idPaises').appendChild( myDiv );
 				
-				
+				document.getElementById('idPaises').innerHTML = paises;
 			}
 			
 			function handleQueryResponse2(response) 
