@@ -231,7 +231,7 @@
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
 					
 				}else { document.getElementById('idProduccion').innerHTML = "No";
-						
+						if(estado.indexOf('Parado')>-1 ){document.getElementById('idImplementacion').innerHTML = "Sí";}
 				} 
 				if(estado.indexOf('Parado')>-1 ){document.getElementById('idImplementacion').innerHTML = "Sí";}
 				/*if (){
