@@ -221,11 +221,12 @@
 			{
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();		
-				
+				alert(data);
+				alert(response);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,2);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
 			
-				 var estado = data.getValue(0,0);
+				var estado = data.getValue(0,0);
 				 
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
