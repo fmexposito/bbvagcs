@@ -22,11 +22,11 @@
 				color: #0B5394;
 				font-family: arial,sans-serif;
 				font-size: x-large;
-				line-height:18px;
+				line-height:30px;
 				margin-left: 5px;
 				width: 99%;
 				font-weight: normal;
-				margin-top:25px;
+				
 			}
 			h2 div {
 				display:inline;
