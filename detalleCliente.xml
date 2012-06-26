@@ -149,7 +149,7 @@
 				query2.send(handleQueryResponse2);
 				
 				var query3= new google.visualization.Query(urlTable, opts);
-				var querytosend3 = "select J, A , B , N , O , P where A like '" + idCliquery.toUpperCase() + "' group by J,A,B,N,O,P";
+				var querytosend3 = "select max(A), J , B , N , O , P where A like '" + idCliquery.toUpperCase() + "' group by J,B,N,O,P";
 				query3.setQuery(querytosend3);
 				query3.send(handleQueryResponse3);
 			}
@@ -225,7 +225,7 @@
 				alert(filas);
 				var estado = "";				
 				for(var i=0;i<filas;i++){
-			    estado += data.getValue(i,0);
+			    estado += data.getValue(i,1);
 				} 
 				alert(estado);
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,2);				
