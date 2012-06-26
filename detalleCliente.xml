@@ -211,7 +211,7 @@
 				if (!gadgetHelper.validateResponse(response)) { return; }			
 				data = response.getDataTable();						
 				var productos="";
-				console.debug(' data.getNumberOfRows(): ' + data.getNumberOfRows());
+				//console.debug(' data.getNumberOfRows(): ' + data.getNumberOfRows());
 				
 				for (var i=0;i<data.getNumberOfRows();i++)
 				{	
