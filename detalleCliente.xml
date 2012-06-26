@@ -112,7 +112,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			//console.debug('version 32');
+			//console.debug('version 33');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -229,6 +229,7 @@
 				for(var i=0;i<filas;i++){
 			    estado += data.getValue(i,0);
 				} 
+				alert(estado);
 				if(estado.indexOf('Producción')>-1){
 					document.getElementById('idProduccion').innerHTML = "Sí"; 
 					
