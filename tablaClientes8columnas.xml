@@ -48,6 +48,10 @@
 			font-size:12px;
 			color: #00008B;
 		}
+		#tablediv table{
+		width:100%;
+		}
+		
 		#tablediv table,
 		#tablediv table tr,
 		#tablediv table	tr td {
