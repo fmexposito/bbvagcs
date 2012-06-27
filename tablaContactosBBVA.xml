@@ -47,12 +47,15 @@
 		font-family: Arial, Helvetica, sans-serif;
 		font-size:12px;
 	}
+	#tablediv table{
+	width:100%;
+	}
 	#tablediv table,
 	#tablediv table tr,
 	#tablediv table	tr td {
 		font-family: Arial, Helvetica, sans-serif !important;
 		font-size:12px;
-		width:100%;
+		
 	}		
 	.formateoCelda {
 		font-family: Arial, Helvetica, sans-serif !important;
