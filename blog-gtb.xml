@@ -154,12 +154,12 @@ float:left;
     var opts = {dataType:'jsonp'};
 
     var query = new google.visualization.Query(urlTable, opts);
-    var topic = gadgets.util.getUrlParameters()["parent"].split("=");
+    var topic = "Boundaries"; //gadgets.util.getUrlParameters()["parent"].split("=");
 	//alert(topic[1].replace(/\+/g," "));
     //var querytosend = "select max(D),B,C,L,N,O,P,S,X,Y,Z,AA where B like '"+topic[1].replace(/\+/g," ")+"'and dateDiff(D,now())>0 group by B,C,L,N,O,P,S,X,Y,Z,AA  order by max(D)  desc ";
      //var querytosend = "select max(D),B,C,L,N,O,P,S,X,Y,Z,AA where (B like '" + topic[1].replace(/\+/g," ") + "') and (dateDiff(D,now())>0) group by B,C,L,N,O,P,S,X,Y,Z,AA order by max(D)  desc ";
     
-    var querytosend = "select max(D),B,C,L,N,O,P,S,X,Y,Z,AA,M,H,AB where (B like '" + topic[1].replace(/\+/g," ") + "') group by B,C,L,N,O,P,S,X,Y,Z,AA,M,H,AB order by max(D)  desc ";
+    var querytosend = "select max(D),B,C,L,N,O,P,S,X,Y,Z,AA,M,H,AB where (B like '" + topic.replace(/\+/g," ") + "') group by B,C,L,N,O,P,S,X,Y,Z,AA,M,H,AB order by max(D)  desc ";
     
 
       query.setQuery(querytosend);
