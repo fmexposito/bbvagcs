@@ -113,7 +113,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 4');
+			console.debug('version 5');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -131,13 +131,13 @@
 			{
 				gadgetHelper = new google.visualization.GadgetHelper();
 				//var query = gadgetHelper.createQueryFromPrefs(prefs);	
-				var opts = {dataType:'jsonp'};	
+				 var opts = {dataType:'jsonp'};	
 				//var idCliquery = paramtoquery("ficha-");	
 				
 				//var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
 				//var querytosend = "select *  where A like 'IDGLOBAL0016'";
 				
-				var query = new google.visualization.Query(urlTable, opts);	
+				/*var query = new google.visualization.Query(urlTable, opts);	
 				//var querytosend = "select max(B),F where A like 'IDGLOBAL0016' group by F";
 				//var querytosend = "select max(B),F where A like '" + idCliquery.toUpperCase() + "' group by F";
 				query.setQuery(querytosend);			  
@@ -147,7 +147,7 @@
 				//var querytosend2 = "select max(B),C,D,F where A like 'IDGLOBAL0016' group by C,D,F";
 				//var querytosend2 = "select max(B),C,D,F where A like '" + idCliquery.toUpperCase() + "' group by C,D,F";
 				query2.setQuery(querytosend2);			  
-				query2.send(handleQueryResponse2);
+				query2.send(handleQueryResponse2);*/
 				
 				var query3= new google.visualization.Query(urlTable, opts);
 				var querytosend3 = 'select max(A), J , B , N , O , P where A like "ficha-IDGLOBAL0001" group by J,B,N,O,P';
