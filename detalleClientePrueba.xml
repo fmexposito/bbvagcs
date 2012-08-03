@@ -113,7 +113,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 3');
+			console.debug('version 4');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -139,13 +139,13 @@
 				
 				var query = new google.visualization.Query(urlTable, opts);	
 				//var querytosend = "select max(B),F where A like 'IDGLOBAL0016' group by F";
-				var querytosend = "select max(B),F where A like '" + idCliquery.toUpperCase() + "' group by F";
+				//var querytosend = "select max(B),F where A like '" + idCliquery.toUpperCase() + "' group by F";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
 				var query2 = new google.visualization.Query(urlTable, opts);	
 				//var querytosend2 = "select max(B),C,D,F where A like 'IDGLOBAL0016' group by C,D,F";
-				var querytosend2 = "select max(B),C,D,F where A like '" + idCliquery.toUpperCase() + "' group by C,D,F";
+				//var querytosend2 = "select max(B),C,D,F where A like '" + idCliquery.toUpperCase() + "' group by C,D,F";
 				query2.setQuery(querytosend2);			  
 				query2.send(handleQueryResponse2);
 				
