@@ -8,7 +8,8 @@
 	</ModulePrefs>
 	
 	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
-	
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
+
 	<Content type="html">
 		<![CDATA[
 
@@ -131,11 +132,12 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 19');
+			console.debug('version 20');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
-			var urlTable = prefs.getString("_table_query_url");		
+			var urlTable = prefs.getString("_table_query_url");	
+			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 						
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
