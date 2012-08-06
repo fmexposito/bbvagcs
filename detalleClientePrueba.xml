@@ -107,14 +107,14 @@
 				<li>En Implementación: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Producto: <ul id="listaproductos"><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
-				<li>Proyecto:<ul id="listaproyectos"><span id="idProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
+				<li>Proyecto: <ul id="listaproyectos"><span id="idProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 13');
+			console.debug('version 14');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -270,7 +270,7 @@
 			var filas = data.getNumberOfRows();
 			var html="";
 			 for(var i=0;i<filas;i++){
-				html += '<li><a href="javascript:detalle('\'+data.getValue(i,1)+'\');" >'+data.getValue(i,1)+'</a></li>';
+				html += '<li><a href="javascript:detalle('+data.getValue(i,1)+');" >'+data.getValue(i,1)+'</a></li>';
 				}
 				
 				
