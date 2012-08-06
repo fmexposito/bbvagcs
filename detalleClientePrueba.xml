@@ -132,7 +132,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 29');
+			console.debug('version 30');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -170,12 +170,12 @@
 				query2.send(handleQueryResponse2);*/
 				
 				var query3= new google.visualization.Query(urlTable, opts);
-				var querytosend3 = 'select max(A), J , B , N , O , P, K where A like "IDGLOBAL0010" group by J,B,N,O,P,K';
+				var querytosend3 = 'select max(A), J , B , N , O , P, K where A like "IDGLOBAL0001" group by J,B,N,O,P,K';
 				query3.setQuery(querytosend3);
 				query3.send(handleQueryResponse3);
 				
 				var query4= new google.visualization.Query(urlTable, opts);
-				var querytosend4 = 'select max(A),K where A like "IDGLOBAL0010" group by K';
+				var querytosend4 = 'select max(A),K where A like "IDGLOBAL0001" group by K';
 				query4.setQuery(querytosend4);
 				query4.send(handleQueryResponse4);
 			}
@@ -195,7 +195,7 @@
 			function detalle(id)
 			{	alert('entro aki');
 				//var idCliente = paramtoquery("ficha-");
-				window.parent.location.href = urlDetalleFicha + "idglobal0010" + "/detalle-proyecto-" + id.toLowerCase();
+				window.parent.location.href = urlDetalleFicha + "idglobal0001" + "/detalle-proyecto-" + id.toLowerCase();
 			}
 						
 			//obtiene el valor del parametro que le pasamos por url: 
