@@ -114,7 +114,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 7');
+			console.debug('version 8');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -156,7 +156,7 @@
 				query3.send(handleQueryResponse3);
 				
 				var query4= new google.visualization.Query(urlTable, opts);
-				var querytosend4 = 'select K where A like "IDGLOBAL0001" group by K';
+				var querytosend4 = 'select max(A),K where A like "IDGLOBAL0001" group by K';
 				query4.setQuery(querytosend4);
 				query4.send(handleQueryResponse4);
 			}
