@@ -132,7 +132,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 21');
+			console.debug('version 22');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -194,8 +194,8 @@
 			// Abre el detalle de la url
 			function detalle(id)
 			{	alert('entro aki');
-				var idCliente = paramtoquery("ficha-");
-				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + "/detalle-proyecto-" + id.toLowerCase();
+				//var idCliente = paramtoquery("ficha-");
+				window.parent.location.href = urlDetalleFicha + "idglobal0010" + "/detalle-proyecto-" + id.toLowerCase();
 			}
 						
 			//obtiene el valor del parametro que le pasamos por url: 
