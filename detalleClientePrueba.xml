@@ -107,13 +107,14 @@
 				<li>En Implementación: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Producto: <ul id="listaproductos"><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
+				<li>Proyecto: <ul id="listaproyectos><span id="idProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 6');
+			console.debug('version 7');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -150,9 +151,14 @@
 				query2.send(handleQueryResponse2);*/
 				
 				var query3= new google.visualization.Query(urlTable, opts);
-				var querytosend3 = 'select max(A), J , B , N , O , P where A like "IDGLOBAL0001" group by J,B,N,O,P';
+				var querytosend3 = 'select max(A), J , B , N , O , P, K where A like "IDGLOBAL0001" group by J,B,N,O,P,K';
 				query3.setQuery(querytosend3);
 				query3.send(handleQueryResponse3);
+				
+				var query4= new google.visualization.Query(urlTable, opts);
+				var querytosend4 = 'select K where A like "IDGLOBAL0001" group by K';
+				query4.setQuery(querytosend4);
+				query4.send(handleQueryResponse4);
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -165,6 +171,12 @@
 						return i;
 					} 
 				}	
+			}
+			// Abre el detalle de la url
+			function detalle(id)
+			{	
+				var idCliente = paramtoquery("ficha-");
+				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + "/detalle-proyecto-" + id.toLowerCase();
 			}
 						
 			//obtiene el valor del parametro que le pasamos por url: 
@@ -248,7 +260,20 @@
 				if ((estado.indexOf('Desarrollo')>-1) || (estado.indexOf('En pruebas - Pte Cliente')>-1) || (estado.indexOf('Pte. Negocio')>-1) || (estado.indexOf('Parado')>-1) || (estado.indexOf('Pte. Cliente')>-1 ) || (estado.indexOf('Pte.Cliente')>-1 ) || (estado.indexOf('En pruebas')>-1 ) || (estado.indexOf('Penny test')>-1 ) || (estado.indexOf('No localizado')>-1 ) || (estado.indexOf('En Cartera')>-1 ) || (estado.indexOf('pte. IT')>-1 ) || (estado.indexOf('Parado')>-1 )){
 					document.getElementById('idImplementacion').innerHTML = "Sí";
 				}else { document.getElementById('idImplementacion').innerHTML = "No";}	
-				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';				
+				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';		
+				
+				
+					
+			}
+			function handleQueryResponse4(response) {
+			data = response.getDataTable();	
+			var filas = data.getNumberOfRows();
+			var html="<ul>";
+			 for(var i=0;i<filas;i++){
+				html += '<li><a href="javascript:detalle(\'{0}\');" >{0}</a> </li>';
+				}
+				html +="</ul>";
+				document.getElementById('listaproyectos').innerHTML = html;
 			}
 			
 		</script>
