@@ -98,6 +98,13 @@
 				text-align: justify;
 				color: #666666;
 			}
+			ul#listaproyectos span li  a{
+				font-family: arial,sans-serif;
+				font-size: 12px;
+				line-height: 17px;
+				text-align: justify;
+				color: #666666;
+			}
 			ul#listaproyectos {
 				margin-left: 250px;
 			}
@@ -124,7 +131,7 @@
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			console.debug('version 15');
+			console.debug('version 16');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
