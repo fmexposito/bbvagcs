@@ -121,9 +121,9 @@
 			<div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 			<ul id="datosFicha">
 				<li>Criticidad: <span id="idCriticidad"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>En Producción: <span id="idProduccion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>En Implementación: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
-				<li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>En ProducciÃ³n: <span id="idProduccion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>En ImplementaciÃ³n: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+				<li>PaÃ­ses: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Producto: <ul id="listaproductos"><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
 				<li>Proyecto: <ul id="listaproyectos"><span id="idProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
 			</ul>
@@ -269,15 +269,15 @@
 				
 				document.getElementById('nombreCliente').innerHTML = data.getValue(0,2);				
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
-				if(estado.indexOf('Producción')>-1){
-					document.getElementById('idProduccion').innerHTML = "Sí"; 
+				if(estado.indexOf('Produccion')>-1){
+					document.getElementById('idProduccion').innerHTML = "SÃ­"; 
 					
 				}else { document.getElementById('idProduccion').innerHTML = "No";
 						
 				} 
 				
 				if ((estado.indexOf('Desarrollo')>-1) || (estado.indexOf('En pruebas - Pte Cliente')>-1) || (estado.indexOf('Pte. Negocio')>-1) || (estado.indexOf('Parado')>-1) || (estado.indexOf('Pte. Cliente')>-1 ) || (estado.indexOf('Pte.Cliente')>-1 ) || (estado.indexOf('En pruebas')>-1 ) || (estado.indexOf('Penny test')>-1 ) || (estado.indexOf('No localizado')>-1 ) || (estado.indexOf('En Cartera')>-1 ) || (estado.indexOf('pte. IT')>-1 ) || (estado.indexOf('Parado')>-1 )){
-					document.getElementById('idImplementacion').innerHTML = "Sí";
+					document.getElementById('idImplementacion').innerHTML = "SÃ­";
 				}else { document.getElementById('idImplementacion').innerHTML = "No";}	
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';		
 				
