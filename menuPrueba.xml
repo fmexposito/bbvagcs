@@ -49,17 +49,17 @@
 	#menu {
 		margin-top:0px; 
 		position:relative; 
-		height:38px;
+		height:50px;
 	}
 	#dropline {
 		position:relative; 
 		font-size:12px; 
-		height:38px; 
+		height:50px; 
 		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/fondomenuhome381.png) no-repeat;
 	}
 	#dropline, 
 	#dropline ul {
-		padding:0px; 
+		padding:6px; 
 		margin:0; 
 		list-style:none; 
 		width:948px;
@@ -74,13 +74,13 @@
 	}
 	#dropline li {
 		float:left; 
-		height:38px;
+		height:50px;
 	}
 	#dropline li a {
 		float:left; 
 		display:block; 
-		height:37px; 
-		line-height:38px; 
+		height:49px; 
+		line-height:50px; 
 		padding:0 20px 0 10px; 
 		font-family:arial, sans-serif; 
 		font-size:11px; 
