@@ -59,7 +59,7 @@
 	}
 	#dropline, 
 	#dropline ul {
-		padding:6px; 
+		padding:0px; 
 		margin:0; 
 		list-style:none; 
 		width:948px;
