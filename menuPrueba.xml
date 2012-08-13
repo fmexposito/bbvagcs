@@ -145,7 +145,7 @@
 		text-transform: capitalize;		
 	}
 .home img{
-margin:0 5px;
+margin:0 -10px;
 }	
 </style>
 
