@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Datos del cliente. Ficha cliente. detallleCliente.xml"
+	<ModulePrefs title="Datos del cliente. Ficha cliente. detallleClientePrueba2.xml"
 		description=""
 		author_affiliation="Capgemini">
 		<Require feature="idi"/>
@@ -8,7 +8,8 @@
 	</ModulePrefs>
 	
 	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
-	
+	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
+
 	<Content type="html">
 		<![CDATA[
 
@@ -91,6 +92,23 @@
 			ul#listaproductos {
 				margin-left: 250px;
 			}
+			ul#listaproyectos span li  {
+				font-family: arial,sans-serif;
+				font-size: 12px;
+				line-height: 17px;
+				text-align: justify;
+				color: #666666;
+			}
+			ul#listaproyectos span li  a{
+				font-family: arial,sans-serif;
+				font-size: 12px;
+				line-height: 17px;
+				text-align: justify;
+				color: #666666;
+			}
+			ul#listaproyectos {
+				margin-left: 250px;
+			}
 			
 		</style>
 	
@@ -107,18 +125,20 @@
 				<li>En Implementación: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				<li>Producto: <ul id="listaproductos"><span id="idProducto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
+				<li>Proyecto: <ul id="listaproyectos"><span id="idProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></ul></li>
+
 			</ul>
 		</div>
 		
 		<script type="text/javascript"> 
 			
 			//console.debug('detalleCliente.xml');
-			//console.debug('version 37');
+			//console.debug('version 1');
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
 			var urlTable = prefs.getString("_table_query_url");		
-						
+			var urlDetalleFicha = prefs.getString("VarURLBaseFicha");		
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
 			function loadVisualizationAPI() 
@@ -153,6 +173,11 @@
 				var querytosend3 = "select max(A), J , B , N , O , P where A like '" + idCliquery.toUpperCase() + "' group by J,B,N,O,P";
 				query3.setQuery(querytosend3);
 				query3.send(handleQueryResponse3);
+				
+				var query4= new google.visualization.Query(urlTable, opts);
+				var querytosend4 = "select max(A),K where A like '"+ idCliquery.toUpperCase() + "' group by K";
+				query4.setQuery(querytosend4);
+				query4.send(handleQueryResponse4);
 			}
 
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
@@ -165,6 +190,11 @@
 						return i;
 					} 
 				}	
+			}
+				function detalle(id)
+			{	
+				var idCliente = paramtoquery("ficha-");
+				window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + "/detalle-proyecto-" + id.toLowerCase();
 			}
 						
 			//obtiene el valor del parametro que le pasamos por url: 
@@ -249,6 +279,18 @@
 					document.getElementById('idImplementacion').innerHTML = "Sí";
 				}else { document.getElementById('idImplementacion').innerHTML = "No";}	
 				document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';				
+			}
+			
+			function handleQueryResponse4(response) {
+			data = response.getDataTable();	
+			var filas = data.getNumberOfRows();
+			var html="";
+			 for(var i=0;i<filas;i++){
+				html += '<li><a href="javascript:detalle(\''+data.getValue(i,1)+'\');" >'+data.getValue(i,1)+'</a></li>';
+				}
+				
+				
+				document.getElementById('idProyecto').innerHTML = html;
 			}
 			
 		</script>
