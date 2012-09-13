@@ -72,7 +72,7 @@
 				html +=	"</ul>";
 				document.getElementById('urlimplantation') = html;
 			}
-			
+		}
 		</script>
 		]]>
 	</Content>
