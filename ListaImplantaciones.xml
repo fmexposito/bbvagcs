@@ -44,7 +44,7 @@
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);							
-				var querytosend = "select O,F  where O <> ''";
+				var querytosend = "select O,F,E  where O <> ''";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
@@ -65,7 +65,7 @@
 				html += "<ul>";
 					for(var i=0; i<data.getNumberOfRows(); i++){
 						
-						html += '<li><a href="'+data.getValue(i,0)+'">'+data.getValue(i,1)+'</a></li>';
+						html += '<li><a href="'+data.getValue(i,0)+'">Implementación del Cliente '+data.getValue(i,1)+' a fecha ' +data.getValue(i,2)+'</a></li>';
 						
 					
 					}
