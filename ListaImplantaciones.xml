@@ -70,7 +70,7 @@
 					
 					}
 				html +=	"</ul>";
-				document.getElementById('urlimplantation') = html;
+				document.getElementById('urlimplantation').innerHTML = html;
 			}
 		}
 		</script>
