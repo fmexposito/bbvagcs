@@ -63,9 +63,10 @@
 				if(data.getNumberOfRows()!=0){
 				var html = "";
 				html += "<ul>";
+				
 					for(var i=0; i<data.getNumberOfRows(); i++){
-						
-						html += '<li><a href="'+data.getValue(i,0)+'">Implementación del Cliente '+data.getValue(i,1)+' a fecha ' +data.getValue(i,2)+'</a></li>';
+						var fecha = new Date (data.getValue(i,2));
+						html += '<li><a href="'+data.getValue(i,0)+'">Implementaci&oacute;n del Cliente '+data.getValue(i,1)+' a fecha de ' +fecha.getDate()+ '/'+fecha.getMonth()+ '/'+fecha.getFullYear()+'</a></li>';
 						
 					
 					}
