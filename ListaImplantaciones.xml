@@ -65,8 +65,8 @@
 				html += "<ul>";
 				
 					for(var i=0; i<data.getNumberOfRows(); i++){
-						var fecha = data.getValue(i,2);
-						html += '<li><a target="_parent" href="'+data.getValue(i,0)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,1)+' a fecha de ' +fecha+'</a></li>';
+						var fecha = data.getValue(i,0);
+						html += '<li><a target="_parent" href="'+data.getValue(i,1)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,1)+' a fecha de ' +fecha+'</a></li>';
 						
 					
 					}
