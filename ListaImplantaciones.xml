@@ -27,13 +27,13 @@
 			color: black;
 			text-decoration:underline;
 			font-size:12px;
-			margin-top: 5px;
+			margin:10px 10px;
 			}
 			.mes a{
 			color: black;
 			text-decoration:underline;
 			font-size:12px;
-			margin-top: 5px;
+			margin:10px 10px;
 			}
 		</style>
 		
