@@ -66,6 +66,7 @@
 				
 					for(var i=0; i<data.getNumberOfRows(); i++){
 						var fecha = data.getValue(i,0);
+						alert(fecha[3][4]);
 						html += '<li><a  href="'+data.getValue(i,2)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,1)+' a fecha del ' +fecha+'</a></li>';
 						
 					
