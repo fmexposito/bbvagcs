@@ -27,14 +27,14 @@
 			color: black;
 			color: black;
 			text-decoration:underline;
-			font-size:12px;
+			font-size:14px;
 			margin:15px 15px;
 			font-weight:normal;
 			}
 			.mes a{
 			color: black;
 			text-decoration:underline;
-			font-size:12px;
+			font-size:14px;
 			font-weight:normal;
 			}
 		</style>
@@ -77,7 +77,7 @@
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);							
-				var querytosend = "select I,L,V  where V <> ''";
+				var querytosend = "select I,V  where V <> '' GROUP BY I";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
