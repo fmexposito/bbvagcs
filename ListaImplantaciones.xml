@@ -42,7 +42,7 @@
 					
 
 		<!--<div id="urlimplantation"></div>-->
-		<div style="width=100px">
+		<div id="mesesImplantacion" style="width=100px">
 		<!--<div id="Enero" class="mes">Enero</div>
 		<div id="Febrero" class="mes">Febrero</div>
 		<div id="Marzo" class="mes">Marzo</div>
