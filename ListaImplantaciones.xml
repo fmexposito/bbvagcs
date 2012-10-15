@@ -42,18 +42,18 @@
 					
 
 		<!--<div id="urlimplantation"></div>-->
-		<div id="Enero" class="mes">Enero<br/></div>
-		<div id="Febrero" class="mes">Febrero<br/></div>
-		<div id="Marzo" class="mes">Marzo<br/></div>
-		<div id="Abril" class="mes">Abril<br/></div>
-		<div id="Mayo" class="mes">Mayo<br/></div>
-		<div id="Junio" class="mes">Junio<br/></div>
-		<div id="Julio" class="mes">Julio<br/></div>
-		<div id="Agosto" class="mes">Agosto<br/></div>
-		<div id="Septiembre" class="mes">Septiembre<br/></div>
-		<div id="Octubre" class="mes">Octubre<br/></div>
-		<div id="Noviembre" class="mes">Noviembre<br/></div>
-		<div id="Diciembre" class="mes">Diciembre<br/></div>
+		<div id="Enero" class="mes">Enero<br/></div><br/>
+		<div id="Febrero" class="mes">Febrero<br/></div><br/>
+		<div id="Marzo" class="mes">Marzo<br/></div><br/>
+		<div id="Abril" class="mes">Abril<br/></div><br/>
+		<div id="Mayo" class="mes">Mayo<br/></div><br/>
+		<div id="Junio" class="mes">Junio<br/></div><br/>
+		<div id="Julio" class="mes">Julio<br/></div><br/>
+		<div id="Agosto" class="mes">Agosto<br/></div><br/>
+		<div id="Septiembre" class="mes">Septiembre<br/></div><br/>
+		<div id="Octubre" class="mes">Octubre<br/></div><br/>
+		<div id="Noviembre" class="mes">Noviembre<br/></div><br/>
+		<div id="Diciembre" class="mes">Diciembre<br/></div><br/>
 		
 		<script type="text/javascript"> 
 			
