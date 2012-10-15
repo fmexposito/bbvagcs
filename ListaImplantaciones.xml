@@ -19,7 +19,7 @@
 			float:left;
 			color: #0B5394;
 			width:300px;
-			font-size:14px;
+			font-size:16px;
 			font-weight:bold;
 			}
 			.mes li{
@@ -27,13 +27,13 @@
 			color: black;
 			text-decoration:underline;
 			font-size:12px;
-			margin:10px 10px;
+			margin:15px 15px;
 			}
 			.mes a{
 			color: black;
 			text-decoration:underline;
 			font-size:12px;
-			margin:10px 10px;
+			
 			}
 		</style>
 		
