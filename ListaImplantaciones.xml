@@ -43,14 +43,14 @@
 
 		<!--<div id="urlimplantation"></div>-->
 		<div style="width=100px">
-		<div id="Enero" class="mes">Enero</div>
+		<!--<div id="Enero" class="mes">Enero</div>
 		<div id="Febrero" class="mes">Febrero</div>
 		<div id="Marzo" class="mes">Marzo</div>
 		<div id="Abril" class="mes">Abril</div>
 		<div id="Mayo" class="mes">Mayo</div>
 		<div id="Junio" class="mes">Junio</div>
 		<div id="Julio" class="mes">Julio</div>
-		<div id="Agosto" class="mes">Agosto</div>
+		<div id="Agosto" class="mes">Agosto</div>-->
 		<div id="Septiembre" class="mes">Septiembre</div>
 		<div id="Octubre" class="mes">Octubre</div>
 		<div id="Noviembre" class="mes">Noviembre</div>
