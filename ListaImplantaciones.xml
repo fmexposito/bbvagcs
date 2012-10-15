@@ -43,18 +43,18 @@
 
 		<!--<div id="urlimplantation"></div>-->
 		<div style="width=100px">
-		<div id="Enero" class="mes">Enero<br/></div>
-		<div id="Febrero" class="mes">Febrero<br/></div>
-		<div id="Marzo" class="mes">Marzo<br/></div>
-		<div id="Abril" class="mes">Abril<br/></div>
-		<div id="Mayo" class="mes">Mayo<br/></div>
-		<div id="Junio" class="mes">Junio<br/></div>
-		<div id="Julio" class="mes">Julio<br/></div>
-		<div id="Agosto" class="mes">Agosto<br/></div>
-		<div id="Septiembre" class="mes">Septiembre<br/></div>
-		<div id="Octubre" class="mes">Octubre<br/></div>
-		<div id="Noviembre" class="mes">Noviembre<br/></div>
-		<div id="Diciembre" class="mes">Diciembre<br/></div>
+		<div id="Enero" class="mes">Enero</div>
+		<div id="Febrero" class="mes">Febrero</div>
+		<div id="Marzo" class="mes">Marzo</div>
+		<div id="Abril" class="mes">Abril</div>
+		<div id="Mayo" class="mes">Mayo</div>
+		<div id="Junio" class="mes">Junio</div>
+		<div id="Julio" class="mes">Julio</div>
+		<div id="Agosto" class="mes">Agosto</div>
+		<div id="Septiembre" class="mes">Septiembre</div>
+		<div id="Octubre" class="mes">Octubre</div>
+		<div id="Noviembre" class="mes">Noviembre</div>
+		<div id="Diciembre" class="mes">Diciembre</div>
 		</div>
 		<script type="text/javascript"> 
 			
