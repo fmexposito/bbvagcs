@@ -114,7 +114,7 @@
 						case '11': document.getElementById('Noviembre').innerHTML += '<li><a  href="'+data.getValue(i,2)+'">' +fecha+ '</a></li>';break;
 						case '12': document.getElementById('Diciembre').innerHTML += '<li><a  href="'+data.getValue(i,2)+'">' +fecha+ '</a></li>';break;
 						}
-					//	html += '<li><a  href="'+data.getValue(i,2)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,1)+' a fecha del ' +fecha+'</a></li>';
+					//	html += '<li><a  href="'+data.getValue(i,1)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,0)+' a fecha del ' +fecha+'</a></li>';
 						
 					
 					}
