@@ -20,28 +20,31 @@
 			color: #0B5394;
 			width:300px;
 			font-size:14px;
+			font-weight:bold;
 			}
 			.mes a{
+			color: black;
 			text-decoration:underline;
 			font-size:12px;
+			margin-top: 5px;
 			}
 		</style>
 		
 					
 
 		<!--<div id="urlimplantation"></div>-->
-		<ul id="Enero" class="mes">Enero<br/></ul>
-		<ul id="Febrero" class="mes">Febrero<br/></ul>
-		<ul id="Marzo" class="mes">Marzo<br/></ul>
-		<ul id="Abril" class="mes">Abril<br/></ul>
-		<ul id="Mayo" class="mes">Mayo<br/></ul>
-		<ul id="Junio" class="mes">Junio<br/></ul>
-		<ul id="Julio" class="mes">Julio<br/></ul>
-		<ul id="Agosto" class="mes">Agosto<br/></ul>
-		<ul id="Septiembre" class="mes">Septiembre<br/></ul>
-		<ul id="Octubre" class="mes">Octubre<br/></ul>
-		<ul id="Noviembre" class="mes">Noviembre<br/></ul>
-		<ul id="Diciembre" class="mes">Diciembre<br/></ul>
+		<div id="Enero" class="mes">Enero<br/></div>
+		<div id="Febrero" class="mes">Febrero<br/></div>
+		<div id="Marzo" class="mes">Marzo<br/></div>
+		<div id="Abril" class="mes">Abril<br/></div>
+		<div id="Mayo" class="mes">Mayo<br/></div>
+		<div id="Junio" class="mes">Junio<br/></div>
+		<div id="Julio" class="mes">Julio<br/></div>
+		<div id="Agosto" class="mes">Agosto<br/></div>
+		<div id="Septiembre" class="mes">Septiembre<br/></div>
+		<div id="Octubre" class="mes">Octubre<br/></div>
+		<div id="Noviembre" class="mes">Noviembre<br/></div>
+		<div id="Diciembre" class="mes">Diciembre<br/></div>
 		
 		<script type="text/javascript"> 
 			
