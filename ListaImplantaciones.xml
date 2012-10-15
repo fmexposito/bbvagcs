@@ -51,10 +51,10 @@
 		<div id="Junio" class="mes">Junio</div>
 		<div id="Julio" class="mes">Julio</div>
 		<div id="Agosto" class="mes">Agosto</div>-->
-		<div id="Septiembre" class="mes">Septiembre</div>
-		<div id="Octubre" class="mes">Octubre</div>
-		<div id="Noviembre" class="mes">Noviembre</div>
-		<div id="Diciembre" class="mes">Diciembre</div>
+		<div id="Septiembre" class="mes">Septiembre</div><br/>
+		<div id="Octubre" class="mes">Octubre</div><br/>
+		<div id="Noviembre" class="mes">Noviembre</div><br/>
+		<div id="Diciembre" class="mes">Diciembre</div><br/>
 		</div>
 		<script type="text/javascript"> 
 			
