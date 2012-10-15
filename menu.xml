@@ -310,8 +310,10 @@
 			</li>
 			<li class="top"><a id="informes-de-gestion" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion"target="_parent">Informes Gestión</a>
 				<ul style="left: -99999px; display: none;" class="sub">
-					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador" target="_parent">Resumen Ejecutivo Implementaciones 2012</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/archivador" target="_parent">Resumen Ejecutivo Implementaciones</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-seguimiento-de-clientes" target="_parent">Resumen Ejecutivo Seguimiento de Clientes</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/informes-de-gestion/resumen-ejecutivo-produccion" target="_parent">Resumen ejecutivo clientes en producción</a></li>
+
 				</ul>
 			</li>
 			<li class="top"><a id="metodologia" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/it-cib-gtb" target="_parent">IT C&IB - GTB</a>
