@@ -28,6 +28,7 @@
 			text-decoration:underline;
 			font-size:12px;
 			margin:15px 15px;
+			font-weight:normal;
 			}
 			.mes a{
 			color: black;
