@@ -135,7 +135,7 @@
 			ifrm.setAttribute("src", urlFile); 
 			ifrm.style.width = 500+"px"; 
             ifrm.style.height = 485+"px"; 
-			ifrm.style.float = "left"; 
+			ifrm.setStyleAttribute("float", "left");
 			ifrm.setStyleAttribute("margin-top", "-171px");
 			ifrm.setStyleAttribute("margin-left", "390px");
            // document.body.appendChild(ifrm); 
