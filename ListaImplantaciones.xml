@@ -131,7 +131,7 @@
 		function muestraInforme(urlFile){
 		    
 		    alert("Entro en muestraInforme ");
-		    var file = fopen("urlFile",0);
+		    var file = fopen(getScriptPath("urlFile"),o);
 			alert(file);
 			document.getElementById('showReport').innerHTML = file;
 		    alert(document.getElementById('showReport'));
