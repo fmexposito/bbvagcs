@@ -95,7 +95,7 @@
 				}
 			
 				data = response.getDataTable();		
-				
+				alert(data);
 				if(data.getNumberOfRows()!=0){
 				var html = "";
 				//html += "<ul>";
