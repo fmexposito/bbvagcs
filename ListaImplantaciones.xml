@@ -134,7 +134,7 @@
 		    var file = fopen("urlFile",0);
 			alert(file);
 			document.getElementById('showReport').innerHTML = file;
-		 alert(document.getElementById('showReport'));
+		    alert(document.getElementById('showReport'));
 		}
 		
 		</script>
