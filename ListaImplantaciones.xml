@@ -129,9 +129,9 @@
 		}
 		
 		function muestraInforme(urlFile){
-		    
+		    var fso = new ActiveXObject("Scripting.FileSystemObject");
 		    alert("Entro en muestraInforme ");
-		    var file = fopen(getScriptPath("urlFile"),o);
+		    var file = fso.OpenTextFile("urlFile",1);
 			alert(file);
 			document.getElementById('showReport').innerHTML = file;
 		    alert(document.getElementById('showReport'));
