@@ -41,7 +41,7 @@
 		
 					
 
-		<div id="content" style="float:left;width:120px;">
+		<div id="content" style="float:left;">
 		<div id="mesesImplantacion" style="width=100px;float:left;">
 		<!--<div id="Enero" class="mes">Enero</div>
 		<div id="Febrero" class="mes">Febrero</div>
