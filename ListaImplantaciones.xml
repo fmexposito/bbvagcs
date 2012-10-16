@@ -127,9 +127,11 @@
 		}
 		
 		function muestraInforme(urlFile){
+		alert("Entro en muestraInforme ");
 		    var file = fopen("urlFile",0);
-			document.getElementById('showReport').value = file;
-		
+			alert(file);
+			document.getElementById('showReport').innerHTML = file;
+		 alert(document.getElementById('showReport'));
 		}
 		
 		</script>
