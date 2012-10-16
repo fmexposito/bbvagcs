@@ -135,7 +135,8 @@
 			ifrm.setAttribute("src", urlFile); 
 			ifrm.style.width = 640+"px"; 
             ifrm.style.height = 480+"px"; 
-            document.body.appendChild(ifrm); 
+           // document.body.appendChild(ifrm); 
+		   document.getElementById('showReport').innerHTML = ifrm;
 			/*alert(file);
 			document.getElementById('showReport').innerHTML = file;
 		    alert(document.getElementById('showReport'));*/
