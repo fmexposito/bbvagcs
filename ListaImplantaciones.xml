@@ -77,7 +77,7 @@
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);							
-				var querytosend = "select I,max(V)  where V <> '' group by I";
+				var querytosend = "select I,max(W)  where W <> '' group by I";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
