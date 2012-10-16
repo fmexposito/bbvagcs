@@ -136,8 +136,7 @@
 			ifrm.style.width = 500+"px"; 
             ifrm.style.height = 485+"px"; 
 			ifrm.style.float = "left"; 
-			ifrm.style.margin-top = -171+"px"; 
-			ifrm.style.margin-left = 390+"px"; 
+			ifrm.style.margin = -171+"px" 0+"px" 0+"px" 390+"px";
            // document.body.appendChild(ifrm); 
 		   document.getElementById('showReport').appendChild(ifrm); 
 			/*alert(file);
