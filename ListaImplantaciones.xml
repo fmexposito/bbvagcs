@@ -130,7 +130,7 @@
 		
 		function muestraInforme(response){
 		    data1 = response.getDataTable();	
-		    var url = data1.getValue(i,1);
+		    var urlFile = data1.getValue(i,1);
 		    alert("Entro en muestraInforme ");
 		    var file = fopen("urlFile",0);
 			alert(file);
