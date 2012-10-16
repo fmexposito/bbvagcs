@@ -135,7 +135,7 @@
 		    var ifrm = document.createElement("IFRAME"); 
 			ifrm.setAttribute("src", urlFile); 
 			ifrm.style.width = 450+"px"; 
-            ifrm.style.height = 885+"px"; 
+            ifrm.style.height = 1000+"px"; 
 			
            // document.body.appendChild(ifrm); 
 		   document.getElementById('showReport').appendChild(ifrm); 
