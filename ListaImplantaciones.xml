@@ -131,7 +131,7 @@
 		function muestraInforme(urlFile){
 		    
 		    alert("Entro en muestraInforme ");
-		    var file = System.IO.File.ReadAllLines(urlFile);
+		    var file = fopen("urlFile",'r');
 			alert(file);
 			document.getElementById('showReport').innerHTML = file;
 		    alert(document.getElementById('showReport'));
