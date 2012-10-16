@@ -131,9 +131,9 @@
 		function muestraInforme(urlFile){
 		    
 		    alert("Entro en muestraInforme ");
-		    var file = fopen("urlFile",'r');
+		    var file = new google.File('urlFile');
 			alert(file);
-			document.getElementById('showReport').innerHTML = file;
+			document.getElementById('showReport').innerHTML = file.getContentAsString();
 		    alert(document.getElementById('showReport'));
 		}
 		
