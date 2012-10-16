@@ -95,7 +95,7 @@
 				}
 			
 				data = response.getDataTable();		
-				alert(data);
+				
 				if(data.getNumberOfRows()!=0){
 				var html = "";
 				//html += "<ul>";
@@ -130,7 +130,7 @@
 		
 		function muestraInforme(urlFile){
 		    
-		    alert("Entro en muestraInforme ");
+		    
 		    var ifrm = document.createElement("IFRAME"); 
 			ifrm.setAttribute("src", urlFile); 
 			ifrm.style.width = 640+"px"; 
