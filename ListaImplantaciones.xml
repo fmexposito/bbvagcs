@@ -101,6 +101,8 @@
 				//html += "<ul>";
 				
 					for(var i=0; i<data.getNumberOfRows(); i++){
+					    var url = data.getValue(i,1);
+						alert("Url "+url);
 						var fecha = data.getValue(i,0);
 						var mes = fecha[3]+fecha[4];
 						switch(mes){
@@ -113,7 +115,7 @@
 						case '07': document.getElementById('Julio').innerHTML += '<li><a  href="'+data.getValue(i,1)+'">' +fecha+ '</a></li>';break;
 						case '08': document.getElementById('Agosto').innerHTML += '<li><a  href="'+data.getValue(i,1)+'">' +fecha+ '</a></li>';break;
 						case '09': document.getElementById('Septiembre').innerHTML += '<li><a  href="'+data.getValue(i,1)+'">' +fecha+ '</a></li>';break;
-						case '10': document.getElementById('Octubre').innerHTML += '<li><a  href="javascript:muestraInforme('+data.getValue(i,1)+')" >' +fecha+ '</a></li>';break;
+						case '10': document.getElementById('Octubre').innerHTML += '<li><a  href="javascript:muestraInforme('+url+')" >' +fecha+ '</a></li>';break;
 						case '11': document.getElementById('Noviembre').innerHTML += '<li><a  href="'+data.getValue(i,1)+'">' +fecha+ '</a></li>';break;
 						case '12': document.getElementById('Diciembre').innerHTML += '<li><a  href="'+data.getValue(i,1)+'">' +fecha+ '</a></li>';break;
 						}
