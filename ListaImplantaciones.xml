@@ -138,7 +138,7 @@
            // document.body.appendChild(ifrm); 
 		   document.getElementById('showReport').appendChild(ifrm); 
 			/*alert(file);
-			document.getElementById('showReport').innerHTML = file;
+			//document.getElementById('showReport').innerHTML = file;
 		    alert(document.getElementById('showReport'));*/
 		}
 		
