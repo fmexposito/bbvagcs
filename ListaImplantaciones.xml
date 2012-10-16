@@ -101,7 +101,7 @@
 				//html += "<ul>";
 				
 					for(var i=0; i<data.getNumberOfRows(); i++){
-					    var url = data.getValue(i,1).toSring();
+					    var url = data.getValue(i,1);
 						alert("Url "+url);
 						var fecha = data.getValue(i,0);
 						var mes = fecha[3]+fecha[4];
