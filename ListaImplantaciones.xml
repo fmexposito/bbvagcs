@@ -135,7 +135,7 @@
 			ifrm.setAttribute("src", urlFile); 
 			ifrm.style.width = 500+"px"; 
             ifrm.style.height = 485+"px"; 
-			ifrm.setAttribute("margin-left", "390px"); 
+			ifrm.setStyleAttribute("margin-left", "490px"); 
            // document.body.appendChild(ifrm); 
 		   document.getElementById('showReport').appendChild(ifrm); 
 			/*alert(file);
