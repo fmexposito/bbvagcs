@@ -56,7 +56,7 @@
 		<div id="Noviembre" class="mes">Noviembre</div>
 		<div id="Diciembre" class="mes">Diciembre</div>
 		</div>
-		<div id="showReport" style="float:left;width:500px;margin-left:490px;">
+		<div id="showReport" style="float:left;width:500px;margin-left:290px;margin-top:-171px;">
 		</div></div>
 		
 		<script type="text/javascript"> 
