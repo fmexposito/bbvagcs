@@ -102,7 +102,7 @@
 				//html += "<ul>";
 				var urlFile = new Array();
 					for(var i=0; i<data.getNumberOfRows(); i++){
-					    alert(i);
+					   // alert(i);
 					    urlFile[i] = data.getValue(i,1);
 						
 						var fecha = data.getValue(i,0);
@@ -118,7 +118,7 @@
 						case '08': document.getElementById('Agosto').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						case '09': document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						//case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '10': alert(i);alert(urlFile[i]);muestraInforme(urlFile[i]);
+						case '10': /*alert(i);alert(urlFile[i]);*/muestraInforme(urlFile[i]);
 						document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						break;
 
@@ -136,7 +136,7 @@
 		
 		function muestraInforme(urlFile){
 		    
-		    alert("entro");
+		   // alert("entro");
 		    var ifrm = document.createElement("IFRAME"); 
 			ifrm.setAttribute("src", urlFile); 
 			ifrm.style.width = 660+"px"; 
