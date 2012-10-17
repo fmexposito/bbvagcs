@@ -57,7 +57,7 @@
 		<div id="Noviembre" class="mes">Noviembre</div>
 		<div id="Diciembre" class="mes">Diciembre</div>
 		</div>
-		<div id="showReport" style="float:left;width:660px;height:2000px;margin-left:150px;">
+		<div id="showReport" style="float:left;width:860px;height:2000px;margin-left:150px;">
 		</div></div>
 		
 		<script type="text/javascript"> 
@@ -134,7 +134,7 @@
 		    
 		    var ifrm = document.createElement("IFRAME"); 
 			ifrm.setAttribute("src", urlFile); 
-			ifrm.style.width = 660+"px"; 
+			ifrm.style.width = 860+"px"; 
             ifrm.style.height = 1500+"px"; 
 			
            // document.body.appendChild(ifrm); 
