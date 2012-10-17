@@ -103,7 +103,7 @@
 				
 					for(var i=0; i<data.getNumberOfRows(); i++){
 					    
-						var urlFile = data.getValue(i,1);
+						var urlFile[i] = data.getValue(i,1);
 						var fecha = data.getValue(i,0);
 						var mes = fecha[3]+fecha[4];
 						switch(mes){
@@ -118,7 +118,7 @@
 						case '09': document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						//case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						case '10': muestraInforme(urlFile);
-						document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';
+						document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						break;
 
 						case '11': document.getElementById('Noviembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
