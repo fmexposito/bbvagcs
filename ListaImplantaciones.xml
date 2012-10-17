@@ -143,7 +143,7 @@
             ifrm.style.height = 660+"px"; 
 			
            // document.body.appendChild(ifrm); 
-		   document.getElementById('showReport').appendChild(ifrm); 
+		   document.getElementById('showReport')= ifrm; 
 			/*alert(file);
 			//document.getElementById('showReport').innerHTML = file;
 		    alert(document.getElementById('showReport'));*/
