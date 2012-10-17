@@ -118,7 +118,7 @@
 						case '08': document.getElementById('Agosto').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						case '09': document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						//case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '10': muestraInforme(urlFile);
+						case '10': muestraInforme(urlFile[i]);
 						document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						break;
 
