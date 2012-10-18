@@ -66,7 +66,7 @@
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
 			var urlTable = prefs.getString("_table_query_url");					
-			var urlOld = "";
+			
 			var ifrm = "";
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
@@ -146,7 +146,7 @@
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
-			   urlOld = urlFileNN;
+			   
 			}
 			else {
 			
