@@ -145,10 +145,11 @@
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   var urlOld = urlFileNN;
+			   alert(urlOld);
 			}
 			else {
 			alert ("Entro en else");
-			alert("srcOld "+document.getElementById('showReport').innerHTML);
+			alert(urlOld);
 			var ifrmOld = document.createElement("IFRAME"); 
 			ifrmOld.setAttribute("src", urlOld); 
 			ifrmOld.style.width = 660+"px"; 
