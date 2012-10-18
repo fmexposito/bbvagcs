@@ -67,6 +67,7 @@
 			var prefs = new _IG_Prefs(); // User preferences			
 			var urlTable = prefs.getString("_table_query_url");					
 			var urlOld = "";
+			var ifrm = "";
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
 			function loadVisualizationAPI() 
@@ -139,7 +140,7 @@
 			
 			if(document.getElementById('showReport').innerHTML == ""){
 			  // alert ("Entro en if");
-			   var ifrm = document.createElement("IFRAME"); 
+			   ifrm = document.createElement("IFRAME"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
