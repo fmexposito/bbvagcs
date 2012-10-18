@@ -135,20 +135,27 @@
 		
 		function muestraInforme(urlFileNN){
 		    
-			var ifrm = document.createElement("IFRAME"); 
-			ifrm.setAttribute("src", urlFileNN); 
-			ifrm.style.width = 660+"px"; 
-            ifrm.style.height = 660+"px"; 
+			
 			
 			if(document.getElementById('showReport').innerHTML == ""){
 			
 			   document.getElementById('showReport').appendChild(ifrm); 
 			}
-			else if(oldifrm != "") {
-			alert('Entro');
-		       document.getElementById('showReport').replaceChild(ifrm,oldifrm); 
+			else {
+			
+			var ifrmOld = document.createElement("IFRAME"); 
+			ifrmOld.setAttribute("src", document.getElementById('showReport').innerHTML); 
+			ifrmOld.style.width = 660+"px"; 
+            ifrmOld.style.height = 660+"px";
+			
+			var ifrm = document.createElement("IFRAME"); 
+			ifrm.setAttribute("src", urlFileNN); 
+			ifrm.style.width = 660+"px"; 
+            ifrm.style.height = 660+"px"; 	
+			
+		       document.getElementById('showReport').replaceChild(ifrm,ifrmOld); 
 		    }
-			 var oldifrm = ifrm;
+			 
 
 
 		 
