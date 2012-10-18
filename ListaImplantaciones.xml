@@ -134,7 +134,7 @@
 		}
 		
 		function muestraInforme(urlFileNN){
-		    
+		    var oldifrm = "";
 			var ifrm = document.createElement("IFRAME"); 
 			ifrm.setAttribute("src", urlFileNN); 
 			ifrm.style.width = 660+"px"; 
@@ -144,11 +144,11 @@
 			
 			   document.getElementById('showReport').appendChild(ifrm); 
 			}
-			else if(oldifrm) {
+			else if(oldifrm != "") {
 			alert('Entro');
 		       document.getElementById('showReport').replaceChild(ifrm,oldifrm); 
 		    }
-			var oldifrm = ifrm;
+			 oldifrm = ifrm;
 
 
 		 
