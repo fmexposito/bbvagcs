@@ -66,7 +66,7 @@
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
 			var urlTable = prefs.getString("_table_query_url");					
-			
+			var urlOld = "";
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
 			function loadVisualizationAPI() 
@@ -134,17 +134,16 @@
 		
 		function muestraInforme(urlFileNN){
 		    
-			var urlOld = "";
+			
 			
 			if(document.getElementById('showReport').innerHTML == ""){
 			   alert ("Entro en if");
 			   var ifrm = document.createElement("IFRAME"); 
-			   ifrm.setAttribute("src", "http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk"); 
+			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
-			   urlOld += urlFileNN;
-			   alert(urlOld);
+			   urlOld = urlFileNN;
 			}
 			else {
 			alert ("Entro en else");
@@ -162,8 +161,8 @@
 		    document.getElementById('showReport').replaceChild(ifrmNew,ifrmOld); 
 			urlOld = urlFileNN;
 		    }
-			 
-
+		
+        
 
 		 
 		}
