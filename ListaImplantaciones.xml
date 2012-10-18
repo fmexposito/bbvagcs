@@ -134,16 +134,20 @@
 			}
 		}
 		
-		function muestraInforme(urlFile){
+		function muestraInforme(urlFileNN){
 		    
-		  
+		    
 		    var ifrm = document.createElement("IFRAME"); 
-			ifrm.setAttribute("src", urlFile); 
+			ifrm.setAttribute("src", urlFileNN); 
 			ifrm.style.width = 660+"px"; 
             ifrm.style.height = 660+"px"; 
 			
            // document.body.appendChild(ifrm); 
 		   document.getElementById('showReport').appendChild(ifrm); 
+		   if(oldifrm){
+		   document.getElementById('showReport').replaceChild(urlFileNN,oldifrm); 
+		   }
+		    var oldifrm = ifrm;
 			/*alert(file);
 			//document.getElementById('showReport').innerHTML = file;
 		    alert(document.getElementById('showReport'));*/
