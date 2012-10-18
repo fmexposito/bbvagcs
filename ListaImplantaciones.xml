@@ -118,6 +118,7 @@
 						case '09': document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						//case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						
 						break;
 
 						case '11': document.getElementById('Noviembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
@@ -138,7 +139,7 @@
 			
 			if(document.getElementById('showReport').innerHTML == ""){
 			   alert ("Entro en if");
-			   var ifrm = document.createElement("IFRAME"); 
+			   var ifrm = document.createElement("IFRAME1"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
@@ -148,12 +149,12 @@
 			else {
 			alert ("Entro en else");
 			alert(urlOld);
-			var ifrmOld = document.createElement("IFRAME"); 
+			var ifrmOld = document.createElement("IFRAME2"); 
 			ifrmOld.setAttribute("src", urlOld); 
 			ifrmOld.style.width = 660+"px"; 
             ifrmOld.style.height = 660+"px";
 			
-			var ifrmNew = document.createElement("IFRAME"); 
+			var ifrmNew = document.createElement("IFRAME3"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
