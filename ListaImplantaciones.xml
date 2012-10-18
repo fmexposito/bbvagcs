@@ -144,7 +144,7 @@
 			
 			   document.getElementById('showReport').appendChild(ifrm); 
 			}
-			if(oldifrm){
+			else if(oldifrm) {
 			alert('Entro');
 		       document.getElementById('showReport').replaceChild(ifrm,oldifrm); 
 		    }
