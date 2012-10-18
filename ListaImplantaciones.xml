@@ -138,8 +138,8 @@
 			
 			
 			if(document.getElementById('showReport').innerHTML == ""){
-			   alert ("Entro en if");
-			   var ifrm = document.createElement("IFRAME1"); 
+			  // alert ("Entro en if");
+			   var ifrm = document.createElement("IFRAME"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
@@ -147,14 +147,14 @@
 			   urlOld = urlFileNN;
 			}
 			else {
-			alert ("Entro en else");
-			alert(urlOld);
-			var ifrmOld = document.createElement("IFRAME2"); 
+			//alert ("Entro en else");
+			//alert(urlOld);
+			var ifrmOld = document.createElement("IFRAME"); 
 			ifrmOld.setAttribute("src", urlOld); 
 			ifrmOld.style.width = 660+"px"; 
             ifrmOld.style.height = 660+"px";
 			
-			var ifrmNew = document.createElement("IFRAME3"); 
+			var ifrmNew = document.createElement("IFRAME"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
