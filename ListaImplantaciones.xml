@@ -138,7 +138,10 @@
 			
 			
 			if(document.getElementById('showReport').innerHTML == ""){
-			
+			   var ifrm = document.createElement("IFRAME"); 
+			   ifrm.setAttribute("src", urlFileNN); 
+			   ifrm.style.width = 660+"px"; 
+               ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
 			}
 			else {
