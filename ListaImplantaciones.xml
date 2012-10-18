@@ -139,12 +139,13 @@
 			ifrm.setAttribute("src", urlFileNN); 
 			ifrm.style.width = 660+"px"; 
             ifrm.style.height = 660+"px"; 
-			alert("eooo5"+document.getElementById('showReport').innerHTML+"Jordi");
+			
 			if(document.getElementById('showReport').innerHTML == ""){
 			
 			   document.getElementById('showReport').appendChild(ifrm); 
 			}
 			if(oldifrm){
+			alert('Entro');
 		       document.getElementById('showReport').replaceChild(ifrm,oldifrm); 
 		    }
 			var oldifrm = ifrm;
