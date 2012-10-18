@@ -141,7 +141,7 @@
 			ifrm.style.width = 660+"px"; 
             ifrm.style.height = 660+"px"; 
 			alert('LLego');
-			if(document.getElementById('showReport').value == ""){
+			if(document.getElementById('showReport') == ""){
 			alert('Entro');
 			   document.getElementById('showReport').appendChild(ifrm); 
 			}
