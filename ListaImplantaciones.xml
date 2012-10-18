@@ -117,8 +117,7 @@
 						case '08': document.getElementById('Agosto').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						case '09': document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
 						//case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '10': muestraInforme(urlFile[i]);
-						document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						break;
 
 						case '11': document.getElementById('Noviembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
@@ -140,7 +139,7 @@
 			if(document.getElementById('showReport').innerHTML == ""){
 			   alert ("Entro en if");
 			   var ifrm = document.createElement("IFRAME"); 
-			   ifrm.setAttribute("src", urlFileNN); 
+			   ifrm.setAttribute("src", "http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk"); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
