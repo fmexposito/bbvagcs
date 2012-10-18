@@ -154,9 +154,9 @@
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
-			
-		    document.getElementById('showReport').removeChild(ifrm); 
-			document.getElementById('showReport').appendChild(ifrmNew);
+			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
+		   // document.getElementById('showReport').removeChild(ifrm); 
+		 //	document.getElementById('showReport').appendChild(ifrmNew);
 			ifrm = ifrmNew;
 		    }
 		
