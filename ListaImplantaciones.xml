@@ -145,7 +145,7 @@
            // document.body.appendChild(ifrm); 
 		   document.getElementById('showReport').appendChild(ifrm); 
 		   if(oldifrm){
-		   document.getElementById('showReport').replaceChild(urlFileNN,oldifrm); 
+		   document.getElementById('showReport').replaceChild(ifrm,oldifrm); 
 		   }
 		    var oldifrm = ifrm;
 			/*alert(file);
