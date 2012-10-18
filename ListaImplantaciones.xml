@@ -149,17 +149,14 @@
 			else {
 			//alert ("Entro en else");
 			//alert(urlOld);
-			var ifrmOld = document.createElement("IFRAME"); 
-			ifrmOld.setAttribute("src", urlOld); 
-			ifrmOld.style.width = 660+"px"; 
-            ifrmOld.style.height = 660+"px";
+			
 			
 			var ifrmNew = document.createElement("IFRAME"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
 			
-		    document.getElementById('showReport').removeChild(ifrmOld); 
+		    document.getElementById('showReport').removeChild(ifrm); 
 			document.getElementById('showReport').appendChild(ifrmNew);
 			urlOld = urlFileNN;
 		    }
