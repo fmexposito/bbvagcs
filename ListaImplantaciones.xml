@@ -144,12 +144,13 @@
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
+			   var urlOld = urlFileNN;
 			}
 			else {
 			alert ("Entro en else");
 			alert("srcOld "+document.getElementById('showReport').innerHTML);
 			var ifrmOld = document.createElement("IFRAME"); 
-			ifrmOld.setAttribute("src", document.getElementById('showReport').innerHTML); 
+			ifrmOld.setAttribute("src", urlOld); 
 			ifrmOld.style.width = 660+"px"; 
             ifrmOld.style.height = 660+"px";
 			
@@ -158,7 +159,8 @@
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
 			
-		       document.getElementById('showReport').replaceChild(ifrmNew,ifrmOld); 
+		    document.getElementById('showReport').replaceChild(ifrmNew,ifrmOld); 
+			urlOld = urlFileNN;
 		    }
 			 
 
