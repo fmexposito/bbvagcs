@@ -140,7 +140,7 @@
 			ifrm.setAttribute("src", urlFileNN); 
 			ifrm.style.width = 660+"px"; 
             ifrm.style.height = 660+"px"; 
-			alert(document.getElementById('showReport'));
+			alert("eooo "+document.getElementById('showReport'));
 			if(document.getElementById('showReport') == ""){
 			alert('Entro');
 			   document.getElementById('showReport').appendChild(ifrm); 
