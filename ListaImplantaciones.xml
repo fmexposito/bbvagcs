@@ -158,7 +158,8 @@
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
 			
-		    document.getElementById('showReport').replaceChild(ifrmNew,ifrmOld); 
+		    document.getElementById('showReport').removeChild(ifrmOld); 
+			document.getElementById('showReport').appendChild(ifrmNew);
 			urlOld = urlFileNN;
 		    }
 		
