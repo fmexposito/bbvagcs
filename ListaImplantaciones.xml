@@ -140,7 +140,7 @@
 			
 			
 			if(document.getElementById('showReport').innerHTML == ""){
-			  // alert ("Entro en if");
+			 
 			   ifrm = document.createElement("IFRAME"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
@@ -149,9 +149,6 @@
 			   urlOld = urlFileNN;
 			}
 			else {
-			//alert ("Entro en else");
-			//alert(urlOld);
-			
 			
 			var ifrmNew = document.createElement("IFRAME"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
