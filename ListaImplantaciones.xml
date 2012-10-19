@@ -138,7 +138,7 @@
 		}
 		
 		function muestraInforme(urlFileNN){
-		    
+		    var contentIframe = "CONTENIDO DEL IFRAME!!!!!!!!!!!!!";
 			
 			
 			if(document.getElementById('showReport').innerHTML == ""){
@@ -149,6 +149,7 @@
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
+			    document.getElementById('iframeOld').appendChild(contentIframe); 
 			   
 			}
 			else {
