@@ -159,7 +159,7 @@
 			    p = document.createTextNode();
 				p.data = "Test";
 			   //ifrm.contentWindow.document.body.appendChild(p);
-			   if(ifrm.contentWindow.document.body != null){
+			   if(ifrm.contentWindow.document.body != ""){
 			    alert(ifrm.contentWindow.document.getElementById('docs-editor'));
 				}
 			    //document.getElementById('iframeOld').appendChild(contentIframe); 
