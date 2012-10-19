@@ -149,7 +149,7 @@
 			if(document.getElementById('showReport').innerHTML == ""){
 			 
 			   ifrm = document.createElement("IFRAME");   
-			   ifrm.id = 'iframeOld';
+			  // ifrm.id = 'iframeOld';
 			   ifrm.setAttribute("id", "iframeOld"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
@@ -161,7 +161,7 @@
 			else {
 			
 			var ifrmNew = document.createElement("IFRAME"); 
-			ifrm.setAttribute("id", "iframeNew"); 
+			//ifrm.setAttribute("id", "iframeNew"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
