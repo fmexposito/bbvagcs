@@ -130,6 +130,7 @@
 					
 					}
 					muestraInforme("http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk");
+					document.getElementById('docs-editor').style.overflow = hidden;
 				//html +=	"</ul>";
 				//document.getElementById('urlimplantation').innerHTML = html;
 			}
