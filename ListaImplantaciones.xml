@@ -144,12 +144,16 @@
 			if(document.getElementById('showReport').innerHTML == ""){
 			 
 			   ifrm = document.createElement("IFRAME");   
+			   ifrm.id = 'iframeOld';
 			   ifrm.setAttribute("id", "iframeOld"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
-			   alert('añadiendo:'+contentIframe);
+			   alert('añadiendo p :');
+			    p = document.createTextNode();
+				p.data = "Test";
+			   ifrm.contentWindow.document.body.appendChild(p);
 			    document.getElementById('iframeOld').appendChild(contentIframe); 
 			   
 			}
