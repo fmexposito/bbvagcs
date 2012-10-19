@@ -130,7 +130,8 @@
 					
 					}
 					muestraInforme("http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk");
-					document.getElementById('docs-editor').style += "overflow: hidden";
+					//document.getElementById('docs-editor').style += "overflow: hidden";
+					
 				//html +=	"</ul>";
 				//document.getElementById('urlimplantation').innerHTML = html;
 			}
@@ -143,6 +144,7 @@
 			if(document.getElementById('showReport').innerHTML == ""){
 			 
 			   ifrm = document.createElement("IFRAME"); 
+			   ifrm.setAttribute("id", "iframeOld"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
@@ -152,6 +154,7 @@
 			else {
 			
 			var ifrmNew = document.createElement("IFRAME"); 
+			ifrm.setAttribute("id", "iframeNew"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
@@ -160,8 +163,7 @@
 		 //	document.getElementById('showReport').appendChild(ifrmNew);
 			ifrm = ifrmNew;
 		    }
-		
-        
+		            window.scrollbars.visible = false;
 
 		 
 		}
