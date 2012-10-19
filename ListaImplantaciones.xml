@@ -164,7 +164,7 @@
 			    alert("entro");
 			    alert(ifrm.contentWindow.document.getElementById('docs-editor'));
 				alert(ifrm.contentWindow.document.body.getElementById('docs-editor'));
-				ifrm.contentWindow.document.body.style += "overflow:hidden";
+				ifrm.contentWindow.document.body.style.overflow = "hidden";
 				}
 			    //document.getElementById('iframeOld').appendChild(contentIframe); 
 			   
