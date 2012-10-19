@@ -179,6 +179,7 @@
             ifrmNew.style.height = 660+"px"; 	
 			ifrmNew.contentWindow.document.getElementById('docs-editor').style.overflow = "hidden";
 			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
+			ifrmNew.contentWindow.document.getElementById('docs-editor').style.overflow = "hidden";
 		   // document.getElementById('showReport').removeChild(ifrm); 
 		 //	document.getElementById('showReport').appendChild(ifrmNew);
 			ifrm = ifrmNew;
