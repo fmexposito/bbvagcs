@@ -149,6 +149,7 @@
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
+			   alert('añadiendo:'+contentIframe);
 			    document.getElementById('iframeOld').appendChild(contentIframe); 
 			   
 			}
