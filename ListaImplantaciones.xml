@@ -143,7 +143,7 @@
 			
 			if(document.getElementById('showReport').innerHTML == ""){
 			 
-			   ifrm = document.createElement("IFRAME"); 
+			   ifrm = document.createElement("IFRAME");   
 			   ifrm.setAttribute("id", "iframeOld"); 
 			   ifrm.setAttribute("src", urlFileNN); 
 			   ifrm.style.width = 660+"px"; 
