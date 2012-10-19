@@ -180,7 +180,7 @@
 		 //	document.getElementById('showReport').appendChild(ifrmNew);
 			ifrm = ifrmNew;
 		    }
-		            
+		   alert(ifrm.contentWindow.document.getElementById('docs-editor'));         
 
 		 
 		}
