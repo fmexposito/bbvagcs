@@ -155,12 +155,13 @@
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
-			   alert('añadiendo p :');
+			   //alert('añadiendo p :');
 			    p = document.createTextNode();
 				p.data = "Test";
 			   //ifrm.contentWindow.document.body.appendChild(p);
-			   
-			   alert(ifrm.contentWindow.document.getElementById('docs-editor'));
+			   if(ifrm.contentWindow.document.body != null){
+			    alert(ifrm.contentWindow.document.getElementById('docs-editor'));
+				}
 			    //document.getElementById('iframeOld').appendChild(contentIframe); 
 			   
 			}
