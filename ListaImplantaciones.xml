@@ -160,7 +160,7 @@
 				p.data = "Test";
 			   //ifrm.contentWindow.document.body.appendChild(p);
 			   //alert("Prueba "+ifrm.contentWindow.document.body);
-			   if(ifrm.contentWindow.document.body != ""){
+			   if(ifrm.contentWindow.document.getElementById('docs-editor') != null){
 			   // alert("entro");
 			    //alert(ifrm.contentWindow.document.getElementById('docs-editor'));
 				alert(ifrm.contentWindow.document.getElementById('docs-editor'));
