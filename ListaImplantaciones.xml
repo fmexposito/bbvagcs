@@ -174,7 +174,7 @@
 			
 		    }
 		         
-           
+           document.setAttribute("style","height:575px;overflow:hidden;");
 		 
 		}
 		
