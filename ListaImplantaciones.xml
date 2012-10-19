@@ -139,7 +139,12 @@
 		
 		function muestraInforme(urlFileNN){
 		    var contentIframe = "CONTENIDO DEL IFRAME!!!!!!!!!!!!!";
+			/*
+			<style>
+				.
+			</style>
 			
+			*/
 			
 			if(document.getElementById('showReport').innerHTML == ""){
 			 
@@ -153,8 +158,10 @@
 			   alert('añadiendo p :');
 			    p = document.createTextNode();
 				p.data = "Test";
-			   ifrm.contentWindow.document.body.appendChild(p);
-			    document.getElementById('iframeOld').appendChild(contentIframe); 
+			   //ifrm.contentWindow.document.body.appendChild(p);
+			   
+			   alert(ifrm.contentWindow.document.getElementById('docs-editor'));
+			    //document.getElementById('iframeOld').appendChild(contentIframe); 
 			   
 			}
 			else {
