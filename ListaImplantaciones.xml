@@ -159,10 +159,10 @@
 			    p = document.createTextNode();
 				p.data = "Test";
 			   //ifrm.contentWindow.document.body.appendChild(p);
-			   alert("Prueba "+ifrm.contentWindow.document.body);
+			   //alert("Prueba "+ifrm.contentWindow.document.body);
 			   if(ifrm.contentWindow.document.body != ""){
-			    alert("entro");
-			    alert(ifrm.contentWindow.document.getElementById('docs-editor'));
+			   // alert("entro");
+			    //alert(ifrm.contentWindow.document.getElementById('docs-editor'));
 				alert(ifrm.contentWindow.document.body.getElementById('docs-editor'));
 				ifrm.contentWindow.document.body.style.overflow = "hidden";
 				ifrm.contentWindow.document.getElementById('docs-editor').style.overflow = "hidden";
