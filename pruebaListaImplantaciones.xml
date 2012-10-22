@@ -168,7 +168,7 @@
 			    
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   while(ifrm.contentWindow.document.getElementById('docs-editor') == null){
-			   sleep();
+			   setTimeout("muestraInforme(urlFileNN)",500);
 			   }
 			   alert(ifrm.contentWindow.document.getElementById('docs-editor'));
 			    alert(ifrm.contentWindow.document.body);
