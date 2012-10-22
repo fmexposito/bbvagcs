@@ -163,7 +163,7 @@
 			  
 			
 			    
-			    document.getElementById('showReport').appendChild(ifrm); 
+			    document.getElementById('showReport').insertBefore(ifrm); 
 			    
 				alert(document.getElementById('showReport'));
 			   // var aux = ifrm.contentWindow;
