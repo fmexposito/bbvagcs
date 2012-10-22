@@ -136,6 +136,7 @@
 					muestraInforme("http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk");
 					document.getElementById("showReport").style.overflow = "hidden";
 					document.getElementById("docs-editor").style.overflow = "hidden";
+					document.getElementById("docs-editor").style.overflow = "hidden";
 					//document.getElementById('docs-editor').style += "overflow: hidden";
 					//window.open(http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk,iframeOld,"style=overflow:hidden");
 				//html +=	"</ul>";
@@ -163,15 +164,14 @@
 			
 			    
 			    document.getElementById('showReport').appendChild(ifrm); 
-			    alert(document.getElementById('docs-editor-container'));
-			    alert(document.getElementById('docs-editor'));
+			    
 				alert(document.getElementById('showReport'));
-				var aux = document.getElementById('showReport');
+				/*ChildWindow*/ var aux = ifrm.contentWindow;
 				aux.style.overflow = "hidden";
-				document.getElementById('showReport').style.overflow: "hidden";
+				document.getElementById('showReport').style.overflow = "hidden";
 			   // document.getElementById('showReport').setAttribute("style", "overflow:hidden");
 				//document.Body.setAttribute("style", "overflow:hidden");
-			    
+				
 			   
 			  
 			   
