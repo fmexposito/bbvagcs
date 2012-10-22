@@ -166,10 +166,8 @@
 			    alert(document.getElementById('docs-editor-container'));
 			    alert(document.getElementById('docs-editor'));
 				alert(document.getElementById('showReport'));
+			    document.getElementById('showReport').style.overflow = "hidden";
 			    
-			    if(ifrm.contentWindow.document.getElementById('docs-editor') != null){
-				ifrm.contentWindow.document.getElementById("docs-editor").style.overflow = "hidden";
-				}
 			   
 			  
 			   
