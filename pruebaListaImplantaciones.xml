@@ -178,7 +178,7 @@
 			
 		    }
 		         
-           document.setAttribute("style","height:575px;overflow:hidden;");
+           //document.setAttribute("style","height:575px;overflow:hidden;");
 		 
 		}
 		
