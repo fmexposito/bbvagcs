@@ -157,6 +157,8 @@
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   ifrm.style.overflow = "hidden";
+			   ifrm.contentWindow.document.getElementById('docs-editor-container').style.overflow = "hidden";
+			   ifrm.contentWindow.document.getElementById('docs-editor').style.overflow = "hidden";
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   document.getElementById("showReport").style.overflow = "hidden";
 			   document.getElementById("docs-editor").style.overflow = "hidden";
