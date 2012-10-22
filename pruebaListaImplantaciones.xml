@@ -156,7 +156,7 @@
                ifrm.style.height = 660+"px"; 
 			   ifrm.style.overflow = "hidden";
 			   document.getElementById('showReport').appendChild(ifrm); 
-			   
+			   document.getElementById("showReport").style.overflow = "hidden";
 			   
 			}
 			else {
@@ -172,7 +172,7 @@
 			//.setAttribute("style","height:575px;overflow:hidden;");
 			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
-			
+			document.getElementById("showReport").style.overflow = "hidden";
 		   // document.getElementById('showReport').removeChild(ifrm); 
 		 //	document.getElementById('showReport').appendChild(ifrmNew);
 			ifrm = ifrmNew;
