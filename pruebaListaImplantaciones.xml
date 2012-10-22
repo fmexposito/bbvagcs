@@ -170,10 +170,11 @@
 			ifrmNew.style
 			ifrmNew.document.getElementById('docs-editor').style.height = 585+"px";
 			ifrmNew.document.getElementById('docs-editor').style.overflow = "hidden";
+			document.getElementById("showReport").style.overflow = "hidden";
 			//.setAttribute("style","height:575px;overflow:hidden;");
 			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
-			document.getElementById("showReport").style.overflow = "hidden";
+			
 		   // document.getElementById('showReport').removeChild(ifrm); 
 		 //	document.getElementById('showReport').appendChild(ifrmNew);
 			ifrm = ifrmNew;
