@@ -166,7 +166,7 @@
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
-			ifrmNew.document.getElementById('docs-editor').style.height = 575+"px";
+			ifrmNew.document.getElementById('docs-editor').style.height = 585+"px";
 			ifrmNew.document.getElementById('docs-editor').style.overflow = "hidden";
 			//.setAttribute("style","height:575px;overflow:hidden;");
 			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
