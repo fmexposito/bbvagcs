@@ -200,10 +200,10 @@
 			
 		    }*/
 		         
-           document.getElementById("showReport").style.overflow = "hidden";
-		   document.getElementById("docs-editor-container").style.overflow = "hidden";
-		   document.getElementById("docs-editor").style.overflow = "hidden";
-		   window.parent.document.getElementById("docs-editor").style.overflow = "hidden";
+          // document.getElementById("showReport").style.overflow = "hidden";
+		  // document.getElementById("docs-editor-container").style.overflow = "hidden";
+		  // document.getElementById("docs-editor").style.overflow = "hidden";
+		  // window.parent.document.getElementById("docs-editor").style.overflow = "hidden";
 		}
 		
 		</script>
