@@ -167,6 +167,9 @@
 			
 			    
 			   document.getElementById('showReport').appendChild(ifrm); 
+			   while(ifrm.contentWindow.document.getElementById('docs-editor') == null){
+			   Utilities.sleep();
+			   }
 			   alert(ifrm.contentWindow.document.getElementById('docs-editor'));
 			    alert(ifrm.contentWindow.document.body);
 			    if(ifrm.contentWindow.document.getElementById('docs-editor') != null){
