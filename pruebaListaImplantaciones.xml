@@ -162,6 +162,7 @@
 			   
 			   
 			   document.getElementById('showReport').appendChild(ifrm); 
+			   ifrm.parent.contentWindow.document.getElementById('showReport').style.overflow = "hidden";
 			   ifrm.contentWindow.document.getElementById('showReport').style.overflow = "hidden";
 			   document.getElementById('showReport').removeChild(ifrm); 
 			   document.getElementById('showReport').appendChild(ifrm); 
