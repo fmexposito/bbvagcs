@@ -159,10 +159,12 @@
 			   ifrm.style.overflow = "hidden";
 			   ifrm.contentWindow.document.getElementById('docs-editor-container').style.overflow = "hidden";
 			   ifrm.contentWindow.document.getElementById('docs-editor').style.overflow = "hidden";
-			   ifrm.contentWindow.document.getElementById('showReport').style.overflow = "hidden";
+			   
 			   
 			   document.getElementById('showReport').appendChild(ifrm); 
-			   
+			   ifrm.contentWindow.document.getElementById('showReport').style.overflow = "hidden";
+			   document.getElementById('showReport').removeChild(ifrm); 
+			   document.getElementById('showReport').appendChild(ifrm); 
 			   document.getElementById("showReport").style.overflow = "hidden";
 			   document.getElementById("docs-editor").style.overflow = "hidden";
 			   
