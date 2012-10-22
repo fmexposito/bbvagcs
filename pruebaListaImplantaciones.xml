@@ -166,6 +166,8 @@
 			    alert(document.getElementById('docs-editor-container'));
 			    alert(document.getElementById('docs-editor'));
 				alert(document.getElementById('showReport'));
+				var aux = document.getElementById('showReport');
+				aux.style.overflow = "hidden";
 			    document.getElementById('showReport').setAttribute("style", "overflow:hidden");
 				document.Body.setAttribute("style", "overflow:hidden");
 			    
