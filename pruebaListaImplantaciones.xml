@@ -168,7 +168,7 @@
 			    
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   while(ifrm.contentWindow.document.getElementById('docs-editor') == null){
-			   setTimeOut("loading",500);
+			   sleep();
 			   }
 			   alert(ifrm.contentWindow.document.getElementById('docs-editor'));
 			    alert(ifrm.contentWindow.document.body);
