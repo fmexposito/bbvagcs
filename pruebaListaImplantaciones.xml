@@ -158,6 +158,7 @@
 			   ifrm.style.overflow = "hidden";
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   document.getElementById("showReport").style.overflow = "hidden";
+			   document.getElementById("docs-editor").style.overflow = "hidden";
 			   
 			}
 			else {
@@ -171,6 +172,7 @@
 			ifrmNew.document.getElementById('docs-editor').style.height = 585+"px";
 			ifrmNew.document.getElementById('docs-editor').style.overflow = "hidden";
 			document.getElementById("showReport").style.overflow = "hidden";
+			document.getElementById("docs-editor").style.overflow = "hidden";
 			//.setAttribute("style","height:575px;overflow:hidden;");
 			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
