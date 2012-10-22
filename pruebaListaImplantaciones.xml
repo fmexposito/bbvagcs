@@ -14,7 +14,11 @@
 
 		<head><script src="https://www.google.com/jsapi" type="text/javascript"></script></head>
 
-		<style type="text/css">			 
+		<style type="text/css">		
+			#docs-editor{
+			overflow:hidden;
+			
+			}
 			.mes{
 			
 			color: #0B5394;
