@@ -148,7 +148,7 @@
 			var VarTituloBloqueServicing = prefs.getString("VarTituloBloqueServicing");
 			var VarBoton1TextoServicing = prefs.getString("VarBoton1TextoServicing");
 			var VarBoton1URLServicing = prefs.getString("VarBoton1URLServicing");
-			var VarBoton2TextoServicing = prefs.getString(""VarBoton2TextoServicing");
+			var VarBoton2TextoServicing = prefs.getString("VarBoton2TextoServicing");
 			var VarBoton2URLServicing = prefs.getString("VarBoton2URLServicing");
 			var VarBoton3TextoServicing = prefs.getString("VarBoton3TextoServicing");
 			var VarBoton3URLServicing = prefs.getString("VarBoton3URLServicing");
