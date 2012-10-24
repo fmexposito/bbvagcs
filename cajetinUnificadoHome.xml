@@ -139,7 +139,7 @@
 			var VarTituloBloqueClientes = prefs.getString("VarTituloBloqueClientes");
 			var VarBoton1TextoClientes = prefs.getString("VarBoton1TextoClientes");
 			var VarBoton1URLClientes = prefs.getString("VarBoton1URLClientes");
-			var VarBoton2TextoClientes = prefs.getString(""VarBoton2TextoClientes");
+			var VarBoton2TextoClientes = prefs.getString("VarBoton2TextoClientes");
 			var VarBoton2URLClientes = prefs.getString("VarBoton2URLClientes");
 			var VarBoton3TextoClientes = prefs.getString("VarBoton3TextoClientes");
 			var VarBoton3URLClientes = prefs.getString("VarBoton3URLClientes");
