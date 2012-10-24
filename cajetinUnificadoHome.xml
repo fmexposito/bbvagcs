@@ -79,7 +79,7 @@
 		<div id="content_div">
 			<div id="content_divfirstblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 			<div id="content_divsecondblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-			<div id="content_divthirdblock"  onclick="location.href='+VarURLThirdBlock+'" style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+			<div id="content_divthirdblock"  onclick="'<script type="text/javascript">window.parent.location.href=+document.getElementById(\''VarURLThirdBlock'\').value+</script>'" style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		</div>
 
