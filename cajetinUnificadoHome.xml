@@ -86,6 +86,7 @@
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
 		<script type="text/javascript">
+		alert(VarURLThirdBlock);
 			var html="";
 			var firstblock="";
 			var secondblock="";
