@@ -140,7 +140,7 @@
 			}
 			
 			
-			function insertarImagenDestacada()
+			function insertarImagenDestacada1()
 			{
 				//BLOQUE1
 				var firstblock="";
@@ -149,12 +149,21 @@
 				{
 					firstblock+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaFirstBlock + '\">';	
 				}
+				return firstblock;
+		    }	
+			
+			function insertarImagenDestacada2()
+			{
 				//BLOQUE2
 				var secondblock="";
 				if (VarImagenDestacadaSecondBlock!="")
 				{
 					secondblock+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaSecondBlock + '\">';	
 				}
+				return secondblock;
+		    }
+			function insertarImagenDestacada3()
+			{
 				//BLOQUE3
 				var thirdblock="";
 				if (VarImagenDestacadaThirdBlock!="")
@@ -162,15 +171,16 @@
 					thirdblock+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaThirdBlock + '\">';	
 				}
 				
-				return firstblock,secondblock,thirdblock;
-			}
+				return thirdblock;
+		    }
+				
 			
 			document.body.style.backgroundColor="#fff";			
 			//BLOQUE1	
 			firstblock +='<table style=\"border-style: none;\" width=\"100%\">';
 			firstblock +='<tr><td>';  
 			firstblock +='<div style=\"padding: 10px; font-size:' + VarSizeFirstBlock + '; color:' + VarColorLetraFirstBlock + ';\">';
-			firstblock +=insertarImagenDestacada();		
+			firstblock +=insertarImagenDestacada1();		
 			firstblock +='<h2 class=\"titulobloque\">' + VarTituloBloqueFirstBlock + '</h2>';
 			firstblock +=bbcode2html(VarComentFirstBlock);			
 			firstblock +='</div>';
@@ -182,7 +192,7 @@
 			secondblock +='<table style=\"border-style: none;\" width=\"100%\">';
 			secondblock +='<tr><td>';  
 			secondblock +='<div style=\"padding: 10px; font-size:' + VarSizeSecondBlock + '; color:' + VarColorLetraSecondBlock + ';\">';
-			secondblock +=insertarImagenDestacada();		
+			secondblock +=insertarImagenDestacada2();		
 			secondblock +='<h2 class=\"titulobloque\">' + VarTituloBloqueSecondBlock + '</h2>';
 			secondblock +=bbcode2html(VarComentSecondBlock);		
 			secondblock +='</div>';
@@ -194,7 +204,7 @@
 			thirdblock +='<table style=\"border-style: none;\" width=\"100%\">';
 			thirdblock +='<tr><td>';  
 			thirdblock +='<div style=\"padding: 10px; font-size:' + VarSizeThirdBlock + '; color:' + VarColorLetraThirdBlock + ';\">';
-			thirdblock +=insertarImagenDestacada();		
+			thirdblock +=insertarImagenDestacada3();		
 			thirdblock +='<h2 class=\"titulobloque\">' + VarTituloBloqueThirdBlock + '</h2>';
 			thirdblock +=bbcode2html(VarComentThirdBlock);			
 			thirdblock +='</div>';
