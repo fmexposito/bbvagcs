@@ -115,7 +115,7 @@
 			var VarComentOnboarding = prefs.getString("VarComentOnboarding");
 			var VarComentClientes = prefs.getString("VarComentClientes");
 			var VarComentServicing = prefs.getString("VarComentServicing");
-			
+			alert("VarComentServicing "+VarComentServicing);
 			var VarBorde="0";
 			var VarAlign="left";
 			var VarColorFondo="transparent";
@@ -153,6 +153,7 @@
 			var VarTituloBloqueServicing = prefs.getString("VarTituloBloqueServicing");
 			var VarBoton1TextoServicing = prefs.getString("VarBoton1TextoServicing");
 			var VarBoton1URLServicing = prefs.getString("VarBoton1URLServicing");
+			alert("VarBoton1URLServicing "+VarBoton1URLServicing);
 			var VarBoton2TextoServicing = prefs.getString("VarBoton2TextoServicing");
 			var VarBoton2URLServicing = prefs.getString("VarBoton2URLServicing");
 			var VarBoton3TextoServicing = prefs.getString("VarBoton3TextoServicing");
@@ -494,9 +495,9 @@
 			// Get userprefs
 			var prefs = new gadgets.Prefs();			
 			function registra(variable)
-			{   alert(variable);
+			{   //alert(variable);
 				prefs.set(variable,document.getElementById(variable).value);
-				alert(variable,document.getElementById(variable).value);
+				//alert(variable,document.getElementById(variable).value);
 			}	
 			gadgets.window.adjustHeight();
 		</script>   
