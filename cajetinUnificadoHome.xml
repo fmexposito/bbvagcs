@@ -133,11 +133,11 @@
 			//document.getElementById('content_divfirstblock').onClick="window.parent.location.href="+VarURLFirstBlock;
 			//document.getElementById('content_divsecondblock').onClick="window.parent.location.href="+VarURLSecondBlock;
 		
-			document.getElementById('content_divthirdblock').onClick = creaEnlaces(VarURLThirdBlock);
+			//document.getElementById('content_divthirdblock').onClick = creaEnlaces(VarURLThirdBlock);
 		
 			function creaEnlaces(url){
 			  window.parent.location.href = url;
-			alert('hola Jordi12');
+			alert('hola Jordi81');
 			}
 			
 			
