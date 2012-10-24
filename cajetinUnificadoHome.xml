@@ -136,8 +136,8 @@
 			document.getElementById('content_divthirdblock').onclick = creaEnlaces(VarURLThirdBlock);
 		
 			function creaEnlaces(url){
-			  window.parent.location.href = url;
-			
+			 // window.parent.location.href = url;
+			alert('hola');
 			}
 			
 			
