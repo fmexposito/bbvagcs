@@ -130,7 +130,7 @@
 			
 			document.getElementById('content_divfirstblock').onClick="window.parent.location.href="+VarURLFirstBlock;
 			document.getElementById('content_divsecondblock').onClick="window.parent.location.href="+VarURLSecondBlock;
-			document.getElementById('content_divthirdblock').onClick ='window.parent.location.href='+VarURLThirdBlock;
+			document.getElementById('content_divthirdblock').onClick = function (){window.parent.location.href = VarURLThirdBlock;}
 		
 			
 			function insertarImagenDestacada()
