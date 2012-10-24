@@ -51,10 +51,10 @@
 				height:150px;
 				cursor:hand;
 			}
-			#content_divfirstblockimg{
+			#content_divfirstblock img{
 			 padding: 0 15px 10px 0;
 			} 
-			#content_divsecondblockimg{
+			#content_divsecondblock img{
 			 padding: 0 15px 10px 0;
 			} 
 			#content_divthirdblock img{
