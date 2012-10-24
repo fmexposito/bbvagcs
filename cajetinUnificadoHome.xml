@@ -134,19 +134,19 @@
 				//BLOQUE1
 				var firstblock="";
 				
-				if (VarImagenDestacadaOnboarding!="")
+				if (VarImagenDestacadaFirstBlock!="")
 				{
 					firstblock+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaFirstBlock + '\">';	
 				}
 				//BLOQUE2
 				var secondblock="";
-				if (VarImagenDestacadaClientes!="")
+				if (VarImagenDestacadaSecondBlock!="")
 				{
 					secondblock+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaSecondBlock + '\">';	
 				}
 				//BLOQUE3
 				var thirdblock="";
-				if (VarImagenDestacadaServicing!="")
+				if (VarImagenDestacadaThirdBlock!="")
 				{
 					thirdblock+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaThirdBlock + '\">';	
 				}
