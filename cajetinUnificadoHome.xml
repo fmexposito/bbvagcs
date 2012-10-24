@@ -103,7 +103,9 @@
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
 		<script type="text/javascript">
-			var html="";
+			var htmlOnboarding="";
+			var htmlClientes="";
+			var htmlServicing="";
 			// Obtener userprefs
 			var prefs = new gadgets.Prefs();
 			
@@ -230,15 +232,15 @@
 			
 			document.body.style.backgroundColor="#fff";
 		//BLOQUE1	
-			htmlOnboarding+='<table style=\"border-style: none;\" width=\"100%\">';
-			htmlOnboarding+='<tr><td>';  
-			htmlOnboarding+='<div style=\"padding: 10px; font-size:' + VarSizeOnboarding + '; color:' + VarColorLetraOnboarding + ';\">';
-			htmlOnboarding+=insertarImagenDestacada();		
-			htmlOnboarding+='<h2 class=\"titulobloque\">' + VarTituloBloqueOnboarding + '</h2>';
-			htmlOnboarding+=bbcode2html(VarComentOnboarding);
-			htmlOnboarding+=insertarBoton();			
-			htmlOnboarding+='</div>';
-			htmlOnboarding+='</td></tr></table>';	
+			htmlOnboarding +='<table style=\"border-style: none;\" width=\"100%\">';
+			htmlOnboarding +='<tr><td>';  
+			htmlOnboarding +='<div style=\"padding: 10px; font-size:' + VarSizeOnboarding + '; color:' + VarColorLetraOnboarding + ';\">';
+			htmlOnboarding +=insertarImagenDestacada();		
+			htmlOnboarding +='<h2 class=\"titulobloque\">' + VarTituloBloqueOnboarding + '</h2>';
+			htmlOnboarding +=bbcode2html(VarComentOnboarding);
+			htmlOnboarding +=insertarBoton();			
+			htmlOnboarding +='</div>';
+			htmlOnboarding +='</td></tr></table>';	
 			
 			document.getElementById("content_div").innerHTML = htmlOnboarding;
 			
