@@ -40,7 +40,7 @@
 	<UserPref name="VarColorLetraClientes" display_name="Color texto por defecto" default_value="#666"/>
 	<UserPref name="VarSizeClientes" display_name="Tama񯠤e texto por defecto" default_value="12"/>
 <!--Bloque3/Servicing-->		
-<UserPref name="VarTituloBloqueServicing" display_name="Tlo:" default_value="Global Customer Solutions"/>
+	<UserPref name="VarTituloBloqueServicing" display_name="Tlo:" default_value="Global Customer Solutions"/>
 	<UserPref name="VarImagenDestacadaServicing" display_name="Imagen destacada:" default_value=""/>
 	<UserPref name="VarBoton1TextoServicing" display_name="Texto boton 1:" default_value=""/>
 	<UserPref name="VarBoton1URLServicing" display_name="URL boton 1:" default_value=""/>
@@ -495,9 +495,9 @@
 			// Get userprefs
 			var prefs = new gadgets.Prefs();			
 			function registra(variable)
-			{   alert(variable);
+			{   //alert(variable);
 				prefs.set(variable,document.getElementById(variable).value);
-				alert(document.getElementById(variable).value);
+				//alert(document.getElementById(variable).value);
 			}	
 			gadgets.window.adjustHeight();
 		</script>   
