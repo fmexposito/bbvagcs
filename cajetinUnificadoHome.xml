@@ -138,7 +138,7 @@
 		
 			function creaEnlaces(url){
 			  window.parent.location.href = url;
-			alert('hola Jordi81');
+			alert('hola Jordi82');
 			}
 			
 			
