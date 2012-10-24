@@ -91,6 +91,9 @@
 
 		<script type="text/javascript">
 			var html="";
+			var firstblock="";
+			var secondblock="";
+			var thirdblock="";
 			// Obtener userprefs
 			var prefs = new gadgets.Prefs();
 			
@@ -130,6 +133,7 @@
 			{
 				//BLOQUE1
 				var firstblock="";
+				
 				if (VarImagenDestacadaOnboarding!="")
 				{
 					firstblock+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaFirstBlock + '\">';	
