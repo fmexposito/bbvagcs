@@ -43,6 +43,7 @@
 			#content_div{
 			float:left;
 			width:100%;
+			/*background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png');*/
 			}
 			#content_divfirstblock, 
 			#content_divsecondblock, 
@@ -52,6 +53,7 @@
 				width:300px;
 				height:150px;
 				cursor:hand;
+				cursor:pointer;
 			}
 			#content_divfirstblock img{
 			 padding: 0 15px 10px 0;
