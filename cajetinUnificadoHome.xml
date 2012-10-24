@@ -38,15 +38,29 @@
 	<UserPref name="VarSizeThirdBlock" display_name="Tamaño de texto por defecto" default_value="12"/>
 	<Content type="html" view="home"><![CDATA[
 		<style>		
-			#content_div img {
-				padding: 0 15px 10px 0;
+			#content_div{
+			float:left;
+			width:100%;
 			}
-			#content_div {
+			#content_divfirstblock, 
+			#content_divsecondblock, 
+			#content_divthirdblock {
+			    float:left;
 				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png');
+				width:300px;
+				height:150px;
 			}
-			#content_div a img {
-				padding: 0;
+			#content_divfirstblock, 
+			#content_divsecondblock, 
+			#content_divthirdblock img{
+			 padding: 0 15px 10px 0;
 			}
+			#content_divfirstblock, 
+			#content_divsecondblock, 
+			#content_divthirdblock a img{
+			 padding: 0;
+			}
+			
 			.sites-adminfooter {
 				display:none;
 			}
@@ -55,26 +69,7 @@
 				margin: 0 0 7px 0;
 				color: #3F78B2;
 			}			
-			a.enlaceboton {
-				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondobotonuntercio.png");
-				background-repeat: no-repeat;
-				color: #FFFFFF;
-				display: block;
-				float: right;
-				font-size: 12px;
-				font-weight: bold;
-				height: 31px;
-				margin: 0px;
-				padding-top: 10px;
-				text-align: center;
-				text-decoration: none;
-				width: 165px;
-			}	
-			a:hover.enlaceboton, 
-			a:active.enlaceboton,
-			a:visited.enlaceboton {
-				color: #FFFFFF;
-			}
+			
 			.margintop {
 				margin-top: 7px !important;
 			}
