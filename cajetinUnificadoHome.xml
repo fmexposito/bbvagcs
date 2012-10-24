@@ -51,8 +51,12 @@
 				height:150px;
 				cursor:hand;
 			}
-			#content_divfirstblock, 
-			#content_divsecondblock, 
+			#content_divfirstblockimg{
+			 padding: 0 15px 10px 0;
+			} 
+			#content_divsecondblockimg{
+			 padding: 0 15px 10px 0;
+			} 
 			#content_divthirdblock img{
 			 padding: 0 15px 10px 0;
 			}
@@ -79,7 +83,7 @@
 		<div id="content_div">
 			<div id="content_divfirstblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 			<div id="content_divsecondblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-			<div id="content_divthirdblock"  onclick="'<script type="text/javascript">window.parent.location.href=+document.getElementById(\''VarURLThirdBlock'\').value+</script>'" style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+			<div id="content_divthirdblock"   style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		</div>
 
