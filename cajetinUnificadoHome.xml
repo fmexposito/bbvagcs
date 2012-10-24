@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+	<ModulePrefs title="Cajetin unificado 3*un tercio portal Global Customer Solutions-Home"
+		title_url=""
+		height="300"
+		width="465"
+		author=""
+		author_email=""
+		description="GadGet para Google Sites que muestra textos en una caja con formato."
+		screenshot=""
+		thumbnail=""  
+		scrolling="false"
+		author_location="Madrid, Spain"
+		scaling="false">
+		<Require feature="dynamic-height"/>
+		<Require feature="setprefs"/>
+	</ModulePrefs> 
+<!--Bloque1/Onboarding-->	
+	<UserPref name="VarTituloBloqueOnboarding" display_name="T�tulo:" default_value="Global Customer Solutions"/>
+	<UserPref name="VarImagenDestacadaOnboarding" display_name="Imagen destacada:" default_value=""/>
+	<UserPref name="VarBoton1TextoOnboarding" display_name="Texto boton 1:" default_value=""/>
+	<UserPref name="VarBoton1URLOnboarding" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarBoton2TextoOnboarding" display_name="Texto boton 2:" default_value=""/>
+	<UserPref name="VarBoton2URLOnboarding" display_name="URL boton 2:" default_value=""/>
+	<UserPref name="VarBoton3TextoOnboarding" display_name="Texto boton 3:" default_value=""/>
+	<UserPref name="VarBoton3URLOnboarding" display_name="URL boton 3:" default_value=""/>
+	<UserPref name="VarComentOnboarding" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
+	<UserPref name="VarColorLetraOnboarding" display_name="Color texto por defecto" default_value="#666"/>
+	<UserPref name="VarSizeOnboarding" display_name="Tama�o de texto por defecto" default_value="12"/>
+<!--Bloque2/Clientes-->	
+	<UserPref name="VarTituloBloqueClientes" display_name="Tlo:" default_value="Global Customer Solutions"/>
+	<UserPref name="VarImagenDestacadaClientes" display_name="Imagen destacada:" default_value=""/>
+	<UserPref name="VarBoton1TextoClientes" display_name="Texto boton 1:" default_value=""/>
+	<UserPref name="VarBoton1URLClientes" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarBoton2TextoClientes" display_name="Texto boton 2:" default_value=""/>
+	<UserPref name="VarBoton2URLClientes" display_name="URL boton 2:" default_value=""/>
+	<UserPref name="VarBoton3TextoClientes" display_name="Texto boton 3:" default_value=""/>
+	<UserPref name="VarBoton3URLClientes" display_name="URL boton 3:" default_value=""/>
+	<UserPref name="VarComentClientes" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
+	<UserPref name="VarColorLetraClientes" display_name="Color texto por defecto" default_value="#666"/>
+	<UserPref name="VarSizeClientes" display_name="Tama񯠤e texto por defecto" default_value="12"/>
+<!--Bloque3/Servicing-->		
+<UserPref name="VarTituloBloqueServicing" display_name="Tlo:" default_value="Global Customer Solutions"/>
+	<UserPref name="VarImagenDestacadaServicing" display_name="Imagen destacada:" default_value=""/>
+	<UserPref name="VarBoton1TextoServicing" display_name="Texto boton 1:" default_value=""/>
+	<UserPref name="VarBoton1URLServicing" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarBoton2TextoServicing" display_name="Texto boton 2:" default_value=""/>
+	<UserPref name="VarBoton2URLServicing" display_name="URL boton 2:" default_value=""/>
+	<UserPref name="VarBoton3TextoServicing" display_name="Texto boton 3:" default_value=""/>
+	<UserPref name="VarBoton3URLServicing" display_name="URL boton 3:" default_value=""/>
+	<UserPref name="VarComentServicing" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
+	<UserPref name="VarColorLetraServicing" display_name="Color texto por defecto" default_value="#666"/>
+	<UserPref name="VarSizeServicing" display_name="Tama񯠤e texto por defecto" default_value="12"/>	
+	
+<!---Fin Bloques-->	
+	<Content type="html" view="home"><![CDATA[
+		<style>		
+			
+			#content_div {
+				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png');
+			}
+			
+			#content_div a img {
+				padding: 0;
+			}
+			.sites-adminfooter {
+				display:none;
+			}
+			h2.titulobloque {
+				font-size: 16px;
+				margin: 0 0 7px 0;
+				color: #3F78B2;
+			}			
+			a.enlaceboton {
+				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondobotonuntercio.png");
+				background-repeat: no-repeat;
+				color: #FFFFFF;
+				display: block;
+				float: right;
+				font-size: 12px;
+				font-weight: bold;
+				height: 31px;
+				margin: 0px;
+				padding-top: 10px;
+				text-align: center;
+				text-decoration: none;
+				width: 165px;
+			}	
+			a:hover.enlaceboton, 
+			a:active.enlaceboton,
+			a:visited.enlaceboton {
+				color: #FFFFFF;
+			}
+			.margintop {
+				margin-top: 7px !important;
+			}
+			
+		</style>
+	<div id="content_div"> 
+		<div id="content_divOnboarding"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_divClientes"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_divServicing"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+	</div>
+
+		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
+
+		<script type="text/javascript">
+			var html="";
+			// Obtener userprefs
+			var prefs = new gadgets.Prefs();
+			
+			var VarComentOnboarding = prefs.getString("VarComentOnboarding");
+			var VarComentClientes = prefs.getString("VarComentClientes");
+			var VarComentServicing = prefs.getString("VarComentServicing");
+			
+			var VarBorde="0";
+			var VarAlign="left";
+			var VarColorFondo="transparent";
+			
+			var VarColorLetraOnboarding = prefs.getString("VarColorLetraOnboarding");
+			var VarColorLetraClientes = prefs.getString("VarColorLetraClientes");
+			var VarColorLetraServicing = prefs.getString("VarColorLetraServicing");
+			
+			var VarColorBorde="#fff";
+			
+			var VarSizeOnboarding = prefs.getString("VarSizeOnboarding");
+			var VarSizeClientes = prefs.getString("VarSizeClientes");
+			var VarSizeServicing = prefs.getString("VarSizeServicing");
+			
+		//BLOQUE1	
+			var VarImagenDestacadaOnboarding = prefs.getString("VarImagenDestacadaOnboarding");
+			var VarTituloBloqueOnboarding = prefs.getString("VarTituloBloqueOnboarding");
+			var VarBoton1TextoOnboarding = prefs.getString("VarBoton1TextoOnboarding");
+			var VarBoton1URLOnboarding = prefs.getString("VarBoton1URLOnboarding");
+			var VarBoton2TextoOnboarding = prefs.getString("VarBoton2TextoOnboarding");
+			var VarBoton2URLOnboarding = prefs.getString("VarBoton2URLOnboarding");
+			var VarBoton3TextoOnboarding = prefs.getString("VarBoton3TextoOnboarding");
+			var VarBoton3URLOnboarding = prefs.getString("VarBoton3URLOnboarding");
+		//BLOQUE2	
+			var VarImagenDestacadaClientes = prefs.getString("VarImagenDestacadaClientes");
+			var VarTituloBloqueClientes = prefs.getString("VarTituloBloqueClientes");
+			var VarBoton1TextoClientes = prefs.getString("VarBoton1TextoClientes");
+			var VarBoton1URLClientes = prefs.getString("VarBoton1URLClientes");
+			var VarBoton2TextoClientes = prefs.getString(""VarBoton2TextoClientes");
+			var VarBoton2URLClientes = prefs.getString("VarBoton2URLClientes");
+			var VarBoton3TextoClientes = prefs.getString("VarBoton3TextoClientes");
+			var VarBoton3URLClientes = prefs.getString("VarBoton3URLClientes");
+		//BLOQUE3	
+			var VarImagenDestacadaServicing = prefs.getString("VarImagenDestacadaServicing");
+			var VarTituloBloqueServicing = prefs.getString("VarTituloBloqueServicing");
+			var VarBoton1TextoServicing = prefs.getString("VarBoton1TextoServicing");
+			var VarBoton1URLServicing = prefs.getString("VarBoton1URLServicing");
+			var VarBoton2TextoServicing = prefs.getString(""VarBoton2TextoServicing");
+			var VarBoton2URLServicing = prefs.getString("VarBoton2URLServicing");
+			var VarBoton3TextoServicing = prefs.getString("VarBoton3TextoServicing");
+			var VarBoton3URLServicing = prefs.getString("VarBoton3URLServicing");
+			
+			function insertarBoton()
+			{
+			   
+			
+				//BLOQUE1
+				var htmlOnboarding="";
+				if ((VarBoton1TextoOnboarding!="")&&(VarBoton1URLOnboarding!=""))
+				{
+					htmlOnboarding+='<a href=\"' + VarBoton1URLOnboarding + '\" title=\"' + VarBoton1TextoOnboarding + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBoton1TextoOnboarding + '</a>';
+				}
+				if ((VarBoton2TextoOnboarding!="")&&(VarBoton2URLOnboarding!=""))
+				{
+					htmlOnboarding+='<a href=\"' + VarBoton2URLOnboarding + '\" title=\"' + VarBoton2TextoOnboarding + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBoton2TextoOnboarding + '</a>';
+				}
+				if ((VarBoton3TextoOnboarding!="")&&(VarBoton3URLOnboarding!=""))
+				{
+					htmlOnboarding+='<a href=\"' + VarBoton3URLOnboarding + '\" title=\"' + VarBoton3TextoOnboarding + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBoton3TextoOnboarding + '</a>';
+				}
+				//BLOQUE2
+				var htmlClientes="";
+				if ((VarBoton1TextoClientes!="")&&(VarBoton1URLClientes!=""))
+				{
+					htmlClientes+='<a href=\"' + VarBoton1URLClientes + '\" title=\"' + VarBoton1TextoClientes + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBoton1TextoClientes + '</a>';
+				}
+				if ((VarBoton2TextoClientes!="")&&(VarBoton2URLClientes!=""))
+				{
+					htmlClientes+='<a href=\"' + VarBoton2URLClientes + '\" title=\"' + VarBoton2TextoClientes + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBoton2TextoClientes + '</a>';
+				}
+				if ((VarBoton3TextoClientes!="")&&(VarBoton3URLClientes!=""))
+				{
+					htmlClientes+='<a href=\"' + VarBoton3URLClientes + '\" title=\"' + VarBoton3TextoClientes + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBoton3TextoClientes + '</a>';
+				}
+				//BLOQUE3
+				var htmlServicing="";
+				if ((VarBoton1TextoServicing!="")&&(VarBoton1URLServicing!=""))
+				{
+					htmlServicing+='<a href=\"' + VarBoton1URLServicing + '\" title=\"' + VarBoton1TextoServicing + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBoton1TextoServicing + '</a>';
+				}
+				if ((VarBoton2TextoServicing!="")&&(VarBoton2URLServicing!=""))
+				{
+					htmlServicing+='<a href=\"' + VarBoton2URLServicing + '\" title=\"' + VarBoton2TextoServicing + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBoton2TextoServicing + '</a>';
+				}
+				if ((VarBoton3TextoServicing!="")&&(VarBoton3URLServicing!=""))
+				{
+					htmlServicing+='<a href=\"' + VarBoton3URLServicing + '\" title=\"' + VarBoton3TextoServicing + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBoton3TextoServicing + '</a>';
+				}
+				
+				
+				return htmlOnboarding,htmlClientes,htmlServicing;
+			}
+			
+			function insertarImagenDestacada()
+			{
+				//BLOQUE1
+				var htmlOnboarding="";
+				if (VarImagenDestacadaOnboarding!="")
+				{
+					htmlOnboarding+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaOnboarding + '\">';	
+				}
+				//BLOQUE2
+				var htmlClientes="";
+				if (VarImagenDestacadaClientes!="")
+				{
+					htmlClientes+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaClientes + '\">';	
+				}
+				//BLOQUE3
+				var htmlServicing="";
+				if (VarImagenDestacadaServicing!="")
+				{
+					htmlServicing+='<img style=\"float: left;\" src=\"' + VarImagenDestacadaServicing + '\">';	
+				}
+				
+				return htmlOnboarding,htmlClientes,htmlServicing;
+			}
+			
+			document.body.style.backgroundColor="#fff";
+		//BLOQUE1	
+			htmlOnboarding+='<table style=\"border-style: none;\" width=\"100%\">';
+			htmlOnboarding+='<tr><td>';  
+			htmlOnboarding+='<div style=\"padding: 10px; font-size:' + VarSizeOnboarding + '; color:' + VarColorLetraOnboarding + ';\">';
+			htmlOnboarding+=insertarImagenDestacada();		
+			htmlOnboarding+='<h2 class=\"titulobloque\">' + VarTituloBloqueOnboarding + '</h2>';
+			htmlOnboarding+=bbcode2html(VarComentOnboarding);
+			htmlOnboarding+=insertarBoton();			
+			htmlOnboarding+='</div>';
+			htmlOnboarding+='</td></tr></table>';	
+			
+			document.getElementById("content_divOnboarding").innerHTML = htmlOnboarding;
+			
+		//BLOQUE2	
+			htmlClientes+='<table style=\"border-style: none;\" width=\"100%\">';
+			htmlClientes+='<tr><td>';  
+			htmlClientes+='<div style=\"padding: 10px; font-size:' + VarSizeClientes + '; color:' + VarColorLetraClientes + ';\">';
+			htmlClientes+=insertarImagenDestacada();		
+			htmlClientes+='<h2 class=\"titulobloque\">' + VarTituloBloqueClientes + '</h2>';
+			htmlClientes+=bbcode2html(VarComentClientes);
+			htmlClientes+=insertarBoton();			
+			htmlClientes+='</div>';
+			htmlClientes+='</td></tr></table>';	
+			
+			document.getElementById("content_divClientes").innerHTML = htmlClientes;
+
+		//BLOQUE3	
+			htmlServicing+='<table style=\"border-style: none;\" width=\"100%\">';
+			htmlServicing+='<tr><td>';  
+			htmlServicing+='<div style=\"padding: 10px; font-size:' + VarSizeServicing + '; color:' + VarColorLetraServicing + ';\">';
+			htmlServicing+=insertarImagenDestacada();		
+			htmlServicing+='<h2 class=\"titulobloque\">' + VarTituloBloqueServicing + '</h2>';
+			htmlServicing+=bbcode2html(VarComentServicing);
+			htmlServicing+=insertarBoton();			
+			htmlServicing+='</div>';
+			htmlServicing+='</td></tr></table>';	
+			
+			document.getElementById("content_divServicing").innerHTML = htmlServicing;	
+			
+			
+			
+			gadgets.window.adjustHeight();
+		</script>
+	]]> 
+
+
+	
+	</Content>  
+	<Content type="html" view="configuration"  preferred_height="480">
+	<![CDATA[
+		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/editorbbcode.js"></script>
+		<style>
+			table td {
+				color: #000;
+				font-size: 11px;
+				font-weight: bold;
+			}
+			table td input,
+			textarea {
+				color: #000;
+				font-size: 11px;				
+			}			
+			input#VarTituloBloque {
+				width: 300px;
+			}
+			input#VarImagenDestacada {
+				width: 575px;
+			}
+			.btnTexto {
+				width: 200px;
+			}
+			.btnURL {
+				width: 345px;
+			}
+			.destacado {
+				color:red;
+				font-size:20px;
+				font-weight:bold;
+			}
+			.textodefecto {
+				width: 40px;
+			}
+			.textocolor {
+				width: 57px;
+			}
+		</style>
+	<!--BLOQUE1	-->
+		<table width="100%" border="0" id="tablaconfig">			
+			<tr>		
+				<td>
+					T&iacute;tulo: <input type="text" id="VarTituloBloqueOnboarding" value="__UP_VarTituloBloqueOnboarding__" onchange="registra('VarTituloBloqueOnboarding')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Im&aacutegen destacada (URL): <input type="text" id="VarImagenDestacadaOnboarding" value="__UP_VarImagenDestacadaOnboarding__" onchange="registra('VarImagenDestacadaOnboarding')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 1 - Texto: <input type="text" id="VarBoton1TextoOnboarding" class="btnTexto" value="__UP_VarBoton1TextoOnboarding__" onchange="registra('VarBoton1TextoOnboarding')">		
+					Bot&oacute;n 1 - URL: <input type="text" id="VarBoton1URLOnboarding" class="btnURL" value="__UP_VarBoton1URLOnboarding__" onchange="registra('VarBoton1URLOnboarding')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 2 - Texto: <input type="text" id="VarBoton2TextoOnboarding" class="btnTexto" value="__UP_VarBoton2TextoOnboarding__" onchange="registra('VarBoton2TextoOnboarding')">		
+					Bot&oacute;n 2 - URL: <input type="text" id="VarBoton2URLOnboarding" class="btnURL" value="__UP_VarBoton2URLOnboarding__" onchange="registra('VarBoton2URLOnboarding')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 3 - Texto: <input type="text" id="VarBoton3TextoOnboarding" class="btnTexto" value="__UP_VarBoton3TextoOnboarding__" onchange="registra('VarBoton3TextoOnboarding')">		
+					Bot&oacute;n 3 - URL: <input type="text" id="VarBoton3URLOnboarding" class="btnURL" value="__UP_VarBoton3URLOnboarding__" onchange="registra('VarBoton3URLOnboarding')">					
+				</td>
+			</tr>
+		</table>
+		<table width="100%" height="170px;" border="0" id="tablaconfig1">			
+			<tr>		
+				<td>
+					Texto (admite bbcode):<br/>
+					<script language="Javascript">
+					<!--
+						editor_para("VarComentOnboarding");
+					//-->
+					</script>
+					<textarea id="VarComentOnboarding" style="height: 100px; width: 100%" onchange="registra('VarComentOnboarding')" >__UP_VarComentOnboarding__</textarea>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="0" id="tablaconfig2">			
+			<tr>
+				<td>Tama�o del texto por defecto: <input type="text" class="textodefecto" id="VarSizeOnboarding" value="__UP_VarSizeOnboarding__" onchange="registra('VarSizeOnboarding')"></td>   
+			</tr>
+			<tr>
+				<td>Color de texto por defecto: <input type="text" class="textocolor" id="VarColorLetraOnboarding" value="__UP_VarColorLetraOnboarding__" onchange="registra('VarColorLetraOnboarding')"></td>		     
+			</tr>
+			<tr>
+				<td class="destacado"><br/><br/>No modificar la altura y el ancho del gadget</td>
+			</tr>
+		</table>	
+		
+		<!--BLOQUE2	-->
+		<table width="100%" border="0" id="tablaconfig">			
+			<tr>		
+				<td>
+					T&iacute;tulo: <input type="text" id="VarTituloBloqueClientes" value="__UP_VarTituloBloqueClientes__" onchange="registra('VarTituloBloqueClientes')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Im&aacutegen destacada (URL): <input type="text" id="VarImagenDestacadaClientes" value="__UP_VarImagenDestacadaClientes__" onchange="registra('VarImagenDestacadaClientes')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 1 - Texto: <input type="text" id="VarBoton1TextoClientes" class="btnTexto" value="__UP_VarBoton1TextoClientes__" onchange="registra('VarBoton1TextoClientes')">		
+					Bot&oacute;n 1 - URL: <input type="text" id="VarBoton1URLClientes" class="btnURL" value="__UP_VarBoton1URLClientes__" onchange="registra('VarBoton1URLClientes')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 2 - Texto: <input type="text" id="VarBoton2TextoClientes" class="btnTexto" value="__UP_VarBoton2TextoClientes__" onchange="registra('VarBoton2TextoClientes')">		
+					Bot&oacute;n 2 - URL: <input type="text" id="VarBoton2URLClientes" class="btnURL" value="__UP_VarBoton2URLClientes__" onchange="registra('VarBoton2URLClientes')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 3 - Texto: <input type="text" id="VarBoton3TextoClientes" class="btnTexto" value="__UP_VarBoton3TextoClientes__" onchange="registra('VarBoton3TextoClientes')">		
+					Bot&oacute;n 3 - URL: <input type="text" id="VarBoton3URLClientes" class="btnURL" value="__UP_VarBoton3URLClientes__" onchange="registra('VarBoton3URLClientes')">					
+				</td>
+			</tr>
+		</table>
+		<table width="100%" height="170px;" border="0" id="tablaconfig1">			
+			<tr>		
+				<td>
+					Texto (admite bbcode):<br/>
+					<script language="Javascript">
+					<!--
+						editor_para("VarComentClientes");
+					//-->
+					</script>
+					<textarea id="VarComentClientes" style="height: 100px; width: 100%" onchange="registra('VarComentClientes')" >__UP_VarComentClientes__</textarea>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="0" id="tablaconfig2">			
+			<tr>
+				<td>Tama񯠤el texto por defecto: <input type="text" class="textodefecto" id="VarSizeClientes" value="__UP_VarSizeClientes__" onchange="registra('VarSizeClientes')"></td>   
+			</tr>
+			<tr>
+				<td>Color de texto por defecto: <input type="text" class="textocolor" id="VarColorLetraClientes" value="__UP_VarColorLetraClientes__" onchange="registra('VarColorLetraClientes')"></td>		     
+			</tr>
+			<tr>
+				<td class="destacado"><br/><br/>No modificar la altura y el ancho del gadget</td>
+			</tr>
+		</table>
+		
+		
+		<!--BLOQUE3	-->
+		<table width="100%" border="0" id="tablaconfig">			
+			<tr>		
+				<td>
+					T&iacute;tulo: <input type="text" id="VarTituloBloqueServicing" value="__UP_VarTituloBloqueServicing__" onchange="registra('VarTituloBloqueServicing')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Im&aacutegen destacada (URL): <input type="text" id="VarImagenDestacadaServicing" value="__UP_VarImagenDestacadaServicing__" onchange="registra('VarImagenDestacadaServicing')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 1 - Texto: <input type="text" id="VarBoton1TextoServicing" class="btnTexto" value="__UP_VarBoton1TextoServicing__" onchange="registra('VarBoton1TextoServicing')">		
+					Bot&oacute;n 1 - URL: <input type="text" id="VarBoton1URLServicing" class="btnURL" value="__UP_VarBoton1URLServicing__" onchange="registra('VarBoton1URLServicing')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 2 - Texto: <input type="text" id="VarBoton2TextoServicing" class="btnTexto" value="__UP_VarBoton2TextoServicing__" onchange="registra('VarBoton2TextoServicing')">		
+					Bot&oacute;n 2 - URL: <input type="text" id="VarBoton2URLServicing" class="btnURL" value="__UP_VarBoton2URLServicing__" onchange="registra('VarBoton2URLServicing')">					
+				</td>
+			</tr>
+			<tr>		
+				<td>
+					Bot&oacute;n 3 - Texto: <input type="text" id="VarBoton3TextoServicing" class="btnTexto" value="__UP_VarBoton3TextoServicing__" onchange="registra('VarBoton3TextoServicing')">		
+					Bot&oacute;n 3 - URL: <input type="text" id="VarBoton3URLServicing" class="btnURL" value="__UP_VarBoton3URLServicing__" onchange="registra('VarBoton3URLServicing')">					
+				</td>
+			</tr>
+		</table>
+		<table width="100%" height="170px;" border="0" id="tablaconfig1">			
+			<tr>		
+				<td>
+					Texto (admite bbcode):<br/>
+					<script language="Javascript">
+					<!--
+						editor_para("VarComentServicing");
+					//-->
+					</script>
+					<textarea id="VarComentServicing" style="height: 100px; width: 100%" onchange="registra('VarComentServicing')" >__UP_VarComentServicing__</textarea>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="0" id="tablaconfig2">			
+			<tr>
+				<td>Tama񯠤el texto por defecto: <input type="text" class="textodefecto" id="VarSizeServicing" value="__UP_VarSizeServicing__" onchange="registra('VarSizeServicing')"></td>   
+			</tr>
+			<tr>
+				<td>Color de texto por defecto: <input type="text" class="textocolor" id="VarColorLetraServicing" value="__UP_VarColorLetraServicing__" onchange="registra('VarColorLetraServicing')"></td>		     
+			</tr>
+			<tr>
+				<td class="destacado"><br/><br/>No modificar la altura y el ancho del gadget</td>
+			</tr>
+		</table>
+		
+		
+		<script type="text/javascript">			
+			// Get userprefs
+			var prefs = new gadgets.Prefs();			
+			function registra(variable)
+			{
+				prefs.set(variable,document.getElementById(variable).value);
+			}	
+			gadgets.window.adjustHeight();
+		</script>   
+	]]>
+	</Content>
+</Module>
