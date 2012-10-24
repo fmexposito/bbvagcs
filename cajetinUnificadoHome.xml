@@ -13,6 +13,8 @@
 		author_location="Madrid, Spain"
 		scaling="false">
 		<Require feature="dynamic-height"/>
+		<Require feature="idi"/>
+		<Require feature="locked-domain" />
 		<Require feature="setprefs"/>
 	</ModulePrefs>  
 	<!--First Block-->
