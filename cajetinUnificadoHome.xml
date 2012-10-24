@@ -128,9 +128,9 @@
 			var VarURLSecondBlock=prefs.getString("VarURLSecondBlock");
 			var VarURLThirdBlock=prefs.getString("VarURLThirdBlock");
 			
-			document.getElementById('content_divfirstblock').onclick="window.parent.location.href="+VarURLFirstBlock;
-			document.getElementById('content_divsecondblock').onclick="window.parent.location.href="+VarURLSecondBlock;
-			document.getElementById('content_divthirdblock').onclick ='window.parent.location.href='+VarURLThirdBlock;
+			document.getElementById('content_divfirstblock').onClick="window.parent.location.href="+VarURLFirstBlock;
+			document.getElementById('content_divsecondblock').onClick="window.parent.location.href="+VarURLSecondBlock;
+			document.getElementById('content_divthirdblock').onClick ='window.parent.location.href='+VarURLThirdBlock;
 		
 			
 			function insertarImagenDestacada()
