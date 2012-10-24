@@ -86,7 +86,6 @@
 			<div id="content_divfirstblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 			<div id="content_divsecondblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 			<div id="content_divthirdblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-			<!--<a href="javascript:creaEnlace('"+document.getElementById('content_divthirdblock').value+"')" id="content_divthirdblock"   style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></a>-->
 
 		</div>
 
@@ -131,14 +130,13 @@
 			var VarURLSecondBlock=prefs.getString("VarURLSecondBlock");
 			var VarURLThirdBlock=prefs.getString("VarURLThirdBlock");
 			
-			//document.getElementById('content_divfirstblock').onClick="window.parent.location.href="+VarURLFirstBlock;
-			//document.getElementById('content_divsecondblock').onClick="window.parent.location.href="+VarURLSecondBlock;
-		
-			document.getElementById('content_divthirdblock').onclick = function(){creaEnlaces(VarURLThirdBlock)};
+			  document.getElementById('content_divfirstblock').onclick = function(){creaEnlaces(VarURLFirstBlock)};
+			  document.getElementById('content_divsecondblock').onclick = function(){creaEnlaces(VarURLSecondBlock)};
+		      document.getElementById('content_divthirdblock').onclick = function(){creaEnlaces(VarURLThirdBlock)};
 		
 			function creaEnlaces(url){
 			  window.parent.location.href = url;
-			alert('hola Jordi82');
+			
 			}
 			
 			
