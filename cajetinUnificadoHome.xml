@@ -96,9 +96,12 @@
 			}
 			
 		</style>
-	
-		<div id="content_div"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-		
+	<div id="content_div">
+		<div id="content_divOnboarding"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_divClientes"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_divServicing"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+
+    </div>
 
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
@@ -242,7 +245,7 @@
 			htmlOnboarding +='</div>';
 			htmlOnboarding +='</td></tr></table>';	
 			
-			document.getElementById("content_div").innerHTML = htmlOnboarding;
+			document.getElementById("content_divOnboarding").innerHTML = htmlOnboarding;
 			
 		//BLOQUE2	
 			htmlClientes+='<table style=\"border-style: none;\" width=\"100%\">';
@@ -255,7 +258,7 @@
 			htmlClientes+='</div>';
 			htmlClientes+='</td></tr></table>';	
 			
-			document.getElementById("content_div").innerHTML += htmlClientes;
+			document.getElementById("content_divClientes").innerHTML += htmlClientes;
 
 		//BLOQUE3	
 			htmlServicing+='<table style=\"border-style: none;\" width=\"100%\">';
@@ -268,7 +271,7 @@
 			htmlServicing+='</div>';
 			htmlServicing+='</td></tr></table>';	
 			
-			document.getElementById("content_div").innerHTML += htmlServicing;	
+			document.getElementById("content_divServicing").innerHTML += htmlServicing;	
 			
 			
 			
