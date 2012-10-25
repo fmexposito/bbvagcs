@@ -43,7 +43,7 @@
 			#content_generic{
 			float:left;
 			width:100%;
-			/*background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png');*/
+			background-image: url('http://bbvagcs.googlecode.com/svn/trunk/fondo.png');
 			}
 			#content_divfirstblock, 
 			#content_divsecondblock, 
@@ -86,9 +86,9 @@
 			}
 		</style>
 		<div id="content_generic">
-			<div id="content_divfirstblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-			<div id="content_divsecondblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-			<div id="content_divthirdblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+			<div id="content_divfirstblock"></div>
+			<div id="content_divsecondblock"></div>
+			<div id="content_divthirdblock"></div>
 
 		</div>
 
