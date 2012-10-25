@@ -49,7 +49,6 @@
 			#content_divsecondblock, 
 			#content_divthirdblock {
 			    float:left;
-				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png');
 				width:300px;
 				height:150px;
 				cursor:hand;
