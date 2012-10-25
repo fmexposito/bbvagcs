@@ -53,8 +53,8 @@
 			#content_divsecondblock, 
 			#content_divthirdblock {
 			    float:left;
-				margin:15px 5px 0px 10px;
-				width:275px;
+				margin:25px 5px 0px 10px;
+				width:300px;
 				height:150px;
 				cursor:hand;
 				cursor:pointer;
