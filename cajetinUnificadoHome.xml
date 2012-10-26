@@ -49,15 +49,7 @@
 			background-position: top;
 			height:180px;
 			}
-			/* #content_divfirstblock{
-			padding:0px 0px 0px 0px;
-			}*/
-			#content_divsecondblock{
-			padding-left:35px;
-			}
-			#content_divthirdblock {
-			padding-left:35px;
-			}
+			
 			#content_divfirstblock, 
 			#content_divsecondblock, 
 			#content_divthirdblock {
@@ -102,8 +94,8 @@
 		</style>
 		<div id="content_generic">
 			<div id="content_divfirstblock"  ></div>
-			<div id="content_divsecondblock" > </div>
-			<div id="content_divthirdblock"></div>
+			<div id="content_divsecondblock" style="padding-left:35px;"> </div>
+			<div id="content_divthirdblock" style="padding-left:35px;"></div>
 			<!--<div id="content_divthirdblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>-->
 
 		</div>
