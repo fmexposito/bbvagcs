@@ -78,13 +78,13 @@
 				
 			}
 			#content_divfirstblock img{
-			 padding: 0 15px 10px 0;
+			 padding: 0 15px 20px 0;
 			} 
 			#content_divsecondblock img{
-			 padding: 0 15px 10px 0;
+			 padding: 0 15px 20px 0;
 			} 
 			#content_divthirdblock img{
-			 padding: 0 15px 10px 0;
+			 padding: 0 15px 20px 0;
 			}
 			#content_divfirstblock, 
 			#content_divsecondblock, 
