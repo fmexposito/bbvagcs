@@ -176,7 +176,7 @@
 				query3.send(handleQueryResponse3);
 				
 				var query4= new google.visualization.Query(urlTable, opts);
-				var querytosend4 = "select max(A),K where A like '"+ idCliquery.toUpperCase() + "' group by K";
+				var querytosend4 = "select max(A),K where A like '"+ idCliquery.toUpperCase() + "' and K <> '' group by K";
 				query4.setQuery(querytosend4);
 				query4.send(handleQueryResponse4);
 			}
