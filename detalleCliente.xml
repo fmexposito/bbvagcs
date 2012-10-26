@@ -287,7 +287,7 @@
 			var filas = data.getNumberOfRows();
 			var html="";
 			alert(filas);
-			 for(var i=1;i<=filas;i++){
+			 for(var i=0;i<filas;i++){
 				html += '<a href="javascript:detalle(\''+data.getValue(i,1)+'\');" >'+data.getValue(i,1)+'</a>, ';
 				}
 				
