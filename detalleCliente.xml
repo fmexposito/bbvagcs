@@ -100,12 +100,12 @@
 				text-align: justify;
 				color: #666666;
 			}
-			ul#listaproyectos span li  a{
+			ul#listaproyectos span   a{
 				font-family: arial,sans-serif;
 				font-size: 12px;
 				line-height: 17px;
 				text-align: justify;
-				color: #666666;
+				color: #666;
 			}
 			ul#listaproyectos {
 				margin-left: 250px;
