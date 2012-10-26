@@ -286,7 +286,7 @@
 			data = response.getDataTable();	
 			var filas = data.getNumberOfRows();
 			var html="";
-			alert(filas);
+			
 			 for(var i=0;i<filas;i++){
 			    if(i == filas-1){
 				html += '<a href="javascript:detalle(\''+data.getValue(i,1)+'\');" >'+data.getValue(i,1)+'</a>';
