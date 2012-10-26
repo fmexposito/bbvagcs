@@ -288,8 +288,13 @@
 			var html="";
 			alert(filas);
 			 for(var i=0;i<filas;i++){
+			    if(i == filas-1){
+				html += '<a href="javascript:detalle(\''+data.getValue(i,1)+'\');" >'+data.getValue(i,1)+'</a>';
+				}
+				else {
 				html += '<a href="javascript:detalle(\''+data.getValue(i,1)+'\');" >'+data.getValue(i,1)+'</a>, ';
 				}
+			}
 				
 				
 				document.getElementById('idProyecto').innerHTML = html;
