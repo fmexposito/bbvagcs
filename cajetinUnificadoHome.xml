@@ -54,8 +54,7 @@
 			#content_divsecondblock, 
 			#content_divthirdblock {
 			    float:left;
-				margin-top:15px;
-				margin-right:5px;
+				margin:15px 5px 0px 11px;
 				width:275px;
 				height:150px;
 				cursor:hand;
