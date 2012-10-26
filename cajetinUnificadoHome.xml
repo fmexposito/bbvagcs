@@ -70,7 +70,7 @@
 				}
 			#content_divthirdblock {
 			    float:left;
-				margin:15px 5px 0px 11px;
+				margin:15px 5px 0px 50px;
 				width:275px;
 				height:150px;
 				cursor:hand;
