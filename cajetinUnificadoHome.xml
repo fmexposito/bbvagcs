@@ -49,14 +49,14 @@
 			background-position: top;
 			height:180px;
 			}
-			#content_divfirstblock{
+			/* #content_divfirstblock{
 			padding:0px 0px 0px 0px;
-			}
+			}*/
 			#content_divsecondblock{
-			padding:0px 0px 0px 0px;
+			padding-left:35px;
 			}
 			#content_divthirdblock {
-			padding:0px 0px 0px 0px;
+			padding-left:35px;
 			}
 			#content_divfirstblock, 
 			#content_divsecondblock, 
