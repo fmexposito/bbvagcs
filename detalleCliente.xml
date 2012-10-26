@@ -286,8 +286,8 @@
 			data = response.getDataTable();	
 			var filas = data.getNumberOfRows();
 			var html="";
-			alert(data.getValue(0,1));
-			 for(var i=0;i<filas;i++){
+			//alert(data.getValue(0,1));
+			 for(var i=1;i<=filas;i++){
 				html += '<a href="javascript:detalle(\''+data.getValue(i,1)+'\');" >'+data.getValue(i,1)+'</a>, ';
 				}
 				
