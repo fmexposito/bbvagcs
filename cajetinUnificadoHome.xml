@@ -52,7 +52,7 @@
 			
 			#content_divfirstblock{
 			float:left;
-				margin:15px 5px 0px 11px;
+				margin:15px 0px 0px 10px;
 				width:275px;
 				height:150px;
 				cursor:hand;
@@ -61,12 +61,12 @@
 			}
 			#content_divsecondblock{
 				float:left;
-				margin:15px 5px 0px 11px;
+				margin:15px 0px 0px 50px;
 				width:275px;
 				height:150px;
 				cursor:hand;
 				cursor:pointer;
-				padding-left:35px;
+				
 				}
 			#content_divthirdblock {
 			    float:left;
@@ -75,7 +75,7 @@
 				height:150px;
 				cursor:hand;
 				cursor:pointer;
-				padding-left:35px;
+				
 			}
 			#content_divfirstblock img{
 			 padding: 0 15px 10px 0;
