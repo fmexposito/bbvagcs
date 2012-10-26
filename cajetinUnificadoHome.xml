@@ -49,11 +49,20 @@
 			background-position: top;
 			height:180px;
 			}
+			#content_divfirstblock{
+			padding:0px 0px 0px 0px;
+			}
+			#content_divsecondblock{
+			padding:0px 0px 0px 0px;
+			}
+			#content_divthirdblock {
+			padding:0px 0px 0px 0px;
+			}
 			#content_divfirstblock, 
 			#content_divsecondblock, 
 			#content_divthirdblock {
 			    float:left;
-				margin:25px 5px 0px 11px;
+				margin:15px 5px 0px 11px;
 				width:275px;
 				height:150px;
 				cursor:hand;
