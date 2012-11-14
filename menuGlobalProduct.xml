@@ -290,7 +290,7 @@
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/global-product/" target="_parent" onclick="mark"></a></li>
 			<li class="top"><a id="canales" class="principal" href="https://sites.google.com/a/bbva.com/global-product/canales" target="_parent">Canales</a>
-			<ul style="left:-99999px; display: none;" class="sub floatRight">
+			<ul style="left:-99999px; display: none;" class="sub">
 					
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/b2b" target="_parent">B2B</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/ebs" target="_parent">EBS</a></li>
