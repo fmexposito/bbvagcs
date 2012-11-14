@@ -292,12 +292,11 @@
 			<li class="top"><a id="canales" class="principal" href="https://sites.google.com/a/bbva.com/global-product/canales" target="_parent">Canales</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/b2b" target="_parent">B2B</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/ebs" target="_parent">EBS</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/funcionalidades-locales" target="_parent">Funcionalidades locales</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/movilidad" target="_parent">Movilidad</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/multichanel" target="_parent">Multichannel</a></li>
-					
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/movilidad" target="_parent">Movilidad</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/funcionalidades-locales" target="_parent">Funcionalidades locales</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/ebs" target="_parent">EBS</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/b2b" target="_parent">B2B</a></li>
 			</ul>
 			</li>
 			<li class="top"><a id="oneformat" class="principal" href="https://sites.google.com/a/bbva.com/global-product/oneformat" target="_parent">One format</a></li>
