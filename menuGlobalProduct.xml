@@ -319,7 +319,7 @@
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/otros-servicios/relay-bank" target="_parent"> Relay Bank</a></li>
 			</ul></li>
 			<li class="top"><a id="helpdesk" class="principal" href="https://sites.google.com/a/bbva.com/global-product/helpdesk" target="_parent">Helpdesk</a>
-			<ul style="left:-99999px; display: none;" class="sub floatRight">
+			<ul style="left:-99999px; display: none;" class="sub">
 					
 					
 					<li><a href="" target="_parent">Documentos</a></li>
@@ -328,7 +328,7 @@
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/helpdesk/canales-helpdesk" target="_parent">Canales</a></li>
 			</ul></li>
 			<li class="top"><a id="comingsoon" class="principal" href="https://sites.google.com/a/bbva.com/global-product/coming-soon" target="_parent">Coming soon</a>
-			<ul style="left:-99999px; display: none;" class="sub floatRight">
+			<ul style="left:-99999px; display: none;" class="sub">
 					
 					<li><a href="" target="_parent">Otros proyectos</a></li>
 					<li><a href="" target="_parent">One format</a></li>
