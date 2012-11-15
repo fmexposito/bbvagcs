@@ -292,47 +292,57 @@
 			<li class="top"><a id="canales" class="principal" href="https://sites.google.com/a/bbva.com/global-product/canales" target="_parent">Canales</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/multichanel" target="_parent">Multichannel</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/movilidad" target="_parent">Movilidad</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/funcionalidades-locales" target="_parent">Funcionalidades locales</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/ebs" target="_parent">EBS</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/b2b" target="_parent">B2B</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/ebs" target="_parent">EBS</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/funcionalidades-locales" target="_parent">Funcionalidades locales</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/movilidad" target="_parent">Movilidad</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/multichanel" target="_parent">Multichannel</a></li>
+					
+					
+					
 			</ul>
 			</li>
 			<li class="top"><a id="oneformat" class="principal" href="https://sites.google.com/a/bbva.com/global-product/oneformat" target="_parent">One format</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
-					
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/estandares" target="_parent">Estándares</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/formatos-locales" target="_parent">Formatos locales</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/one-format-respuestas" target="_parent">Respuestas</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/oneformat-pagos" target="_parent">Pagos</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/one-format-respuestas" target="_parent">Respuestas</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/formatos-locales" target="_parent">Formatos locales</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/estandares" target="_parent">Estándares</a></li>
+					
+					
+					
 			</ul>
 			</li>
 			<li class="top"><a id="otrosservicios" class="principal" href="https://sites.google.com/a/bbva.com/global-product/otros-servicios" target="_parent">Otros servicios</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
 					
-					
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/otros-servicios/registro-actividad" target="_parent">Registro de actividad</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/otros-servicios/seguridad" target="_parent">Seguridad</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/otros-servicios/relay-bank" target="_parent"> Relay Bank</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/otros-servicios/seguridad" target="_parent">Seguridad</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/otros-servicios/registro-actividad" target="_parent">Registro de actividad</a></li>
+					
+					
 			</ul></li>
 			<li class="top"><a id="helpdesk" class="principal" href="https://sites.google.com/a/bbva.com/global-product/helpdesk" target="_parent">Helpdesk</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
-					
-					<li><a href="" target="_parent">Documentos</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/helpdesk/alertas" target="_parent">Alertas </a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/helpdesk/otros-servicios" target="_parent">Otros servicios</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/helpdesk/canales-helpdesk" target="_parent">Canales</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/helpdesk/otros-servicios" target="_parent">Otros servicios</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/helpdesk/alertas" target="_parent">Alertas </a></li>
+					<li><a href="" target="_parent">Documentos</a></li>
+					
+					
+					
 			</ul></li>
 			<li class="top"><a id="comingsoon" class="principal" href="https://sites.google.com/a/bbva.com/global-product/coming-soon" target="_parent">Coming soon</a>
 			<ul style="left:-99999px; display: none;" class="sub">
-					
-					<li><a href="" target="_parent">Otros proyectos</a></li>
-					<li><a href="" target="_parent">One format</a></li>
+			
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/coming-soon/coming-soon-canales" target="_parent">Canales</a></li>
+					<li><a href="" target="_parent">One format</a></li>
+					<li><a href="" target="_parent">Otros proyectos</a></li>
+					
+					
 			</ul></li>
 			
 		</ul>
