@@ -7,7 +7,8 @@
 		<Require feature="locked-domain" />
 	</ModulePrefs>
 	
-	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
+	<UserPref name="_table_query_url" default_value="" display_name="Data source url Privados(Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
+    <UserPref name="_table_query_urlPublicos" default_value="" display_name="Data source url Públicos(Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
 
 	<Content type="html">
 		<![CDATA[
@@ -66,7 +67,7 @@
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
 			var urlTable = prefs.getString("_table_query_url");					
-			
+			var urlTablePublicos = prefs.getString("_table_query_urlPublicos");	
 			var ifrm = "";
 			_IG_RegisterOnloadHandler(loadVisualizationAPI);
 			
@@ -74,6 +75,7 @@
 			{
 				google.load("visualization", "1", {"packages": ["table"]});
 				google.setOnLoadCallback(sendQuery);
+				google.setOnLoadCallback(sendQueryPublicos);
 			}
 
 			function sendQuery() 
@@ -84,6 +86,19 @@
 				var querytosend = "select A,B,C";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
+				
+				
+			}
+			
+			function sendQueryPublicos() 
+			{
+				gadgetHelper = new google.visualization.GadgetHelper();
+				var opts = {dataType:'jsonp'};				
+				var queryPublicos = new google.visualization.Query(urlTablePublicos, opts);							
+				var querytosend = "select A,B,C";
+				queryPublicos.setQuery(querytosend);			  
+				queryPublicos.send(handleQueryResponse);
+				
 				
 			}
 
@@ -140,7 +155,7 @@
 		}
 		
 		function muestraInforme(urlFileNN){
-		alert(urlFileNN);
+		
 		    var contentIframe = "CONTENIDO DEL IFRAME!!!!!!!!!!!!!";
 			/*
 			<style>
