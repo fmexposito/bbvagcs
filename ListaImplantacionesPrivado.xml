@@ -106,6 +106,7 @@
 					    urlFile[i] = data.getValue(i,1);
 						
 						var fecha = data.getValue(i,2);
+						alert("i "+ i +" fecha " fecha);
 						var mes = fecha[3]+fecha[4];
 						switch(mes){
 						case '01': document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile+'\')" href="#" >' +fecha+ '</a></li>';break;
