@@ -83,7 +83,7 @@
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var opts = {dataType:'jsonp'};				
 				var query = new google.visualization.Query(urlTable, opts);							
-				var querytosend = "select A,max(B),max(C) group by A order by C";
+				var querytosend = "select A,B,C order by C";
 				query.setQuery(querytosend);			  
 				query.send(handleQueryResponse);
 				
@@ -95,7 +95,7 @@
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var opts = {dataType:'jsonp'};				
 				var queryPublicos = new google.visualization.Query(urlTablePublicos, opts);							
-				var querytosend = "select A,max(B),max(C) group by A order by C";
+				var querytosend = "select A,B,C order by C";
 				queryPublicos.setQuery(querytosend);			  
 				queryPublicos.send(handleQueryResponse);
 				
