@@ -95,7 +95,7 @@
 				gadgetHelper = new google.visualization.GadgetHelper();
 				var opts = {dataType:'jsonp'};				
 				var queryPublicos = new google.visualization.Query(urlTablePublicos, opts);							
-				var querytosend = "select A,B,C";
+				var querytosend = "select A,max(B),C group by A order by C";
 				queryPublicos.setQuery(querytosend);			  
 				queryPublicos.send(handleQueryResponse);
 				
