@@ -335,14 +335,14 @@
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-customer-services/metodologia" target="_parent">Metodología</a></li>
 				</ul>
 			</li>
-			<li class="top"><a id="global-product" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product" target="_parent">Global Product</a>
-				<ul style="left: -99999px; display: none;" class="sub floatRight">
+			<li class="top"><a id="global-product" class="down" href="https://sites.google.com/a/bbva.com/global-product/" target="_parent">Global Product</a>
+				<!--<ul style="left: -99999px; display: none;" class="sub floatRight">
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/coming-soon" target="_parent">Cooming soon</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/helpdesk" target="_parent">Helpdesk</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/otros-servicios" target="_parent">Otros servicios</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/one-format" target="_parent">One format</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/global-product/canales" target="_parent">Canales</a></li>
-				</ul>
+				</ul>-->
 			</li>
 			<li class="top"><a class="principal" href="#" id="privacy">Global Sales</a></li>
 		</ul>
