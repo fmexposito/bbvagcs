@@ -308,7 +308,7 @@
 			thirdblock+=insertarImagenDestacada3();		
 			thirdblock+='<h2 class=\"titulobloque\">' + VarTituloBloqueThirdBlock + '</h2>';
 			thirdblock+=bbcode2html(VarComentThirdBlock);
-			thirdblock+=insertarBotonBlock1();			
+			thirdblock+=insertarBotonBlock3();			
 			thirdblock+='</div>';
 			
 			document.getElementById("content_divthirdblock").innerHTML = thirdblock;	
