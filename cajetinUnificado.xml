@@ -54,29 +54,18 @@
 			
 			#content_divfirstblock{
 			float:left;
-				margin:10px 0px 0px 10px;
-				width:275px;
-				height:150px;
-				cursor:hand;
-				cursor:pointer;
+				margin:10px 0px 0px 10px;			
+				
 			
 			}
 			#content_divsecondblock{
 				float:left;
-				margin:10px 0px 0px 50px;
-				width:275px;
-				height:150px;
-				cursor:hand;
-				cursor:pointer;
+				margin:10px 0px 0px 10px;
 				
 				}
 			#content_divthirdblock {
 			    float:left;
-				margin:10px 5px 0px 50px;
-				width:275px;
-				height:150px;
-				cursor:hand;
-				cursor:pointer;
+				margin:10px 5px 0px 10px;
 				
 			}
 			#content_divfirstblock img{
@@ -116,6 +105,11 @@
 			}
 			.content_div {
 				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png');
+				width:296px;
+				height:180px;
+				background-color: transparent;
+				 background-repeat: no-repeat; 
+				 background-position: top;
 			}
 			.content_div a img {
 				padding: 0;
@@ -152,12 +146,11 @@
 				margin-top: 7px !important;
 			}
 		</style>
+		
 		<div id="content_generic">
-			<div class="content_div" id="content_divfirstblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-			<div class="content_div" id="content_divsecondblock" style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "> </div>
-			<div class="content_div" id="content_divthirdblock" style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
-			<!--<div id="content_divthirdblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>-->
-
+			<div class="content_div" id="content_divfirstblock"></div>
+			<div class="content_div" id="content_divsecondblock" > </div>
+			<div class="content_div" id="content_divthirdblock" ></div>			
 		</div>
 
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
