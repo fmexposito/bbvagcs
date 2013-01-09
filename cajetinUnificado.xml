@@ -64,18 +64,18 @@
 			
 			#content_divfirstblock{
 			float:left;
-				margin:10px 0px 0px 0px;			
+				margin:10px 0px 0px 5px;			
 				
 			
 			}
 			#content_divsecondblock{
 				float:left;
-				margin:10px 0px 0px 15px;
+				margin:10px 0px 0px 20px;
 				
 				}
 			#content_divthirdblock {
 			    float:left;
-				margin:10px 0px 0px 15px;
+				margin:10px 0px 0px 20px;
 				
 			}
 			#content_divfirstblock img{
