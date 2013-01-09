@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Module>
-	<ModulePrefs title="Cajetin personalizado un tercio portal Global Customer Solutions"
+	<ModulePrefs title="cajetinUnificado.xml "
 		title_url=""
 		height="300"
-		width="465"
+		width="940"
 		author=""
 		author_email=""
-		description="GadGet para Google Sites que muestra textos en una caja con formato."
+		description="Cajetin personalizado un tercio portal Global Customer Solutions"
 		screenshot=""
 		thumbnail=""  
 		scrolling="false"
