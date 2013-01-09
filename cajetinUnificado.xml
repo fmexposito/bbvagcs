@@ -268,10 +268,10 @@
 				{
 					html+='<a href=\"' + VarBlock1Boton1URL + '\" title=\"' + VarBlock1Boton1Texto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock1Boton1Texto + '</a>';
 				}
-				if ((VarBlock1Boton2Texto!="")&&(VarBlock1Boton2URL!=""))
+			/*	if ((VarBlock1Boton2Texto!="")&&(VarBlock1Boton2URL!=""))
 				{
 					html+='<a href=\"' + VarBlock1Boton2URL + '\" title=\"' + VarBlock1Boton2Texto + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBlock1Boton2Texto + '</a>';
-				}
+				}*/
 			
 				return html;
 			}
@@ -284,10 +284,10 @@
 				{
 					html+='<a href=\"' + VarBlock2Boton1URL + '\" title=\"' + VarBlock2Boton1Texto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock2Boton1Texto + '</a>';
 				}
-				if ((VarBlock1Boton2Texto!="")&&(VarBlock2Boton2URL!=""))
+			/*	if ((VarBlock1Boton2Texto!="")&&(VarBlock2Boton2URL!=""))
 				{
 					html+='<a href=\"' + VarBlock2Boton2URL + '\" title=\"' + VarBlock2Boton2Texto + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBlock2Boton2Texto + '</a>';
-				}
+				}*/
 			
 				return html;
 			}			
@@ -299,10 +299,10 @@
 				{
 					html+='<a href=\"' + VarBlock3Boton1URL + '\" title=\"' + VarBlock3Boton1Texto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock3Boton1Texto + '</a>';
 				}
-				if ((VarBlock3Boton2Texto!="")&&(VarBlock3Boton2URL!=""))
+		/*		if ((VarBlock3Boton2Texto!="")&&(VarBlock3Boton2URL!=""))
 				{
 					html+='<a href=\"' + VarBlock3Boton2URL + '\" title=\"' + VarBlock3Boton2Texto + '\" target=\"_parent\" class=\"enlaceboton\">' + VarBlock3Boton2Texto + '</a>';
-				}
+				}*/
 			
 				return html;
 			}
