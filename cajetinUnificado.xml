@@ -43,7 +43,9 @@
 			#content_generic{
 			float:left;
 			width:100%;
+			/*
 			background-image: url('http://bbvagcs.googlecode.com/svn/trunk/fondo.png');
+			*/
 			background-color: transparent;
 			background-repeat: no-repeat;
 			background-position: top;
@@ -107,11 +109,53 @@
 			.sites-adminfooter {
 				display:none;
 			}
+			
+			/********/
+			.content_div img {
+				padding: 0 15px 10px 0;
+			}
+			.content_div {
+				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png');
+			}
+			.content_div a img {
+				padding: 0;
+			}
+			.sites-adminfooter {
+				display:none;
+			}
+			h2.titulobloque {
+				font-size: 16px;
+				margin: 0 0 7px 0;
+				color: #3F78B2;
+			}			
+			a.enlaceboton {
+				background-image: url("https://bbvagcs.googlecode.com/svn/trunk/fondobotonuntercio.png");
+				background-repeat: no-repeat;
+				color: #FFFFFF;
+				display: block;
+				float: right;
+				font-size: 12px;
+				font-weight: bold;
+				height: 31px;
+				margin: 0px;
+				padding-top: 10px;
+				text-align: center;
+				text-decoration: none;
+				width: 165px;
+			}	
+			a:hover.enlaceboton, 
+			a:active.enlaceboton,
+			a:visited.enlaceboton {
+				color: #FFFFFF;
+			}
+			.margintop {
+				margin-top: 7px !important;
+			}
 		</style>
 		<div id="content_generic">
-			<div id="content_divfirstblock"  ></div>
-			<div id="content_divsecondblock"> </div>
-			<div id="content_divthirdblock"></div>
+			<div class="content_div" id="content_divfirstblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+			<div class="content_div" id="content_divsecondblock" style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "> </div>
+			<div class="content_div" id="content_divthirdblock" style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 			<!--<div id="content_divthirdblock"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>-->
 
 		</div>
@@ -271,14 +315,14 @@
 			document.getElementById("content_divsecondblock").innerHTML = secondblock;
 
 		//BLOQUE3	
-			thirdblock +='<table style=\"border-style: none;\" width=\"100%\">';
+			/*thirdblock +='<table style=\"border-style: none;\" width=\"100%\">';
 			thirdblock +='<tr><td>';  
 			thirdblock +='<div style=\"padding: 10px; font-size:' + VarSizeThirdBlock + '; color:' + VarColorLetraThirdBlock + ';\">';
 			thirdblock +=insertarImagenDestacada3();		
 			thirdblock +='<h2 class=\"titulobloque\">' + VarTituloBloqueThirdBlock + '</h2>';
 			thirdblock +=bbcode2html(VarComentThirdBlock);			
 			thirdblock +='</div>';
-			thirdblock +='</td></tr></table>';	
+			thirdblock +='</td></tr></table>';*/	
 			
 			thirdblock+='<div style=\"padding: 10px; font-size:' + VarSizeThirdBlock + '; color:' + VarColorLetraThirdBlock + ';\">';
 			thirdblock+=insertarImagenDestacada3();		
