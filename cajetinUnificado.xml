@@ -20,12 +20,12 @@
 	<!--First Block-->
 	<UserPref name="VarTituloBloqueFirstBlock" display_name="Título:" default_value="Global Customer Solutions"/>
 	<UserPref name="VarImagenDestacadaFirstBlock" display_name="Imagen destacada:" default_value=""/>
-	<!--<UserPref name="VarURLFirstBlock" display_name="URL boton 3:" default_value=""/>-->
 	
 	<UserPref name="VarBlock1Boton1Texto" display_name="Texto boton 1:" default_value=""/>
 	<UserPref name="VarBlock1Boton1URL" display_name="URL boton 1:" default_value=""/>
-	<UserPref name="VarBlock1Boton2Texto" display_name="Texto boton 2:" default_value=""/>
+<!-- 	<UserPref name="VarBlock1Boton2Texto" display_name="Texto boton 2:" default_value=""/>
 	<UserPref name="VarBlock1Boton2URL" display_name="URL boton 2:" default_value=""/>
+	-->
 	
 	<UserPref name="VarComentFirstBlock" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetraFirstBlock" display_name="Color texto por defecto" default_value="#666"/>
@@ -33,12 +33,11 @@
 	<!--Second Block-->
 	<UserPref name="VarTituloBloqueSecondBlock" display_name="Título:" default_value="Global Customer Solutions"/>
 	<UserPref name="VarImagenDestacadaSecondBlock" display_name="Imagen destacada:" default_value=""/>
-	<!-- <UserPref name="VarURLSecondBlock" display_name="URL boton 3:" default_value=""/>-->
 	
 	<UserPref name="VarBlock2Boton1Texto" display_name="Texto boton 1:" default_value=""/>
 	<UserPref name="VarBlock2Boton1URL" display_name="URL boton 1:" default_value=""/>
-	<UserPref name="VarBlock2Boton2Texto" display_name="Texto boton 2:" default_value=""/>
-	<UserPref name="VarBlock2Boton2URL" display_name="URL boton 2:" default_value=""/>
+<!-- 	<UserPref name="VarBlock2Boton2Texto" display_name="Texto boton 2:" default_value=""/>
+	<UserPref name="VarBlock2Boton2URL" display_name="URL boton 2:" default_value=""/>-->
 	
 	<UserPref name="VarComentSecondBlock" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetraSecondBlock" display_name="Color texto por defecto" default_value="#666"/>
@@ -46,12 +45,11 @@
 	<!--Third Block-->
 	<UserPref name="VarTituloBloqueThirdBlock" display_name="Título:" default_value="Global Customer Solutions"/>
 	<UserPref name="VarImagenDestacadaThirdBlock" display_name="Imagen destacada:" default_value=""/>
-	<!-- <UserPref name="VarURLThirdBlock" display_name="URL boton 3:" default_value=""/>-->
 	
 	<UserPref name="VarBlock3Boton1Texto" display_name="Texto boton 1:" default_value=""/>
 	<UserPref name="VarBlock3Boton1URL" display_name="URL boton 1:" default_value=""/>
-	<UserPref name="VarBlock3Boton2Texto" display_name="Texto boton 2:" default_value=""/>
-	<UserPref name="VarBlock3Boton2URL" display_name="URL boton 2:" default_value=""/>
+<!-- 	<UserPref name="VarBlock3Boton2Texto" display_name="Texto boton 2:" default_value=""/>
+	<UserPref name="VarBlock3Boton2URL" display_name="URL boton 2:" default_value=""/>-->
 	
 	<UserPref name="VarComentThirdBlock" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetraThirdBlock" display_name="Color texto por defecto" default_value="#666"/>
@@ -262,9 +260,6 @@
 				
 				return thirdblock;
 		    }
-	
-
-		
 			
 			function insertarBotonBlock1()
 			{
@@ -295,8 +290,7 @@
 				}
 			
 				return html;
-			}
-			
+			}			
 			
 			function insertarBotonBlock3()
 			{
@@ -316,16 +310,7 @@
 			
 			document.body.style.backgroundColor="#fff";			
 			//BLOQUE1	
-			/*
-			firstblock +='<table style=\"border-style: none;\" width=\"100%\">';
-			firstblock +='<tr><td>';  
-			firstblock +='<div style=\"padding: 10px; font-size:' + VarSizeFirstBlock + '; color:' + VarColorLetraFirstBlock + ';\">';
-			firstblock +=insertarImagenDestacada1();		
-			firstblock +='<h2 class=\"titulobloque\">' + VarTituloBloqueFirstBlock + '</h2>';
-			firstblock +=bbcode2html(VarComentFirstBlock);			
-			firstblock +='</div>';
-			firstblock +='</td></tr></table>';	
-			*/
+		
 			firstblock+='<div style=\"padding: 10px; font-size:' + VarSizeFirstBlock + '; color:' + VarColorLetraFirstBlock + ';\">';
 			firstblock+=insertarImagenDestacada1();		
 			firstblock+='<h2 class=\"titulobloque\">' + VarTituloBloqueFirstBlock + '</h2>';
@@ -333,20 +318,10 @@
 			firstblock+=insertarBotonBlock1();			
 			firstblock+='</div>';
 			
-			
 			document.getElementById("content_divfirstblock").innerHTML = firstblock;
 			
 		//BLOQUE2	
-			/*
-			secondblock +='<table style=\"border-style: none;\" width=\"100%\">';
-			secondblock +='<tr><td>';  
-			secondblock +='<div style=\"padding: 10px; font-size:' + VarSizeSecondBlock + '; color:' + VarColorLetraSecondBlock + ';\">';
-			secondblock +=insertarImagenDestacada2();		
-			secondblock +='<h2 class=\"titulobloque\">' + VarTituloBloqueSecondBlock + '</h2>';
-			secondblock +=bbcode2html(VarComentSecondBlock);		
-			secondblock +='</div>';
-			secondblock +='</td></tr></table>';	
-			*/
+			
 			secondblock+='<div style=\"padding: 10px; font-size:' + VarSizeSecondBlock + '; color:' + VarColorLetraSecondBlock + ';\">';
 			secondblock+=insertarImagenDestacada2();		
 			secondblock+='<h2 class=\"titulobloque\">' + VarTituloBloqueSecondBlock + '</h2>';
@@ -354,18 +329,9 @@
 			secondblock+=insertarBotonBlock2();			
 			secondblock+='</div>';
 			
-			
 			document.getElementById("content_divsecondblock").innerHTML = secondblock;
 
-		//BLOQUE3	
-			/*thirdblock +='<table style=\"border-style: none;\" width=\"100%\">';
-			thirdblock +='<tr><td>';  
-			thirdblock +='<div style=\"padding: 10px; font-size:' + VarSizeThirdBlock + '; color:' + VarColorLetraThirdBlock + ';\">';
-			thirdblock +=insertarImagenDestacada3();		
-			thirdblock +='<h2 class=\"titulobloque\">' + VarTituloBloqueThirdBlock + '</h2>';
-			thirdblock +=bbcode2html(VarComentThirdBlock);			
-			thirdblock +='</div>';
-			thirdblock +='</td></tr></table>';*/	
+		//BLOQUE3				
 			
 			thirdblock+='<div style=\"padding: 10px; font-size:' + VarSizeThirdBlock + '; color:' + VarColorLetraThirdBlock + ';\">';
 			thirdblock+=insertarImagenDestacada3();		
