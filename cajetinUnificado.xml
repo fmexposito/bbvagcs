@@ -22,8 +22,8 @@
 	<UserPref name="VarTituloBloqueFirstBlock" display_name="Título:" default_value="Global Customer Solutions"/>
 	<UserPref name="VarImagenDestacadaFirstBlock" display_name="Imagen destacada:" default_value=""/>
 	
-	<UserPref name="VarBlock1Boton1Texto" display_name="Texto boton 1:" default_value=""/>
-	<UserPref name="VarBlock1Boton1URL" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarBlock1BotonTexto" display_name="Texto boton:" default_value=""/>
+	<UserPref name="VarBlock1BotonURL" display_name="URL boton:" default_value=""/>
 	
 	<UserPref name="VarComentFirstBlock" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetraFirstBlock" display_name="Color texto por defecto" default_value="#666"/>
@@ -33,8 +33,8 @@
 	<UserPref name="VarTituloBloqueSecondBlock" display_name="Título:" default_value="Global Customer Solutions"/>
 	<UserPref name="VarImagenDestacadaSecondBlock" display_name="Imagen destacada:" default_value=""/>
 	
-	<UserPref name="VarBlock2Boton1Texto" display_name="Texto boton 1:" default_value=""/>
-	<UserPref name="VarBlock2Boton1URL" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarBlock2BotonTexto" display_name="Texto boton:" default_value=""/>
+	<UserPref name="VarBlock2BotonURL" display_name="URL boton:" default_value=""/>
 	
 	<UserPref name="VarComentSecondBlock" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetraSecondBlock" display_name="Color texto por defecto" default_value="#666"/>
@@ -44,8 +44,8 @@
 	<UserPref name="VarTituloBloqueThirdBlock" display_name="Título:" default_value="Global Customer Solutions"/>
 	<UserPref name="VarImagenDestacadaThirdBlock" display_name="Imagen destacada:" default_value=""/>
 	
-	<UserPref name="VarBlock3Boton1Texto" display_name="Texto boton 1:" default_value=""/>
-	<UserPref name="VarBlock3Boton1URL" display_name="URL boton 1:" default_value=""/>
+	<UserPref name="VarBlock3BotonTexto" display_name="Texto boton:" default_value=""/>
+	<UserPref name="VarBlock3BotonURL" display_name="URL boton:" default_value=""/>
 	
 	<UserPref name="VarComentThirdBlock" display_name="Comentario (admite bbcode)" default_value="Texto adicional"/>  	
 	<UserPref name="VarColorLetraThirdBlock" display_name="Color texto por defecto" default_value="#666"/>
@@ -200,14 +200,14 @@
 			var VarTituloBloqueSecondBlock=prefs.getString("VarTituloBloqueSecondBlock");
 			var VarTituloBloqueThirdBlock=prefs.getString("VarTituloBloqueThirdBlock");
 			
-		    var VarBlock1Boton1Texto=prefs.getString("VarBlock1Boton1Texto");
-			var VarBlock1Boton1URL=prefs.getString("VarBlock1Boton1URL");
+		    var VarBlock1BotonTexto=prefs.getString("VarBlock1BotonTexto");
+			var VarBlock1BotonURL=prefs.getString("VarBlock1BotonURL");
 			
-			 var VarBlock2Boton1Texto=prefs.getString("VarBlock2Boton1Texto");
-			var VarBlock2Boton1URL=prefs.getString("VarBlock2Boton1URL");
+			 var VarBlock2BotonTexto=prefs.getString("VarBlock2BotonTexto");
+			var VarBlock2BotonURL=prefs.getString("VarBlock2BotonURL");
 		
-			 var VarBlock3Boton1Texto=prefs.getString("VarBlock3Boton1Texto");
-			var VarBlock3Boton1URL=prefs.getString("VarBlock3Boton1URL");	
+			 var VarBlock3BotonTexto=prefs.getString("VarBlock3BotonTexto");
+			var VarBlock3BotonURL=prefs.getString("VarBlock3BotonURL");	
 		
 			function creaEnlaces(url){
 			  window.parent.location.href = url;			
@@ -250,9 +250,9 @@
 			function insertarBotonBlock1()
 			{
 				var html="";
-				if ((VarBlock1Boton1Texto!="")&&(VarBlock1Boton1URL!=""))
+				if ((VarBlock1BotonTexto!="")&&(VarBlock1BotonURL!=""))
 				{
-					html+='<a href=\"' + VarBlock1Boton1URL + '\" title=\"' + VarBlock1Boton1Texto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock1Boton1Texto + '</a>';
+					html+='<a href=\"' + VarBlock1BotonURL + '\" title=\"' + VarBlock1BotonTexto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock1BotonTexto + '</a>';
 				}			
 				return html;
 			}
@@ -261,9 +261,9 @@
 			function insertarBotonBlock2()
 			{
 				var html="";
-				if ((VarBlock2Boton1Texto!="")&&(VarBlock2Boton1URL!=""))
+				if ((VarBlock2BotonTexto!="")&&(VarBlock2BotonURL!=""))
 				{
-					html+='<a href=\"' + VarBlock2Boton1URL + '\" title=\"' + VarBlock2Boton1Texto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock2Boton1Texto + '</a>';
+					html+='<a href=\"' + VarBlock2BotonURL + '\" title=\"' + VarBlock2BotonTexto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock2BotonTexto + '</a>';
 				}
 				return html;
 			}			
@@ -271,9 +271,9 @@
 			function insertarBotonBlock3()
 			{
 				var html="";
-				if ((VarBlock3Boton1Texto!="")&&(VarBlock3Boton1URL!=""))
+				if ((VarBlock3BotonTexto!="")&&(VarBlock3BotonURL!=""))
 				{
-					html+='<a href=\"' + VarBlock3Boton1URL + '\" title=\"' + VarBlock3Boton1Texto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock3Boton1Texto + '</a>';
+					html+='<a href=\"' + VarBlock3BotonURL + '\" title=\"' + VarBlock3BotonTexto + '\" target=\"_parent\" class=\"enlaceboton margintop\">' + VarBlock3BotonTexto + '</a>';
 				}
 				return html;
 			}
@@ -308,7 +308,7 @@
 			thirdblock+=insertarImagenDestacada3();		
 			thirdblock+='<h2 class=\"titulobloque\">' + VarTituloBloqueThirdBlock + '</h2>';
 			thirdblock+=bbcode2html(VarComentThirdBlock);
-			secondblock+=insertarBotonBlock1();			
+			thirdblock+=insertarBotonBlock1();			
 			thirdblock+='</div>';
 			
 			document.getElementById("content_divthirdblock").innerHTML = thirdblock;	
@@ -377,8 +377,8 @@
 			</tr>
 			<tr>		
 				<td>
-					Bot&oacute;n 1 - Texto: <input type="text" id="VarBlock1Boton1Texto" class="btnTexto" value="__UP_VarBlock1Boton1Texto__" onchange="registra('VarBlock1Boton1Texto')">		
-					Bot&oacute;n 1 - URL: <input type="text" id="VarBlock1Boton1URL" class="btnURL" value="__UP_VarBlock1Boton1URL__" onchange="registra('VarBlock1Boton1URL')">					
+					Bot&oacute;n - Texto: <input type="text" id="VarBlock1BotonTexto" class="btnTexto" value="__UP_VarBlock1BotonTexto__" onchange="registra('VarBlock1BotonTexto')">		
+					Bot&oacute;n - URL: <input type="text" id="VarBlock1BotonURL" class="btnURL" value="__UP_VarBlock1BotonURL__" onchange="registra('VarBlock1BotonURL')">					
 				</td>
 			</tr>
 			</table>
@@ -421,8 +421,8 @@
 			</tr>
 				<tr>		
 				<td>
-					Bot&oacute;n 1 - Texto: <input type="text" id="VarBlock2Boton1Texto" class="btnTexto" value="__UP_VarBlock2Boton1Texto__" onchange="registra('VarBlock2Boton1Texto')">		
-					Bot&oacute;n 1 - URL: <input type="text" id="VarBlock2Boton1URL" class="btnURL" value="__UP_VarBlock2Boton1URL__" onchange="registra('VarBlock2Boton1URL')">					
+					Bot&oacute;n - Texto: <input type="text" id="VarBlock2BotonTexto" class="btnTexto" value="__UP_VarBlock2BotonTexto__" onchange="registra('VarBlock2BotonTexto')">		
+					Bot&oacute;n - URL: <input type="text" id="VarBlock2BotonURL" class="btnURL" value="__UP_VarBlock2BotonURL__" onchange="registra('VarBlock2BotonURL')">					
 				</td>
 			</tr>
 			</table>
@@ -464,8 +464,8 @@
 			</tr>
 				<tr>		
 				<td>
-					Bot&oacute;n 1 - Texto: <input type="text" id="VarBlock3Boton1Texto" class="btnTexto" value="__UP_VarBlock3Boton1Texto__" onchange="registra('VarBlock3Boton1Texto')">		
-					Bot&oacute;n 1 - URL: <input type="text" id="VarBlock3Boton1URL" class="btnURL" value="__UP_VarBlock3Boton1URL__" onchange="registra('VarBlock3Boton1URL')">					
+					Bot&oacute;n - Texto: <input type="text" id="VarBlock3BotonTexto" class="btnTexto" value="__UP_VarBlock3BotonTexto__" onchange="registra('VarBlock3BotonTexto')">		
+					Bot&oacute;n - URL: <input type="text" id="VarBlock3BotonURL" class="btnURL" value="__UP_VarBlock3BotonURL__" onchange="registra('VarBlock3BotonURL')">					
 				</td>
 			</tr>
 			</table>
