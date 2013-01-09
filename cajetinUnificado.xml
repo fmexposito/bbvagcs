@@ -371,7 +371,7 @@
 			thirdblock+=insertarImagenDestacada3();		
 			thirdblock+='<h2 class=\"titulobloque\">' + VarTituloBloqueThirdBlock + '</h2>';
 			thirdblock+=bbcode2html(VarComentThirdBlock);
-			secondblock+=insertarBotonBlock3();			
+			secondblock+=insertarBotonBlock2();			
 			thirdblock+='</div>';
 			
 			document.getElementById("content_divthirdblock").innerHTML = thirdblock;	
@@ -556,7 +556,7 @@
 					Texto (admite bbcode):<br/>
 					<script language="Javascript">
 					<!--
-						editor_para("VarComentFirstBlock");
+						editor_para("VarComentThirdBlock");
 					//-->
 					</script>
 					<textarea id="VarComentThirdBlock" style="height: 100px; width: 100%" onchange="registra('VarComentThirdBlock')" >__UP_VarComentThirdBlock__</textarea>
