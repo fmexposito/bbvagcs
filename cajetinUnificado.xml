@@ -2,7 +2,7 @@
 <Module>
 	<ModulePrefs title="cajetinUnificado.xml "
 		title_url=""
-		height="300"
+		height="145"
 		width="940"
 		author=""
 		author_email=""
@@ -59,7 +59,7 @@
 			background-color: transparent;
 			background-repeat: no-repeat;
 			background-position: top;
-			height:180px;
+			height:145px;
 			}
 			
 			#content_divfirstblock{
