@@ -132,7 +132,7 @@
 					
 					}
 				}	
-					muestraInforme("https://docs.google.com/a/bbva.com/open?id=1rdNjI3utsFomLmn8cjTI3zIKYh6bmSeOP1M4fiUF6Mk");
+					muestraInforme("https://docs.google.com/a/bbva.com/document/d/1ZfEnm2nQ13J9TVh78nPMQ5Z1FSBqzkU3rPtQiCxlu2I/edit");
 					//document.getElementById('docs-editor').style += "overflow: hidden";
 					//window.open(http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk,iframeOld,"style=overflow:hidden");
 				//html +=	"</ul>";
