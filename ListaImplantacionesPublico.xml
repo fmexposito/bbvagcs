@@ -101,7 +101,7 @@
 				var html = "";
 				//html += "<ul>";
 				var urlFile = new Array();
-				var contadorMes = 0; 
+				
 					for(var i=0; i<data.getNumberOfRows(); i++){
 					   
 					    urlFile[i] = data.getValue(i,1);
