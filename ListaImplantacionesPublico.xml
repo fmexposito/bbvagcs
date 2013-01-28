@@ -113,7 +113,7 @@
 						case '01': if(document.getElementById('Enero')==""){
 					    document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						}else{
-						document.getElementById('Enero').innerHTML += <li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						}
 						break;
 						
