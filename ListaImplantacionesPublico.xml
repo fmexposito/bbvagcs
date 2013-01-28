@@ -38,6 +38,9 @@
 			font-size:14px;
 			font-weight:normal;
 			}
+			.kix-appview-editor {
+			overflow-x:hidden;
+			}
 		</style>
 		
 					
