@@ -110,7 +110,13 @@
 						if(fecha.indexOf('2013')!=-1){
 						
 						switch(mes){
-						case '01': document.getElementById('Enero').innerHTML += 'Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						case '01': if(document.getElementById('Enero')==""){
+					    document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}else{
+						document.getElementById('Enero').innerHTML += <li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break;
+						
 						case '02': document.getElementById('Febrero').innerHTML += 'Febrero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
 						case '03': document.getElementById('Marzo').innerHTML += 'Marzo<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
 						case '04': document.getElementById('Abril').innerHTML += 'Abril<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
