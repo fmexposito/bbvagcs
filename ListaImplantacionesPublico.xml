@@ -116,7 +116,7 @@
 						}else{
 						document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						}
-						contador++;
+						
 						break;
 						
 						case '02': document.getElementById('Febrero').innerHTML += 'Febrero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
