@@ -111,7 +111,7 @@
 						if(fecha.indexOf('2013')!=-1){
 						
 						switch(mes){
-						case '01':console.debug(document.getElementById('Enero').value); if (document.getElementById('Enero').value ==""){
+						case '01':console.debug(document.getElementById('Enero').innerHTML); if (document.getElementById('Enero').innerHTML ==""){
 					    document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						}else{
 						document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
