@@ -101,7 +101,7 @@
 				var html = "";
 				//html += "<ul>";
 				var urlFile = new Array();
-				var contador = 0; 
+				var contadorMes = 0; 
 					for(var i=0; i<data.getNumberOfRows(); i++){
 					   
 					    urlFile[i] = data.getValue(i,1);
@@ -111,7 +111,7 @@
 						if(fecha.indexOf('2013')!=-1){
 						
 						switch(mes){
-						case '01': console.debug(contador);if(contador == 0){
+						case '01': if (document.getElementById('Enero').value == ""){
 					    document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
 						}else{
 						document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
