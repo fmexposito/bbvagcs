@@ -163,7 +163,8 @@
 			   ifrm = document.createElement("IFRAME");   
 			  // ifrm.id = 'iframeOld';
 			   ifrm.setAttribute("id", "iframeOld"); 
-			   ifrm.setAttribute("src", urlFileNN); 
+			   ifrm.setAttribute("src", urlFileNN);
+			   ifrm.setAttribute("allowscriptaccess", "always");
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
@@ -175,6 +176,7 @@
 			var ifrmNew = document.createElement("IFRAME"); 
 			//ifrm.setAttribute("id", "iframeNew"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
+			ifrmNew.setAttribute("allowscriptaccess", "always");
 			ifrmNew.style.width = 660+"px"; 
             ifrmNew.style.height = 660+"px"; 	
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
