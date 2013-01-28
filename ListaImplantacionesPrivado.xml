@@ -45,14 +45,14 @@
 
 		<div id="content" style="float:left;">
 		<div id="mesesImplantacion" style="width=100px;float:left;">
-		<!--<div id="Enero" class="mes">Enero</div>
+		<div id="Enero" class="mes">Enero</div>
 		<div id="Febrero" class="mes">Febrero</div>
 		<div id="Marzo" class="mes">Marzo</div>
 		<div id="Abril" class="mes">Abril</div>
 		<div id="Mayo" class="mes">Mayo</div>
 		<div id="Junio" class="mes">Junio</div>
 		<div id="Julio" class="mes">Julio</div>
-		<div id="Agosto" class="mes">Agosto</div>-->
+		<div id="Agosto" class="mes">Agosto</div>
 		<div id="Septiembre" class="mes">Septiembre</div>
 		<div id="Octubre" class="mes">Octubre</div>
 		<div id="Noviembre" class="mes">Noviembre</div>
@@ -125,22 +125,95 @@
 						var mes = fecha[3]+fecha[4];
 						
 						switch(mes){
-						case '01': document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '02': document.getElementById('Febrero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '03': document.getElementById('Marzo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '04': document.getElementById('Abril').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '05': document.getElementById('Mayo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '06': document.getElementById('Junio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '07': document.getElementById('Julio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '08': document.getElementById('Agosto').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '09': document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						//case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						case '01':if (document.getElementById('Enero').innerHTML ==""){
+					    document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}else{
+						document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
 						
 						break;
+						
+						case '02':if (document.getElementById('Febrero').innerHTML ==""){
+					    document.getElementById('Febrero').innerHTML +='Febrero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}else{
+						document.getElementById('Febrero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						
+						break;
+						
+						case '03':if (document.getElementById('Marzo').innerHTML ==""){
+						document.getElementById('Marzo').innerHTML += 'Marzo<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Marzo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						
+						break; 
+						
+						case '04':if (document.getElementById('Abril').innerHTML ==""){
+						document.getElementById('Abril').innerHTML += 'Abril<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Abril').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break; 
+						
+						case '05':if (document.getElementById('Mayo').innerHTML ==""){
+						document.getElementById('Mayo').innerHTML += 'Mayo<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Mayo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break; 
+						
+						case '06':if (document.getElementById('Junio').innerHTML ==""){
+						document.getElementById('Junio').innerHTML += 'Junio<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Junio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break; 
+						
+						case '07':if (document.getElementById('Julio').innerHTML ==""){
+						document.getElementById('Julio').innerHTML += 'Julio<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Julio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break;
+						case '08':if (document.getElementById('Agosto').innerHTML ==""){
+						document.getElementById('Agosto').innerHTML += 'Agosto<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Agosto').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break;
 
-						case '11': document.getElementById('Noviembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-						case '12': document.getElementById('Diciembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						case '09':if (document.getElementById('Septiembre').innerHTML ==""){
+						document.getElementById('Septiembre').innerHTML += 'Septiembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break;
+
+						//case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						case '10':if (document.getElementById('Octubre').innerHTML ==""){
+						document.getElementById('Octubre').innerHTML += 'Octubre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break;				
+						
+						
+
+						case '11':if (document.getElementById('Noviembre').innerHTML ==""){
+						document.getElementById('Noviembre').innerHTML += 'Noviembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Noviembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break;		
+
+						case '12':if (document.getElementById('Diciembre').innerHTML ==""){
+						document.getElementById('Diciembre').innerHTML += 'Diciembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+						}else{
+						document.getElementById('Diciembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+						}
+						break;		 
+						
 						}
 					//	html += '<li><a  href="'+data.getValue(i,1)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,0)+' a fecha del ' +fecha+'</a></li>';
 						
