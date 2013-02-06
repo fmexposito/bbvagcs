@@ -1,39 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="menu portal BBVA1" >
+<ModulePrefs title="menu.xml menu portal BBVA1" >
 	<Require feature="dynamic-height"/>   
 	<Require feature="setprefs" />  
 </ModulePrefs>  
-<!--<UserPref name="VarrootSite" display_name="Root del Site" required="true" default_value="home"/>-->
-<!--
-<Content type="html" view="configuration" preferred_height="80">
-<![CDATA[
-	<style>
-		input#VarrootSite {
-           width: 300px;
-          }		  
-	</style>
-  
-	<table width="100%" border="0" id="tablaconfig">           
-		<tr>       
-			<td>
-				Root del Site: <input type="text" id="VarrootSite" value="__UP_VarrootSite__"   onchange="registra('VarrootSite')"/>                   
-			</td>
-		</tr>
-	</table>	
-  
-	<script type="text/javascript">           
-		// Get userprefs
-		var prefs = new gadgets.Prefs();           
-		function registra(variable)
-		{	
-			prefs.set(variable,document.getElementById(variable).value);
-		}  
-		gadgets.window.adjustHeight();
-	</script>   
-]]>
-</Content>
--->
 <Content type="html"><![CDATA[
 
 <style type="text/css">
@@ -292,7 +262,7 @@
 			<li class="top"><a id="onboarding-clients" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" target="_parent">Onboarding Clientes</a>
 				<ul style="left: -99999px; display: none;" class="sub">
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/cuestionarios-ventas" target="_parent">Cuestionarios Ventas</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-servicios-visualizacion" target="_parent">Catálogo Conexiones H2H</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-conexiones-h2h" target="_parent">Catálogo Conexiones H2H</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes" target="_parent">Guías Implementación de Clientes</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones" target="_parent">Plantillas de peticiones</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios" target="_parent">Catálogo de Servicios</a></li>
