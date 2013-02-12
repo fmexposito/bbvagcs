@@ -174,7 +174,7 @@
 		var roundCount = Math.ceil(count);
 		var resto = (data.getNumberOfRows())%64;
 		var result = (data.getNumberOfRows())%8;
-		var total = 2; //roundCount+result;
+		var total = 3; //roundCount+result;
 		
 		var cssClassNames = {
 			'headerRow': 'header',
