@@ -165,7 +165,7 @@
 		var dataAux = new google.visualization.DataTable();
 		//Create DataView
 		var view = new google.visualization.DataView(dataAux);
-		var aux = 1;
+		var aux = 0;
 	    dataAux.addRows(total);
 		
 		for (var columna=0;columna<8;columna++)
@@ -181,8 +181,8 @@
 			for(var col=1; col<=29; col+=4)
 			{
 				try
-				{	alert(data.getValue(aux,1));
-					alert(data.getValue(aux,0));				
+				{	//alert(data.getValue(aux,1));
+					//alert(data.getValue(aux,0));				
 					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
 					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
 					aux++;			
