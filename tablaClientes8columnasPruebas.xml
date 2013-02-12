@@ -100,8 +100,10 @@
 			color: #00008B;
 		}
 	hr{
-	margin-left:auto;
+	margin-left:-1px;
 	margin-right:0px;
+	display:block;
+	color:#D1D1D1;
 	}
 	#titlestoped img,
 	#titlependingcustomer img,	
