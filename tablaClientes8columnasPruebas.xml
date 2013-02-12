@@ -118,17 +118,23 @@
 	 font-family:Arial;
 	 color:#0B5394;
 	}
+	.linetitle{
+	display:block;
+	width:auto;
+	height:4px;
+	margin-bottom:20px;
+	}
 </style>
 <div id="titlependingbusiness"><img src="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/cliente_32x32.png"/></div>
-<hr/>
+<img class='linetitle' src="https://bbvagcs.googlecode.com/svn/trunk/img/lineborder.png"/>
 <div id="pendingbusiness"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <div id="titlependingcustomer"><img src="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/cliente_32x32.png"/></div>
-<hr/>
+<img class='linetitle' src="https://bbvagcs.googlecode.com/svn/trunk/img/lineborder.png"/>
 <div id="pendingcustomer"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <div id="titlestoped"><img src="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/cliente_32x32.png"/></div>
-<hr/>
+<img class='linetitle' src="https://bbvagcs.googlecode.com/svn/trunk/img/lineborder.png"/>
 <div id="stoped"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
