@@ -211,6 +211,179 @@
 		view.setColumns([1,5,9,13,17,21,25,29]);	
 		dataAux.setColumnLabel(1,"");				
 		chart.draw(view,options);	
+		
+		gadgetHelper = new google.visualization.GadgetHelper();	
+		var opts = {dataType:'jsonp'};
+		var query2 = new google.visualization.Query(urlTable, opts);		
+		query2.setQuery("select * where E like '%Pendiente cliente%'");
+		query2.send(handleQueryResponse2);
+		
+	}
+	function handleQueryResponse2(response) 
+	{
+		if (!gadgetHelper.validateResponse(response)) { return; }
+	
+		data = response.getDataTable();
+		
+		var count = (data.getNumberOfRows()-1)/8;
+		var roundCount = Math.ceil(count);
+		var resto = (data.getNumberOfRows())%64;
+		var result = (data.getNumberOfRows())%8;
+		var total = roundCount+result;
+		
+		var cssClassNames = {
+			'headerRow': 'header',
+			'tableRow': 'filaPar',
+			'oddTableRow': 'filaImpar',
+			'selectedTableRow': 'filaSeleccionada',
+			'hoverTableRow': 'filaHover',
+			'headerCell': 'header',
+			'tableCell': 'formateoCelda',
+			'rowNumberCell': ''
+		};
+         
+        var chart = new google.visualization.Table(document.getElementById('pendingcustomer'));
+        
+		
+		var options = { 'page': 'enable', 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};	
+		
+		var dataAux = new google.visualization.DataTable();
+		//Create DataView
+		var view = new google.visualization.DataView(dataAux);
+		var aux = 0;
+	    dataAux.addRows(total);
+		
+		for (var columna=0;columna<8;columna++)
+		{		
+			for(var j=0;j<4;j++)
+			{			
+				dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+			}		
+		}
+	
+		for (var fila=0; fila<total; fila++)
+		{	
+			for(var col=1; col<=29; col+=4)
+			{
+				try
+				{	alert(data.getValue(aux,1));
+					//alert(data.getValue(aux,0));				
+					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
+					aux++;			
+				}
+				catch (err)
+				{
+					break;
+				}
+			}
+		}
+		
+		// Apply formatter and set the formatted value.
+     	var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+		
+		formatter.format(dataAux,[1,0]); 
+		formatter.format(dataAux,[5,4]); 
+		formatter.format(dataAux,[9,8]); 
+		formatter.format(dataAux,[13,12]); 
+		formatter.format(dataAux,[17,16]); 
+		formatter.format(dataAux,[21,20]); 
+		formatter.format(dataAux,[25,24]); 
+		formatter.format(dataAux,[29,28]); 		
+
+		
+		//Select the Columns to DataView
+		view.setColumns([1,5,9,13,17,21,25,29]);	
+		dataAux.setColumnLabel(1,"");				
+		chart.draw(view,options);	
+		
+		gadgetHelper = new google.visualization.GadgetHelper();	
+		var opts = {dataType:'jsonp'};
+		var query3 = new google.visualization.Query(urlTable, opts);		
+		query3.setQuery("select * where E like '%Parado%'");
+		query3.send(handleQueryResponse3);
+		
+	}
+	function handleQueryResponse3(response) 
+	{
+		if (!gadgetHelper.validateResponse(response)) { return; }
+	
+		data = response.getDataTable();
+		
+		var count = (data.getNumberOfRows()-1)/8;
+		var roundCount = Math.ceil(count);
+		var resto = (data.getNumberOfRows())%64;
+		var result = (data.getNumberOfRows())%8;
+		var total = roundCount+result;
+		
+		var cssClassNames = {
+			'headerRow': 'header',
+			'tableRow': 'filaPar',
+			'oddTableRow': 'filaImpar',
+			'selectedTableRow': 'filaSeleccionada',
+			'hoverTableRow': 'filaHover',
+			'headerCell': 'header',
+			'tableCell': 'formateoCelda',
+			'rowNumberCell': ''
+		};
+         
+        var chart = new google.visualization.Table(document.getElementById('stoped'));
+        
+		
+		var options = { 'page': 'enable', 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};	
+		
+		var dataAux = new google.visualization.DataTable();
+		//Create DataView
+		var view = new google.visualization.DataView(dataAux);
+		var aux = 0;
+	    dataAux.addRows(total);
+		
+		for (var columna=0;columna<8;columna++)
+		{		
+			for(var j=0;j<4;j++)
+			{			
+				dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+			}		
+		}
+	
+		for (var fila=0; fila<total; fila++)
+		{	
+			for(var col=1; col<=29; col+=4)
+			{
+				try
+				{	alert(data.getValue(aux,1));
+					//alert(data.getValue(aux,0));				
+					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
+					aux++;			
+				}
+				catch (err)
+				{
+					break;
+				}
+			}
+		}
+		
+		// Apply formatter and set the formatted value.
+     	var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+		
+		formatter.format(dataAux,[1,0]); 
+		formatter.format(dataAux,[5,4]); 
+		formatter.format(dataAux,[9,8]); 
+		formatter.format(dataAux,[13,12]); 
+		formatter.format(dataAux,[17,16]); 
+		formatter.format(dataAux,[21,20]); 
+		formatter.format(dataAux,[25,24]); 
+		formatter.format(dataAux,[29,28]); 		
+
+		
+		//Select the Columns to DataView
+		view.setColumns([1,5,9,13,17,21,25,29]);	
+		dataAux.setColumnLabel(1,"");				
+		chart.draw(view,options);	
+		
+		
+		
 	}
 		
 </script>
