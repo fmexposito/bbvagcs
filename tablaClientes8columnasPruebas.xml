@@ -178,7 +178,7 @@
 	
 		for (var fila=0; fila<total; fila++)
 		{	
-			for(var col=1; col<=29; col+=4)
+			for(var col=0; col<=29; col+=4)
 			{
 				try
 				{				
