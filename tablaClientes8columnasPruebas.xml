@@ -100,7 +100,9 @@
 			color: #00008B;
 		}
 </style>
-<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+<div id="pendingbusiness"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+<div id="pendingcustomer"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+<div id="stoped"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
     
@@ -122,9 +124,9 @@
 	{
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		var opts = {dataType:'jsonp'};
-		var query = new google.visualization.Query(urlTable, opts);		
-		query.setQuery("select * ");
-		query.send(handleQueryResponse);
+		var query1 = new google.visualization.Query(urlTable, opts);		
+		query1.setQuery("select * where E like '%Pendiente negocio%'");
+		query1.send(handleQueryResponse1);
 	}
 
 	function detalle(id)
@@ -132,7 +134,7 @@
 		window.parent.location.href = urlDetalleFicha + id.toLowerCase();		
 	}
 	
-	function handleQueryResponse(response) 
+	function handleQueryResponse1(response) 
 	{
 		if (!gadgetHelper.validateResponse(response)) { return; }
 	
@@ -155,8 +157,11 @@
 			'rowNumberCell': ''
 		};
          
-        var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-		var options = { 'page': 'enable', 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+        var chart = new google.visualization.Table(document.getElementById('pendingbusiness'));
+        
+		
+		var options = { 'page': 'enable', 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};	
+		
 		var dataAux = new google.visualization.DataTable();
 		//Create DataView
 		var view = new google.visualization.DataView(dataAux);
