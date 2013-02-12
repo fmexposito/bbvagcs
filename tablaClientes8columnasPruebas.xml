@@ -139,7 +139,7 @@
 		if (!gadgetHelper.validateResponse(response)) { return; }
 	
 		data = response.getDataTable();
-		
+		alert(data.getValue(0,0));
 		var count = (data.getNumberOfRows()-1)/8;
 		var roundCount = Math.ceil(count);
 		var resto = (data.getNumberOfRows())%64;
