@@ -99,9 +99,21 @@
 			margin: 5% 0 0 7%;
 			color: #00008B;
 		}
+	hr{
+	margin-left:auto;
+	margin-right:0px;
+	}	
 </style>
+<div id="titlependingbusiness"><img src="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/cliente_32x32.png"/></div>
+<hr/>
 <div id="pendingbusiness"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
+<div id="titlependingcustomer"><img src="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/cliente_32x32.png"/></div>
+<hr/>
 <div id="pendingcustomer"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+
+<div id="titlestoped"><img src="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/cliente_32x32.png"/></div>
+<hr/>
 <div id="stoped"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript"> 
@@ -211,7 +223,7 @@
 		view.setColumns([1,5,9,13,17,21,25,29]);	
 		dataAux.setColumnLabel(1,"");				
 		chart.draw(view,options);	
-		
+		document.getElementById('titlependingbusiness').innerHTML += 'Clientes "Pendiente negocio"';
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		var opts = {dataType:'jsonp'};
 		var query2 = new google.visualization.Query(urlTable, opts);		
@@ -296,7 +308,7 @@
 		view.setColumns([1,5,9,13,17,21,25,29]);	
 		dataAux.setColumnLabel(1,"");				
 		chart.draw(view,options);	
-		
+		document.getElementById('titlependingcustomer').innerHTML += 'Clientes "Pendiente cliente"';
 		gadgetHelper = new google.visualization.GadgetHelper();	
 		var opts = {dataType:'jsonp'};
 		var query3 = new google.visualization.Query(urlTable, opts);		
@@ -381,7 +393,7 @@
 		view.setColumns([1,5,9,13,17,21,25,29]);	
 		dataAux.setColumnLabel(1,"");				
 		chart.draw(view,options);	
-		
+		document.getElementById('titlestoped').innerHTML += 'Clientes "Parado"';
 		
 		
 	}
