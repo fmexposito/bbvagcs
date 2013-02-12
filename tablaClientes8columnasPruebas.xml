@@ -145,7 +145,7 @@
 		var resto = (data.getNumberOfRows())%64;
 		var result = (data.getNumberOfRows())%8;
 		var total = roundCount+result;
-		
+		alert(total);
 		var cssClassNames = {
 			'headerRow': 'header',
 			'tableRow': 'filaPar',
@@ -192,7 +192,7 @@
 				}
 			}
 		}
-		alert(dataAux);
+		
 		// Apply formatter and set the formatted value.
      	var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
 		
