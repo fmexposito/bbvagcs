@@ -107,7 +107,7 @@
 	var gadgetHelper = null;
 	var prefs = new _IG_Prefs(); // User preferences
 	var urlTable = prefs.getString("_table_query_url");
-	var	numElePag = prefs.getInt("_NumElemPorPagina");
+	//var	numElePag = prefs.getInt("_NumElemPorPagina");
 	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
 	
 	_IG_RegisterOnloadHandler(loadVisualizationAPI);
@@ -156,7 +156,7 @@
 		};
          
         var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
+		var options = { 'page': 'enable', 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
 		var dataAux = new google.visualization.DataTable();
 		//Create DataView
 		var view = new google.visualization.DataView(dataAux);
