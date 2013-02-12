@@ -176,7 +176,7 @@
 		var result = (data.getNumberOfRows())%8;
 		var total = Math.ceil(data.getNumberOfRows()/8)+1; //roundCount+result;
 		
-		console.debug("filasTotales "+filasTotales);
+		//console.debug("filasTotales "+filasTotales);
 		var cssClassNames = {
 			'headerRow': 'header',
 			'tableRow': 'filaPar',
