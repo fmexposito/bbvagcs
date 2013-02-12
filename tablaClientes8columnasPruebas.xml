@@ -206,7 +206,7 @@
 			for(var col=1; col<=29; col+=4)
 			{
 				try
-				{	alert(data.getValue(aux,1));
+				{	//alert(data.getValue(aux,1));
 					//alert(data.getValue(aux,0));				
 					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
 					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
@@ -291,7 +291,7 @@
 			for(var col=1; col<=29; col+=4)
 			{
 				try
-				{	alert(data.getValue(aux,1));
+				{	//alert(data.getValue(aux,1));
 					//alert(data.getValue(aux,0));				
 					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
 					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
@@ -376,7 +376,7 @@
 			for(var col=1; col<=29; col+=4)
 			{
 				try
-				{	alert(data.getValue(aux,1));
+				{	//alert(data.getValue(aux,1));
 					//alert(data.getValue(aux,0));				
 					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
 					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
