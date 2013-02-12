@@ -103,8 +103,8 @@
 	margin-left:auto;
 	margin-right:0px;
 	}
-	#titlestoped,
-	#titlependingcustomer,	
+	#titlestoped img,
+	#titlependingcustomer img,	
 	#titlependingbusiness img{
 		margin-right:15px;
 	}
