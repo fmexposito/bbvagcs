@@ -445,7 +445,7 @@
 		view.setColumns([1,5,9,13,17,21,25,29]);	
 		dataAux.setColumnLabel(1,"");				
 		chart.draw(view,options);	
-		document.getElementById('titlestoped').innerHTML += 'Clientes "Parado"';
+		document.getElementById('titlestoped').innerHTML += 'Clientes "Parados"';
 		
 		
 	}
