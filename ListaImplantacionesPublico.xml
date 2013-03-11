@@ -216,7 +216,7 @@
 					
 					}
 				}	
-					console.debug("idUltimoInforme "+idUltimoInforme);
+					console.debug("idUltimoInforme1 "+idUltimoInforme);
 					muestraInforme("https://docs.google.com/a/bbva.com/open?id="+idUltimoInforme);
 					//document.getElementById('docs-editor').style += "overflow: hidden";
 					//window.open(http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk,iframeOld,"style=overflow:hidden");
