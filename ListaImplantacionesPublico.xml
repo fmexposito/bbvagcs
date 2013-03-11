@@ -105,14 +105,15 @@
 				//html += "<ul>";
 				var urlFile = new Array();
 				var idUltimoInforme = "";
-				var MaxFecha = "";
+				var MaxMes = "";
 					for(var i=0; i<data.getNumberOfRows(); i++){
 					   
 					    urlFile[i] = data.getValue(i,1);
 						var fecha = data.getValue(i,2);
+						var mes = fecha[3]+fecha[4];
 						
-						if ((MaxFecha=="")||(MaxFecha<fecha)){
-						 MaxFecha = fecha;
+						if ((MaxMes=="")||(MaxMes<mes)){
+						 MaxMes = mes;
 						 idUltimoInforme = data.getValue(i,2);
 						}
 						
