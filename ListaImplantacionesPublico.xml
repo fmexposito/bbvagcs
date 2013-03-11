@@ -112,14 +112,14 @@
 						var fecha = data.getValue(i,2);
 						var mes = fecha[3]+fecha[4];
 						
-						if ((MaxMes=="")||(MaxMes<mes)){
-						 MaxMes = mes;
-						 idUltimoInforme = data.getValue(i,0);
-						}
+						
 						
 						var mes = fecha[3]+fecha[4];
 						if(fecha.indexOf('2013')!=-1){
-						
+						 if ((MaxMes=="")||(MaxMes<mes)){
+						 MaxMes = mes;
+						 idUltimoInforme = data.getValue(i,0);
+						}
 						switch(mes){
 						case '01':if (document.getElementById('Enero').innerHTML ==""){
 					    document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
