@@ -250,7 +250,7 @@
 			   ifrm.setAttribute("src", urlFileNN);
 			   ifrm.setAttribute("allowscriptaccess", "always");
 			   ifrm.style.width = 800+"px"; 
-               ifrm.style.height = 660+"px"; 
+               ifrm.style.height = 706+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   
 			   
@@ -262,7 +262,7 @@
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.setAttribute("allowscriptaccess", "always");
 			ifrmNew.style.width = 800+"px"; 
-            ifrmNew.style.height = 660+"px"; 	
+            ifrmNew.style.height = 706+"px"; 	
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
 			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
