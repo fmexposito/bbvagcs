@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="menu.xml menu portal BBVA1" >
+<ModulePrefs title="menu.xml menu portal BBVA1 " >
 	<Require feature="dynamic-height"/>   
 	<Require feature="setprefs" />  
 </ModulePrefs>  
