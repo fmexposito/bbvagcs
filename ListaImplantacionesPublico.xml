@@ -114,7 +114,7 @@
 						
 						if ((MaxMes=="")||(MaxMes<mes)){
 						 MaxMes = mes;
-						 idUltimoInforme = data.getValue(i,2);
+						 idUltimoInforme = data.getValue(i,0);
 						}
 						
 						var mes = fecha[3]+fecha[4];
