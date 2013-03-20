@@ -259,14 +259,14 @@
 	<div id="menu">
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a id="onboarding-clients" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients" target="_parent">Onboarding Clientes</a>
-				<ul style="left: -99999px; display: none;" class="sub">
+			<li class="top"><a id="onboarding-clients" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/" target="_parent">Onboarding Clientes</a>
+				<!--<ul style="left: -99999px; display: none;" class="sub">
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/cuestionarios-ventas" target="_parent">Cuestionarios Ventas</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-conexiones-h2h" target="_parent">Catálogo Conexiones H2H</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/guias-implementacion-clientes" target="_parent">Guías Implementación de Clientes</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/plantillas-peticiones" target="_parent">Plantillas de peticiones</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios" target="_parent">Catálogo de Servicios</a></li>
-				</ul>
+				</ul>-->
 			</li>
 			<li class="top"><a id="clientes" class="principal" href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes" target="_parent">Clientes</a>
 			<li class="top"><a id="servicing" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" target="_parent">Servicing</a>
