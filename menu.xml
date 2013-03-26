@@ -128,7 +128,7 @@
 		{
 			if(this.className.indexOf("current") == -1)  
 			{
-				getCurrent = $(this).parent().children("li.current:eq(0)");
+				getCurrent = $(this).parent().children("li.current ul:eq(0)");
 				if(this.className.indexOf("top") != -1)  
 				{
 					$(this).children("a:eq(0)").css("background-color","#2586d7");
@@ -269,7 +269,7 @@
 				</ul>-->
 			</li>
 			<li class="top"><a id="clientes" class="principal" href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes" target="_parent">Clientes</a>
-			<li class="top"><a id="servicing" class="down" href="https://sites.google.com/a/bbva.com/portal-gcs/home/servicing" target="_parent">Servicing</a>
+			<li class="top"><a id="servicing" class="down" href="https://sites.google.com/a/bbva.com/servicing/" target="_parent">Servicing</a>
 				<ul style="left: -99999px; display: none;" class="sub">
 					
 					
