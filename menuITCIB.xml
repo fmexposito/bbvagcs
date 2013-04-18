@@ -222,7 +222,7 @@
 	{
 		// Construct the breadcrumb string
 		//var rootSite = prefs.getString("VarrootSite");
-		var rootSite = "global-product";
+		var rootSite = "it-cib-gtb";
 		var s ="";
 		var i,j,k = 0;
 		var base = "";
