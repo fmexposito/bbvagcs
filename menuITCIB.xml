@@ -303,21 +303,21 @@
 			<li class="top"><a id="documentacion" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/documentacion" target="_parent">Documentación</a>
 		
 			</li>
-			<li class="top"><a id="proyectos" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/proyectos" target="_parent">Proyectos</a>
+			<li class="top"><a id="proyectos" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/proyectos-clientes" target="_parent">Proyectos</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
 					
-					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/proyectos" target="_parent"> Proyectos</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/proyectos-cliente" target="_parent">Proyectos cliente</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/proyecto" target="_parent"> Proyectos</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/proyectos-clientes" target="_parent">Proyectos cliente</a></li>
 					
 					
 					
 			</ul></li>
-			<li class="top"><a id="customersolutions" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/globalcustomersolutions" target="_parent">Global Customer Solutions</a>
+			<li class="top"><a id="customersolutions" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/equipo" target="_parent">Global Customer Solutions</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
-					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/globalcustomersolutions" target="_parent">Equipos</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/lineas-trabajo" target="_parent">Lineas de trabajo </a></li>
+					<!--<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/globalcustomersolutions" target="_parent">Equipos</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/lineas-trabajo" target="_parent">Lineas de trabajo </a></li>-->
 
 					
 					
