@@ -289,7 +289,7 @@
 	<div id="menu">
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a id="implantaciones" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/registro" target="_parent">Implantaciones</a>
+			<li class="top"><a id="implantaciones" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/registro" target="_parent">Implantaciones</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
 					<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/registro" target="_parent">Registro</a></li>
@@ -300,10 +300,10 @@
 					
 			</ul>
 			</li>
-			<li class="top"><a id="documentacion" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/documentacion" target="_parent">Documentación</a>
+			<li class="top"><a id="documentacion" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/documentacion" target="_parent">Documentación</a>
 		
 			</li>
-			<li class="top"><a id="proyectos" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/proyectos-clientes" target="_parent">Proyectos</a>
+			<li class="top"><a id="proyectos" class="down" href="https://sites.google.com/a/bbva.com/it-cib-gtb/proyectos-clientes" target="_parent">Proyectos</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
 					
@@ -313,7 +313,7 @@
 					
 					
 			</ul></li>
-			<li class="top"><a id="customersolutions" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/equipo" target="_parent">Global Customer Solutions</a>
+			<li class="top"><a id="customersolutions" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/equipo" target="_parent">Global Customer Solutions</a>
 			<ul style="left:-99999px; display: none;" class="sub">
 					
 					<!--<li><a href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/globalcustomersolutions" target="_parent">Equipos</a></li>
@@ -323,7 +323,7 @@
 					
 					
 			</ul></li>
-			<li class="top"><a id="oneformat" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/home/oneformat" target="_parent">OneFormat Clientes</a>
+			<li class="top"><a id="oneformat" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/oneformat" target="_parent">OneFormat Clientes</a>
 			</li>
 			
 		</ul>
