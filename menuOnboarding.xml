@@ -222,7 +222,7 @@
 	{
 		// Construct the breadcrumb string
 		//var rootSite = prefs.getString("VarrootSite");
-		var rootSite = "global-product";
+		var rootSite = "onboarding";
 		var s ="";
 		var i,j,k = 0;
 		var base = "";
@@ -289,20 +289,20 @@
 	<div id="menu">
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a id="plantillas" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/home/plantillas-peticiones" target="_parent">Plantillas de peticiones</a>
+			<li class="top"><a id="plantillas" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/plantillas-peticiones" target="_parent">Plantillas de peticiones</a>
 			</li>
 			
 			
-			<li class="top"><a id="cuestionario" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/home/cuestionarios-ventas" target="_parent">Cuestionario de ventas</a>
+			<li class="top"><a id="cuestionario" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/cuestionarios-ventas" target="_parent">Cuestionario de ventas</a>
 			</li>
 			
-			<li class="top"><a id="catalogo" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/home/catalogo-conexiones-h2h" target="_parent">Catálogo de conexiones H2H</a>
+			<li class="top"><a id="catalogo" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/catalogo-conexiones-h2h" target="_parent">Catálogo de conexiones H2H</a>
 			</li>
 			
-			<li class="top"><a id="implementacion" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/home/guias-implementacion-clientes" target="_parent">Guías implementación de clientes</a>
+			<li class="top"><a id="implementacion" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/guias-implementacion-clientes" target="_parent">Guías implementación de clientes</a>
 			</li>
 			
-			<li class="top"><a id="servicios" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/home/catalogo-servicios" target="_parent">Catálogo de servicios</a>
+			<li class="top"><a id="servicios" class="principal" href="https://sites.google.com/a/bbva.com/onboarding/catalogo-servicios" target="_parent">Catálogo de servicios</a>
 			</li>
 			
 		</ul>
