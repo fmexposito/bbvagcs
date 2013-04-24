@@ -222,7 +222,7 @@
 	{
 		// Construct the breadcrumb string
 		//var rootSite = prefs.getString("VarrootSite");
-		var rootSite = "global-product";
+		var rootSite = "servicing";
 		var s ="";
 		var i,j,k = 0;
 		var base = "";
@@ -289,11 +289,11 @@
 	<div id="menu">
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a id="workflow" class="principal" href="https://sites.google.com/a/bbva.com/servicing/home/workflow" target="_parent">Workflow de clientes</a>
+			<li class="top"><a id="workflow" class="principal" href="https://sites.google.com/a/bbva.com/servicing/workflow" target="_parent">Workflow de clientes</a>
 			</li>
-			<li class="top"><a id="informes" class="principal" href="https://sites.google.com/a/bbva.com/servicing/home/informes-servicing" target="_parent">Informes de servicing</a>
+			<li class="top"><a id="informes" class="principal" href="https://sites.google.com/a/bbva.com/servicing/informes-servicing" target="_parent">Informes de servicing</a>
 		    </li>
-			<li class="top"><a id="documentos" class="principal" href="https://sites.google.com/a/bbva.com/servicing/home/documentacion-servicing" target="_parent">Documentos de servicing</a>
+			<li class="top"><a id="documentos" class="principal" href="https://sites.google.com/a/bbva.com/servicing/documentacion-servicing" target="_parent">Documentos de servicing</a>
 			</li>
 			
 			
