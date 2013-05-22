@@ -312,12 +312,12 @@
 	function datospagina()
 	{
 		var parametros = gadgets.util.getUrlParameters()["parent"];	
-		if (parametros.indexOf("contact")!=-1)
+		if (parametros.indexOf("contacto")!=-1)
 		{
 			document.getElementById("contact").style.backgroundColor = "#2586D7";
 		}
 		
-		if (parametros.indexOf("help")!=-1)
+		if (parametros.indexOf("ayuda")!=-1)
 		{
 			document.getElementById("help").style.backgroundColor = "#2586d7";
 		}
