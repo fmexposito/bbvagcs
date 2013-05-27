@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  	<ModulePrefs title="sidebar_textLinks8.xml"
+    description="Showing the first three upcoming events."
+    author_affiliation="Capgemini"
+	width="300">
+	    <Require feature="idi"/>
+	    <Require feature="locked-domain" />
+		<Require feature="dynamic-height"/>
+		<Require feature="setprefs" />
+  	</ModulePrefs>
+	<UserPref name="VarTitleModule" default_value="" display_name="VarTitleModule" required="true" />
+
+	<UserPref name="VarTextLink1" default_value="" display_name="VarTextLink1" required="true" />
+	<UserPref name="VarText1" default_value="" display_name="VarText1" required="true" />
+
+	<UserPref name="VarTextLink2" default_value="" display_name="VarTextLink2" required="true" />
+	<UserPref name="VarText2" default_value="" display_name="VarText2" required="true" />
+
+	<UserPref name="VarTextLink3" default_value="" display_name="VarTextLink3" required="true" />
+	<UserPref name="VarText3" default_value="" display_name="VarText3" required="true" />
+
+	<UserPref name="VarTextLink4" default_value="" display_name="VarTextLink4" required="true" />
+	<UserPref name="VarText4" default_value="" display_name="VarText4" required="true" />
+
+	<UserPref name="VarTextLink5" default_value="" display_name="VarTextLink5" required="true" />
+	<UserPref name="VarText5" default_value="" display_name="VarText5" required="true" />
+
+	<UserPref name="VarTextLink6" default_value="" display_name="VarTextLink6" required="true" />
+	<UserPref name="VarText6" default_value="" display_name="VarText6" required="true" />
+
+	<UserPref name="VarTextLink7" default_value="" display_name="VarTextLink7" required="true" />
+	<UserPref name="VarText7" default_value="" display_name="VarText7" required="true" />
+
+	<UserPref name="VarTextLink8" default_value="" display_name="VarTextLink8" required="true" />
+	<UserPref name="VarText8" default_value="" display_name="VarText8" required="true" />
+
+	<UserPref name="VarTextLink9" default_value="" display_name="VarTextLink9" required="true" />
+	<UserPref name="VarText9" default_value="" display_name="VarText9" required="true" />
+
+	<UserPref name="VarTextLink10" default_value="" display_name="VarTextLink10" required="true" />
+	<UserPref name="VarText10" default_value="" display_name="VarText10" required="true" />
+
+
+ <Content type="html" charset="UTF-8">
+    <![CDATA[
+	<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+
+	<style type="text/css">
+
+	@font-face {
+		font-family: 'BBVA Web Book';
+		src:url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.eot');
+		src:url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.eot?iefix') format("embedded-opentype"),
+			url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.woff') format("woff"),
+			url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.ttf') format("truetype"),
+			url('https://bbvaportaldeayuda.googlecode.com/svn/trunk/fonts/web-book/web-book.svg#BBVA Web Book') format("svg");
+		font-style: normal;
+		font-weight: normal;
+	}
+
+	.container{
+		border: 1px solid #DDE3EA;
+		border-radius: 2px 2px 2px 2px;
+		clear: both;
+		margin-top: 15px;
+		width: 298px;
+	}
+	#nivel{
+		background: #ffffff; /* Old browsers */
+		background: -moz-linear-gradient(top,  #ffffff 0%, #f5f7f8 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f7f8)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f7f8 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #ffffff 0%,#f5f7f8 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #ffffff 0%,#f5f7f8 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #ffffff 0%,#f5f7f8 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f7f8',GradientType=0 ); /* IE6-9 */
+		border-bottom: 1px solid #DDE3EA;
+		color: #333333;
+		font-family: BBVA Web Book,Arial;
+		font-size: 16px;
+		padding-bottom: 15px;
+		padding-left: 18px;
+		padding-top: 14px;
+	}
+	.event{
+		border-bottom: 1px solid #DDE3EA;
+		padding:20px 10px;
+	}
+	.event:hover{
+		background-color:#E2FAFE;
+		cursor:pointer;
+	}
+	.event:last-child{
+		border-bottom: none;
+	}
+
+	.title,
+	.title a {
+		color:#0072C9;
+		font-size:12px;
+		font-weight: bold;
+		font-family: BBVA Web Book, Arial;
+		text-decoration:none;
+	}
+	</style>
+
+<div class="container" id="container">
+
+</div>
+
+   <script type="text/javascript">
+	   	var html="";
+
+	   	var gadgetHelper = null;
+	   	var prefs = new gadgets.Prefs();
+
+	   	var VarTitleModule = prefs.getString("VarTitleModule");
+		var VarTextLink1 = prefs.getString("VarTextLink1");
+        var VarLink1 = prefs.getString("VarLink1");
+
+        var VarTextLink2 = prefs.getString("VarTextLink2");
+        var VarLink2 = prefs.getString("VarLink2");
+
+        var VarTextLink3 = prefs.getString("VarTextLink3");
+        var VarLink3 = prefs.getString("VarLink3");
+
+        var VarTextLink4 = prefs.getString("VarTextLink4");
+        var VarLink4 = prefs.getString("VarLink4");
+
+        var VarTextLink5 = prefs.getString("VarTextLink5");
+        var VarLink5 = prefs.getString("VarLink5");
+
+        var VarTextLink6 = prefs.getString("VarTextLink6");
+        var VarLink6 = prefs.getString("VarLink6");
+
+        var VarTextLink7 = prefs.getString("VarTextLink7");
+        var VarLink7 = prefs.getString("VarLink7");
+
+        var VarTextLink8 = prefs.getString("VarTextLink8");
+        var VarLink8 = prefs.getString("VarLink8");
+
+        var VarTextLink9 = prefs.getString("VarTextLink9");
+        var VarLink9 = prefs.getString("VarLink9");
+
+        var VarTextLink10 = prefs.getString("VarTextLink10");
+        var VarLink10 = prefs.getString("VarLink10");
+
+        if (VarTitleModule!="")
+        {
+        	html +='<div id="nivel">';
+			html +=	VarTitleModule;
+			html +="</div>";
+     	}
+
+     	html += "<div id="events">";
+
+        if (VarLink1!="")
+        {
+
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink1+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink1;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink2!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink2+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink2;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink3!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink3+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink3;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink4!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink4+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink4;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink5!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink5+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink5;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink6!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink6+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink6;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink7!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink7+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink7;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink8!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink8+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink8;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink9!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink9+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink9;
+			html +="	</div>";
+			html +="</div>";
+     	}
+     	if (VarLink10!="")
+        {
+        	html +='<div class="event" onclick="javascript:Go(\''+VarLink10+'\')">';
+			html +="	<div class='title'>";
+			html +=			VarTextLink10;
+			html +="	</div>";
+			html +="</div>";
+     	}
+
+
+     	htm+="</div>";
+
+     	document.getElementById('container').innerHTML += html;
+
+
+		function Go(destination)
+		{
+			window.open(destination);
+			return false;
+		}
+
+	</script>
+
+    ]]>
+  </Content>
+
+  <Content type="html" view="configuration" preferred_height="550">
+
+<![CDATA[
+<style type="text/css">
+
+	table td {
+		color: #000;
+		font-size: 11px;
+		font-weight: bold;
+	}
+
+	table td input,
+	textarea {
+		color: #000;
+		font-size: 11px;
+	}
+
+ </style>
+
+ <table width="100%" border="0" id="tablaconfig">
+	<tr>
+        <td>
+	        Title - Module: <input type="text" size="100" id="VarTitleModule" value="__UP_VarTitleModule__"   onchange="registra('VarTitleModule')"/>
+        </td>
+    </tr>
+    <tr>
+	    <td>
+	       	Link1 - Text: <input type="text" size="100" id="VarTextLink1" value="__UP_VarTextLink1__"   onchange="registra('VarTextLink1')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link1 - URL: <input type="text" size="100" id="VarLink1" value="__UP_VarLink1__" onchange="registra('VarLink1')"/>
+	    </td>
+	</tr>
+
+     <tr>
+	    <td>
+	       	Link2 - Text: <input type="text" size="100" id="VarTextLink2" value="__UP_VarTextLink2__"   onchange="registra('VarTextLink2')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link2 - URL: <input type="text" size="100" id="VarLink2" value="__UP_VarLink2__" onchange="registra('VarLink2')"/>
+	    </td>
+	</tr>
+
+
+      <tr>
+	    <td>
+	       	Link3 - Text: <input type="text" size="100" id="VarTextLink3" value="__UP_VarTextLink3__"   onchange="registra('VarTextLink3')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link3 - URL: <input type="text" size="100" id="VarLink3" value="__UP_VarLink3__" onchange="registra('VarLink3')"/>
+	    </td>
+	</tr>
+
+
+      <tr>
+	    <td>
+	       	Link4 - Text: <input type="text" size="100" id="VarTextLink4" value="__UP_VarTextLink4__"   onchange="registra('VarTextLink4')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link4 - URL: <input type="text" size="100" id="VarLink4" value="__UP_VarLink4__" onchange="registra('VarLink4')"/>
+	    </td>
+	</tr>
+
+	 <tr>
+	    <td>
+	       	Link5 - Text: <input type="text" size="100" id="VarTextLink5" value="__UP_VarTextLink5__"   onchange="registra('VarTextLink5')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link5 - URL: <input type="text" size="100" id="VarLink5" value="__UP_VarLink5__" onchange="registra('VarLink5')"/>
+	    </td>
+	</tr>
+
+	 <tr>
+	    <td>
+	       	Link6 - Text: <input type="text" size="100" id="VarTextLink6" value="__UP_VarTextLink6__"   onchange="registra('VarTextLink6')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link6 - URL: <input type="text" size="100" id="VarLink6" value="__UP_VarLink6__" onchange="registra('VarLink6')"/>
+	    </td>
+	</tr>
+
+	 <tr>
+	    <td>
+	       	Link7 - Text: <input type="text" size="100" id="VarTextLink4" value="__UP_VarTextLink7__"   onchange="registra('VarTextLink7')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link7 - URL: <input type="text" size="100" id="VarLink7" value="__UP_VarLink7__" onchange="registra('VarLink7')"/>
+	    </td>
+	</tr>
+
+	 <tr>
+	    <td>
+	       	Link8 - Text: <input type="text" size="100" id="VarTextLink8" value="__UP_VarTextLink8__"   onchange="registra('VarTextLink8')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link8 - URL: <input type="text" size="100" id="VarLink8" value="__UP_VarLink8__" onchange="registra('VarLink8')"/>
+	    </td>
+	</tr>
+
+	 <tr>
+	    <td>
+	       	Link9 - Text: <input type="text" size="100" id="VarTextLink9" value="__UP_VarTextLink9__"   onchange="registra('VarTextLink4')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link9 - URL: <input type="text" size="100" id="VarLink9" value="__UP_VarLink9__" onchange="registra('VarLink9')"/>
+	    </td>
+	</tr>
+
+	 <tr>
+	    <td>
+	       	Link10 - Text: <input type="text" size="100" id="VarTextLink10" value="__UP_VarTextLink10__"   onchange="registra('VarTextLink10')"/>
+	    </td>
+	</tr>
+	<tr>
+	   	<td>
+	       	Link10 - URL: <input type="text" size="100" id="VarLink10" value="__UP_VarLink10__" onchange="registra('VarLink10')"/>
+	    </td>
+	</tr>
+
+</table>
+
+<script type="text/javascript">
+    // Get userprefs
+    var prefs = new gadgets.Prefs();
+
+    function registra(variable) {
+		prefs.set(variable,document.getElementById(variable).value);
+	}
+	gadgets.window.adjustHeight();
+</script>
+
+ ]]>
+
+ </Content>
+
+</Module>
