@@ -12,34 +12,34 @@
 	<UserPref name="VarTitleModule" default_value="" display_name="VarTitleModule" required="true" />
 
 	<UserPref name="VarTextLink1" default_value="" display_name="VarTextLink1" required="true" />
-	<UserPref name="VarText1" default_value="" display_name="VarText1" required="true" />
+	<UserPref name="VarLink1" default_value="" display_name="VarLink1" required="true" />
 
 	<UserPref name="VarTextLink2" default_value="" display_name="VarTextLink2" required="true" />
-	<UserPref name="VarText2" default_value="" display_name="VarText2" required="true" />
+	<UserPref name="VarLink2" default_value="" display_name="VarLink2" required="true" />
 
 	<UserPref name="VarTextLink3" default_value="" display_name="VarTextLink3" required="true" />
-	<UserPref name="VarText3" default_value="" display_name="VarText3" required="true" />
+	<UserPref name="VarLink3" default_value="" display_name="VarLink3" required="true" />
 
 	<UserPref name="VarTextLink4" default_value="" display_name="VarTextLink4" required="true" />
-	<UserPref name="VarText4" default_value="" display_name="VarText4" required="true" />
+	<UserPref name="VarLink4" default_value="" display_name="VarLink4" required="true" />
 
 	<UserPref name="VarTextLink5" default_value="" display_name="VarTextLink5" required="true" />
-	<UserPref name="VarText5" default_value="" display_name="VarText5" required="true" />
+	<UserPref name="VarLink5" default_value="" display_name="VarLink5" required="true" />
 
 	<UserPref name="VarTextLink6" default_value="" display_name="VarTextLink6" required="true" />
-	<UserPref name="VarText6" default_value="" display_name="VarText6" required="true" />
+	<UserPref name="VarLink6" default_value="" display_name="VarLink6" required="true" />
 
 	<UserPref name="VarTextLink7" default_value="" display_name="VarTextLink7" required="true" />
-	<UserPref name="VarText7" default_value="" display_name="VarText7" required="true" />
+	<UserPref name="VarLink7" default_value="" display_name="VarLink7" required="true" />
 
 	<UserPref name="VarTextLink8" default_value="" display_name="VarTextLink8" required="true" />
-	<UserPref name="VarText8" default_value="" display_name="VarText8" required="true" />
+	<UserPref name="VarLink8" default_value="" display_name="VarLink8" required="true" />
 
 	<UserPref name="VarTextLink9" default_value="" display_name="VarTextLink9" required="true" />
-	<UserPref name="VarText9" default_value="" display_name="VarText9" required="true" />
+	<UserPref name="VarLink9" default_value="" display_name="VarLink9" required="true" />
 
 	<UserPref name="VarTextLink10" default_value="" display_name="VarTextLink10" required="true" />
-	<UserPref name="VarText10" default_value="" display_name="VarText10" required="true" />
+	<UserPref name="VarLink10" default_value="" display_name="VarLink10" required="true" />
 
 
  <Content type="html" charset="UTF-8">
