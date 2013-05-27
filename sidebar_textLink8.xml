@@ -108,7 +108,7 @@
 
 		var VarTextLink1 = prefs.getString("VarTextLink1");
         var VarLink1 = prefs.getString("VarLink1");
-
+		console.log(VarLink1);
         var VarTextLink2 = prefs.getString("VarTextLink2");
         var VarLink2 = prefs.getString("VarLink2");
 
