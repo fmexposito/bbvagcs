@@ -237,7 +237,7 @@
 
 		function Go(destination)
 		{
-			window.open(destination);
+			window.open(destination,"_parent");
 			return false;
 		}
 
