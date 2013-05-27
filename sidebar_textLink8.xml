@@ -388,6 +388,7 @@
     var prefs = new gadgets.Prefs();
 
     function registra(variable) {
+	console.log("entro en registra");
 		prefs.set(variable,document.getElementById(variable).value);
 	}
 	gadgets.window.adjustHeight();
