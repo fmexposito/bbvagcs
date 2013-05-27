@@ -289,11 +289,11 @@
 	<div id="menu">
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/site-banca-electronica" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a id="help" class="principal" href="https://sites.google.com/a/bbva.com/site-banca-electronica/ayuda" target="_parent">Ayuda</a>
+		<!--	<li class="top"><a id="help" class="principal" href="https://sites.google.com/a/bbva.com/site-banca-electronica/ayuda" target="_parent">Ayuda</a>
 			</li>
 			<li class="top"><a id="contact" class="principal" href="https://sites.google.com/a/bbva.com/site-banca-electronica/contacto" target="_parent">Contacto</a>
 		    </li>
-			
+			-->
 			
 			
 			
@@ -306,7 +306,7 @@
 	<!-- breadcrumbs-->
 	<div id="title-crumbs">breadcrumbs</div>
 
-	<!-- Elemento de men򠳥t visited -->
+	<!-- Elemento de  visited -->
 	<script type="text/javascript">
 	gadgets.util.registerOnLoadHandler(datospagina);
 	function datospagina()
