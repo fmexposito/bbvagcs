@@ -135,6 +135,8 @@
 
         var VarTextLink10 = prefs.getString("VarTextLink10");
         var VarLink10 = prefs.getString("VarLink10");
+        
+        console.log('v0');
 
         if (VarTitleModule!="")
         {
@@ -229,7 +231,7 @@
 
 
      	html+="</div>";
-		console.log(VarLink1);
+		
      	document.getElementById('container').innerHTML += html;
 
 
@@ -339,7 +341,7 @@
 
 	 <tr>
 	    <td>
-	       	Link7 - Text: <input type="text" size="100" id="VarTextLink4" value="__UP_VarTextLink7__"   onchange="registra('VarTextLink7')"/>
+	       	Link7 - Text: <input type="text" size="100" id="VarTextLink7" value="__UP_VarTextLink7__"   onchange="registra('VarTextLink7')"/>
 	    </td>
 	</tr>
 	<tr>
