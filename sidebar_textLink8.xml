@@ -229,7 +229,7 @@
 
 
      	html+="</div>";
-
+	console.log(VarLink1);
      	document.getElementById('container').innerHTML += html;
 
 
