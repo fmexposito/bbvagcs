@@ -173,8 +173,8 @@
 				
 				document.getElementById('codigoProyectoTitulo').innerHTML = data.getValue(0,1);
 				document.getElementById('codigoProyecto').innerHTML = data.getValue(0,10);
-				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
-				document.getElementById('gestorIT').innerHTML = data.getValue(0,13);				
+				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,13);
+				document.getElementById('gestorIT').innerHTML = data.getValue(0,12);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
 				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,48);
 				
