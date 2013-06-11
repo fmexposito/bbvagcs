@@ -105,7 +105,7 @@
 				
 				<li>Estado: <span id="estadoProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 				
-				<!--<li>Fecha implantación: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>-->
+				<li>Fecha implantación: <span id="fechaProyecto"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
 			</ul>
 		</div>
 		
@@ -176,7 +176,7 @@
 				document.getElementById('gestorNegocio').innerHTML = data.getValue(0,12);
 				document.getElementById('gestorIT').innerHTML = data.getValue(0,13);				
 				document.getElementById('estadoProyecto').innerHTML = data.getValue(0,9);
-				//document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,13);
+				document.getElementById('fechaProyecto').innerHTML = data.getFormattedValue(0,48);
 				
 				
 			}
