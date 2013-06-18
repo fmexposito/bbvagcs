@@ -325,6 +325,8 @@
 			</ul></li>
 			<li class="top"><a id="oneformat" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/oneformat" target="_parent">OneFormat Clientes</a>
 			</li>
+			<li class="top"><a id="sepa" class="principal" href="https://sites.google.com/a/bbva.com/it-cib-gtb/sepa" target="_parent">Sepa</a>
+			</li>
 			
 		</ul>
 	</div>
@@ -357,6 +359,10 @@
 		if (parametros.indexOf("oneformat")!=-1)
 		{
 			document.getElementById("oneformat").style.backgroundColor = "#2586d7";
+		}
+		if (parametros.indexOf("sepa")!=-1)
+		{
+			document.getElementById("sepa").style.backgroundColor = "#2586d7";
 		}
 			
 	}
