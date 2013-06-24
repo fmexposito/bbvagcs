@@ -271,7 +271,7 @@
 				document.getElementById('idCriticidad').innerHTML = data.getValue(0,4);
         
         console.log("TEST 01");
-        console.log($(estado));
+        console.log(estado);
         
         if((estado.indexOf('Implementado')>-1) || (estado.indexOf('En Penny Test')>-1)){
               document.getElementById('idProduccion').innerHTML = "Sí"; 
