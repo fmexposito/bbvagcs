@@ -114,7 +114,7 @@
         var idUltimoInforme = "";
         var MaxMes = "";
         var Maxdia = "";
-          for(var i=0; i<data.getNumberOfRows(); i++){
+          for(var i=1; i<data.getNumberOfRows(); i++){
              
              console.log("data: " + data);
               urlFile[i] = data.getValue(i,1);
