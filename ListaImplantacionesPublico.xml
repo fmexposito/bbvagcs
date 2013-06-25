@@ -71,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_13");
+      console.log("dd_14");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -135,6 +135,9 @@
                 idUltimoInforme = data.getValue(i,0);
               
              }
+             
+             alert($('#Enero').html());
+             
             switch(mes){
            case '01':if ($('#Enero').html()==""){
            console.log("dentro!");
