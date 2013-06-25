@@ -71,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_20");
+      console.log("dd_21");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -124,12 +124,12 @@
             console.log("fecha4: "+ fecha.substring(4,5));
          
          
-            var mes = fecha[3]+fecha[4];
+            var mes = fecha.substring(3,4)+fecha.substring(4,5);
             console.log("mes: "+mes);
-            var dia = fecha[0]+fecha[1];
+            var dia = fecha.substring(0,1)+fecha.substring(1,2);
             
             
-            var mes = fecha[3]+fecha[4];
+           
             if(fecha.indexOf('2013')!=-1){
              if ((MaxMes=="")||(MaxMes<mes)){
               MaxMes = mes;
