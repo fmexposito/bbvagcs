@@ -71,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_15");
+      console.log("dd_16");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -137,7 +137,7 @@
              }
              
            //  alert($('#Enero').html().trim());
-             
+             console.log(mes);
             switch(mes){
            case '01':if ($('#Enero').html().trim()==""){
            console.log("dentro!");
