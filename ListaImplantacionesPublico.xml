@@ -64,7 +64,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.log("dd_7");
+			console.log("dd_8");
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -280,6 +280,7 @@
 		    }
 		         
           // document.setAttribute("style","height:575px;overflow:hidden;");
+          console.log("out");
            document.style.height = '575px';
             document.style.overflow= 'hidden';
 		 
