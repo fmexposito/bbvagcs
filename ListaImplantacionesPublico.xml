@@ -136,7 +136,7 @@
               
              }
              
-             alert($('#Enero').html().trim());
+           //  alert($('#Enero').html().trim());
              
             switch(mes){
            case '01':if ($('#Enero').html().trim()==""){
