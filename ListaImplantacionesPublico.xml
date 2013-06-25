@@ -120,9 +120,10 @@
               urlFile[i] = data.getValue(i,1);
             var fecha = data.getValue(i,2);
             console.log("Fecha: " + fecha);
-             console.log("fecha3: "+ fecha[3]);
-               
-           console.log("fecha4: "+ fecha[4]);
+            console.log("fecha3: "+ fecha.substring(2,4));               
+            console.log("fecha4: "+ fecha.substring(3,5));
+         
+         
             var mes = fecha[3]+fecha[4];
             console.log("mes: "+mes);
             var dia = fecha[0]+fecha[1];
