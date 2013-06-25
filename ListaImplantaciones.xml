@@ -61,6 +61,7 @@
 		
 		<script type="text/javascript"> 
 			
+         log.console("entro al gadget");
 			
 			
 			var gadgetHelper = null;	
