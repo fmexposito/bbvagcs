@@ -64,7 +64,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.log("dd_6");
+			console.log("dd_7");
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -249,8 +249,9 @@
 			   ifrm.setAttribute("id", "iframeOld"); 
 			   ifrm.setAttribute("src", urlFileNN);
 			   ifrm.setAttribute("allowscriptaccess", "always");
+            console.log("ifrmNew1: " + ifrm.style);
 			   ifrm.style.width = 800+"px"; 
-            console.log("in MuestraInforme");
+          
                ifrm.style.height = 706+"px"; 
             
 			   document.getElementById('showReport').appendChild(ifrm); 
@@ -263,7 +264,7 @@
 			//ifrm.setAttribute("id", "iframeNew"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.setAttribute("allowscriptaccess", "always");
-         console.log("ifrmNew: " + ifrmNew.style);
+         console.log("ifrmNew2: " + ifrmNew.style);
 			ifrmNew.style.width = 800+"px";
          
             ifrmNew.style.height = 706+"px"; 	
