@@ -71,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_21");
+      console.log("dd_22");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -146,13 +146,11 @@
          
              console.log(mes);
             switch(mes){
-           case '01':if ($('#Enero').html()==""){
+           case '01':if (document.getElementById('Enero').innerHTML ==""){
            console.log("dentro!");
-               $('#Enero').html('Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
-               
+                document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
               }else{
-               console.log("dentro!");
-               $('#Enero').html('<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
+                document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
             
               }
             
