@@ -263,8 +263,10 @@
 			//ifrm.setAttribute("id", "iframeNew"); 
 			ifrmNew.setAttribute("src", urlFileNN); 
 			ifrmNew.setAttribute("allowscriptaccess", "always");
-			ifrmNew.style.width = 800+"px"; 
+			ifrmNew.style.width = 800+"px";
+         console.log("ifrmNew: " + ifrmNew.style);
             ifrmNew.style.height = 706+"px"; 	
+            
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
 			document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
 			//ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
