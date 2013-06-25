@@ -280,7 +280,7 @@
 		    }
 		         
           // document.setAttribute("style","height:575px;overflow:hidden;");
-          console.log("out");
+          console.log(document.style);
            document.style.height = '575px';
             document.style.overflow= 'hidden';
 		 
