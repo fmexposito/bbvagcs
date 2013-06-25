@@ -71,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_22");
+      console.log("dd_23");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -150,7 +150,7 @@
            console.log("dentro!");
                 document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
               }else{
-                document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+            document.getElementById('eNERO').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
             
               }
             
