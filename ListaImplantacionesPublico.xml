@@ -71,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_11");
+      console.log("dd_12");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -136,13 +136,13 @@
               
              }
             switch(mes){
-			case '01':if ($('#Enero').html()==""){
-			  $('#Enero').html('Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
-             
-            }else{
-			  $('#Enero').html('<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
-          
-            }
+           case '01':if ($('#Enero').html()==""){
+               $('#Enero').text('Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
+               
+              }else{
+               $('#Enero').html('<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
+            
+              }
             
             break;
             
