@@ -252,6 +252,7 @@
 			   ifrm.style.width = 800+"px"; 
             console.log("in MuestraInforme");
                ifrm.style.height = 706+"px"; 
+             console.log("in MuestraInforme_2");
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   
 			   
