@@ -64,7 +64,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.log("dd_4");
+			console.log("dd_5");
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
