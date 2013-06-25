@@ -116,6 +116,7 @@
         var Maxdia = "";
           for(var i=0; i<data.getNumberOfRows(); i++){
              
+             console.log("data: " + data);
               urlFile[i] = data.getValue(i,1);
             var fecha = data.getValue(i,2);
             console.log("Fecha: " + fecha);
