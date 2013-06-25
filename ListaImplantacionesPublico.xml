@@ -71,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_23");
+      console.log("dd_24");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -116,16 +116,14 @@
         var Maxdia = "";
           for(var i=1; i<data.getNumberOfRows(); i++){
              
-             console.log("data: " + data);
+            
               urlFile[i] = data.getValue(i,1);
             var fecha = data.getValue(i,2);
-            console.log("Fecha: " + fecha);
-            console.log("fecha3: "+ fecha.substring(3,4));               
-            console.log("fecha4: "+ fecha.substring(4,5));
+          
          
          
             var mes = fecha.substring(3,4)+fecha.substring(4,5);
-            console.log("mes: "+mes);
+            
             var dia = fecha.substring(0,1)+fecha.substring(1,2);
             
             
@@ -144,13 +142,13 @@
              }
              
          
-             console.log(mes);
+           
             switch(mes){
            case '01':if (document.getElementById('Enero').innerHTML ==""){
-           console.log("dentro!");
+       
                 document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
               }else{
-            document.getElementById('eNERO').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+            document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
             
               }
             
@@ -268,7 +266,7 @@
          ifrm.setAttribute("id", "iframeOld"); 
          ifrm.setAttribute("src", urlFileNN);
          ifrm.setAttribute("allowscriptaccess", "always");
-            console.log("ifrmNew1: " + ifrm.style);
+          
          ifrm.style.width = 800+"px"; 
           
                ifrm.style.height = 706+"px"; 
@@ -283,7 +281,7 @@
       //ifrm.setAttribute("id", "iframeNew"); 
       ifrmNew.setAttribute("src", urlFileNN); 
       ifrmNew.setAttribute("allowscriptaccess", "always");
-         console.log("ifrmNew2: " + ifrmNew.style);
+        
       ifrmNew.style.width = 800+"px";
          
             ifrmNew.style.height = 706+"px";   
@@ -299,7 +297,7 @@
         }
              
           // document.setAttribute("style","height:575px;overflow:hidden;");
-          console.log(document.style);
+         
            document.style.height = '575px';
             document.style.overflow= 'hidden';
      
