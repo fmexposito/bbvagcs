@@ -64,7 +64,7 @@
 		
 		<script type="text/javascript"> 
 			
-			console.log("dd_2");
+			console.log("dd_3");
 			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
@@ -250,6 +250,7 @@
 			   ifrm.setAttribute("src", urlFileNN);
 			   ifrm.setAttribute("allowscriptaccess", "always");
 			   ifrm.style.width = 800+"px"; 
+            console.log("in MuestraInforme");
                ifrm.style.height = 706+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   
