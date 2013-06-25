@@ -148,7 +148,7 @@
             switch(mes){
            case '01':if ($('#Enero').html()==""){
            console.log("dentro!");
-               $('#Enero').text('Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
+               $('#Enero').html('Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
                
               }else{
                console.log("dentro!");
