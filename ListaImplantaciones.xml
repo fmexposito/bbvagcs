@@ -150,8 +150,11 @@
 			 
 			   ifrm = document.createElement("IFRAME");   
 			  // ifrm.id = 'iframeOld';
-			   ifrm.setAttribute("id", "iframeOld"); 
-			   ifrm.setAttribute("src", urlFileNN); 
+			  console.log("1er setAttribute");
+			   ifrm.setAttribute("id", "iframeOld");
+            console.log("2o setAttribute");
+			   ifrm.setAttribute("src", urlFileNN);
+              console.log("3er setAttribute"); 
 			   ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
