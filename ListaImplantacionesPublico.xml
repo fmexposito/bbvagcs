@@ -1,311 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Url implantations1"
-		description=""
-		author_affiliation="Capgemini">
-		<Require feature="idi"/>
-		<Require feature="locked-domain" />
-	</ModulePrefs>
-	
-	<UserPref name="_table_query_url" default_value="" display_name="Data source url Públicos (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
-
-	<Content type="html">
-		<![CDATA[
-
-
-  
-
-
-
-    <head>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      <script src="https://www.google.com/jsapi" type="text/javascript"></script></head>
-
-    <style type="text/css">       
-      .mes{
-      
-      color: #0B5394;
-      width:100px;
-      font-size:16px;
-      font-weight:bold;
-      margin-bottom: 15px;
-      }
-      .mes li{
-      color: black;
-      color: black;
-      text-decoration:underline;
-      font-size:14px;
-      margin:15px 15px;
-      font-weight:normal;
-      width:100px;
-      }
-      .mes a{
-      color: black;
-      text-decoration:underline;
-      font-size:14px;
-      font-weight:normal;
-      }
-      .kix-appview-editor {
-      overflow-x:hidden;
-      }
-    </style>
-    
-          
-
-    <div id="content" style="float:left;">
-    <div id="mesesImplantacion" style="width=100px;float:left;">
-    <div id="Enero" class="mes"></div>
-    <div id="Febrero" class="mes"></div>
-    <div id="Marzo" class="mes"></div>
-    <div id="Abril" class="mes"></div>
-    <div id="Mayo" class="mes"></div>
-    <div id="Junio" class="mes"></div>
-    <div id="Julio" class="mes"></div>
-    <div id="Agosto" class="mes"></div>
-    <div id="Septiembre" class="mes"></div>
-    <div id="Octubre" class="mes"></div>
-    <div id="Noviembre" class="mes"></div>
-    <div id="Diciembre" class="mes"></div>
-    </div>
-    <div id="showReport" style="width:800px;height:698px;margin-left:150px;overflow:hidden;margin-top:0px;"></div></div>
-    
-    <script type="text/javascript"> 
-      
-      console.log("dd_24");
-      
-      var gadgetHelper = null;  
-      var prefs = new _IG_Prefs(); // User preferences      
-      var urlTable = prefs.getString("_table_query_url");          
-      
-      var ifrm = "";
-      _IG_RegisterOnloadHandler(loadVisualizationAPI);
-      
-      function loadVisualizationAPI() 
-      {
-        google.load("visualization", "1", {"packages": ["table"]});
-        google.setOnLoadCallback(sendQuery);
-      }
-
-      function sendQuery() 
-      {
-        gadgetHelper = new google.visualization.GadgetHelper();
-        var opts = {dataType:'jsonp'};        
-        var query = new google.visualization.Query(urlTable, opts);              
-        var querytosend = "select A,B,C where C <> '%Fecha%' and A <> '%Id informe%' and B <> '%Url informe%'";
-        query.setQuery(querytosend);        
-        query.send(handleQueryResponse);
+        <ModulePrefs title="Url implantations1"
+                description=""
+                author_affiliation="Capgemini">
+                <Require feature="idi"/>
+                <Require feature="locked-domain" />
+        </ModulePrefs>
         
-      }
+        <UserPref name="_table_query_url" default_value="" display_name="Data source url Públicos (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
 
-      
-      function handleQueryResponse(response) 
-      {
-        if (!gadgetHelper.validateResponse(response)) 
-        { 
-          return; 
-        }
-      
-        data = response.getDataTable();    
-        
-        if(data.getNumberOfRows()!=0){
-        var html = "";
-        //html += "<ul>";
-        var urlFile = new Array();
-        var idUltimoInforme = "";
-        var MaxMes = "";
-        var Maxdia = "";
-          for(var i=1; i<data.getNumberOfRows(); i++){
-             
-            
-              urlFile[i] = data.getValue(i,1);
-            var fecha = data.getValue(i,2);
-          
-         
-         
-            var mes = fecha.substring(3,4)+fecha.substring(4,5);
-            
-            var dia = fecha.substring(0,1)+fecha.substring(1,2);
-            
-            
-           
-            if(fecha.indexOf('2013')!=-1){
-             if ((MaxMes=="")||(MaxMes<mes)){
-              MaxMes = mes;
-              Maxdia = dia;
-              idUltimoInforme = data.getValue(i,0);
-              
-             }else if((MaxMes == mes)&&(Maxdia<dia)){
-              
-                Maxdia = dia;
-                idUltimoInforme = data.getValue(i,0);
-              
-             }
-             
-         
-           
-            switch(mes){
-           case '01':if (document.getElementById('Enero').innerHTML ==""){
-       
-                document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-              }else{
-            document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            
-              }
-            
-            break;
-            
-            case '02':if (document.getElementById('Febrero').innerHTML ==""){
-              document.getElementById('Febrero').innerHTML +='Febrero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }else{
-            document.getElementById('Febrero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            
-            break;
-            
-            case '03':if (document.getElementById('Marzo').innerHTML ==""){
-            document.getElementById('Marzo').innerHTML += 'Marzo<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Marzo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            
-            break; 
-            
-            case '04':if (document.getElementById('Abril').innerHTML ==""){
-            document.getElementById('Abril').innerHTML += 'Abril<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Abril').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break; 
-            
-            case '05':if (document.getElementById('Mayo').innerHTML ==""){
-            document.getElementById('Mayo').innerHTML += 'Mayo<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Mayo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break; 
-            
-            case '06':if (document.getElementById('Junio').innerHTML ==""){
-            document.getElementById('Junio').innerHTML += 'Junio<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Junio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break; 
-            
-            case '07':if (document.getElementById('Julio').innerHTML ==""){
-            document.getElementById('Julio').innerHTML += 'Julio<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Julio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break;
-            case '08':if (document.getElementById('Agosto').innerHTML ==""){
-            document.getElementById('Agosto').innerHTML += 'Agosto<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Agosto').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break;
+        <Content type="html">
+                <![CDATA[
 
-            case '09':if (document.getElementById('Septiembre').innerHTML ==""){
-            document.getElementById('Septiembre').innerHTML += 'Septiembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break;
+                <head><script src="https://www.google.com/jsapi" type="text/javascript"></script></head>
 
-            //case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            case '10':if (document.getElementById('Octubre').innerHTML ==""){
-            document.getElementById('Octubre').innerHTML += 'Octubre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break;        
-            
-            
+                <style type="text/css">                  
+                        .mes{
+                        
+                        color: #0B5394;
+                        width:100px;
+                        font-size:16px;
+                        font-weight:bold;
+                        margin-bottom: 15px;
+                        }
+                        .mes li{
+                        color: black;
+                        color: black;
+                        text-decoration:underline;
+                        font-size:14px;
+                        margin:15px 15px;
+                        font-weight:normal;
+                        width:100px;
+                        }
+                        .mes a{
+                        color: black;
+                        text-decoration:underline;
+                        font-size:14px;
+                        font-weight:normal;
+                        }
+                        .kix-appview-editor {
+                        overflow-x:hidden;
+                        }
+                </style>
+                
+                                        
 
-            case '11':if (document.getElementById('Noviembre').innerHTML ==""){
-            document.getElementById('Noviembre').innerHTML += 'Noviembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Noviembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break;    
+                <div id="content" style="float:left;">
+                <div id="mesesImplantacion" style="width=100px;float:left;">
+                <div id="Enero" class="mes"></div>
+                <div id="Febrero" class="mes"></div>
+                <div id="Marzo" class="mes"></div>
+                <div id="Abril" class="mes"></div>
+                <div id="Mayo" class="mes"></div>
+                <div id="Junio" class="mes"></div>
+                <div id="Julio" class="mes"></div>
+                <div id="Agosto" class="mes"></div>
+                <div id="Septiembre" class="mes"></div>
+                <div id="Octubre" class="mes"></div>
+                <div id="Noviembre" class="mes"></div>
+                <div id="Diciembre" class="mes"></div>
+                </div>
+                <div id="showReport" style="width:800px;height:698px;margin-left:150px;overflow:hidden;margin-top:0px;"></div></div>
+                
+                <script type="text/javascript"> 
+                        
+                        
+                        
+                        var gadgetHelper = null;        
+                        var prefs = new _IG_Prefs(); // User preferences                        
+                        var urlTable = prefs.getString("_table_query_url");                                     
+                        
+                        var ifrm = "";
+                        _IG_RegisterOnloadHandler(loadVisualizationAPI);
+                        
+                        function loadVisualizationAPI() 
+                        {
+                                google.load("visualization", "1", {"packages": ["table"]});
+                                google.setOnLoadCallback(sendQuery);
+                        }
 
-            case '12':if (document.getElementById('Diciembre').innerHTML ==""){
-            document.getElementById('Diciembre').innerHTML += 'Diciembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
-            }else{
-            document.getElementById('Diciembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
-            }
-            break;     
-            
-            }
-          //  html += '<li><a  href="'+data.getValue(i,1)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,0)+' a fecha del ' +fecha+'</a></li>';
-            
-          
-          }
-        }  
-          //console.debug("idUltimoInforme2 "+idUltimoInforme);
-          muestraInforme("https://docs.google.com/a/bbva.com/open?id="+idUltimoInforme);
-          //document.getElementById('docs-editor').style += "overflow: hidden";
-          //window.open(http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk,iframeOld,"style=overflow:hidden");
-        //html +=  "</ul>";
-        //document.getElementById('urlimplantation').innerHTML = html;
-      }
-    }
-    
-    function muestraInforme(urlFileNN){
-        var contentIframe = "CONTENIDO DEL IFRAME!!!!!!!!!!!!!";
-      /*
-      <style>
-        .
-      </style>
-      
-      */
-      
-      if(document.getElementById('showReport').innerHTML == ""){
-       
-         ifrm = document.createElement("IFRAME");   
-        // ifrm.id = 'iframeOld';
-         ifrm.setAttribute("id", "iframeOld"); 
-         ifrm.setAttribute("src", urlFileNN);
-         ifrm.setAttribute("allowscriptaccess", "always");
-          
-         ifrm.style.width = 800+"px"; 
-          
+                        function sendQuery() 
+                        {
+                                gadgetHelper = new google.visualization.GadgetHelper();
+                                var opts = {dataType:'jsonp'};                          
+                                var query = new google.visualization.Query(urlTable, opts);                                                     
+                                var querytosend = "select A,B,C where C <> '%Fecha%' and A <> '%Id informe%' and B <> '%Url informe%'";
+                                query.setQuery(querytosend);                      
+                                query.send(handleQueryResponse);
+                                
+                        }
+
+                        
+                        function handleQueryResponse(response) 
+                        {
+                                if (!gadgetHelper.validateResponse(response)) 
+                                { 
+                                        return; 
+                                }
+                        
+                                data = response.getDataTable();         
+                                
+                                if(data.getNumberOfRows()!=0){
+                                var html = "";
+                                //html += "<ul>";
+                                var urlFile = new Array();
+                                var idUltimoInforme = "";
+                                var MaxMes = "";
+                                var Maxdia = "";
+                                        for(var i=0; i<data.getNumberOfRows(); i++){
+                                           
+                                            urlFile[i] = data.getValue(i,1);
+                                                var fecha = data.getValue(i,2);
+                                                var mes = fecha[3]+fecha[4];
+                                                var dia = fecha[0]+fecha[1];
+                                                
+                                                
+                                                var mes = fecha[3]+fecha[4];
+                                                if(fecha.indexOf('2013')!=-1){
+                                                 if ((MaxMes=="")||(MaxMes<mes)){
+                                                  MaxMes = mes;
+                                                  Maxdia = dia;
+                                                  idUltimoInforme = data.getValue(i,0);
+                                                  
+                                                 }else if((MaxMes == mes)&&(Maxdia<dia)){
+                                                        
+                                                                Maxdia = dia;
+                                                                idUltimoInforme = data.getValue(i,0);
+                                                        
+                                                 }
+                                                switch(mes){
+                                                case '01':if (document.getElementById('Enero').innerHTML ==""){
+                                            document.getElementById('Enero').innerHTML +='Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }else{
+                                                document.getElementById('Enero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                
+                                                break;
+                                                
+                                                case '02':if (document.getElementById('Febrero').innerHTML ==""){
+                                            document.getElementById('Febrero').innerHTML +='Febrero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }else{
+                                                document.getElementById('Febrero').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                
+                                                break;
+                                                
+                                                case '03':if (document.getElementById('Marzo').innerHTML ==""){
+                                                document.getElementById('Marzo').innerHTML += 'Marzo<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Marzo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                
+                                                break; 
+                                                
+                                                case '04':if (document.getElementById('Abril').innerHTML ==""){
+                                                document.getElementById('Abril').innerHTML += 'Abril<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Abril').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break; 
+                                                
+                                                case '05':if (document.getElementById('Mayo').innerHTML ==""){
+                                                document.getElementById('Mayo').innerHTML += 'Mayo<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Mayo').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break; 
+                                                
+                                                case '06':if (document.getElementById('Junio').innerHTML ==""){
+                                                document.getElementById('Junio').innerHTML += 'Junio<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Junio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break; 
+                                                
+                                                case '07':if (document.getElementById('Julio').innerHTML ==""){
+                                                document.getElementById('Julio').innerHTML += 'Julio<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Julio').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break;
+                                                case '08':if (document.getElementById('Agosto').innerHTML ==""){
+                                                document.getElementById('Agosto').innerHTML += 'Agosto<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Agosto').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break;
+
+                                                case '09':if (document.getElementById('Septiembre').innerHTML ==""){
+                                                document.getElementById('Septiembre').innerHTML += 'Septiembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Septiembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break;
+
+                                                //case '10': document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                case '10':if (document.getElementById('Octubre').innerHTML ==""){
+                                                document.getElementById('Octubre').innerHTML += 'Octubre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Octubre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break;                          
+                                                
+                                                
+
+                                                case '11':if (document.getElementById('Noviembre').innerHTML ==""){
+                                                document.getElementById('Noviembre').innerHTML += 'Noviembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Noviembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break;          
+
+                                                case '12':if (document.getElementById('Diciembre').innerHTML ==""){
+                                                document.getElementById('Diciembre').innerHTML += 'Diciembre<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';break;
+                                                }else{
+                                                document.getElementById('Diciembre').innerHTML += '<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>';
+                                                }
+                                                break;           
+                                                
+                                                }
+                                        //      html += '<li><a  href="'+data.getValue(i,1)+'">Implantaci&oacute;n del Cliente '+data.getValue(i,0)+' a fecha del ' +fecha+'</a></li>';
+                                                
+                                        
+                                        }
+                                }       
+                                        //console.debug("idUltimoInforme2 "+idUltimoInforme);
+                                        muestraInforme("https://docs.google.com/a/bbva.com/open?id="+idUltimoInforme);
+                                        //document.getElementById('docs-editor').style += "overflow: hidden";
+                                        //window.open(http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk,iframeOld,"style=overflow:hidden");
+                                //html +=       "</ul>";
+                                //document.getElementById('urlimplantation').innerHTML = html;
+                        }
+                }
+                
+                function muestraInforme(urlFileNN){
+                    var contentIframe = "CONTENIDO DEL IFRAME!!!!!!!!!!!!!";
+                        /*
+                        <style>
+                                .
+                        </style>
+                        
+                        */
+                        
+                        if(document.getElementById('showReport').innerHTML == ""){
+                         
+                           ifrm = document.createElement("IFRAME");   
+                          // ifrm.id = 'iframeOld';
+                           ifrm.setAttribute("id", "iframeOld"); 
+                           ifrm.setAttribute("src", urlFileNN);
+                           ifrm.setAttribute("allowscriptaccess", "always");
+                           ifrm.style.width = 800+"px"; 
                ifrm.style.height = 706+"px"; 
-            
-         document.getElementById('showReport').appendChild(ifrm); 
-         
-         
-      }
-      else {
-      
-      var ifrmNew = document.createElement("IFRAME"); 
-      //ifrm.setAttribute("id", "iframeNew"); 
-      ifrmNew.setAttribute("src", urlFileNN); 
-      ifrmNew.setAttribute("allowscriptaccess", "always");
-        
-      ifrmNew.style.width = 800+"px";
-         
-            ifrmNew.style.height = 706+"px";   
-            
-      //ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
-      document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
-      //ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
-      
-       // document.getElementById('showReport').removeChild(ifrm); 
-     //  document.getElementById('showReport').appendChild(ifrmNew);
-      ifrm = ifrmNew;
-      
-        }
-             
-          // document.setAttribute("style","height:575px;overflow:hidden;");
-         
-           document.style.height = '575px';
-            document.style.overflow= 'hidden';
-     
-    }
-    
-    </script>
- 
- 
-		]]>
-	</Content>
+                           document.getElementById('showReport').appendChild(ifrm); 
+                           
+                           
+                        }
+                        else {
+                        
+                        var ifrmNew = document.createElement("IFRAME"); 
+                        //ifrm.setAttribute("id", "iframeNew"); 
+                        ifrmNew.setAttribute("src", urlFileNN); 
+                        ifrmNew.setAttribute("allowscriptaccess", "always");
+                        ifrmNew.style.width = 800+"px"; 
+            ifrmNew.style.height = 706+"px";    
+                        //ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
+                        document.getElementById('showReport').replaceChild(ifrmNew,ifrm); 
+                        //ifrmNew.document.getElementById('docs-editor').setAttribute("style","height:575px;overflow:hidden;");
+                        
+                   // document.getElementById('showReport').removeChild(ifrm); 
+                 //     document.getElementById('showReport').appendChild(ifrmNew);
+                        ifrm = ifrmNew;
+                        
+                    }
+                         
+           document.setAttribute("style","height:575px;overflow:hidden;");
+                 
+                }
+                
+                </script>
+                ]]>
+        </Content>
 </Module>
