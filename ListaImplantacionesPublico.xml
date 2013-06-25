@@ -143,10 +143,10 @@
               
              }
              
-           //  alert($('#Enero').html().trim());
+         
              console.log(mes);
             switch(mes){
-           case '01':if ($('#Enero').html().trim()==""){
+           case '01':if ($('#Enero').html()==""){
            console.log("dentro!");
                $('#Enero').text('Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
                
