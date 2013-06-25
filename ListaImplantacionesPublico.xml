@@ -16,8 +16,9 @@
   
 
 
+
     <head>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
       <script src="https://www.google.com/jsapi" type="text/javascript"></script></head>
 
     <style type="text/css">       
@@ -70,7 +71,7 @@
     
     <script type="text/javascript"> 
       
-      console.log("dd_10");
+      console.log("dd_11");
       
       var gadgetHelper = null;  
       var prefs = new _IG_Prefs(); // User preferences      
@@ -136,10 +137,10 @@
              }
             switch(mes){
 			case '01':if ($('#Enero').html()==""){
-			  $('#Enero').html($('#Enero').html()+'Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
+			  $('#Enero').html('Enero<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
              
             }else{
-			  $('#Enero').html($('#Enero').html()+'<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
+			  $('#Enero').html('<li><a  onclick="muestraInforme(\''+urlFile[i]+'\')" href="#" >' +fecha+ '</a></li>');
           
             }
             
@@ -295,6 +296,7 @@
     }
     
     </script>
+ 
  
 		]]>
 	</Content>
