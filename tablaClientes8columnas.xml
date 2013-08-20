@@ -21,7 +21,7 @@
 	function getCriticidad(){
 		$.ajax({
 			type: "POST",
-			url: "https://script.google.com/a/macros/bbva.com/s/AKfycbxGz1OIe7KEmlkWds892lkQea7IjMpjL5J2VcMh0clbBeft6UQ/exec",
+			url: "http://script.google.com/a/macros/bbva.com/s/AKfycbxGz1OIe7KEmlkWds892lkQea7IjMpjL5J2VcMh0clbBeft6UQ/exec",
 				}).done(function( msg ) {
 			alert( "Data Saved: " + msg );
 		});
