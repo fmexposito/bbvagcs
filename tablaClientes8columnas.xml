@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Tabla desde docs"
-	description="Tabla cargada con paginacion y parametrizada."
-	author_affiliation="Capgemini">
-	<Require feature="idi"/>
-	<Require feature="locked-domain" />
+        <ModulePrefs title="Tabla desde docs"
+        description="Tabla cargada con paginacion y parametrizada."
+        author_affiliation="Capgemini">
+        <Require feature="idi"/>
+        <Require feature="locked-domain" />
 </ModulePrefs>
-  
+ 
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
 <UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
@@ -15,199 +15,222 @@
 
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+	function getCriticidad(){
+		$.ajax({
+			type: "POST",
+			url: "https://script.google.com/a/macros/bbva.com/s/AKfycbxGz1OIe7KEmlkWds892lkQea7IjMpjL5J2VcMh0clbBeft6UQ/exec",
+				}).done(function( msg ) {
+			alert( "Data Saved: " + msg );
+		});
+	}
+
+</script>
+
 <style type="text/css">
-	  .filaPar {
-			background: white; 
-			border-bottom: 1px solid #E2E2E2; 
-			height: 45px; 
-			font-family:  Arial, Helvetica, sans-serif;
-			font-size:12px;
-			color: #00008B;
-		}
-		.filaImpar {
-			background: #DFE3E5; 
-			border-bottom: 1px solid #E2E2E2; 
-			height: 45px; 
-			font-family: Arial, Helvetica, sans-serif;
-			font-size:12px;
-			color: #00008B;
-		}
-		.filaSeleccionada{
-			background: white; 
-			border-bottom: 1px solid #A22E212; 
-			height: 45px; 
-			font-family: Arial, Helvetica, sans-serif;
-			font-size:12px;
-			color: #00008B;
-		}
-		.filaHover{
-			background: #F0EEE2; 
-			border-bottom: 1px solid #B2B2B2; 
-			height: 45px;
-			font-family: Arial, Helvetica, sans-serif;
-			font-size:12px;
-			color: #00008B;
-		}
-		#tablediv table{
-		width:100%;
-		}
-		
-		#tablediv table,
-		#tablediv table tr,
-		#tablediv table	tr td {
-			font-family: Arial, Helvetica, sans-serif !important;
-			border: 1px solid #fff !important;
-			color: #00008B;
-			font-size:12px;
-		}		
-		.formateoCelda {
-			font-family: Arial, Helvetica, sans-serif !important;
-			padding-left: 5px !important;
-			color: #00008B;
-		}
-		.header {
-			background-color: #fff;		
-			color: white; 
-			font-size:14px; 
-			font-weight: bold;
-			text-align: center;
-			font-family: Arial, Helvetica, sans-serif;
-			height: 35px;
-			border: 1px solid #fff !important;				
-		}
-		
-		tr.header td.google-visualization-table-th{
-			border: 1px solid #fff !important;
-			color: #00008B;
-			visibility:hidden;}
-		tr.header td.google-visualization-table-sorthdr {
-			border: 1px solid #fff !important;
-			color: #00008B;
-			
-		}
-		a.enlaceTabla,
-		a:active.enlaceTabla,
-		a:visited.enlaceTabla {
-			color: #00008B;	
-			font-size:12px; 			
-		}
-		a:hover.enlaceTabla {
-			color: #009EE5;
-			font-size:12px;
-		}
-		img.loading {
-			margin: 5% 0 0 7%;
-			color: #00008B;
-		}
+          .filaPar {
+                        background: white;
+                        border-bottom: 1px solid #E2E2E2;
+                        height: 45px;
+                        font-family:  Arial, Helvetica, sans-serif;
+                        font-size:12px;
+                        color: #00008B;
+                }
+                .filaImpar {
+                        background: #DFE3E5;
+                        border-bottom: 1px solid #E2E2E2;
+                        height: 45px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size:12px;
+                        color: #00008B;
+                }
+                .filaSeleccionada{
+                        background: white;
+                        border-bottom: 1px solid #A22E212;
+                        height: 45px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size:12px;
+                        color: #00008B;
+                }
+                .filaHover{
+                        background: #F0EEE2;
+                        border-bottom: 1px solid #B2B2B2;
+                        height: 45px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size:12px;
+                        color: #00008B;
+                }
+                #tablediv table{
+                width:100%;
+                }
+               
+                #tablediv table,
+                #tablediv table tr,
+                #tablediv table tr td {
+                        font-family: Arial, Helvetica, sans-serif !important;
+                        border: 1px solid #fff !important;
+                        color: #00008B;
+                        font-size:12px;
+                }              
+                .formateoCelda {
+                        font-family: Arial, Helvetica, sans-serif !important;
+                        padding-left: 5px !important;
+                        color: #00008B;
+                }
+                .header {
+                        background-color: #fff;        
+                        color: white;
+                        font-size:14px;
+                        font-weight: bold;
+                        text-align: center;
+                        font-family: Arial, Helvetica, sans-serif;
+                        height: 35px;
+                        border: 1px solid #fff !important;                              
+                }
+               
+                tr.header td.google-visualization-table-th{
+                        border: 1px solid #fff !important;
+                        color: #00008B;
+                        visibility:hidden;}
+                tr.header td.google-visualization-table-sorthdr {
+                        border: 1px solid #fff !important;
+                        color: #00008B;
+                       
+                }
+                a.enlaceTabla,
+                a:active.enlaceTabla,
+                a:visited.enlaceTabla {
+                        color: #00008B;
+                        font-size:12px;                        
+                }
+                a:hover.enlaceTabla {
+                        color: #009EE5;
+                        font-size:12px;
+                }
+                img.loading {
+                        margin: 5% 0 0 7%;
+                        color: #00008B;
+                }
 </style>
+
+<select onChange="getCriticidad();">
+	<option value="Todas" selected>Todas</option>
+	<option value="Alta">Alta</option>
+	<option value="Media">Media</option>
+	<option value="Baja">Baja</option>
+</select>
+
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
-<script type="text/javascript"> 
-    
-	var gadgetHelper = null;
-	var prefs = new _IG_Prefs(); // User preferences
-	var urlTable = prefs.getString("_table_query_url");
-	var	numElePag = prefs.getInt("_NumElemPorPagina");
-	var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
-	
-	_IG_RegisterOnloadHandler(loadVisualizationAPI);
-	
-	function loadVisualizationAPI() 
-	{
-		google.load("visualization", "1", {"packages": ["table"]});
-		google.setOnLoadCallback(sendQuery);
-	}
+<script type="text/javascript">
+   
+        var gadgetHelper = null;
+        var prefs = new _IG_Prefs(); // User preferences
+        var urlTable = prefs.getString("_table_query_url");
+        var     numElePag = prefs.getInt("_NumElemPorPagina");
+        var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+       
+        _IG_RegisterOnloadHandler(loadVisualizationAPI);
+       
+        function loadVisualizationAPI()
+        {
+                google.load("visualization", "1", {"packages": ["table"]});
+                google.setOnLoadCallback(sendQuery);
+        }
 
-	function sendQuery() 
-	{
-		gadgetHelper = new google.visualization.GadgetHelper();	
-		var opts = {dataType:'jsonp'};
-		var query = new google.visualization.Query(urlTable, opts);		
-		query.setQuery("select * ");
-		query.send(handleQueryResponse);
-	}
+        function sendQuery()
+        {
+                gadgetHelper = new google.visualization.GadgetHelper();
+                var opts = {dataType:'jsonp'};
+                var query = new google.visualization.Query(urlTable, opts);            
+                query.setQuery("select * ");
+                query.send(handleQueryResponse);
+        }
 
-	function detalle(id)
-	{				
-		window.parent.location.href = urlDetalleFicha + id.toLowerCase();		
-	}
-	
-	function handleQueryResponse(response) 
-	{
-		if (!gadgetHelper.validateResponse(response)) { return; }
-	
-		data = response.getDataTable();
-		
-		var count = (data.getNumberOfRows()-1)/8;
-		var roundCount = Math.ceil(count);
-		var resto = (data.getNumberOfRows())%64;
-		var result = (data.getNumberOfRows())%8;
-		var total = roundCount+result;
-		
-		var cssClassNames = {
-			'headerRow': 'header',
-			'tableRow': 'filaPar',
-			'oddTableRow': 'filaImpar',
-			'selectedTableRow': 'filaSeleccionada',
-			'hoverTableRow': 'filaHover',
-			'headerCell': 'header',
-			'tableCell': 'formateoCelda',
-			'rowNumberCell': ''
-		};
+        function detalle(id)
+        {                              
+                window.parent.location.href = urlDetalleFicha + id.toLowerCase();              
+        }
+       
+        function handleQueryResponse(response)
+        {
+                if (!gadgetHelper.validateResponse(response)) { return; }
+       
+                data = response.getDataTable();
+               
+                var count = (data.getNumberOfRows()-1)/8;
+                var roundCount = Math.ceil(count);
+                var resto = (data.getNumberOfRows())%64;
+                var result = (data.getNumberOfRows())%8;
+                var total = roundCount+result;
+               
+                var cssClassNames = {
+                        'headerRow': 'header',
+                        'tableRow': 'filaPar',
+                        'oddTableRow': 'filaImpar',
+                        'selectedTableRow': 'filaSeleccionada',
+                        'hoverTableRow': 'filaHover',
+                        'headerCell': 'header',
+                        'tableCell': 'formateoCelda',
+                        'rowNumberCell': ''
+                };
          
-        var chart = new google.visualization.Table(document.getElementById('tablediv'));		
-		var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};		
-		var dataAux = new google.visualization.DataTable();
-		//Create DataView
-		var view = new google.visualization.DataView(dataAux);
-		var aux = 1;
-	    dataAux.addRows(total);
-		
-		for (var columna=0;columna<8;columna++)
-		{		
-			for(var j=0;j<4;j++)
-			{			
-				dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
-			}		
-		}
-	
-		for (var fila=0; fila<total; fila++)
-		{	
-			for(var col=1; col<=29; col+=4)
-			{
-				try
-				{				
-					dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
-					dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
-					aux++;			
-				}
-				catch (err)
-				{
-					break;
-				}
-			}
-		}
-		
-		// Apply formatter and set the formatted value.
-     	var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
-		
-		formatter.format(dataAux,[1,0]); 
-		formatter.format(dataAux,[5,4]); 
-		formatter.format(dataAux,[9,8]); 
-		formatter.format(dataAux,[13,12]); 
-		formatter.format(dataAux,[17,16]); 
-		formatter.format(dataAux,[21,20]); 
-		formatter.format(dataAux,[25,24]); 
-		formatter.format(dataAux,[29,28]); 		
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));                
+                var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};              
+                var dataAux = new google.visualization.DataTable();
+                //Create DataView
+                var view = new google.visualization.DataView(dataAux);
+                var aux = 1;
+            dataAux.addRows(total);
+               
+                for (var columna=0;columna<8;columna++)
+                {              
+                        for(var j=0;j<4;j++)
+                        {                      
+                                dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+                        }              
+                }
+       
+                for (var fila=0; fila<total; fila++)
+                {      
+                        for(var col=1; col<=29; col+=4)
+                        {
+                                try
+                                {                              
+                                        dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+                                        dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
+                                        aux++;                  
+                                }
+                                catch (err)
+                                {
+                                        break;
+                                }
+                        }
+                }
+               
+                // Apply formatter and set the formatted value.
+        var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+               
+                formatter.format(dataAux,[1,0]);
+                formatter.format(dataAux,[5,4]);
+                formatter.format(dataAux,[9,8]);
+                formatter.format(dataAux,[13,12]);
+                formatter.format(dataAux,[17,16]);
+                formatter.format(dataAux,[21,20]);
+                formatter.format(dataAux,[25,24]);
+                formatter.format(dataAux,[29,28]);              
 
-		
-		//Select the Columns to DataView
-		view.setColumns([1,5,9,13,17,21,25,29]);	
-		dataAux.setColumnLabel(1,"");				
-		chart.draw(view,options);	
-	}
-		
+               
+                //Select the Columns to DataView
+                view.setColumns([1,5,9,13,17,21,25,29]);        
+                dataAux.setColumnLabel(1,"");                          
+                chart.draw(view,options);      
+        }
+               
 </script>
 ]]>
 </Content>
 </Module>
+
