@@ -61,6 +61,7 @@
 			.formateoCelda {
 				font-family: Arial, Helvetica, sans-serif !important;
 				padding-left: 5px !important;
+				font-weight:normal;
 			}
 			#tablediv table, #tablediv table tr.header, #tablediv table tr.header td {
 			background:#2966B0;
