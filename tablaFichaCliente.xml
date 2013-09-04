@@ -80,7 +80,7 @@
 			font-family: Arial, Helvetica, sans-serif;
 			}
 			.google-visualization-table-table .gradient, .google-visualization-table-div-page .gradient{
-			background: none;
+			background: #2966B0;
 			color:red;
 			font-weight:bold;
 			}
