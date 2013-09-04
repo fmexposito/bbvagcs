@@ -58,7 +58,10 @@
 				font-family: Arial, Helvetica, sans-serif !important;
 				padding-left: 5px !important;
 			}
-			
+			#tablediv table, #tablediv table tr, #tablediv table tr td {
+			background-color:#2966B0;
+			color:white;
+			}
 			#tablediv tr.header td.google-visualization-table-th gradient google-visualization-table-sorthdr{
 				background: #2966B0;	
 				color: white; 
