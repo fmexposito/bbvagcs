@@ -74,7 +74,7 @@
 			background-color: #2966B0;
 			}
 			.google-visualization-table-table .gradient, .google-visualization-table-div-page .gradient{
-			background-color: #2966B0;
+			background: #2966B0;
 			color:white;
 			}
 			
