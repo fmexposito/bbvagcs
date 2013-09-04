@@ -67,7 +67,10 @@
 				font-family: Arial, Helvetica, sans-serif;
 				height: 35px;
 			}
-			.header tr td.google-visualization-table-th gradient google-visualization-table-sorthdr{
+			.google-visualization-table-th gradient google-visualization-table-sorthdr td{
+			background-color: #2966B0;
+			}
+			.header tr .google-visualization-table-th gradient google-visualization-table-sorthdr td{
 			background-color: #2966B0;
 			}
 			.google-visualization-table-table .gradient, .google-visualization-table-div-page .gradient{
