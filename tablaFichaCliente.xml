@@ -67,20 +67,14 @@
 				font-family: Arial, Helvetica, sans-serif;
 				height: 35px;
 			}
-			.google-visualization-table-th gradient google-visualization-table-sorthdr td{
-			background-color: #2966B0;
-			}
-			.header tr .google-visualization-table-th gradient google-visualization-table-sorthdr td{
-			background-color: #2966B0;
-			}
+			
 			.google-visualization-table-table .gradient, .google-visualization-table-div-page .gradient{
 			background: none;
+			font-weight: bold;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
 			}
-			.google-visualization-table-table .gradient, .google-visualization-table-div-page .gradient{
-			background: #2966B0;
-			color:white;
-			font-weight:bold;
-			}
+			
 			
 			a.enlaceTabla,
 			a:active.enlaceTabla,
