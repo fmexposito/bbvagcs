@@ -70,6 +70,9 @@
 			.header tr td.google-visualization-table-th gradient google-visualization-table-sorthdr{
 			background-color: #2966B0;
 			}
+			.google-visualization-table-table .gradient, .google-visualization-table-div-page .gradient{
+			background:none;
+			}
 			a.enlaceTabla,
 			a:active.enlaceTabla,
 			a:visited.enlaceTabla {
