@@ -58,7 +58,7 @@
 				font-family: Arial, Helvetica, sans-serif !important;
 				padding-left: 5px !important;
 			}
-			#tablediv table, #tablediv table tr, #tablediv table tr td {
+			#tablediv table, #tablediv table tr.header, #tablediv table tr.header td {
 			background:#2966B0;
 			color:white;
 			font-weight: bold;
