@@ -58,10 +58,8 @@
 				font-family: Arial, Helvetica, sans-serif !important;
 				padding-left: 5px !important;
 			}
-			#tablediv tr.header td{
-			background-color: #2966B0;
-			}
-			.header tr{
+			
+			#tablediv .header{
 				background: #2966B0;	
 				color: white; 
 				font-size:14px; 
