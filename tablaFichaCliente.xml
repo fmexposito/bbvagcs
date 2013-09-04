@@ -59,7 +59,7 @@
 				padding-left: 5px !important;
 			}
 			
-			#tablediv .header tr td.google-visualization-table-th gradient google-visualization-table-sorthdr{
+			#tablediv tr.header td.google-visualization-table-th gradient google-visualization-table-sorthdr{
 				background: #2966B0;	
 				color: white; 
 				font-size:14px; 
