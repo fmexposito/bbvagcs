@@ -58,6 +58,9 @@
 				font-family: Arial, Helvetica, sans-serif !important;
 				padding-left: 5px !important;
 			}
+			#tablediv tr.header td{
+			background-color: #2966B0;
+			}
 			.header tr{
 				background: #2966B0;	
 				color: white; 
@@ -67,7 +70,11 @@
 				font-family: Arial, Helvetica, sans-serif;
 				height: 35px;
 			}
-			
+			.google-visualization-table-table .gradient, .google-visualization-table-div-page .gradient{
+			background: none;
+			text-align:left;
+			font-weight:bold;
+			}
 			
 			a.enlaceTabla,
 			a:active.enlaceTabla,
