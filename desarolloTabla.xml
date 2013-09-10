@@ -116,6 +116,7 @@
 <script type="text/javascript">
    
          var criti = "Todas";
+         var mainjson = new JSONObject();
          
          alert("SOOOOOOOOOOOOOOOOOOOOOOO!");
    
@@ -225,8 +226,15 @@
                                 {                              
                                         dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
                                         dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
-                                        var titcriti = data.getValue(aux,3);
-                                        aux++;                  
+                                        var titcriti = data.getValue(aux,2);
+                                        var nombre = data.getValue(aux,1);
+                                        var idcliente = data.getValue(aux,0);
+                                        aux++;      
+                            
+                                        json = new JSONObject();
+                                       json.append("nombre",nombre);
+                                       json.append("idcliente",idcliente);
+                                       json.append("criticidad", titcriti);  
                                 }
                                 catch (err)
                                 {
