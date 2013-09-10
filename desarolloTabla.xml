@@ -133,12 +133,22 @@
         
         function drawTable()
         {
-              
+        criti = "Todas";
+   
+        var gadgetHelper = null;
+        var prefs = new _IG_Prefs(); // User preferences
+        var urlTable = prefs.getString("_table_query_url");
+        var     numElePag = prefs.getInt("_NumElemPorPagina");
+        var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+       
+        _IG_RegisterOnloadHandler(loadVisualizationAPI2);
                 
-                google.load("visualization", "1", {"packages": ["table"]});
-                
-                
-                google.setOnLoadCallback(sendQuery);
+             
+        }
+        
+        function loadVisualizationAPI2(){
+           google.load("visualization", "1", {"packages": ["table"]});               
+           google.setOnLoadCallback(sendQuery);
         }
 
         function sendQuery()
