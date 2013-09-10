@@ -116,6 +116,8 @@
 <script type="text/javascript">
    
          var criti = "Todas";
+         
+         alert("SOOOOOOOOOOOOOOOOOOOOOOO!");
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
