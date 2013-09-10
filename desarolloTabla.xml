@@ -150,7 +150,7 @@
                 gadgetHelper = new google.visualization.GadgetHelper();
                 var opts = {dataType:'jsonp'};
                 var query = new google.visualization.Query(urlTable, opts);            
-                query.setQuery("select * FROM C == Media");
+                query.setQuery("select * WHERE C == 'Media'");
                 query.send(handleQueryResponse);
         }
 
