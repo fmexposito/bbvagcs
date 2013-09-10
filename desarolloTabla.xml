@@ -157,7 +157,7 @@
                 else if (criti == "Alta")
                    query.setQuery("select * where C = 'Alta'");
                 else if (criti == "Todas")
-                   query.setQuery("select * );
+                   query.setQuery("select * ");
                 query.send(handleQueryResponse);
         }
 
