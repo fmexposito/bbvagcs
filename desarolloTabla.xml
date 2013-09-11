@@ -116,7 +116,7 @@
 <script type="text/javascript">
    
          var criti = "Todas";
-         var mainjson = new JSONObject();
+         var mainjson = [];
          
          alert("SOOOOOOOOOOOOOOOOOOOOOOO!");
    
@@ -231,10 +231,11 @@
                                         var idcliente = data.getValue(aux,0);
                                         aux++;      
                             
-                                        json = new JSONObject();
-                                       json.append("nombre",nombre);
-                                       json.append("idcliente",idcliente);
-                                       json.append("criticidad", titcriti);  
+                                        json = [];
+										
+										
+                                      json.push({name: nombre, critic: titcriti, id: idcliente})
+									  mainjson.push(json);
                                 }
                                 catch (err)
                                 {
@@ -266,4 +267,3 @@
 ]]>
 </Content>
 </Module>
-
