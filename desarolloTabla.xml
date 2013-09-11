@@ -103,7 +103,7 @@
                         color: #00008B;
                 }
 </style>
-0001a
+0001ab
  <select id="combo" onChange="drawTable();">
         <option value="Todas" selected>Todas</option>
         <option value="Alta">Alta</option>
@@ -308,7 +308,7 @@ var blocks = 0;
                 //Create DataView
                 var view = new google.visualization.DataView(dataAux);
                 var aux = 1;
-            dataAux.addRows(count);
+            dataAux.addRows(roundCount);
                
                 for (var columna=0;columna<8;columna++)
                 {              
@@ -322,7 +322,7 @@ var blocks = 0;
        
 				var cont = 0;
 	   
-                for (var fila=0; fila<count; fila++)
+                for (var fila=0; fila<roundCount; fila++)
                 { 
                   console.log('EACH FILA:' + lines + ' with a total: ' + total);  
                   lines++;
