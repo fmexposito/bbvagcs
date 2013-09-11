@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Module>
         <ModulePrefs title="Tabla desde docs"
         description="Tabla cargada con paginacion y parametrizada."
@@ -305,16 +305,18 @@
                         }              
                 }
        
+				var cont = 0;
+	   
                 for (var fila=0; fila<total; fila++)
                 {      
                         for(var col=1; col<=29; col+=4)
                         {
                                 try
                                 {                       
-                                        if (mainjson[fila][0].critic==crit){
-                                            dataAux.setCell(fila,col,filteredJson[fila].name,filteredJson[fila].name,data.getProperties(aux, 1));
-                                            dataAux.setCell(fila,col-1,filteredJson[fila].id,filteredJson[fila].id,data.getProperties(aux, 0));
-                                        }
+											cont = cont ++;
+                                            dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,data.getProperties(aux, 1));
+                                            dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,data.getProperties(aux, 0));
+                                        
                                         
                                        
                                 }
