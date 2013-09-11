@@ -121,6 +121,12 @@ Tipo de Criticidad
          var rojo = new Object();
          rojo.style = "background-color: rgb(256, 137, 30);color: rgb(0, 0, 0);font-family:Dialog;";
          
+         var verde= new Object();
+         verde.style = "background-color: rgb(134, 200, 45);color: rgb(0, 0, 0);font-family:Dialog;";
+         
+         var naranja= new Object();
+         naranja.style = "background-color: rgb(253, 189, 44);color: rgb(0, 0, 0);font-family:Dialog;";
+         
          
        alert("Martin guapo!");
    
