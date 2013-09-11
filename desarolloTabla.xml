@@ -346,10 +346,17 @@ var blocks = 0;
                                 {                       
                                      console.log('SET CELL: cont - ' + cont + ' vs ' + numberOfRows);
                                      if(cont < numberOfRows){
-                                       console.log('cont < numberOfRows');
-                                       dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,rojo);
-                                       dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,rojo);
-                                       cont++;
+                                       if (criti == "Todas"){
+                                         dataAux.setCell(fila,col,filteredJson[cont][0].name,filteredJson[cont][0].name,rojo);
+                                         dataAux.setCell(fila,col-1,filteredJson[cont][0].id,filteredJson[cont][0].id,rojo);
+                                         cont++;
+                                       }else{
+                                         dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,rojo);
+                                         dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,rojo);
+                                         cont++;
+                                       }
+                                      
+                                      
                                      }
                                 }
                                 catch (err)
