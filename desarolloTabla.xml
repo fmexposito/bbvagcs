@@ -118,7 +118,7 @@
          var criti = "Todas";
          var mainjson = [];
          
-        alert("Martin guapo!");
+       // alert("Martin guapo!");
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
@@ -328,8 +328,8 @@ xxx++;
                                 try
                                 {                       
 											
-                                            dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,data.getProperties(aux, 1));
-                                            dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,data.getProperties(aux, 0));
+                                             dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,filteredJson[cont].critic);
+                                            dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,filteredJson[cont].critic);
 											cont = cont +1;
                                         
                                         
