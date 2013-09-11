@@ -118,7 +118,7 @@ Tipo de Criticidad
          var criti = "Todas";
          var mainjson = [];
          
-         var rojo;
+         var rojo = Object {style ="background-color: rgb(256, 137, 30);color: rgb(0, 0, 0);font-family:Dialog;"};
          
        alert("Martin guapo!");
    
@@ -224,7 +224,7 @@ Tipo de Criticidad
                         {
                                 try
                                 { 
-                                        rojo = data.getProperties(aux, 1);
+                                       //rojo = data.getProperties(aux, 1);
                                         dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
                                         dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
                                         var titcriti = data.getValue(aux,2);
