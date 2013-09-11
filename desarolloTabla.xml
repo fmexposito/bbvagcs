@@ -184,9 +184,11 @@
         {                              
                 window.parent.location.href = urlDetalleFicha + id.toLowerCase();              
         }
-       
+       console.log('WTFJONGEUH!!!!!');
+       alert("alert 1");
         function handleQueryResponse(response)
         {
+               alert("alert 2");
         console.clear();
         console.log('ENTRANDO QUERY RESPONSE');
                 if (!gadgetHelper.validateResponse(response)) { return; }
