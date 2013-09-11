@@ -365,7 +365,7 @@ var blocks = 0;
                                          dataAux.setCell(fila,col-1,filteredJson[cont][0].id,filteredJson[cont][0].id,color);
                                          cont++;
                                        }else{
-                                        if (criti == "Todas"){
+                                        
                                             var color;
                                             if (filteredJson[cont].critic == "Alta"){
                                                color = naranja;
