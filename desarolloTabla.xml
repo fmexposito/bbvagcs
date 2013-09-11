@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ <?xml version="1.0" encoding="UTF-8"?>
 <Module>
         <ModulePrefs title="Tabla desde docs"
         description="Tabla cargada con paginacion y parametrizada."
@@ -329,8 +329,8 @@
        // var formatter = new google.visualization.PatternFormat("<a class='enlacetabla' href='javascript:detalle("\' + filteredJson[fila].id + '\');' title='Ver detalle de " + filteredJson[fila].name + "'>" + filteredJson[fila].name+"</a>");
 		// var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'+ filteredJson[fila].id+\');" title="Ver detalle de + filteredJson[fila].name+">"+ filteredJson[fila].id+"</a>');
 		
-		 //  var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
-           var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle("\'+filteredJson[fila].id +\'");" title="Ver detalle de {0}">{0}</a>');
+		   var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+         //  var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle("\'+filteredJson[fila].id +\'");" title="Ver detalle de {0}">{0}</a>');
 		 
 	  
                 formatter.format(dataAux,[1,0]);
