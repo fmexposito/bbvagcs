@@ -272,7 +272,8 @@ var blocks = 0;
 				var filteredJson = [];
             
              if (crit == "Todas"){
-                filteredJson = mainjson;
+             loadVisualizationAPI();
+              //  filteredJson = mainjson;
             }else {
 				
                 for (a=0; a<numberOfClients; a++){
@@ -280,7 +281,7 @@ var blocks = 0;
                       filteredJson.push(mainjson[a][0])
                    }			
                 }
-            }
+            //}
             
 				console.log('clients: ' + numberOfClients + ' filterClients: ' + filteredJson.length);
 				var numberOfRows = filteredJson.length;
@@ -370,7 +371,7 @@ var blocks = 0;
                 dataAux.setColumnLabel(1,"");                          
                 chart.draw(view,options);      
         }
-               
+              } 
 </script>
 ]]>
 </Content>
