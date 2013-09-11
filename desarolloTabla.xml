@@ -184,11 +184,9 @@
         {                              
                 window.parent.location.href = urlDetalleFicha + id.toLowerCase();              
         }
-       console.log('WTFJONGEUH!!!!!');
-       alert("alert 1");
+
         function handleQueryResponse(response)
         {
-               alert("alert 2");
         console.clear();
         console.log('ENTRANDO QUERY RESPONSE');
                 if (!gadgetHelper.validateResponse(response)) { return; }
@@ -228,17 +226,13 @@
                                 dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
-       var xxx = 0;
-       console.log('CREATED XXX');
+       
                 for (var fila=0; fila<total; fila++)
                 {      
-                console.log('ENTERING FILAS');
                         for(var col=1; col<=29; col+=4)
                         {
                                 try
                                 { 
-    console.log(xxx);
-xxx++;    
                                         dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
                                         dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
                                         var titcriti = data.getValue(aux,2);
@@ -277,11 +271,14 @@ xxx++;
                 dataAux.setColumnLabel(1,"");                          
                 chart.draw(view,options);      
         }
-                
-                function doTable(crit)
+var lines = 0;  
+var blocks = 0;
+
+        function doTable(crit)
         {
-                
-                numberOfClients = mainjson.length;
+          console.clear();
+          console.log('ENTERING doTable - FILTERING');      
+          numberOfClients = mainjson.length;
 				
 				var filteredJson = [];
 				
@@ -290,7 +287,7 @@ xxx++;
 						filteredJson.push(mainjson[a][0])
 					}			
 				}
-				
+				console.log('clients: ' + numberOfClients + ' filterClients: ' + filteredJson.length);
 				var numberOfRows = filteredJson.length;
              
                 var count = (numberOfRows-1)/8;
@@ -320,8 +317,10 @@ xxx++;
                
                 for (var columna=0;columna<8;columna++)
                 {              
+                console.log('ENTERING COLUMNA');
                         for(var j=0;j<4;j++)
-                        {                      
+                        {                 
+                                console.log('addColumn');    
                                 dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
@@ -329,12 +328,16 @@ xxx++;
 				var cont = 0;
 	   
                 for (var fila=0; fila<total; fila++)
-                {      
+                { 
+                  console.log('EACH FILA:' + lines);  
+                  line++;
                         for(var col=1; col<=29; col+=4)
                         {
+                            console.log('FOR EACH COL:' + blocks);
+                            blocks++;
                                 try
                                 {                       
-											
+                                     console.log('SET CELL');
                                              dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,filteredJson[cont].critic);
                                             dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,filteredJson[cont].critic);
 											cont = cont +1;
