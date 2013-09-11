@@ -187,8 +187,6 @@
 
         function handleQueryResponse(response)
         {
-        console.clear();
-        console.log('ENTRANDO QUERY RESPONSE');
                 if (!gadgetHelper.validateResponse(response)) { return; }
        
                 data = response.getDataTable();
@@ -222,7 +220,6 @@
                 {              
                         for(var j=0;j<4;j++)
                         {                      
-                        console.log('ADDING COLUMN');
                                 dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
@@ -330,7 +327,7 @@ var blocks = 0;
                 for (var fila=0; fila<total; fila++)
                 { 
                   console.log('EACH FILA:' + lines);  
-                  line++;
+                  lines++;
                         for(var col=1; col<=29; col+=4)
                         {
                             console.log('FOR EACH COL:' + blocks);
