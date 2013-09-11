@@ -137,8 +137,14 @@
         function drawTable()
         {
         criti = $('#combo').val();
+		
+		if (criti != "Todas"){
+			 _IG_RegisterOnloadHandler(loadVisualizationAPI);
+		}else{
+			doTable(criti);
+		}
    
-        doTable(criti);
+        
                 
              
         }
