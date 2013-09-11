@@ -136,7 +136,7 @@
         
         function drawTable()
         {
-        criti = "Todas";
+        criti = $('combo').val();
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
@@ -186,6 +186,88 @@
                 data = response.getDataTable();
                
                 var count = (data.getNumberOfRows()-1)/8;
+                var roundCount = Math.ceil(count);
+                var resto = (data.getNumberOfRows())%64;
+                var result = (data.getNumberOfRows())%8;
+                var total = roundCount+result;
+               
+                var cssClassNames = {
+                        'headerRow': 'header',
+                        'tableRow': 'filaPar',
+                        'oddTableRow': 'filaImpar',
+                        'selectedTableRow': 'filaSeleccionada',
+                        'hoverTableRow': 'filaHover',
+                        'headerCell': 'header',
+                        'tableCell': 'formateoCelda',
+                        'rowNumberCell': ''
+                };
+         
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));                
+                var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};              
+                var dataAux = new google.visualization.DataTable();
+                //Create DataView
+                var view = new google.visualization.DataView(dataAux);
+                var aux = 1;
+            dataAux.addRows(total);
+               
+                for (var columna=0;columna<8;columna++)
+                {              
+                        for(var j=0;j<4;j++)
+                        {                      
+                                dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+                        }              
+                }
+       
+                for (var fila=0; fila<total; fila++)
+                {      
+                        for(var col=1; col<=29; col+=4)
+                        {
+                                try
+                                {                              
+                                        dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+                                        dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
+                                        var titcriti = data.getValue(aux,2);
+                                        var nombre = data.getValue(aux,1);
+                                        var idcliente = data.getValue(aux,0);
+                                        aux++;      
+                            
+                                        json = [];
+										
+										
+                                      json.push({name: nombre, critic: titcriti, id: idcliente})
+									  mainjson.push(json);
+                                }
+                                catch (err)
+                                {
+                                        break;
+                                }
+                        }
+                }
+               
+                // Apply formatter and set the formatted value.
+        var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+               
+                formatter.format(dataAux,[1,0]);
+                formatter.format(dataAux,[5,4]);
+                formatter.format(dataAux,[9,8]);
+                formatter.format(dataAux,[13,12]);
+                formatter.format(dataAux,[17,16]);
+                formatter.format(dataAux,[21,20]);
+                formatter.format(dataAux,[25,24]);
+                formatter.format(dataAux,[29,28]);              
+
+               
+                //Select the Columns to DataView
+                view.setColumns([1,5,9,13,17,21,25,29]);        
+                dataAux.setColumnLabel(1,"");                          
+                chart.draw(view,options);      
+        }
+		
+		function doTable(response)
+        {
+				getNumberOfRows = mainjson.size();
+             
+				var count = (data.getNumberOfRows()-1)/8;
                 var roundCount = Math.ceil(count);
                 var resto = (data.getNumberOfRows())%64;
                 var result = (data.getNumberOfRows())%8;
