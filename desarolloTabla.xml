@@ -287,7 +287,7 @@ var blocks = 0;
 				console.log('clients: ' + numberOfClients + ' filterClients: ' + filteredJson.length);
 				var numberOfRows = filteredJson.length;
              
-                var count = (numberOfRows-1)/8;
+                var count = (numberOfRows+1)/8;
                 var roundCount = Math.ceil(count);
                 var resto = (numberOfRows )%64;
                 var result = (numberOfRows )%8;
@@ -328,7 +328,7 @@ var blocks = 0;
                 { 
                   console.log('EACH FILA:' + lines);  
                   lines++;
-                        for(var col=1; col<=29; col+=4)
+                        for(var col=1; col<=count; col++)
                         {
                             console.log('FOR EACH COL:' + blocks);
                             blocks++;
