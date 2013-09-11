@@ -260,7 +260,7 @@
 		function doTable(crit)
         {
 		
-				getNumberOfRows = mainjson.size();
+				getNumberOfRows = mainjson.length;
              
 				var count = (data.getNumberOfRows()-1)/8;
                 var roundCount = Math.ceil(count);
