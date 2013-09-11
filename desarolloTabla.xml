@@ -226,10 +226,10 @@
                                         aux++;      
                             
                                         json = [];
-										
-										
+                                                                                
+                                                                                
                                       json.push({name: nombre, critic: titcriti, id: idcliente})
-									  mainjson.push(json);
+                                                                          mainjson.push(json);
                                 }
                                 catch (err)
                                 {
@@ -256,13 +256,23 @@
                 dataAux.setColumnLabel(1,"");                          
                 chart.draw(view,options);      
         }
-		
-		function doTable(crit)
+                
+                function doTable(crit)
         {
-		
-				numberOfRows = mainjson.length;
+                
+                numberOfClients = mainjson.length;
+				
+				var filteredJson = [];
+				
+				for (a=0; a<=numberOfClients; a++){
+					if (mainjson[a][0] == crit){
+						filteredJson.push(mainjson[a][0])
+					}			
+				}
+				
+				var numberOfRows = filteredJson.length;
              
-				var count = (numberOfRows-1)/8;
+                var count = (numberOfRows-1)/8;
                 var roundCount = Math.ceil(count);
                 var resto = (numberOfRows )%64;
                 var result = (numberOfRows )%8;
@@ -301,7 +311,7 @@
                         {
                                 try
                                 {                       
-                                        if (mainjson[fila].critic==crit){
+                                        if (mainjson[fila][0].critic==crit){
                                             dataAux.setCell(fila,col,mainjson[fila].name,mainjson[fila].name,data.getProperties(aux, 1));
                                             dataAux.setCell(fila,col-1,mainjson[fila].id,mainjson[fila].id,data.getProperties(aux, 0));
                                         }
