@@ -118,7 +118,7 @@
          var criti = "Todas";
          var mainjson = [];
          
-         alert("SOOOOOOOOOOOOOOOOOOOOOOO!");
+
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
