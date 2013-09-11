@@ -365,9 +365,20 @@ var blocks = 0;
                                          dataAux.setCell(fila,col-1,filteredJson[cont][0].id,filteredJson[cont][0].id,color);
                                          cont++;
                                        }else{
+                                        if (criti == "Todas"){
+                                            var color;
+                                            if (filteredJson[cont][0].critic == "Alta"){
+                                               color = naranja;
+                                            } else if (filteredJson[cont][0].critic == "Media"){
+                                               color = amarillo;
+                                            } else if (filteredJson[cont][0].critic == "Baja"){
+                                               color = verde;
+                                            } else {
+                                               color = blanco;
+                                            }
                                         
-                                         dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,verde);
-                                         dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,verde);
+                                         dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,color);
+                                         dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,color);
                                          cont++;
                                          
                                        }
