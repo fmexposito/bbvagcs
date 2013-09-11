@@ -367,11 +367,11 @@ var blocks = 0;
                                        }else{
                                         if (criti == "Todas"){
                                             var color;
-                                            if (filteredJson[cont][0].critic == "Alta"){
+                                            if (filteredJson[cont].critic == "Alta"){
                                                color = naranja;
-                                            } else if (filteredJson[cont][0].critic == "Media"){
+                                            } else if (filteredJson[cont].critic == "Media"){
                                                color = amarillo;
-                                            } else if (filteredJson[cont][0].critic == "Baja"){
+                                            } else if (filteredJson[cont].critic == "Baja"){
                                                color = verde;
                                             } else {
                                                color = blanco;
