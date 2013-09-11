@@ -280,7 +280,9 @@ var blocks = 0;
 				var filteredJson = [];
 				
 				for (a=0; a<numberOfClients; a++){
-					if (mainjson[a][0].critic == crit){
+          if (crit == "Todas"){
+              filteredJson = mainjson;
+          }else if (mainjson[a][0].critic == crit){
 						filteredJson.push(mainjson[a][0])
 					}			
 				}
