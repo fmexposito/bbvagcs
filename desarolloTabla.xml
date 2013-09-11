@@ -118,7 +118,7 @@ Tipo de Criticidad
          var criti = "Todas";
          var mainjson = [];
          
-       // alert("Martin guapo!");
+       alert("Martin guapo!");
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
