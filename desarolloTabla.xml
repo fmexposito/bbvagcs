@@ -312,8 +312,8 @@
                                 try
                                 {                       
                                         if (mainjson[fila][0].critic==crit){
-                                            dataAux.setCell(fila,col,mainjson[fila].name,mainjson[fila].name,data.getProperties(aux, 1));
-                                            dataAux.setCell(fila,col-1,mainjson[fila].id,mainjson[fila].id,data.getProperties(aux, 0));
+                                            dataAux.setCell(fila,col,filteredJson[fila].name,filteredJson[fila].name,data.getProperties(aux, 1));
+                                            dataAux.setCell(fila,col-1,filteredJson[fila].id,filteredJson[fila].id,data.getProperties(aux, 0));
                                         }
                                         
                                        
