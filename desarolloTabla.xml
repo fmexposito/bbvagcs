@@ -289,7 +289,7 @@ var blocks = 0;
             // loadVisualizationAPI();
                 filteredJson = mainjson;
             }else {
-                                
+                filteredJson = "";      
                 for (a=0; a<numberOfClients; a++){
                     if (mainjson[a][0].critic == crit){
                       filteredJson.push(mainjson[a][0])
