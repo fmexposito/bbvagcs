@@ -103,7 +103,7 @@
                         color: #00008B;
                 }
 </style>
-00012345
+000123456
  <select id="combo" onChange="drawTable();">
         <option value="Todas" selected>Todas</option>
         <option value="Alta">Alta</option>
@@ -335,12 +335,11 @@ var blocks = 0;
                                 try
                                 {                       
                                      console.log('SET CELL: cont - ' + cont);
-                                             dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,filteredJson[cont].critic);
-                                            dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,filteredJson[cont].critic);
-											cont = cont +1;
-                                        
-                                        
-                                       
+                                     if(cont < numberOfRows){
+                                       dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,filteredJson[cont].critic);
+                                       dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,filteredJson[cont].critic);
+                                       cont = cont +1;
+                                     }
                                 }
                                 catch (err)
                                 {
