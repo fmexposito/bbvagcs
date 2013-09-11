@@ -138,7 +138,7 @@
         {
         criti = $('#combo').val();
 		
-		if (criti != "Todas"){
+		if (criti == "Todas"){
 			 _IG_RegisterOnloadHandler(loadVisualizationAPI);
 		}else{
 			doTable(criti);
