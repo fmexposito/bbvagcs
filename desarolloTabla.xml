@@ -278,14 +278,18 @@ var blocks = 0;
           numberOfClients = mainjson.length;
 				
 				var filteredJson = [];
+            
+             if (crit == "Todas"){
+                filteredJson = mainjson;
+            }else {
 				
-				for (a=0; a<numberOfClients; a++){
-          if (crit == "Todas"){
-              filteredJson = mainjson;
-          }else if (mainjson[a][0].critic == crit){
-						filteredJson.push(mainjson[a][0])
-					}			
-				}
+                for (a=0; a<numberOfClients; a++){
+                    if (mainjson[a][0].critic == crit){
+                      filteredJson.push(mainjson[a][0])
+                   }			
+                }
+            }
+            
 				console.log('clients: ' + numberOfClients + ' filterClients: ' + filteredJson.length);
 				var numberOfRows = filteredJson.length;
              
