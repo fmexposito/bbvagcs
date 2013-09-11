@@ -103,7 +103,7 @@
                         color: #00008B;
                 }
 </style>
-0001234567
+00012345678
  <select id="combo" onChange="drawTable();">
         <option value="Todas" selected>Todas</option>
         <option value="Alta">Alta</option>
@@ -332,7 +332,7 @@ var blocks = 0;
 	   
                 for (var fila=0; fila<total; fila++)
                 { 
-                  console.log('EACH FILA:' + lines);  
+                  console.log('EACH FILA:' + lines + ' with a total: ' + total);  
                   lines++;
                         for(var col=1; col<=29; col+=4)
                         {
