@@ -118,7 +118,9 @@ Tipo de Criticidad
          var criti = "Todas";
          var mainjson = [];
          
-         var rojo = new Object {style ="background-color: rgb(256, 137, 30);color: rgb(0, 0, 0);font-family:Dialog;"};
+         var rojo = new Object();
+         rojo.style = "background-color: rgb(256, 137, 30);color: rgb(0, 0, 0);font-family:Dialog;";
+         
          
        alert("Martin guapo!");
    
