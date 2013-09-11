@@ -283,8 +283,8 @@ var blocks = 0;
 				var filteredJson = [];
             
              if (crit == "Todas"){
-             loadVisualizationAPI();
-              //  filteredJson = mainjson;
+            // loadVisualizationAPI();
+                filteredJson = mainjson;
             }else {
 				
                 for (a=0; a<numberOfClients; a++){
