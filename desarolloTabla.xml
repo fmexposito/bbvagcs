@@ -339,7 +339,7 @@ var blocks = 0;
                                 {                       
                                      console.log('SET CELL');
                                              dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,filteredJson[cont].critic);
-                                            dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,filteredJson[cont].critic);
+                                       //     dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,filteredJson[cont].critic);
 											cont = cont +1;
                                         
                                         
