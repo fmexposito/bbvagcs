@@ -313,9 +313,10 @@
                         {
                                 try
                                 {                       
-											cont = cont ++;
+											
                                             dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,data.getProperties(aux, 1));
                                             dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,data.getProperties(aux, 0));
+											cont = cont +1;
                                         
                                         
                                        
