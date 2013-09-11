@@ -326,7 +326,7 @@
                 }
                
                 // Apply formatter and set the formatted value.
-        var formatter = new google.visualization.PatternFormat("<a class='enlacetabla' href='javascript:detalle(\'' + filteredJson[fila].id + '\');' title='Ver detalle de " + filteredJson[fila].name + "'>" + filteredJson[fila].name+"</a>");
+        var formatter = new google.visualization.PatternFormat("<a class='enlacetabla' href='javascript:detalle(\' + filteredJson[fila].id + \');' title='Ver detalle de " + filteredJson[fila].name + "'>" + filteredJson[fila].name+"</a>");
                
                 formatter.format(dataAux,[1,0]);
                 formatter.format(dataAux,[5,4]);
