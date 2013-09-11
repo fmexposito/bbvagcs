@@ -126,8 +126,8 @@ Tipo de Criticidad
          
          var amarillo= new Object();
          amarillo.style = "background-color: rgb(253, 189, 44);color: rgb(0, 0, 0);font-family:Dialog;";
-		 
-		 var blanco= new Object();
+                 
+                 var blanco= new Object();
          blanco.style = "background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);font-family:Dialog;";
          
          
@@ -360,16 +360,16 @@ var blocks = 0;
                                             } else {
                                                color = blanco;
                                             }
-									   
+                                                                           
                                          dataAux.setCell(fila,col,filteredJson[cont][0].name,filteredJson[cont][0].name,color);
                                          dataAux.setCell(fila,col-1,filteredJson[cont][0].id,filteredJson[cont][0].id,color);
                                          cont++;
                                        }else{
-                                        if(cont < numberOfRows){
+                                        
                                          dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,rojo);
                                          dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,rojo);
                                          cont++;
-                                         }
+                                         
                                        }
                                       
                                       
