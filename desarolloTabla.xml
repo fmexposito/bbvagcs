@@ -136,7 +136,7 @@
         
         function drawTable()
         {
-        criti = $('combo').val();
+        criti = $('#combo').val();
    
         doTable(criti);
                 
