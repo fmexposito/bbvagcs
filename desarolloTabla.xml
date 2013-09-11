@@ -263,9 +263,9 @@
                 numberOfClients = mainjson.length;
 				
 				var filteredJson = [];
-				
-				for (a=0; a<=numberOfClients; a++){
-					if (mainjson[a][0] == crit){
+				x
+				for (a=0; a<numberOfClients; a++){
+					if (mainjson[a][0].critic == crit){
 						filteredJson.push(mainjson[a][0])
 					}			
 				}
