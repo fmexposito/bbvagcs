@@ -308,7 +308,7 @@ var blocks = 0;
                 //Create DataView
                 var view = new google.visualization.DataView(dataAux);
                 var aux = 1;
-            dataAux.addRows(total);
+            dataAux.addRows(count);
                
                 for (var columna=0;columna<8;columna++)
                 {              
