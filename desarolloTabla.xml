@@ -297,7 +297,7 @@ var blocks = 0;
                                 
                                 var filteredJson = [];
             
-             if (crit == "Todas" && tipo="Todos"){
+             if (crit == "Todas" && tipo=="Todos"){
             // loadVisualizationAPI();
                 filteredJson = mainjson;
             }else {
