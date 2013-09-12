@@ -111,6 +111,13 @@
         <option value="Baja">Baja</option>
 </select> 
 
+<span style="font-color:#3F78B2;"> Tipo de Cliente </span>
+ <select id="combo" onChange="drawTable();">
+        <option value="Todos" selected>Todos</option>
+        <option value="CIB">CIB</option>
+        <option value="BEC">BEC</option>
+</select> 
+
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
 <script type="text/javascript">
@@ -131,7 +138,7 @@
          blanco.style = "background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);font-family:Dialog;";
          
          
-     //  alert("Martin guapo!");
+       alert("Break point!");
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
@@ -385,7 +392,7 @@ var blocks = 0;
                                       
                                       
                                      }
-									 
+                                                                         
                                 }
                                 catch (err)
                                 {
@@ -419,4 +426,3 @@ var blocks = 0;
 ]]>
 </Content>
 </Module>
-
