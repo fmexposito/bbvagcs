@@ -104,7 +104,7 @@
                 }
 </style>
 <div id="divcombos" style="margin-left:510px;">
-<span style="font-color:#3F78B2; font-size:85%"> Tipo de Criticidad </span>
+<span style="font-color:#3F78B2; font-size:85%; font-weight:bold;"> Tipo de Criticidad </span>
  <select id="combo" onChange="drawTable();" style="margin-right:10px;">
         <option value="Todas" selected>Todas</option>
         <option value="Alta">Alta</option>
@@ -113,7 +113,7 @@
 		<option value="">Sin Criticidad</option>
 </select> 
 
-<span style="font-color:#3F78B2; font-size:85%"> Tipo de Cliente </span>
+<span style="font-color:#3F78B2; font-size:85%; font-weight:bold;"> Tipo de Cliente </span>
  <select id="comboTipo" onChange="drawTable();">
         <option value="Todos" selected>Todos</option>
         <option value="CIB">CIB</option>
