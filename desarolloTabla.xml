@@ -103,7 +103,7 @@
                         color: #00008B;
                 }
 </style>
-<div style="float:right;">
+<div id="divcombos" style="float:right;">
 <span style="font-color:#3F78B2;"> Tipo de Criticidad </span>
  <select id="combo" onChange="drawTable();" style="margin-right:10px;">
         <option value="Todas" selected>Todas</option>
@@ -250,13 +250,12 @@
                                         var titcriti = data.getValue(aux,2);
                                         var nombre = data.getValue(aux,1);
                                         var idcliente = data.getValue(aux,0);
-                                        var tipoCliente = data.getValue(aux,3);
                                         aux++;      
                             
                                         json = [];
                                                                                 
                                                                                 
-                                      json.push({name: nombre, critic: titcriti, id: idcliente, tipo:tipoCliente})
+                                      json.push({name: nombre, critic: titcriti, id: idcliente})
                                                                           mainjson.push(json);
                                 }
                                 catch (err)
