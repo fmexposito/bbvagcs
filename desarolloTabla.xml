@@ -141,7 +141,7 @@
          blanco.style = "background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);font-family:Dialog;";
          
          
-       alert("Break point!");
+       //alert("Break point!");
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
@@ -383,7 +383,7 @@ var blocks = 0;
                                 {                       
                                      console.log('SET CELL: cont - ' + cont + ' vs ' + numberOfRows);
                                      if(cont < numberOfRows){
-                                       if (criti == "Todas"){
+                                       if (criti == "Todas" && tipo=="Todos"){
                                             var color;
                                             if (filteredJson[cont][0].critic == "Alta"){
                                                color = naranja;
