@@ -110,6 +110,7 @@
         <option value="Alta">Alta</option>
         <option value="Media">Media</option>
         <option value="Baja">Baja</option>
+		<option value="">Sin Criticidad</option>
 </select> 
 
 <span style="font-color:#3F78B2;"> Tipo de Cliente </span>
