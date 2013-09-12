@@ -113,7 +113,7 @@
 </select> 
 
 <span style="font-color:#3F78B2;"> Tipo de Cliente </span>
- <select id="combo" onChange="drawTable();">
+ <select id="comboTipo" onChange="drawTable();">
         <option value="Todos" selected>Todos</option>
         <option value="CIB">CIB</option>
         <option value="BEC">BEC</option>
@@ -125,6 +125,7 @@
 <script type="text/javascript">
    
          var criti = "Todas";
+		 var tipo = "Todos";
          var mainjson = [];
          
          var naranja = new Object();
@@ -159,9 +160,10 @@
         function drawTable()
         {
         criti = $('#combo').val();
+		tipo = $('#comboTipo').val();
                 
          
-                        doTable(criti);
+                        doTable(criti,tipo);
                 
    
         
@@ -287,7 +289,7 @@
 var lines = 0;  
 var blocks = 0;
 
-        function doTable(crit)
+        function doTable(crit,tipo)
         {
           console.clear();
           console.log('ENTERING doTable - FILTERING');      
@@ -295,16 +297,38 @@ var blocks = 0;
                                 
                                 var filteredJson = [];
             
-             if (crit == "Todas"){
+             if (crit == "Todas" && tipo="Todos"){
             // loadVisualizationAPI();
                 filteredJson = mainjson;
             }else {
                 filteredJson = [];      
-                for (a=0; a<numberOfClients; a++){
+				
+				if (crit!="Todas" && tipo=="Todos"){
+					for (a=0; a<numberOfClients; a++){
                     if (mainjson[a][0].critic == crit){
                       filteredJson.push(mainjson[a][0])
-                   }                    
-                }
+						}                    
+					}
+				}else if (crit=="Todas" && tipo!="Todos"){
+					for (a=0; a<numberOfClients; a++){
+                    if (mainjson[a][0].tipo == tipo){
+                      filteredJson.push(mainjson[a][0])
+						}                    
+					}
+				}else{
+					for (a=0; a<numberOfClients; a++){
+						if (mainjson[a][0].tipo == tipo && mainjson[a][0].critic==crit){
+						  filteredJson.push(mainjson[a][0])
+							}                    
+						}
+				}
+				
+				
+             //   for (a=0; a<numberOfClients; a++){
+             //       if (mainjson[a][0].critic == crit){
+             //         filteredJson.push(mainjson[a][0])
+             //      }                    
+             //   }
             }
             
                                 console.log('clients: ' + numberOfClients + ' filterClients: ' + filteredJson.length);
