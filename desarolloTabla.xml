@@ -141,7 +141,7 @@
          blanco.style = "background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);font-family:Dialog;";
          
          
-       //alert("Break point!");
+       alert("Break point!");
    
         var gadgetHelper = null;
         var prefs = new _IG_Prefs(); // User preferences
