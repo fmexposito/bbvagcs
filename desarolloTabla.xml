@@ -86,6 +86,7 @@
                 tr.header td.google-visualization-table-sorthdr {
                         border: 1px solid #fff !important;
                         color: #00008B;
+						display:none;
                        
                 }
                 a.enlaceTabla,
