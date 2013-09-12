@@ -250,7 +250,7 @@
                                         var titcriti = data.getValue(aux,2);
                                         var nombre = data.getValue(aux,1);
                                         var idcliente = data.getValue(aux,0);
-										var tipoCliente = data.getValue(aux,3);
+										var tipoCliente = data.getValue(aux,4);
                                         aux++;      
                             
                                         json = [];
