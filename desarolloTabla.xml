@@ -103,7 +103,7 @@
                         color: #00008B;
                 }
 </style>
-<div id="divcombos" style="margin-left:510px;">
+<div id="divcombos" style="margin-left:530px;">
 <span style="font-color:#3F78B2; font-size:75%; font-weight:bold;"> Tipo de Criticidad: </span>
  <select id="combo" onChange="drawTable();" style="margin-right:10px;">
         <option value="Todas" selected>Todas</option>
