@@ -7,7 +7,7 @@
                 <Require feature="locked-domain" />
         </ModulePrefs>
         
-        <UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />==
+        <UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
         <UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
         <UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />   
         <UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
@@ -27,7 +27,6 @@
                                 height: 45px; 
                                 font-family:  Arial, Helvetica, sans-serif;
                                 font-size:13px;
-                                font-weight:normal;
                         }
                         .filaImpar {
                                 background: #DFE3E5; 
@@ -35,7 +34,6 @@
                                 height: 45px; 
                                 font-family: Arial, Helvetica, sans-serif;
                                 font-size:13px;
-                                font-weight:normal;
                         }
                         .filaSeleccionada{
                                 background: white; 
@@ -43,7 +41,6 @@
                                 height: 45px; 
                                 font-family: Arial, Helvetica, sans-serif;
                                 font-size:13px;
-                                font-weight:normal;
                         }
                         .filaHover{
                                 background: #F0EEE2; 
@@ -51,7 +48,6 @@
                                 height: 45px;
                                 font-family: Arial, Helvetica, sans-serif;
                                 font-size:13px;
-                                font-weight:normal;
                         }
                         #tablediv table,
                         #tablediv table tr,
@@ -61,17 +57,9 @@
                         .formateoCelda {
                                 font-family: Arial, Helvetica, sans-serif !important;
                                 padding-left: 5px !important;
-                                font-weight:normal;
                         }
-                        #tablediv table, #tablediv table tr.header, #tablediv table tr.header td {
-                        background:#2966B0;
-                        color:white;
-                        font-weight: bold;
-                        text-align: left;
-                        font-family: Arial, Helvetica, sans-serif;
-                        }
-                        #tablediv tr.header td.google-visualization-table-th gradient google-visualization-table-sorthdr{
-                                background: #2966B0;    
+                        .header {
+                                background-color: #2966B0;      
                                 color: white; 
                                 font-size:14px; 
                                 font-weight: bold;
@@ -79,12 +67,6 @@
                                 font-family: Arial, Helvetica, sans-serif;
                                 height: 35px;
                         }
-                        td.google-visualization-table-th gradient google-visualization-table-sorthdr{
-                        background: none;
-                        text-align:left;
-                        
-                        }
-                        
                         a.enlaceTabla,
                         a:active.enlaceTabla,
                         a:visited.enlaceTabla {
@@ -103,7 +85,6 @@
                 <script type="text/javascript"> 
                         
                         //console.debug('tablaFichaCliente.xml version 53');
-                        alert("B");
                         
                         var gadgetHelper = null;                        
                         var varListaColumnas = "";
@@ -131,9 +112,9 @@
                                 gadgetHelper = new google.visualization.GadgetHelper();
                                 //var query = gadgetHelper.createQueryFromPrefs(prefs); 
                                 var opts = {dataType:'jsonp'};                          
-                                var query = new google.visualization.Query(urlTable);                             
+                                var query = new google.visualization.Query(urlTable, opts);                             
                                 var idCliquery = paramtoquery("ficha-");                                
-                                var querytosend = "select *  where A LIKE '" + idCliquery.toUpperCase() + "'";
+                                var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
                                 query.setQuery(querytosend);                      
                                 query.send(handleQueryResponse);
                         }
