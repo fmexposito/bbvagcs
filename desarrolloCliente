@@ -131,7 +131,7 @@
                                 gadgetHelper = new google.visualization.GadgetHelper();
                                 //var query = gadgetHelper.createQueryFromPrefs(prefs); 
                                 var opts = {dataType:'jsonp'};                          
-                                var query = new google.visualization.Query(urlTable, opts);                             
+                                var query = new google.visualization.Query(urlTable);                             
                                 var idCliquery = paramtoquery("ficha-");                                
                                 var querytosend = "select *  where A LIKE '" + idCliquery.toUpperCase() + "'";
                                 query.setQuery(querytosend);                      
