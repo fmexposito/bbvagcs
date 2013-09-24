@@ -133,7 +133,7 @@
                                 var opts = {dataType:'jsonp'};                          
                                 var query = new google.visualization.Query(urlTable, opts);                             
                                 var idCliquery = paramtoquery("ficha-");                                
-                                var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
+                                var querytosend = "select *  where A =='" + idCliquery.toUpperCase() + "'";
                                 query.setQuery(querytosend);                      
                                 query.send(handleQueryResponse);
                         }
