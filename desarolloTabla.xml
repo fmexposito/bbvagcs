@@ -1,4 +1,4 @@
-?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Module>
         <ModulePrefs title="Tabla desde docs"
         description="Tabla cargada con paginacion y parametrizada."
