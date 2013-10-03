@@ -1,247 +1,459 @@
-<?xml version="1.0" encoding="UTF-8"?>
+?xml version="1.0" encoding="UTF-8"?>
 <Module>
-        <ModulePrefs title="Tabla listado de clientes. tablaFichaCliente.xml"
-                description="Tabla cargada con paginacion y parametrizada."
-                author_affiliation="Capgemini">
-                <Require feature="idi"/>
-                <Require feature="locked-domain" />
-        </ModulePrefs>
-        
-        <UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
-        <UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
-        <UserPref name="_Col" default_value="" display_name="Escoger primeras n columnas:" />   
-        <UserPref name="VarListaColumnas" default_value="" display_name="Lista de columnas a mostrar (números de columna separados por comas):" />
-        <UserPref name="_Row" default_value="" display_name="Escoger primeras n filas:" />      
-        <UserPref name="VarListaFilas" default_value="" display_name="Rango de filas a mostrar (número-número):" />
-        <UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
+        <ModulePrefs title="Tabla desde docs"
+        description="Tabla cargada con paginacion y parametrizada."
+        author_affiliation="Capgemini">
+        <Require feature="idi"/>
+        <Require feature="locked-domain" />
+</ModulePrefs>
+ 
+<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+<UserPref name="_NumElemPorPagina" default_value="" display_name="Número de elementos por página:" required="true" />
+<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/clientes/ficha-):" />
 
-        <Content type="html">
-                <![CDATA[
+<Content type="html"><![CDATA[
 
-                <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
 
-                <style type="text/css">
-                         .filaPar {
-                                background: white; 
-                                border-bottom: 1px solid #E2E2E2; 
-                                height: 45px; 
-                                font-family:  Arial, Helvetica, sans-serif;
-                                font-size:13px;
-                                font-weight:normal;
-                        }
-                        .filaImpar {
-                                background: #DFE3E5; 
-                                border-bottom: 1px solid #E2E2E2; 
-                                height: 45px; 
-                                font-family: Arial, Helvetica, sans-serif;
-                                font-size:13px;
-                                font-weight:normal;
-                        }
-                        .filaSeleccionada{
-                                background: white; 
-                                border-bottom: 1px solid #A22E212; 
-                                height: 45px; 
-                                font-family: Arial, Helvetica, sans-serif;
-                                font-size:13px;
-                                font-weight:normal;
-                        }
-                        .filaHover{
-                                background: #F0EEE2; 
-                                border-bottom: 1px solid #B2B2B2; 
-                                height: 45px;
-                                font-family: Arial, Helvetica, sans-serif;
-                                font-size:13px;
-                                font-weight:normal;
-                        }
-                        #tablediv table,
-                        #tablediv table tr,
-                        #tablediv table tr td {
-                                font-family: Arial, Helvetica, sans-serif !important;
-                        }               
-                        .formateoCelda {
-                                font-family: Arial, Helvetica, sans-serif !important;
-                                padding-left: 5px !important;
-                                font-weight:normal;
-                        }
-                        #tablediv table, #tablediv table tr.header, #tablediv table tr.header td {
-                        background:#2966B0;
-                        color:white;
-                        font-weight: bold;
-                        text-align: left;
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<style type="text/css">
+          .filaPar {
+                        background: white;
+                        border-bottom: 1px solid #E2E2E2;
+                        height: 45px;
+                        font-family:  Arial, Helvetica, sans-serif;
+                        font-size:12px;
+                        color: #00008B;
+                }
+                .filaImpar {
+                        background: #DFE3E5;
+                        border-bottom: 1px solid #E2E2E2;
+                        height: 45px;
                         font-family: Arial, Helvetica, sans-serif;
-                        }
-                        #tablediv tr.header td.google-visualization-table-th gradient google-visualization-table-sorthdr{
-                                background: #2966B0;    
-                                color: white; 
-                                font-size:14px; 
-                                font-weight: bold;
-                                text-align: center;
-                                font-family: Arial, Helvetica, sans-serif;
-                                height: 35px;
-                        }
-                        td.google-visualization-table-th gradient google-visualization-table-sorthdr{
-                        background: none;
-                        text-align:left;
-                        
-                        }
-                        
-                        a.enlaceTabla,
-                        a:active.enlaceTabla,
-                        a:visited.enlaceTabla {
-                                color: #3F78B2;
-                        }
-                        a:hover.enlaceTabla {
-                                color: #009EE5;
-                        }
-                        img.loading {
-                                margin: 5% 0 0 40%;
-                        }
-                </style>
+                        font-size:12px;
+                        color: #00008B;
+                }
+                .filaSeleccionada{
+                        background: white;
+                        border-bottom: 1px solid #A22E212;
+                        height: 45px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size:12px;
+                        color: #00008B;
+                }
+                .filaHover{
+                        background: #FFFFFF;
+                        border-bottom: 1px solid #B2B2B2;
+                        height: 45px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size:12px;
+                        color: #00008B;
+                }
+                #tablediv table{
+                width:100%;
+                }
+               
+                #tablediv table,
+                #tablediv table tr,
+                #tablediv table tr td {
+                        font-family: Arial, Helvetica, sans-serif !important;
+                        border: 1px solid #fff !important;
+                        color: #00008B;
+                        font-size:12px;
+                }              
+                .formateoCelda {
+                        font-family: Arial, Helvetica, sans-serif !important;
+                        padding-left: 5px !important;
+                        color: #00008B;
+                }
+                .header {
+                        background-color: #fff;        
+                        color: white;
+                        font-size:14px;
+                        font-weight: bold;
+                        text-align: center;
+                        font-family: Arial, Helvetica, sans-serif;
+                        height: 35px;
+                        border: 1px solid #fff !important;                              
+                }
+               
+                tr.header td.google-visualization-table-th{
+                        border: 1px solid #fff !important;
+                        color: #00008B;
+                        visibility:hidden;}
+                tr.header td.google-visualization-table-sorthdr {
+                        border: 1px solid #fff !important;
+                        color: #00008B;
+                                                display:none;
+                       
+                }
+                a.enlaceTabla,
+                a:active.enlaceTabla,
+                a:visited.enlaceTabla {
+                        color: #00008B;
+                        font-size:12px;                        
+                }
+                a:hover.enlaceTabla {
+                        color: #009EE5;
+                        font-size:12px;
+                }
+                img.loading {
+                        margin: 5% 0 0 7%;
+                        color: #00008B;
+                }
+</style>
+<div id="divcombos" style="margin-left:530px;">
+<span style="font-color:#3F78B2; font-size:75%; font-weight:bold;"> Tipo de Criticidad: </span>
+ <select id="combo" onChange="drawTable();" style="margin-right:10px;">
+        <option value="Todas" selected>Todas</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+                <option value="">Sin Criticidad</option>
+</select>
 
-                <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
+<span style="font-color:#3F78B2; font-size:75%; font-weight:bold;"> Tipo de Cliente: </span>
+ <select id="comboTipo" onChange="drawTable();">
+        <option value="Todos" selected>Todos</option>
+        <option value="CIB">CIB</option>
+        <option value="BEC">BEC</option>
+                <option value="">Sin Clasificar</option>
+</select>
+</div>
 
-                <script type="text/javascript"> 
-                        
-                        //console.debug('tablaFichaCliente.xml version 53');
-                        
-                        var gadgetHelper = null;                        
-                        var varListaColumnas = "";
-                        var     _Col = "";                      
-                        var prefs = new _IG_Prefs(); // User preferences        
-                        var     _Col = prefs.getInt("_Col");
-                        var urlTable = prefs.getString("_table_query_url");
-                        var     numElePag = prefs.getInt("_NumElemPorPagina");
-                        var varListaColumnas = prefs.getString("VarListaColumnas");                     
-                        var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
-                        var     _Row = prefs.getInt("_Row");
-                        var varListaFilas = prefs.getString("VarListaFilas"); 
-                        
-                        
-                        _IG_RegisterOnloadHandler(loadVisualizationAPI);
-                        
-                        function loadVisualizationAPI() 
-                        {
-                                google.load("visualization", "1", {"packages": ["table"]});
-                                google.setOnLoadCallback(sendQuery);
-                        }
+<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
 
-                        function sendQuery() 
-                        {
-                                gadgetHelper = new google.visualization.GadgetHelper();
-                                //var query = gadgetHelper.createQueryFromPrefs(prefs); 
-                                var opts = {dataType:'jsonp'};                          
-                                var query = new google.visualization.Query(urlTable, opts);                             
-                                var idCliquery = paramtoquery("ficha-");                                
-                          // var querytosend = "select *  where A like '" + idCliquery.toUpperCase() + "'";
-            var querytosend = "select *";
-                                query.setQuery(querytosend);                      
-                                query.send(handleQueryResponse);
-                        }
+<script type="text/javascript">
+   
+         var criti = "Todas";
+                 var tipo = "Todos";
+         var mainjson = [];
+         
+         var naranja = new Object();
+         naranja.style = "background-color: rgb(256, 137, 30);color: rgb(0, 0, 0);font-family:Dialog;";
+         
+         var verde= new Object();
+         verde.style = "background-color: rgb(134, 200, 45);color: rgb(0, 0, 0);font-family:Dialog;";
+         
+         var amarillo= new Object();
+         amarillo.style = "background-color: rgb(253, 189, 44);color: rgb(0, 0, 0);font-family:Dialog;";
+                 
+                 var blanco= new Object();
+         blanco.style = "background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);font-family:Dialog;";
+         
+         
+       //alert("Break point!");
+   
+        var gadgetHelper = null;
+        var prefs = new _IG_Prefs(); // User preferences
+        var urlTable = prefs.getString("_table_query_url");
+        var     numElePag = prefs.getInt("_NumElemPorPagina");
+        var urlDetalleFicha = prefs.getString("VarURLBaseFicha");
+       
+        _IG_RegisterOnloadHandler(loadVisualizationAPI);
+       
+        function loadVisualizationAPI()
+        {
+                google.load("visualization", "1", {"packages": ["table"]});
+                google.setOnLoadCallback(sendQuery);
+        }
+       
+        function drawTable()
+        {
+        criti = $('#combo').val();
+                tipo = $('#comboTipo').val();
+               
+         
+                        doTable(criti,tipo);
+               
+   
+       
+               
+             
+        }
+       
+        function loadVisualizationAPI2(){
+           google.load("visualization", "1", {"packages": ["table"]});              
+           google.setOnLoadCallback(sendQuery);
+        }
 
-                        //devuelve el indicide donde se encuentra la "cadena" del array "parametros"
-                        function indiceCadena (parametros, cadena)
-                        {       
-                                for(var i=0; i<parametros.length; i++)
-                                {                                       
-                                        if(parametros[i].indexOf(cadena)>-1)
-                                        {
-                                                return i;
-                                        } 
-                                }       
-                        }
-                        
-                        // Abre el detalle de la url
-                        function detalle(id)
-                        {       
-                                var idCliente = paramtoquery("ficha-");
-                                window.parent.location.href = urlDetalleFicha + idCliente.toLowerCase() + "/detalle-proyecto-" + id.toLowerCase();
-                        }
-                        
-                        //obtiene el valor del parametro que le pasamos por url: 
-                        // para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
-                        function paramtoquery(param)
+        function sendQuery()
+        {
+                criti = $('combo').val;
+       
+                gadgetHelper = new google.visualization.GadgetHelper();
+                var opts = {dataType:'jsonp'};
+                var query = new google.visualization.Query(urlTable, opts);  
+       
+       
+                if (criti == "Baja")
+                   query.setQuery("select * where C = 'Baja'");
+                else if (criti == "Media")
+                   query.setQuery("select * where C = 'Media'");
+                else if (criti == "Alta")
+                   query.setQuery("select * where C = 'Alta'");
+                else if (criti == "Todas")
+                   query.setQuery("select * ");
+                query.send(handleQueryResponse);
+        }
+
+        function detalle(id)
+        {                              
+                window.parent.location.href = urlDetalleFicha + id.toLowerCase();              
+        }
+
+        function handleQueryResponse(response)
+        {
+                if (!gadgetHelper.validateResponse(response)) { return; }
+       
+                data = response.getDataTable();
+               
+                var count = (data.getNumberOfRows()-1)/8;
+                var roundCount = Math.ceil(count);
+                var resto = (data.getNumberOfRows())%64;
+                var result = (data.getNumberOfRows())%8;
+                var total = roundCount+result;
+               
+                var cssClassNames = {
+                        'headerRow': 'header',
+                        'tableRow': 'filaPar',
+                        'oddTableRow': 'filaImpar',
+                        'selectedTableRow': 'filaSeleccionada',
+                        'hoverTableRow': 'filaHover',
+                        'headerCell': 'header',
+                        'tableCell': 'formateoCelda',
+                        'rowNumberCell': ''
+                };
+         
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));                
+                var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};              
+                var dataAux = new google.visualization.DataTable();
+                //Create DataView
+                var view = new google.visualization.DataView(dataAux);
+                var aux = 1;
+            dataAux.addRows(total);
+               
+                for (var columna=0;columna<8;columna++)
+                {              
+                        for(var j=0;j<4;j++)
+                        {                      
+                                dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+                        }              
+                }
+       
+                for (var fila=0; fila<total; fila++)
+                {      
+                        for(var col=1; col<=29; col+=4)
                         {
-                                var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");             
-                                var indexFicha = indiceCadena(arrayParametros,param);           
-                                var arrayidCliente = arrayParametros[indexFicha].split("-");            
-                                return arrayidCliente[1];               
-                        }
-                        
-                        function handleQueryResponse(response) 
-                        {
-                                if (!gadgetHelper.validateResponse(response)) { return; }
-                        
-                                data = response.getDataTable();                         
-                                var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{0}\');" >{0}</a> ');
-                                formatter.format(data, [10,10]); // Apply formatter and set the formatted value of the first column.
-                                
-                                var cssClassNames = {
-                                        'headerRow': 'header',
-                                        'tableRow': 'filaPar',
-                                        'oddTableRow': 'filaImpar',
-                                        'selectedTableRow': 'filaSeleccionada',
-                                        'hoverTableRow': 'filaHover',
-                                        'headerCell': '',
-                                        'tableCell': 'formateoCelda',
-                                        'rowNumberCell': ''
-                                };
-                                 
-                                var chart = new google.visualization.Table(document.getElementById('tablediv'));                
-                                var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': true, 'allowHtml': true, 'cssClassNames': cssClassNames};               
-                                var view = new google.visualization.DataView(data);
-                                
-                                if (_Col!="")
+                                try
                                 {
-                                        var columnasAmostrar = [];
-                                        
-                                        for(i=0 ; i < _Col ; i++) 
-                                        { 
-                                                columnasAmostrar.push(i);
-                                        }
-                                        view.setColumns(columnasAmostrar);
+                                       //rojo = data.getProperties(aux, 1);
+                                        dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+                                        dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
+                                        var titcriti = data.getValue(aux,2);
+                                        var nombre = data.getValue(aux,1);
+                                        var idcliente = data.getValue(aux,0);
+                                                                                var tipoCliente = data.getValue(aux,4);
+                                        aux++;      
+                           
+                                        json = [];
+                                                                               
+                                                                               
+                                      json.push({name: nombre, critic: titcriti, id: idcliente, tipo: tipoCliente})
+                                                                          mainjson.push(json);
                                 }
-                                else if (varListaColumnas!="")
-                                        {
-                                                var listaColumnas = varListaColumnas.split(",");
-                                                        
-                                                if (listaColumnas.length > 0)
-                                                {
-                                                        var arrayColumnas = [];
-                                                        for(j=0; j<listaColumnas.length; j++)
-                                                        {
-                                                                indexaux = parseInt(listaColumnas[j]);
-                                                                arrayColumnas.push(indexaux);
-                                                        }
-                                                        view.setColumns(arrayColumnas);
-                                                }
-                                        }
-                                        
-                                if (_Row!="")
+                                catch (err)
                                 {
-                                        var filasAmostrar = [];
-                                        
-                                        for(i=0 ; i < _Row ; i++) 
-                                        { 
-                                                filasAmostrar.push(i);
-                                        }
-
-                                        view.setRows(filasAmostrar);
+                                        break;
                                 }
-                                
-                                else if (varListaFilas!="")
-                                        {                               
-                                                var listaFilas = varListaFilas.split("-");
-                                                if (listaFilas.length > 0)
-                                                {   
-                                                        view.setRows(parseInt(listaFilas[0]-1),parseInt(listaFilas[listaFilas.length-1]-1));
-                                                }
-                                        }
-                                
-                                chart.draw(view, options);
                         }
+                }
+               
+                // Apply formatter and set the formatted value.
+        var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+               
+                formatter.format(dataAux,[1,0]);
+                formatter.format(dataAux,[5,4]);
+                formatter.format(dataAux,[9,8]);
+                formatter.format(dataAux,[13,12]);
+                formatter.format(dataAux,[17,16]);
+                formatter.format(dataAux,[21,20]);
+                formatter.format(dataAux,[25,24]);
+                formatter.format(dataAux,[29,28]);              
 
-                </script>
-                ]]>
-        </Content>
+               
+                //Select the Columns to DataView
+                view.setColumns([1,5,9,13,17,21,25,29]);        
+                dataAux.setColumnLabel(1,"");                          
+                chart.draw(view,options);      
+        }
+var lines = 0;  
+var blocks = 0;
+
+        function doTable(crit,tipo)
+        {
+          console.clear();
+          console.log('ENTERING doTable - FILTERING');      
+          numberOfClients = mainjson.length;
+                               
+                                var filteredJson = [];
+           
+             if (crit == "Todas" && tipo=="Todos"){
+            // loadVisualizationAPI();
+                filteredJson = mainjson;
+            }else {
+                filteredJson = [];      
+                               
+                                if (crit!="Todas" && tipo=="Todos"){
+                                        for (a=0; a<numberOfClients; a++){
+                    if (mainjson[a][0].critic == crit){
+                      filteredJson.push(mainjson[a][0])
+                                                }                    
+                                        }
+                                }else if (crit=="Todas" && tipo!="Todos"){
+                                        for (a=0; a<numberOfClients; a++){
+                    if (mainjson[a][0].tipo == tipo){
+                      filteredJson.push(mainjson[a][0])
+                                                }                    
+                                        }
+                                }else{
+                                        for (a=0; a<numberOfClients; a++){
+                                                if (mainjson[a][0].tipo == tipo && mainjson[a][0].critic==crit){
+                                                  filteredJson.push(mainjson[a][0])
+                                                        }                    
+                                                }
+                                }
+                               
+                               
+             //   for (a=0; a<numberOfClients; a++){
+             //       if (mainjson[a][0].critic == crit){
+             //         filteredJson.push(mainjson[a][0])
+             //      }                    
+             //   }
+            }
+           
+                                console.log('clients: ' + numberOfClients + ' filterClients: ' + filteredJson.length);
+                                var numberOfRows = filteredJson.length;
+             
+                var count = (numberOfRows+1)/8;
+                var roundCount = Math.ceil(count);
+                var resto = (numberOfRows )%64;
+                var result = (numberOfRows )%8;
+                var total = roundCount+result;
+               
+                var cssClassNames = {
+                        'headerRow': 'header',
+                        'tableRow': 'filaPar',
+                        'oddTableRow': 'filaImpar',
+                        'selectedTableRow': 'filaSeleccionada',
+                        'hoverTableRow': 'filaHover',
+                        'headerCell': 'header',
+                        'tableCell': 'formateoCelda',
+                        'rowNumberCell': ''
+                };
+         
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));                
+                var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};              
+                var dataAux = new google.visualization.DataTable();
+                //Create DataView
+                var view = new google.visualization.DataView(dataAux);
+                var aux = 1;
+            dataAux.addRows(roundCount);
+               
+                for (var columna=0;columna<8;columna++)
+                {              
+                console.log('ENTERING COLUMNA');
+                        for(var j=0;j<4;j++)
+                        {                
+                                console.log('addColumn');    
+                                dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+                        }              
+                }
+       
+                                var cont = 0;
+           
+                for (var fila=0; fila<roundCount; fila++)
+                {
+                  console.log('EACH FILA:' + lines + ' with a total: ' + total);  
+                  lines++;
+                        for(var col=1; col<=29; col+=4)
+                        {
+                            console.log('FOR EACH COL:' + blocks);
+                            blocks++;
+                                try
+                                {                      
+                                     console.log('SET CELL: cont - ' + cont + ' vs ' + numberOfRows);
+                                     if(cont < numberOfRows){
+                                       if (criti == "Todas" && tipo=="Todos"){
+                                            var color;
+                                            if (filteredJson[cont][0].critic == "Alta"){
+                                               color = naranja;
+                                            } else if (filteredJson[cont][0].critic == "Media"){
+                                               color = amarillo;
+                                            } else if (filteredJson[cont][0].critic == "Baja"){
+                                               color = verde;
+                                            } else {
+                                               color = blanco;
+                                            }
+                                                                           
+                                         dataAux.setCell(fila,col,filteredJson[cont][0].name,filteredJson[cont][0].name,color);
+                                         dataAux.setCell(fila,col-1,filteredJson[cont][0].id,filteredJson[cont][0].id,color);
+                                         cont++;
+                                       }else{
+                                       
+                                            var color;
+                                            if (filteredJson[cont].critic == "Alta"){
+                                               color = naranja;
+                                            } else if (filteredJson[cont].critic == "Media"){
+                                               color = amarillo;
+                                            } else if (filteredJson[cont].critic == "Baja"){
+                                               color = verde;
+                                            } else {
+                                               color = blanco;
+                                            }
+                                       
+                                         dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,color);
+                                         dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,color);
+                                         cont++;
+                                         
+                                       }
+                                     
+                                     
+                                     }
+                                                                         
+                                }
+                                catch (err)
+                                {
+                                        break;
+                                }
+                        }
+                }
+               
+                // Apply formatter and set the formatted value.
+     
+                   var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
+                 
+         
+                formatter.format(dataAux,[1,0]);
+                formatter.format(dataAux,[5,4]);
+                formatter.format(dataAux,[9,8]);
+                formatter.format(dataAux,[13,12]);
+                formatter.format(dataAux,[17,16]);
+                formatter.format(dataAux,[21,20]);
+                formatter.format(dataAux,[25,24]);
+                formatter.format(dataAux,[29,28]);              
+
+               
+                //Select the Columns to DataView
+                view.setColumns([1,5,9,13,17,21,25,29]);        
+                dataAux.setColumnLabel(1,"");                          
+                chart.draw(view,options);      
+        }
+             
+</script>
+]]>
+</Content>
 </Module>
 
