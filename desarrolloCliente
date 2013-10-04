@@ -86,6 +86,8 @@
                         
                         //console.debug('tablaFichaCliente.xml version 53');
                         
+                        alert("A");
+                        
                         var gadgetHelper = null;                        
                         var varListaColumnas = "";
                         var     _Col = "";                      
