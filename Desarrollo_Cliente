@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-        <ModulePrefs title="Tabla listado de clientes. tablaFichaCliente.xml"
-                description="Tabla cargada con paginacion y parametrizada."
+        <ModulePrefs title="dESARROLLO _ Tabla listado de clientes. tablaFichaCliente.xml"
+                description="DESARROLLO _ Tabla cargada con paginacion y parametrizada."
                 author_affiliation="Capgemini">
                 <Require feature="idi"/>
                 <Require feature="locked-domain" />
@@ -102,7 +102,7 @@
 
                 <script type="text/javascript"> 
                         
-                        //console.debug('tablaFichaCliente.xml version 53');
+                        //console.debug('tablaFichaCliente.xml version 54');
                         
                         alert ("Version de pruebas A");
                         
