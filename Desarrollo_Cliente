@@ -104,7 +104,7 @@
                         
                         //console.debug('tablaFichaCliente.xml version 53');
                         
-                        alert ("Version de pruebas A")
+                        alert ("Version de pruebas A");
                         
                         var gadgetHelper = null;                        
                         var varListaColumnas = "";
