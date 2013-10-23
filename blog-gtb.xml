@@ -129,9 +129,7 @@ float:left;
 
 <script type="text/javascript">
 
-  console.debug('26 event.xml');
-
-    //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
+     //https://docs.google.com/a/bbva.com/spreadsheet/ccc?key=0AqlvxYdNvmcRdFZZLXlCdWZnM25qZEVIMmVYdkpraFE#gid=0
 
   var gadgetHelper = null;
   var prefs = new _IG_Prefs(); // User preferences
@@ -191,9 +189,7 @@ float:left;
       var time1 = new Date(data.getValue(0,8));
       var time2 = new Date(data.getValue(0,9));
       var html = "";
-	  console.debug(fecha);
-	  console.debug(time1);
-	  console.debug(time2);
+	  
       html +='<div class="title-page">'+data.getValue(0,1)+'</div>';
 
       html +='<div class="event-date">'+fecha.getDate()+' / '+month[fecha.getMonth()]+' / '+fecha.getFullYear()+' - '+time2.getDate()+' / '+month[time2.getMonth()]+' / '+time2.getFullYear()+'</div>';
