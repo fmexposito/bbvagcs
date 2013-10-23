@@ -108,7 +108,7 @@
 
 		var VarTextLink1 = prefs.getString("VarTextLink1");
         var VarLink1 = prefs.getString("VarLink1");
-		console.log(VarLink1);
+		
         var VarTextLink2 = prefs.getString("VarTextLink2");
         var VarLink2 = prefs.getString("VarLink2");
 
@@ -136,7 +136,6 @@
         var VarTextLink10 = prefs.getString("VarTextLink10");
         var VarLink10 = prefs.getString("VarLink10");
         
-        console.log('v1');
 
         if (VarTitleModule!="")
         {
@@ -390,8 +389,7 @@
     var prefs = new gadgets.Prefs();
 
     function registra(variable) {
-	console.log("entro en registra");
-		prefs.set(variable,document.getElementById(variable).value);
+  	prefs.set(variable,document.getElementById(variable).value);
 	}
 	gadgets.window.adjustHeight();
 </script>
