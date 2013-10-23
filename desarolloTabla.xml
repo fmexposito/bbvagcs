@@ -294,8 +294,7 @@ var blocks = 0;
 
         function doTable(crit,tipo)
         {
-          console.clear();
-          console.log('ENTERING doTable - FILTERING');      
+          
           numberOfClients = mainjson.length;
                                
                                 var filteredJson = [];
@@ -334,7 +333,6 @@ var blocks = 0;
              //   }
             }
            
-                                console.log('clients: ' + numberOfClients + ' filterClients: ' + filteredJson.length);
                                 var numberOfRows = filteredJson.length;
              
                 var count = (numberOfRows+1)/8;
@@ -364,10 +362,8 @@ var blocks = 0;
                
                 for (var columna=0;columna<8;columna++)
                 {              
-                console.log('ENTERING COLUMNA');
                         for(var j=0;j<4;j++)
                         {                
-                                console.log('addColumn');    
                                 dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
@@ -376,15 +372,12 @@ var blocks = 0;
            
                 for (var fila=0; fila<roundCount; fila++)
                 {
-                  console.log('EACH FILA:' + lines + ' with a total: ' + total);  
                   lines++;
                         for(var col=1; col<=29; col+=4)
                         {
-                            console.log('FOR EACH COL:' + blocks);
                             blocks++;
                                 try
                                 {                      
-                                     console.log('SET CELL: cont - ' + cont + ' vs ' + numberOfRows);
                                      if(cont < numberOfRows){
                                        if (criti == "Todas" && tipo=="Todos"){
                                             var color;
