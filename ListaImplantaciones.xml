@@ -61,9 +61,7 @@
 		
 		<script type="text/javascript"> 
 			
-         log.console("entro al gadget");
-			
-			
+      			
 			var gadgetHelper = null;	
 			var prefs = new _IG_Prefs(); // User preferences			
 			var urlTable = prefs.getString("_table_query_url");					
@@ -97,8 +95,7 @@
 				}
 			
 				data = response.getDataTable();		
-           log.console("antes de imprimir");
-				
+           
 				if(data.getNumberOfRows()!=0){
 				var html = "";
 				//html += "<ul>";
@@ -131,7 +128,7 @@
 						
 					
 					}
-              console.log("muestra informe");
+              
 					muestraInforme("http://docs.google.com/a/bbva.com/open?id=");
 					//document.getElementById('docs-editor').style += "overflow: hidden";
 					//window.open(http://docs.google.com/a/bbva.com/open?id=0B5Z6EoQT3skrMS0xMDM3NmJmOC01MWUwLTQ4Y2UtOTQ0MS0yMGU0ZDQyN2NiNDk,iframeOld,"style=overflow:hidden");
@@ -153,12 +150,9 @@
 			 
 			   ifrm = document.createElement("IFRAME");   
 			  // ifrm.id = 'iframeOld';
-			  console.log("1er setAttribute");
 			   ifrm.setAttribute("id", "iframeOld");
-            console.log("2o setAttribute");
-			   ifrm.setAttribute("src", urlFileNN);
-              console.log("3er setAttribute"); 
-			   ifrm.style.width = 660+"px"; 
+         ifrm.setAttribute("src", urlFileNN);
+         ifrm.style.width = 660+"px"; 
                ifrm.style.height = 660+"px"; 
 			   document.getElementById('showReport').appendChild(ifrm); 
 			   
