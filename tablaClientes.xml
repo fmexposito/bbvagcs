@@ -99,7 +99,7 @@
 
 		<script type="text/javascript"> 
 		
-			console.debug('tablaClientes.xml v 48');
+			//console.debug('tablaClientes.xml v 48');
 		
 			var gadgetHelper = null;			
 			var varListaColumnas = "";
@@ -146,14 +146,14 @@
 			//devuelve el indicide donde se encuentra la "cadena" del array "parametros"
 			function indiceCadena (parametros, cadena)
 			{		
-				console.debug('indiceCadena <-- ' +' parametros: '+ parametros + ' cadena: '+ cadena);
+				//console.debug('indiceCadena <-- ' +' parametros: '+ parametros + ' cadena: '+ cadena);
 				for(var i=0; i<parametros.length; i++)
 				{					
-					console.debug('parametros['+i+'].indexOf(cadena):' + parametros[i].indexOf(cadena));
+					//console.debug('parametros['+i+'].indexOf(cadena):' + parametros[i].indexOf(cadena));
 					if(parametros[i].indexOf(cadena)>-1)
 					{
 						return i;
-						console.debug('indiceCadena -->');
+						//console.debug('indiceCadena -->');
 					} 
 				}	
 			}
@@ -168,14 +168,14 @@
 			// para ficha-CLIGLOBAL001 , pasandole "ficha-" devuelve "CLIGLOBAL001"
 			function paramtoquery(param)
 			{
-				console.debug('idCliente <--');		
+				//console.debug('idCliente <--');		
 				var arrayParametros = gadgets.util.getUrlParameters()["parent"].split("/");		
-				console.debug('arrayParametros:' + arrayParametros);		
+				//console.debug('arrayParametros:' + arrayParametros);		
 				var indexFicha = indiceCadena(arrayParametros,param);		
-				console.debug('indexFicha:' + indexFicha);		
+				//console.debug('indexFicha:' + indexFicha);		
 				var arrayidCliente = arrayParametros[indexFicha].split("-");		
-				console.debug('arrayidCliente:' + arrayidCliente);		
-				console.debug('idCliente -->');		
+				//console.debug('arrayidCliente:' + arrayidCliente);		
+				//console.debug('idCliente -->');		
 				return arrayidCliente[1];		
 			}
 			
