@@ -33,7 +33,7 @@
 			}
 			#content_div {
 				background-image: url('https://bbvagcs.googlecode.com/svn/trunk/fondocajetinunmedio3.png');
-        background-size: 150px 400px;
+        background-size: 440px 180px;
 			}
 			#content_div a img {
 				padding: 0;
