@@ -2,8 +2,6 @@
 <Module>
 	<ModulePrefs title="Cajetin personalizado un tercio portal Global Customer Solutions"
 		title_url=""
-		height="300"
-		width="465"
 		author=""
 		author_email=""
 		description="GadGet para Google Sites que muestra textos en una caja con formato."
@@ -71,7 +69,7 @@
 			
 		</style>
 	
-		<div id="content_div"  style="height:180px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
+		<div id="content_div"  style="height:150px; background-image:url(https://bbvagcs.googlecode.com/svn/trunk/fondocajetinuntercio.png); background-color: transparent; background-repeat: no-repeat; background-position: top; "></div>
 
 		<script type="text/javascript" src="https://bbvagcs.googlecode.com/svn/trunk/bbcode2html.js"></script>
 
