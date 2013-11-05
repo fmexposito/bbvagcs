@@ -296,7 +296,7 @@
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/ebs" target="_parent">EBS</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/funcionalidades-locales" target="_parent">Funcionalidades locales</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/movilidad" target="_parent">Movilidad</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/multichanel" target="_parent">Multichannel</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales/multichanel" target="_parent">Multichanel</a></li>
 					
 					
 					
@@ -308,7 +308,7 @@
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/oneformat-pagos" target="_parent">Pagos</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/one-format-respuestas" target="_parent">Respuestas</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/formatos-locales" target="_parent">Formatos locales</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/estandares" target="_parent">Estándares</a></li>
+					<li><a href="https://sites.google.com/a/bbva.com/global-product/oneformat/estandares" target="_parent">EstÃ¡ndares</a></li>
 					
 					
 					
@@ -351,7 +351,7 @@
 	<!-- breadcrumbs-->
 	<div id="title-crumbs">breadcrumbs</div>
 
-	<!-- Elemento de men� set visited -->
+	<!-- Elemento de menú set visited -->
 	<script type="text/javascript">
 	gadgets.util.registerOnLoadHandler(datospagina);
 	function datospagina()
