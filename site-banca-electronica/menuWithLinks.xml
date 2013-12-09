@@ -373,16 +373,9 @@ ul#comunicacionessub li a {
 	<button type="button" id="botonmenu">Portal SAR</button>
 </div>
 		<ul id="dropline">
-		   <li id="home" class="homefirst"><a class="enlace" href="https://sites.google.com/a/bbva.com/implantaciones-eyp/home" target="_parent" title="home"></a></li>
+		   <li id="home" class="homefirst"><a class="enlace" href="https://sites.google.com/a/bbva.com/site-banca-electronica/" target="_parent" title="home"></a></li>
 	       <li id="colombia" class="top"><span class="enlace" tabindex="0"><span><a style="color: rgb(255, 255, 255);" href="https://sites.google.com/a/bbva.com/site-banca-electronica/colombia"  target="_parent" title="colombia">Colombia</a></span></span>
-		   <!--<ul id="fuerzasul" style="left: 0px;position:absolute; display: none;color:#fff;" class="sub">
-				<li><a id="comercializacion" href="https://sites.google.com/a/bbva.com/implantaciones-eyp/home/fuerzas-ventas/comercializacion" target="_parent">Comercializaci&oacute;n</a></li>
-				<li><a id="contratacion" href="https://sites.google.com/a/bbva.com/implantaciones-eyp/home/fuerzas-ventas/contratacion" target="_parent">Contrataci&oacute;n</a></li>
-				<li><a id="postventa" href="https://sites.google.com/a/bbva.com/implantaciones-eyp/home/fuerzas-ventas/postventa" target="_parent">Postventa y Servicing</a></li>
-				<li><a id="modelodireccion" href="https://sites.google.com/a/bbva.com/implantaciones-eyp/home/fuerzas-ventas/modelodireccion" target="_parent">Modelo direcci&oacute;n</a></li>
-				<!--<li><a id="gestion" href="https://sites.google.com/a/bbva.com/implantaciones-eyp/home/fuerzas-ventas/gestion" target="_parent">Gesti&oacute;n</a></li>-->
-		   <!--</ul>-->
-			</li>
+		  </li>
 			<li id="peru" class="top" ><span class="enlace" tabindex="1"><span><a class="principal" style="color: rgb(255, 255, 255);" href="https://sites.google.com/a/bbva.com/site-banca-electronica/peru"  target="_parent" title="Per&uacute;">Per&uacute;</a></span></span></li>
 			<li id="estado" class="top"><span class="enlace" tabindex="2"><span><a class="principal" style="color: rgb(255, 255, 255);" href="https://sites.google.com/a/bbva.com/site-banca-electronica/estados-de-servicio"  target="_parent" title="estado">Estado del Servicio</a></span></span></li>
 		
@@ -390,6 +383,31 @@ ul#comunicacionessub li a {
 	</div>
 
 	<!-- breadcrumbs-->
+	
+        <div id="title-crumbs">breadcrumbs</div>
+
+        <!-- Elemento de  visited -->
+        <script type="text/javascript">
+        gadgets.util.registerOnLoadHandler(datospagina);
+        function datospagina()
+        {
+                var parametros = gadgets.util.getUrlParameters()["parent"];    
+                if (parametros.indexOf("contacto")!=-1)
+                {
+                        document.getElementById("contact").style.backgroundColor = "#2586D7";
+                }
+               
+                if (parametros.indexOf("ayuda")!=-1)
+                {
+                        document.getElementById("help").style.backgroundColor = "#2586d7";
+                }
+               
+                       
+        }
+        </script>
+
+<!--Fin of the Breadcrumbs-->
+
 
 	<!-- Elemento de menu set visited -->
 	<script type="text/javascript">
@@ -428,153 +446,159 @@ ul#comunicacionessub li a {
 	}
 	 // End Hack indexOf Explorer
 
-	//gadgets.util.registerOnLoadHandler(datospagina);
+	gadgets.util.registerOnLoadHandler(datospagina);
 
 	</script>
 
 <!--Fin of the Breadcrumbs-->
 </div>
 <script type="text/javascript">
-	//console.log('version j4');
-    //console.log('entro en menufixed');
-	//console.log("rutapadre "+rutapadre);
 
-	function datospagina() {
-		/*var rutapadre = gadgets.util.getUrlParameters()["parent"];
-		if(rutapadre.indexOf("fuerzas-ventas")!=-1){
+        $(document).ready(function()
+        {
+				$("#dropline li.current").children("ul").css("left", "0px").show();
+                $("#dropline li.current").children(":first-child").css("color", "#c00");
+                $("#dropline li").hover(function()
+                {
+                        if(this.className.indexOf("current") == -1)  
+                        {
+								getCurrent = $(this).parent().children("li.current:eq(0)");
+                                if(this.className.indexOf("top") != -1)  
+                                {
+                                        $(this).children("a:eq(0)").css("background-color","#2586d7");
+                                }
+                                else
+                                {
+                                        $(this).children("a:eq(0)").css("color","#000");
+                                }
 
-		 	document.getElementById('fuerzasul').style.display = "block";
-		 	document.getElementById('fuerzas').style.backgroundColor="#005098";
-		 	$("#fuerzas").addClass("current");
+                                if (getCurrent = 1)
+                                {
+                                        $(this).parent().children("li.current:eq(0)").children("ul").hide();
+                                }
 
-			if(rutapadre.indexOf("/fuerzas-ventas/comercializacion")!=-1){
-				document.getElementById('comercializacion').style.backgroundColor="#2586d7";
-			}
+                                $(this).children("ul:eq(0)").css("left", "0px").show();
+                        }
+                },function()
+                        {
+                                if(this.className.indexOf("current") == -1)  
+                                {
+										getCurrent = $(this).parent().children("li.current:eq(0)");
 
-			if(rutapadre.indexOf("/fuerzas-ventas/contratacion")!=-1){
-				document.getElementById('contratacion').style.backgroundColor="#2586d7";
-			}
+                                        if(this.className.indexOf("top") != -1)
+                                        {
+                                                $(this).children("a:eq(0)").css("color","#fff");
+                                                $(this).children("a:eq(0)").css("background-color","transparent");
+                                        }
+                                        else
+                                        {                                      
+                                                $(this).children("a:eq(0)").css("color","#666");
+                                        }
 
-			if(rutapadre.indexOf("/fuerzas-ventas/postventa")!=-1){
-				document.getElementById('postventa').style.backgroundColor="#2586d7";
-			}
+                                        if (getCurrent = 1 )
+                                        {                                  
+                                                $(this).parent().children("li.current:eq(0)").children("ul").show();
+                                        }
+                                       
+                                        $(this).children("ul:eq(0)").css("left", "-99999px").hide();
+                                }
+                        }
+                );
+        });
 
-			if(rutapadre.indexOf("/fuerzas-ventas/modelodireccion")!=-1){
-				document.getElementById('modelodireccion').style.backgroundColor="#2586d7";
-			}
-
-			if(rutapadre.indexOf("/fuerzas-ventas/gestion")!=-1){
-				document.getElementById('gestion').style.backgroundColor="#2586d7";
-			}
-
-		} else if(rutapadre.indexOf("comunicaciones")!=-1) {
-
-			document.getElementById('comunicacionessub').style.display = "block";
-			document.getElementById('comunicaciones').style.backgroundColor="#005098";
-			$("#comunicaciones").addClass("current")
-
-			if(rutapadre.indexOf("/comunicaciones?tipocomunicado=red")!=-1){
-				document.getElementById('comunicacionred').style.backgroundColor="#2586d7";
-			}
-
-			if(rutapadre.indexOf("/comunicaciones/comunicaciones-bienvenida?tipocomunicado=clientes")!=-1){
-				document.getElementById('comunicacioncliente').style.backgroundColor="#2586d7";
-			}
-
-			if(rutapadre.indexOf("/comunicaciones/faqs")!=-1){
-				document.getElementById('comunicacionfaqs').style.backgroundColor="#2586d7";
-				console.log("faqs");
-			}
-
-		}*/
-	}
-
-
-	$(document).ready(function() {
-
-		datospagina();
-
-		$("#dropline li.current").children("ul").css("left", "0px").show();
-		$("#dropline li.current").children(":first-child").css("color", "#c00");
-
-		$("#dropline li").hover(function()
-		{
-			if(this.className.indexOf("current") == -1)
-			{
-				getCurrent = $(this).parent().children("li.current ul:eq(0)");
-
-				if(this.className.indexOf("top") != -1)
-				{
-					//$("#dropline li.current").css("background-color","#2586d7");
-					$(this).children("a:eq(0)").css("background-color","#2586d7");
-					$(this).children("a:eq(0)").css("color","#fff");
-				}
-				else
-				{
-					$(this).children("a:eq(0)").css("color","#fff");
-				}
-
-				if (getCurrent = 1)
-				{
-					$(this).parent().children("li.current:eq(0)").children("ul").hide();
-
-				}
-
-				$(this).children("ul:eq(0)").css("left", "0px").show();
-
-			}
-
-		},function()
-			{
-				if(this.className.indexOf("current") == -1)
-				{
-					getCurrent = $(this).parent().children("li.current:eq(0)");
-
-					if(this.className.indexOf("top") != -1)
-					{
-						$(this).children("a:eq(0)").css("color","#fff");
-						$(this).children("a:eq(0)").css("background-color","transparent");
-					}
-					else
-					{
-						$(this).children("a:eq(0)").css("color","#fff");
-					}
-
-					if (getCurrent = 1 )
-					{
-						$(this).parent().children("li.current:eq(0)").children("ul").show();
-
-					}
-
-					$(this).children("ul:eq(0)").css("left", "-99999px").hide();
-
-				}
-			}
-
-		);
-
-	});
-
-
-var prefs = new gadgets.Prefs();
-gadgets.util.registerOnLoadHandler(showBreadcrumbs);
-//console.log('breadcrumbs.xml version 6');
-
-function indice (parametros, rootSite)
-{
-	for(var i=0; i<parametros.length; i++)
-	{
-		if(parametros[i]== rootSite)
-		{
-			return i;
-		}
-	}
-}
+        var prefs = new gadgets.Prefs();
+        gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+       
+        //console.debug('breadcrumbs.xml version 6');
+       
+        function indice (parametros, rootSite)
+        {      
+				alert("indice");
+			   for(var i=0; i<parametros.length; i++)
+                {
+                        if(parametros[i]== rootSite)
+                        {
+                                return i;
+                        }
+                }      
+        }
+       
+        function showBreadcrumbs()
+        {
+				alert("show breadcrumbs");
+                // Construct the breadcrumb string
+                //var rootSite = prefs.getString("VarrootSite");
+                var rootSite = "site-banca-electronica";
+                var s ="";
+                var i,j,k = 0;
+                var base = "";
+                var barra = "/";
+                var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
+                var indexroot = indice(parametros, rootSite);  
+               
+			   alert("parametros.length ="+parametros.length);
+			   
+                for (i=0;i<parametros.length;i++)
+                {                              
+                        alert("outer iter");
+						if(i<indexroot)
+                        {
+                                base = base + parametros[i]+ "/";                              
+                        }
+                        if (parametros[i] == rootSite)
+                        {      
+                                s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
+                       
+                                for(j=i+1;j<parametros.length;++j)
+                                {  
+										alert("inner iter");
+                                        var aux = parametros[j].replace(/-/g," ");                                              
+                                       
+                                        if (aux.indexOf("?")>1)
+                                        {
+                                                var auxMov = aux.split("?");
+                                                var litEnlace = auxMov[0];
+                                        }
+                                        else
+                                        {                                                      
+                                                if (aux.indexOf("ficha")>-1)
+                                                {                                                              
+                                                        var litEnlace = "Ficha";
+                                                }
+                                                else if (aux.indexOf("detalle proyecto")>-1)
+                                                {                                                              
+                                                        var litEnlace = "Detalle Proyecto";
+                                                }
+                                                else if (aux.indexOf("contactos")>-1)
+                                                {
+                                                        var litEnlace = "Contactos";
+                                                }
+                                                else
+                                                {                                                              
+                                                        var litEnlace = aux;
+                                                }
+                                        }
+                                        if (j<parametros.length-1)
+                                        {
+                                                s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
+                                                rootSite = rootSite + "/" + parametros[j];
+                                        }
+                                        else
+                                        {                                              
+                                                s = s + " ><span class=\'currentBreadCrumb\' + parametros[j] + barra + \' >&nbsp;" + litEnlace + "</span>";
+                                        }
+                                }
+                        }
+                }
+				
+                document.getElementById("title-crumbs").innerHTML = s;    
+        }
 
 </script>
 <!-- end of content -->
 ]]></Content>
 </Module>
+
 
 
 
