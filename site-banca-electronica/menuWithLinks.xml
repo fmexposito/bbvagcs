@@ -368,10 +368,8 @@ ul#comunicacionessub li a {
 <script src="https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/js/jquery-1.js" type="text/javascript"></script>
 <div id="content">
 	<div id="menu">
-	<div class="bloqueEnlaces">
-  <div class="separatorTopMenu"><img src="https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-top-menu.png"/></div>
-	<button type="button" id="botonmenu">Portal SAR</button>
-</div>
+  <!--<div class="separatorTopMenu"><img src="https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-top-menu.png"/></div>-->
+
 		<ul id="dropline">
 		   <li id="home" class="homefirst"><a class="enlace" href="https://sites.google.com/a/bbva.com/site-banca-electronica/" target="_parent" title="home"></a></li>
 	       <li id="colombia" class="top"><span class="enlace" tabindex="0"><span><a style="color: rgb(255, 255, 255);" href="https://sites.google.com/a/bbva.com/site-banca-electronica/colombia"  target="_parent" title="colombia">Colombia</a></span></span>
@@ -381,6 +379,7 @@ ul#comunicacionessub li a {
 		
 		</ul>
 	</div>
+</div>
 
 	<!-- breadcrumbs-->
 	
