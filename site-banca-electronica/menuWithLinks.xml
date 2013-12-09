@@ -557,7 +557,7 @@ ul#comunicacionessub li a {
 
 
 var prefs = new gadgets.Prefs();
-//gadgets.util.registerOnLoadHandler(showBreadcrumbs);
+gadgets.util.registerOnLoadHandler(showBreadcrumbs);
 //console.log('breadcrumbs.xml version 6');
 
 function indice (parametros, rootSite)
