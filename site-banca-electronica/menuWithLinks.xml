@@ -368,9 +368,7 @@ ul#comunicacionessub li a {
 <script src="https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/js/jquery-1.js" type="text/javascript"></script>
 <div id="content">
 	<div id="menu">
-  <!--<div class="separatorTopMenu"><img src="https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-top-menu.png"/></div>-->
-
-		<ul id="dropline">
+    <ul id="dropline">
 		   <li id="home" class="homefirst"><a class="enlace" href="https://sites.google.com/a/bbva.com/site-banca-electronica/" target="_parent" title="home"></a></li>
 	       <li id="colombia" class="top"><span class="enlace" tabindex="0"><span><a style="color: rgb(255, 255, 255);" href="https://sites.google.com/a/bbva.com/site-banca-electronica/colombia"  target="_parent" title="colombia">Colombia</a></span></span>
 		  </li>
@@ -512,7 +510,6 @@ ul#comunicacionessub li a {
        
         function indice (parametros, rootSite)
         {      
-				alert("indice");
 			   for(var i=0; i<parametros.length; i++)
                 {
                         if(parametros[i]== rootSite)
@@ -524,8 +521,7 @@ ul#comunicacionessub li a {
        
         function showBreadcrumbs()
         {
-				alert("show breadcrumbs");
-                // Construct the breadcrumb string
+				// Construct the breadcrumb string
                 //var rootSite = prefs.getString("VarrootSite");
                 var rootSite = "site-banca-electronica";
                 var s ="";
@@ -535,12 +531,10 @@ ul#comunicacionessub li a {
                 var parametros = gadgets.util.getUrlParameters()["parent"].split("/");  
                 var indexroot = indice(parametros, rootSite);  
                
-			   alert("parametros.length ="+parametros.length);
 			   
                 for (i=0;i<parametros.length;i++)
                 {                              
-                        alert("outer iter");
-						if(i<indexroot)
+                        if(i<indexroot)
                         {
                                 base = base + parametros[i]+ "/";                              
                         }
@@ -550,8 +544,7 @@ ul#comunicacionessub li a {
                        
                                 for(j=i+1;j<parametros.length;++j)
                                 {  
-										alert("inner iter");
-                                        var aux = parametros[j].replace(/-/g," ");                                              
+										var aux = parametros[j].replace(/-/g," ");                                              
                                        
                                         if (aux.indexOf("?")>1)
                                         {
