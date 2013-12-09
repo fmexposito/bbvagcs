@@ -19,8 +19,7 @@
 		margin-top:0px;
 		position:relative;
 		height:40px;
-		float:left;
-	}
+	 }
 	#dropline {
 		position:relative;
 		float:left;
