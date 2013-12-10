@@ -186,6 +186,9 @@ width: 60px;
 background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-menu.png') no-repeat scroll right top transparent;
 }
 
+#colombia,
+#peru,
+#estado,
 #direccion,
 #fuerzas,
 #administracion,
@@ -195,6 +198,39 @@ background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/se
   float: left;
   text-align: center;
   background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-menu.png') no-repeat scroll right top transparent;
+}
+
+#colombia{
+	width:123.5px;
+	padding-left:0px;
+}
+
+#colombia:hover{
+	background-color: #2586d7;
+	color:#fff;
+	height: 39px;
+}
+
+#peru{
+	width:123.5px;
+	padding-left:0px;
+}
+
+#peru:hover{
+	background-color: #2586d7;
+	color:#fff;
+	height: 39px;
+}
+
+#estado{
+	width:123.5px;
+	padding-left:0px;
+}
+
+#estado:hover{
+	background-color: #2586d7;
+	color:#fff;
+	height: 39px;
 }
 
 #fuerzas{
@@ -589,6 +625,7 @@ ul#comunicacionessub li a {
 <!-- end of content -->
 ]]></Content>
 </Module>
+
 
 
 
