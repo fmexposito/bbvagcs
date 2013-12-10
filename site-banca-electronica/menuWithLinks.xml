@@ -226,13 +226,13 @@ width: 60px;
 
 
 
-#comunicaciones a .imageunnim{
+/*#comunicaciones a .imageunnim{
 border:none;
 }
 
 #comunicaciones a .imageunnim img{
 border:none;
-}
+}*/
 
 dropline ul li a:hover{
 background-color: #2586d7;
@@ -272,7 +272,7 @@ background-color: #2586d7;
 #dropline li#fuerzas.top .enlace span a:hover {
 background-color: #2586d7;
 }
-*/
+
 
 #dropline li#fuerzas:hover {
 background-color: #2586d7;
@@ -308,7 +308,7 @@ ul#comunicacionessub li {
 ul#comunicacionessub li a {
 	height:28px;
 	line-height:30px;
-}
+}*/
 </style>
 <script src="https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/js/jquery-1.js" type="text/javascript"></script>
 <div id="content">
@@ -535,6 +535,7 @@ ul#comunicacionessub li a {
 <!-- end of content -->
 ]]></Content>
 </Module>
+
 
 
 
