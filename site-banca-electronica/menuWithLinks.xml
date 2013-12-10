@@ -15,10 +15,6 @@
 	way to fit your requirements.
 	*/
 
-	td { 
-		height: 60px !important;
-	}	
-
 	#menu {
 		margin-top:0px;
 		position:relative;
