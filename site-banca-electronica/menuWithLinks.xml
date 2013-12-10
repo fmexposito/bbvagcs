@@ -491,8 +491,7 @@ ul#comunicacionessub li a {
                                 for(j=i+1;j<parametros.length;++j)
                                 {  
 															var aux = parametros[j].replace(/-/g," ");                                              
-										alert("aux="+aux);
-                                       
+										
                                         if (aux.indexOf("?")>1)
                                         {
                                                 var auxMov = aux.split("?");
@@ -502,13 +501,11 @@ ul#comunicacionessub li a {
                                         {                                                      
                                                 if (aux.indexOf("ayuda")>-1)
                                                 {                                                              
-                                                        alert("ayuda");
-														var litEnlace = "Ayuda";
+                                                       var litEnlace = "Ayuda";
                                                 }
                                                 else if (aux.indexOf("contacto")>-1)
                                                 {
-                                                        alert("contacto");
-														var litEnlace = "Contacto";
+                                                       var litEnlace = "Contacto";
                                                 }
                                                 else
                                                 {                                                              
@@ -517,14 +514,12 @@ ul#comunicacionessub li a {
                                         }
                                         if (j<parametros.length-1)
                                         {
-												alert("link bread");
 											   s = s + "<a class=\'linkBreadCrumb\' href=\'"+ base  + rootSite + barra  + parametros[j] + barra + "\' target=\'_parent\' title=\'" + litEnlace + "\'> >&nbsp;" + litEnlace + "</a>";
                                                 rootSite = rootSite + "/" + parametros[j];
                                         }
                                         else
                                         {                                              
-                                                alert("current bread");
-												s = s + " ><span class=\'currentBreadCrumb\'" + parametros[j] + barra + "\' >&nbsp;" + litEnlace + "</span>";
+                                                s = s + " ><span class=\'currentBreadCrumb\'" + parametros[j] + barra + "\' >&nbsp;" + litEnlace + "</span>";
                                         }
                                 }
                         }
