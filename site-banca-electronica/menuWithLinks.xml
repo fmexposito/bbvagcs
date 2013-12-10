@@ -15,6 +15,10 @@
 	way to fit your requirements.
 	*/
 
+	td { 
+		height: 60px !important;
+	}	
+
 	#menu {
 		margin-top:0px;
 		position:relative;
@@ -502,11 +506,11 @@ ul#comunicacionessub li a {
                                                 if (aux.indexOf("ayuda")>-1)
                                                 {                                                              
                                                        var litEnlace = "Ayuda";
-                                                }
+										        }
                                                 else if (aux.indexOf("contacto")>-1)
                                                 {
                                                        var litEnlace = "Contacto";
-                                                }
+											    }
                                                 else
                                                 {                                                              
                                                         var litEnlace = aux;
@@ -532,6 +536,7 @@ ul#comunicacionessub li a {
 <!-- end of content -->
 ]]></Content>
 </Module>
+
 
 
 
