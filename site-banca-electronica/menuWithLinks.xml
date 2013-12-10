@@ -330,10 +330,10 @@ ul#comunicacionessub li a {
 
         <!-- Elemento de  visited -->
         <script type="text/javascript">
-        gadgets.util.registerOnLoadHandler(datospagina);
+        /*gadgets.util.registerOnLoadHandler(datospagina);
         function datospagina()
         {
-                var parametros = gadgets.util.getUrlParameters()["parent"];    
+				var parametros = gadgets.util.getUrlParameters()["parent"];    
                 if (parametros.indexOf("contacto")!=-1)
                 {
                         document.getElementById("contact").style.backgroundColor = "#2586D7";
@@ -341,11 +341,11 @@ ul#comunicacionessub li a {
                
                 if (parametros.indexOf("ayuda")!=-1)
                 {
-                        document.getElementById("help").style.backgroundColor = "#2586d7";
+                        document.getElementById("ayuda").style.backgroundColor = "#2586d7";
                 }
                
                        
-        }
+        }*/
         </script>
 
 <!--Fin of the Breadcrumbs-->
@@ -388,7 +388,7 @@ ul#comunicacionessub li a {
 	}
 	 // End Hack indexOf Explorer
 
-	gadgets.util.registerOnLoadHandler(datospagina);
+//	gadgets.util.registerOnLoadHandler(datospagina);
 
 	</script>
 
@@ -485,12 +485,13 @@ ul#comunicacionessub li a {
                         }
                         if (parametros[i] == rootSite)
                         {      
-                                s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
-                       
+                                
+								s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
+								
                                 for(j=i+1;j<parametros.length;++j)
                                 {  
-										var aux = parametros[j].replace(/-/g," ");                                              
-                                       
+															var aux = parametros[j].replace(/-/g," ");                                              
+										
                                         if (aux.indexOf("?")>1)
                                         {
                                                 var auxMov = aux.split("?");
@@ -498,17 +499,13 @@ ul#comunicacionessub li a {
                                         }
                                         else
                                         {                                                      
-                                                if (aux.indexOf("ficha")>-1)
+                                                if (aux.indexOf("ayuda")>-1)
                                                 {                                                              
-                                                        var litEnlace = "Ficha";
+                                                        var litEnlace = "Ayuda";
                                                 }
-                                                else if (aux.indexOf("detalle proyecto")>-1)
-                                                {                                                              
-                                                        var litEnlace = "Detalle Proyecto";
-                                                }
-                                                else if (aux.indexOf("contactos")>-1)
+                                                else if (aux.indexOf("contacto")>-1)
                                                 {
-                                                        var litEnlace = "Contactos";
+                                                        var litEnlace = "Contacto";
                                                 }
                                                 else
                                                 {                                                              
