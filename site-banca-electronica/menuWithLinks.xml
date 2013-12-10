@@ -183,7 +183,7 @@
 
 #home{
 width: 60px;
-background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-menu.png') no-repeat scroll right top transparent;
+//background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-menu.png') no-repeat scroll right top transparent;
 }
 
 #colombia,
@@ -191,7 +191,7 @@ background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/se
 #estado{
   float: left;
   text-align: center;
-  background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-menu.png') no-repeat scroll right top transparent;
+  //background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-menu.png') no-repeat scroll right top transparent;
 }
 
 #colombia{
