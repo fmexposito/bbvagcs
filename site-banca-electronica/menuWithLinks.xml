@@ -188,20 +188,13 @@ background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/se
 
 #colombia,
 #peru,
-#estado,
-#direccion,
-#fuerzas,
-#administracion,
-#aplicaciones,
-#novedades,
-#implantaciones{
+#estado{
   float: left;
   text-align: center;
   background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/separador-menu.png') no-repeat scroll right top transparent;
 }
 
 #colombia{
-	width:123.5px;
 	padding-left:0px;
 }
 
@@ -212,7 +205,6 @@ background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/se
 }
 
 #peru{
-	width:123.5px;
 	padding-left:0px;
 }
 
@@ -223,7 +215,6 @@ background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/se
 }
 
 #estado{
-	width:123.5px;
 	padding-left:0px;
 }
 
@@ -233,88 +224,7 @@ background: url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/se
 	height: 39px;
 }
 
-#fuerzas{
-	width:123.5px;
-	padding-left:0px;
-}
 
-#fuerzas:hover{
-	background-color: #2586d7;
-	color:#fff;
-	height: 39px;
-}
-
-#administracion{
-	width:123.5px;
-	padding-left:7px;
-}
-
-#administracion:hover{
-	background-color: #2586d7;
-	color:#fff;
-	height: 39px;
-}
-
-#direccion{
-	width:90px;
-	padding-left:12px;
-}
-
-#direccion:hover{
-	background-color: #2586d7;
-	color:#fff;
-	height: 39px;
-}
-
-#aplicaciones{
-	width:114px;
-	padding-left:16px;
-}
-
-#aplicaciones:hover{
-	background-color: #2586d7;
-	color:#fff;
-	height: 39px;
-}
-
-#novedades{
-	width:100px;
-	padding-left:15px;
-}
-
-#novedades:hover{
-	background-color: #2586d7;
-	color:#fff;
-	height: 39px;
-}
-
-#implantaciones{
-	width:123.5px;
-	padding-left:9px;
-}
-
-#implantaciones:hover{
-	background-color: #2586d7;
-	color:#fff;
-	height: 39px;
-}
-
-#comunicaciones{
-	float: left;
-	text-align: left;
-	width:151px;
-	background:url('https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/last-option-menu.png') no-repeat scroll 134px; center;
-	padding-left:15px;
-}
-
-
-#comunicaciones:hover{
-	background-color: #2586d7;
-	color:#fff;
-	height: 39px;
-	border-top-right-radius:3px;
-	border-bottom-right-radius:3px;
-}
 
 #comunicaciones a .imageunnim{
 border:none;
