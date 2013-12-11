@@ -245,7 +245,7 @@ background-color: #2586d7;
 color:#fff;
 }
 
-
+/*
 a#comercializacion:hover,
 a#contratacion:hover,
 a#postventa:hover,
@@ -256,7 +256,7 @@ a#comunicacioncliente:hover,
 a#comunicacionfaqs:hover {
 background-color: #2586d7;
 color:#fff;
-}
+}*/
 
 #home a{
 width:60px;
@@ -532,6 +532,7 @@ ul#comunicacionessub li a {
 <!-- end of content -->
 ]]></Content>
 </Module>
+
 
 
 
