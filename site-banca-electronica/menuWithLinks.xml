@@ -156,7 +156,7 @@
 	padding-top:2px;
 }*/
 
-#botonmenu{
+/*#botonmenu{
 	background:url("https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/green-button.png")no-repeat;
 	color:white;
 	font-size:12px;
@@ -169,7 +169,7 @@
 	cursor:pointer;
 	margin-top:5px;
 	font-weight:bold;
-}
+}*/
 
 /*.separatorTopMenu{
 	float:left;
