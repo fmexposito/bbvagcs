@@ -171,7 +171,7 @@
 	font-weight:bold;
 }
 
-.separatorTopMenu{
+/*.separatorTopMenu{
 	float:left;
 	margin-bottom:10px;
 }
@@ -179,7 +179,7 @@
 .separatorTopMenu img{
 	margin-right: 22px;
 	margin-left:22px;
-}
+}*/
 
 #home{
 width: 60px;
