@@ -330,22 +330,25 @@ ul#comunicacionessub li a {
 
         <!-- Elemento de  visited -->
         <script type="text/javascript">
-        /*gadgets.util.registerOnLoadHandler(datospagina);
+        gadgets.util.registerOnLoadHandler(datospagina);
         function datospagina()
         {
 				var parametros = gadgets.util.getUrlParameters()["parent"];    
-                if (parametros.indexOf("contacto")!=-1)
+                if (parametros.indexOf("colombia")!=-1)
                 {
-                        document.getElementById("contact").style.backgroundColor = "#2586D7";
+                        document.getElementById("colombia").style.backgroundColor = "#2586D7";
                 }
                
-                if (parametros.indexOf("ayuda")!=-1)
+                if (parametros.indexOf("peru")!=-1)
                 {
-                        document.getElementById("ayuda").style.backgroundColor = "#2586d7";
+                        document.getElementById("peru").style.backgroundColor = "#2586d7";
                 }
                
-                       
-        }*/
+				if (parametros.indexOf("estados-de-servicio")!=-1)
+                {
+                        document.getElementById("estado").style.backgroundColor = "#2586d7";
+                }			
+        }
         </script>
 
 <!--Fin of the Breadcrumbs-->
@@ -388,7 +391,7 @@ ul#comunicacionessub li a {
 	}
 	 // End Hack indexOf Explorer
 
-//	gadgets.util.registerOnLoadHandler(datospagina);
+	gadgets.util.registerOnLoadHandler(datospagina);
 
 	</script>
 
