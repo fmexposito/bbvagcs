@@ -119,7 +119,7 @@
 		text-transform: capitalize;
 	}
 /* aqui */
-.bloqueEnlaces {
+/*.bloqueEnlaces {
 	float:right;
 	text-align: right;
 	margin-bottom: 10px;
@@ -136,8 +136,8 @@
 	font-family: BBVA Web Light, Arial;
 	font-weight: normal;
 
-}
-
+}*/
+/*
 .buzon{
 	float:left;
 	padding-top:10px;
@@ -154,7 +154,7 @@
 .buzontext{
 	float:left;
 	padding-top:2px;
-}
+}*/
 
 #botonmenu{
 	background:url("https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/green-button.png")no-repeat;
