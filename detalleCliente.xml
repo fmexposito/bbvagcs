@@ -273,14 +273,15 @@
         //console.log("TEST 01");
         //console.log(estado);
         
-        if((estado.indexOf('Implementado')>-1) || (estado.indexOf('En Penny Test')>-1)){
+        if((estado.indexOf('Implementado')>-1) || (estado.indexOf('Implementado con OK')>-1) || (estado.indexOf('Implementado sin OK')>-1) ){
               document.getElementById('idProduccion').innerHTML = "Sí"; 
 				}else { 
               document.getElementById('idProduccion').innerHTML = "No"; 				
 				} 
 				
          
-      if((!estado.indexOf('Nueva')>-1) && (!estado.indexOf('Parado')>-1) && (!estado.indexOf('Excluido')>-1)){  
+      //if((!estado.indexOf('Nueva')>-1) && (!estado.indexOf('Parado')>-1) && (!estado.indexOf('Excluido')>-1)){  
+      if((!estado.indexOf('En Test - Conectividad')>-1) && (!estado.indexOf('En Test - Integración')>-1) && (!estado.indexOf('En Test - Aceptación')>-1)){  
 					document.getElementById('idImplementacion').innerHTML = "Sí";
 				}else { 
             document.getElementById('idImplementacion').innerHTML = "No";
