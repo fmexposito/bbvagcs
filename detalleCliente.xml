@@ -274,7 +274,7 @@
         //console.log("TEST 01");
         console.log(estado);
        
-        if((estado.indexOf('Implementado')>-1) || (estado.indexOf('Implementado con OK')>-1) || (estado.indexOf('Implementado sin OK')>-1) || (!estado.indexOf('En Penny Test')>-1) ){
+if((estado.indexOf('Implementado')>-1) || (estado.indexOf('Implementado con OK')>-1) || (estado.indexOf('Implementado sin OK')>-1) || (estado.indexOf('En Penny Test')>-1) ){
               document.getElementById('idProduccion').innerHTML = "Sí";
                                 }else {
               document.getElementById('idProduccion').innerHTML = "No";                                
@@ -282,11 +282,11 @@
                                
          
       //if((!estado.indexOf('Nueva')>-1) && (!estado.indexOf('Parado')>-1) && (!estado.indexOf('Excluido')>-1)){  
-      if((!estado.indexOf('En Test - Conectividad')>-1) && (!estado.indexOf('En Test - Integración')>-1) && (!estado.indexOf('En Test - Aceptación')>-1) && (!estado.indexOf('P-950 en confección')>-1) && (!estado.indexOf('PDTE Valoración IT')>-1) && (!estado.indexOf('PDTE Plan de Trabajo IT')>-1) && (!estado.indexOf('PDTE Visto Bueno del CL del plan de trabajo')>-1) && (!estado.indexOf('')>-1) && (!estado.indexOf('')>-1) && (!estado.indexOf('En Desarrollo')>-1) && (!estado.indexOf('PDTE Implantar')>-1) && (!estado.indexOf('PDTE Doc Alcance en GCS')>-1)){  
-                                        document.getElementById('idImplementacion').innerHTML = "Sí";
+      if((estado.indexOf('En Test - Conectividad')>-1) && (estado.indexOf('En Test - Integración')>-1) && (estado.indexOf('En Test - Aceptación')>-1) && (estado.indexOf('P-950 en confección')>-1) && (estado.indexOf('PDTE Valoración IT')>-1) && (estado.indexOf('PDTE Plan de Trabajo IT')>-1) && (estado.indexOf('PDTE Visto Bueno del CL del plan de trabajo')>-1) && (estado.indexOf('En Desarrollo')>-1) && (estado.indexOf('PDTE Implantar')>-1) && (estado.indexOf('PDTE Doc Alcance en GCS')>-1)){  
+                                        document.getElementById('idImplementacion').innerHTML = "No";
                                 }else {
-            document.getElementById('idImplementacion').innerHTML = "No";
-        }      
+            document.getElementById('idImplementacion').innerHTML = "Sí";
+        }     
                                 document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';                        
                         }
                        
