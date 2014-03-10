@@ -289,28 +289,27 @@
 	<div id="menu">
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a id="metodologia" class="principal" href="https://sites.google.com/a/bbva.com/global-customer-service/metodologia" target="_parent">Metodología</a>
-			</li>
+			<li class="top"><a id="metodologia" class="principal"  target="_parent">Implementación</a></li>			
+			<li class="top"><a id="documentos" class="principal" target="_parent">Transaccionalidad</a></li>
 			
-			
-			<li class="top"><a id="documentos" class="principal" href="https://sites.google.com/a/bbva.com/global-customer-service/documentos-alcance" target="_parent">Documentos de alcance</a>
-			</li>
-			
-			<li class="top"><a id="proyectos" class="principal" href="https://sites.google.com/a/bbva.com/global-customer-service/proyectos" target="_parent">Proyectos</a>
-			<ul style="left:-99999px; display: none;" class="sub">
+			<li class="top"><a id="proyectos" class="principal"  target="_parent">Cartera Viva</a>
+		<!-- 	<ul style="left:-99999px; display: none;" class="sub">
 					
-					
+				  
 					<li><a href="https://sites.google.com/a/bbva.com/global-customer-service/proyectos/proyectos-cliente" target="_parent">Proyectos cliente</a></li>
 					<li><a href="https://sites.google.com/a/bbva.com/global-customer-service/proyectos/herramientas" target="_parent">Herramientas</a></li>
+				  
 					
 					
-					
-			</ul></li>
-			<li class="top"><a id="enlaces" class="principal" href="https://sites.google.com/a/bbva.com/global-customer-service/enlaces-productos" target="_parent">Enlaces a productos</a>
+			</ul>  -->  </li>
+			<li class="top"><a id="enlaces" class="principal"  target="_parent">Global NetCash</a>
 			</li>
 			
-			<li class="top"><a id="gestion" class="principal" href="https://sites.google.com/a/bbva.com/global-customer-service/gestion-del-conocimiento" target="_parent">Gestión del conocimiento</a>
-			</li>
+			<li class="top"><a id="gestion" class="principal"  target="_parent">Post Venta</a></li>
+         
+         <li class="top"><a id="contact" class="principal"  target="_parent">Contact Centers</a></li>
+         
+         <li class="top"><a id="repo" class="principal"  target="_parent">Repositorio de Informes</a></li>
 			
 		</ul>
 	</div>
@@ -343,6 +342,14 @@
 		if (parametros.indexOf("gestion")!=-1)
 		{
 			document.getElementById("gestion").style.backgroundColor = "#2586d7";
+		}
+     if (parametros.indexOf("contact")!=-1)
+		{
+			document.getElementById("contac").style.backgroundColor = "#2586d7";
+		}
+     if (parametros.indexOf("repo")!=-1)
+		{
+			document.getElementById("repo").style.backgroundColor = "#2586d7";
 		}
 			
 	}
