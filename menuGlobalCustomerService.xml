@@ -289,8 +289,8 @@
 	<div id="menu">
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a id="metodologia" class="principal"  target="_parent">Implementación</a></li>			
-			<li class="top"><a id="documentos" class="principal" target="_parent">Transaccionalidad</a></li>
+			<li class="top"><a id="metodologia" class="principal"  target="_parent" href="https://sites.google.com/a/bbva.com/global-customer-service/home/implementaciones">Implementación</a></li>			
+			<li class="top"><a id="documentos" class="principal" target="_parent" href="https://sites.google.com/a/bbva.com/global-customer-service/home/transaccionalidad">Transaccionalidad</a></li>
 			
 			<li class="top"><a id="proyectos" class="principal"  target="_parent">Cartera Viva</a>
 		<!-- 	<ul style="left:-99999px; display: none;" class="sub">
@@ -302,7 +302,7 @@
 					
 					
 			</ul>  -->  </li>
-			<li class="top"><a id="enlaces" class="principal"  target="_parent">Global NetCash</a>
+			<li class="top"><a id="enlaces" class="principal"  target="_parent" href="https://sites.google.com/a/bbva.com/global-customer-service/home/gnc">Global NetCash</a>
 			</li>
 			
 			<li class="top"><a id="gestion" class="principal"  target="_parent">Post Venta</a></li>
