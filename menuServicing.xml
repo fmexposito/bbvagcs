@@ -42,72 +42,72 @@
 	The original version of this stylesheet and the associated (x)html
 	is available at http://www.stunicholls.com/menu/jquery-dropline-7.html
 	Copyright (c) 2005-2008 Stu Nicholls. All rights reserved.
-	This stylesheet and the associated (x)html may be modified in any 
+	This stylesheet and the associated (x)html may be modified in any
 	way to fit your requirements.
 	*/
 
 	#menu {
-		margin-top:0px; 
-		position:relative; 
+		margin-top:0px;
+		position:relative;
 		height:38px;
 	}
 	#dropline {
-		position:relative; 
-		font-size:12px; 
-		height:38px; 
+		position:relative;
+		font-size:12px;
+		height:38px;
 		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/fondomenuhome38.png) no-repeat;
 	}
-	#dropline, 
+	#dropline,
 	#dropline ul {
-		padding:0px; 
-		margin:0; 
-		list-style:none; 
+		padding:0px;
+		margin:0;
+		list-style:none;
 		width:948px;
 	}
 	#dropline table {
-		border-collapse:collapse; 
-		margin:-1px -10px 0 0; 
-		padding:0; 
-		width:0; 
-		height:0; 
+		border-collapse:collapse;
+		margin:-1px -10px 0 0;
+		padding:0;
+		width:0;
+		height:0;
 		font-size:12px;
 	}
 	#dropline li {
-		float:left; 
+		float:left;
 		height:38px;
 	}
 	#dropline li a {
-		float:left; 
-		display:block; 
-		height:37px; 
-		line-height:38px; 
-		padding:0 20px 0 10px; 
-		font-family:arial, sans-serif; 
-		font-size:11px; 
-		color:#fff; 
-		text-decoration:none; 
+		float:left;
+		display:block;
+		height:37px;
+		line-height:38px;
+		padding:0 20px 0 10px;
+		font-family:arial, sans-serif;
+		font-size:11px;
+		color:#fff;
+		text-decoration:none;
 		font-weight:bold;
 		padding:0px 19px 0px 10px;
 	}
 	#dropline li ul li a {
 		color: rgb(102, 102, 102);
 	}
-	#dropline li a.principal { 
+	#dropline li a.principal {
 		color:#fff;
 	}
-	#dropline li a.down { 
-		color:#fff; 
+	#dropline li a.down {
+		color:#fff;
 		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/down.gif) no-repeat right center;
 	}
 	#dropline li ul li a.down {
-		font-size:14px; 
+		font-size:14px;
 		font-weight:bold;
 	}
 	#dropline li ul {
-		position:absolute; 
-		top:38px; 
-		left:-9999px; 
-		z-index:10; 
+		position:absolute;
+		top:38px;
+		left:-9999px;
+		z-index:10;
 		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/fade.png);
 	}
 	#dropline li ul.floatRight li {
@@ -136,7 +136,7 @@
 		fon-weight: normal;
 		text-decoration:none;		
 		text-transform: capitalize;
-	} 
+	}
 	.currentBreadCrumb {
 		fon-weight: bold;
 		font-size:12px;
@@ -163,12 +163,12 @@
 				{
 					$(this).children("a:eq(0)").css("background-color","#2586d7");
 				}
-				else 
+				else
 				{
 					$(this).children("a:eq(0)").css("color","#000");
 				}
 
-				if (getCurrent = 1) 
+				if (getCurrent = 1)
 				{
 					$(this).parent().children("li.current:eq(0)").children("ul").hide();
 				}
@@ -181,17 +181,17 @@
 				{
 					getCurrent = $(this).parent().children("li.current:eq(0)");
 
-					if(this.className.indexOf("top") != -1) 
+					if(this.className.indexOf("top") != -1)
 					{
 						$(this).children("a:eq(0)").css("color","#fff");
 						$(this).children("a:eq(0)").css("background-color","transparent");
 					}
-					else 
+					else
 					{					
 						$(this).children("a:eq(0)").css("color","#666");
 					}
 
-					if (getCurrent = 1 ) 
+					if (getCurrent = 1 )
 					{				    
 						$(this).parent().children("li.current:eq(0)").children("ul").show();
 					}
@@ -214,7 +214,7 @@
 			if(parametros[i]== rootSite)
 			{
 				return i;
-			} 
+			}
 		}	
 	}
 	
@@ -236,7 +236,7 @@
 			{
 				base = base + parametros[i]+ "/";				
 			}
-			if (parametros[i] == rootSite) 
+			if (parametros[i] == rootSite)
 			{	
 				s = "&nbsp;<a class=\'linkBreadCrumb\' href=\'"+ base + rootSite + barra + "\' target=\'_parent\' title=\' " + parametros[i].replace(/-/g," ") + "  \'>home</a>";
 			
@@ -294,6 +294,7 @@
 			<li class="top"><a id="informes" class="principal" href="https://sites.google.com/a/bbva.com/servicing/informes-servicing" target="_parent">Informes de servicing</a>
 		    </li>
 			<li class="top"><a id="documentos" class="principal" href="https://sites.google.com/a/bbva.com/servicing/documentacion-servicing" target="_parent">Documentos de servicing</a>
+ <li class="top"><a id="documentos" class="principal" href="https://sites.google.com/a/bbva.com/servicing/registro-servicing" target="_parent">Paso a servicing</a>
 			</li>
 			
 			
@@ -331,7 +332,7 @@
 	</script>
 
 <!--Fin of the Breadcrumbs-->
-</div> 
+</div>
 <!-- end of content -->
 ]]></Content>
 </Module>
