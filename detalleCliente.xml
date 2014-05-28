@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs title="Datos del cliente. Ficha cliente. detallleCliente.xml"
-		description=""
-		author_affiliation="Capgemini">
-		<Require feature="idi"/>
-		<Require feature="locked-domain" />
-	</ModulePrefs>
-	
-	<UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
-	<UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
+        <ModulePrefs title="Datos del cliente. Ficha cliente. detallleCliente.xml"
+                description=""
+                author_affiliation="Capgemini">
+                <Require feature="idi"/>
+                <Require feature="locked-domain" />
+        </ModulePrefs>
+       
+        <UserPref name="_table_query_url" default_value="" display_name="Data source url (Ej:https://docs.google.com/spreadsheet/ccc?key=0AoYEewut2JmZdG5HM2VLTTdwQUlLdmhnMk1DLXBWZl)" required="true" />
+        <UserPref name="VarURLBaseFicha" default_value="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha-" display_name="URL base desde la que se construirá la ficha (Ej: https://sites.google.com/a/bbva.com/portal-gcs/home/clientes/ficha- ):" />
 
-	<Content type="html">
-		<![CDATA[
+        <Content type="html">
+                <![CDATA[
 
 
                 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
@@ -122,7 +122,7 @@
                 <div id="detalleFicha">
                         <div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
                         <ul id="datosFicha">
-                               
+                                <li style="display:hidden;">Criticidad: <span id="idCriticidad"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
                                 <li>En Producción: <span id="idProduccion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
                                 <li>En Implementación: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
                                 <li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
@@ -286,7 +286,7 @@ if((estado.indexOf('Implementado')>-1) || (estado.indexOf('Implementado con OK')
                                         document.getElementById('idImplementacion').innerHTML = "Sí";
                                 }else {
             document.getElementById('idImplementacion').innerHTML = "No";
-        }       
+        }      
                                 document.getElementById('imagenCliente').innerHTML ='<img border="0" src="' + data.getValue(0,5) +'">';                        
                         }
                        
@@ -311,6 +311,6 @@ if((estado.indexOf('Implementado')>-1) || (estado.indexOf('Implementado con OK')
                 </script>
 
 
-		]]>
-	</Content>
+                ]]>
+        </Content>
 </Module>
