@@ -122,7 +122,7 @@
                 <div id="detalleFicha">
                         <div id="imagenCliente"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
                         <ul id="datosFicha">
-                                <li style="display:hidden;">Criticidad: <span id="idCriticidad"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
+                                <li style="display:none;">Criticidad: <span id="idCriticidad"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
                                 <li>En Producción: <span id="idProduccion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
                                 <li>En Implementación: <span id="idImplementacion"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
                                 <li>Países: <span id="idPaises"><img class="loading" width="15" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></span></li>
