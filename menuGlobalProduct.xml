@@ -290,62 +290,23 @@
 		<ul id="dropline">
 			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/global-product/" target="_parent" onclick="mark"></a></li>
 			<li class="top"><a id="canales" class="principal" href="https://sites.google.com/a/bbva.com/global-product/global-net-cash" target="_parent">Global Net Cash</a>
-			<ul style="left:-99999px; display: none;" class="sub">
-					
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/global-net-cash/manuales" target="_parent">Manuales</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/global-net-cash/circuitos" target="_parent">Circuitos</a></li>
-				  
-					
-					
-					
-			</ul>
+			
 			</li>
 			<li class="top"><a id="oneformat" class="principal" href="https://sites.google.com/a/bbva.com/global-product/one-format" target="_parent">One format</a>
-			<ul style="left:-99999px; display: none;" class="sub">
-					
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/argentina" target="_parent">Argentina</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/chile" target="_parent">Chile</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/colombia" target="_parent">Colombia</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/espana" target="_parent">España</a></li>
-          <li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/mexico" target="_parent">México</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/peru" target="_parent">Perú</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/portugal" target="_parent">Portugal</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/venezuela" target="_parent">Venezuela</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/bbva-londres" target="_parent">BBVA Londres</a></li>
-          <li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/bbva-n-york" target="_parent">BBVA N.York</a></li>
-
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-format/bbva-paris" target="_parent">BBVA Paris</a></li>
-
-
-					
-					
-			</ul>
+			
 			</li>
 			<li class="top"><a id="otrosservicios" class="principal" href="https://sites.google.com/a/bbva.com/global-product/core-net-cash" target="_parent">Core Net Cash</a>
 			</li>
          
 			<li class="top"><a id="helpdesk" class="principal" href="https://sites.google.com/a/bbva.com/global-product/canales-directos" target="_parent">Canales Directos</a>
-			<ul style="left:-99999px; display: none;" class="sub">
-					
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales-directos/manuales" target="_parent">Manuales</a></li>
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/canales-directos/circuitos" target="_parent">Circuitos</a></li>
-		  
-					
-					
-					
-			</ul></li>
+			</li>
 			<li class="top"><a id="comingsoon" class="principal" href="https://sites.google.com/a/bbva.com/global-product/one-bank" target="_parent">One Bank</a>
-			<ul style="left:-99999px; display: none;" class="sub">
-			
-					<li><a href="https://sites.google.com/a/bbva.com/global-product/one-bank/manual" target="_parent">Manual</a></li>
-				  
-					
-					
-			</ul></li>
+			</li>
          
      <li class="top"><a id="metodologia" class="principal" href="https://sites.google.com/a/bbva.com/global-product/metodologia" target="_parent">Metodología</a>
 			</li>
-			
+			 <li class="top"><a id="formulario" class="principal" href="https://sites.google.com/a/bbva.com/global-product/formulario-solicitud" target="_parent">Formulario de Solicitud</a>
+			</li>
 		</ul>
 	</div>
 
