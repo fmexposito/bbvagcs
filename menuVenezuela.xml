@@ -292,14 +292,14 @@
 	
 	<div id="menu">
 		<ul id="dropline">
-			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" href="https://sites.google.com/a/bbva.com/portal-gcs/home/" target="_parent" onclick="mark"></a></li>
-			<li class="top"><a class="principal" href="#" target="_parent">Opción 1</a></li>
-      <li class="top"><a class="principal" href="#" target="_parent">Opción 2</a></li>
-      <li class="top"><a class="principal" href="#" target="_parent">Opción 3</a></li>
-      <li class="top"><a class="principal" href="#" target="_parent">Opción 4</a></li>
-      <li class="top"><a class="principal" href="#" target="_parent">Opción 5</a></li>
-      <li class="top"><a class="principal" href="#" target="_parent">Opción 6</a></li>
-      <li class="top"><a class="principal" href="#" target="_parent">Opción 7</a></li>
+			<li class="home"><a style="color:#fff;width:10px;margin-left:5px;" target="_parent" onclick="mark"></a></li>
+			<li class="top"><a class="principal" target="_parent">Opción 1</a></li>
+      <li class="top"><a class="principal" target="_parent">Opción 2</a></li>
+      <li class="top"><a class="principal" target="_parent">Opción 3</a></li>
+      <li class="top"><a class="principal" target="_parent">Opción 4</a></li>
+      <li class="top"><a class="principal" target="_parent">Opción 5</a></li>
+      <li class="top"><a class="principal" target="_parent">Opción 6</a></li>
+      <li class="top"><a class="principal" target="_parent">Opción 7</a></li>
 			
 		  
 			
