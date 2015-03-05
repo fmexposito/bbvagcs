@@ -268,7 +268,7 @@
 					<li><a href="https://sites.google.com/a/bbva.com/portal-gcs/home/onboarding-clients/catalogo-de-servicios" target="_parent">Catálogo de Servicios</a></li>
 				</ul>-->
 			</li>
-			<li class="top"><a id="clientes" class="principal" href="https://sites.google.com/a/bbva.com/portal-gcs/home/clientes" target="_parent">Clientes</a>
+			<li class="top"><a id="clientes" class="principal" href="https://gcs-areacliente.appspot.com/clients.do" target="_parent">Clientes</a>
 			<li class="top"><a id="servicing" class="principal" href="https://sites.google.com/a/bbva.com/servicing/" target="_parent">Servicing</a>
 				<!--<ul style="left: -99999px; display: none;" class="sub">
 					
