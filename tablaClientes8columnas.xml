@@ -123,7 +123,7 @@
 </select> -->
 
 <div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>
-hello
+
 <script type="text/javascript">
    
         var gadgetHelper = null;
