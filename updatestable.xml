@@ -189,7 +189,7 @@
                 {              
                         for(var j=0;j<4;j++)
                         {                      
-                              //  dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+                               dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
        
@@ -199,7 +199,7 @@
                         {
                                 try
                                 {                              
-                                        dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
+                                        //dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
                                         dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
                                         aux++;                  
                                 }
