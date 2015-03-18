@@ -189,7 +189,7 @@
                 {              
                         for(var j=0;j<4;j++)
                         {                      
-                                dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+                                dataAux.addColumn('string',"hola soy tober"); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
        
