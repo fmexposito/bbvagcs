@@ -182,7 +182,7 @@
                 var dataAux = new google.visualization.DataTable();
                 //Create DataView
                 var view = new google.visualization.DataView(dataAux);
-                var aux = 1;
+                var aux = 0;
             dataAux.addRows(total);
                
                 for (var columna=0;columna<8;columna++)
@@ -192,7 +192,7 @@
                                 dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
-        dataAux.setCell(1,1,data.getValue(0,1),data.getFormattedValue(0,1),data.getProperties(0, 1));
+        dataAux.setCell(1,1,data.getFormattedValue(0,1),data.getFormattedValue(0,1),data.getProperties(0, 1));
         /*
                 for (var fila=0; fila<total; fila++)
                 {      
