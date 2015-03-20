@@ -258,7 +258,7 @@
                                         var tipoCliente = data.getValue(aux,4);
                                         var anio1 = data.getValue(aux,5)
                                         aux++;      
-                           
+                           console.log(anio1);
                                         json = [];
                                                                                
                                                                                
