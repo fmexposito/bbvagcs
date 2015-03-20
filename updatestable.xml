@@ -189,10 +189,11 @@
                 {              
                         for(var j=0;j<4;j++)
                         {                      
-                                dataAux.addColumn('string',"hola soy tober"); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
+                                dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
-       
+        dataAux.setCell(1,1,data.getValue(1,1),data.getFormattedValue(1,1),data.getProperties(1, 1));
+        /*
                 for (var fila=0; fila<total; fila++)
                 {      
                         for(var col=1; col<=29; col+=4)
@@ -208,7 +209,7 @@
                                         break;
                                 }
                         }
-                }
+                }*/
                
                 // Apply formatter and set the formatted value.
         var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
