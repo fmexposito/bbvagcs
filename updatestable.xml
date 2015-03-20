@@ -177,7 +177,7 @@
                         'rowNumberCell': ''
                 };
          
-      			var chart = new google.visualization.Table(document.getElementById('tablediv'));                
+        var chart = new google.visualization.Table(document.getElementById('tablediv'));                
                 var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};              
                 var dataAux = new google.visualization.DataTable();
                 //Create DataView
@@ -192,20 +192,13 @@
                                 dataAux.addColumn('string',"hola soy tober"); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
-                for (var fila=0; fila<total; fila++)
-                	{      
-						dataAux.setCell(fila,1,data.getValue(fila,1),data.getFormattedValue(fila,1),data.getProperties(fila, 1));
-       				}
        
-       /*
                 for (var fila=0; fila<total; fila++)
                 {      
                         for(var col=1; col<=29; col+=4)
                         {
                                 try
-                                {  
-                                
-                                	                            
+                                {                              
                                         dataAux.setCell(fila,col,data.getValue(aux,1),data.getFormattedValue(aux,1),data.getProperties(aux, 1));
                                         dataAux.setCell(fila,col-1,data.getValue(aux,0),data.getFormattedValue(aux,0),data.getProperties(aux, 0));
                                         aux++;                  
@@ -215,7 +208,7 @@
                                         break;
                                 }
                         }
-                }*/
+                }
                
                 // Apply formatter and set the formatted value.
         var formatter = new google.visualization.PatternFormat('<a class="enlacetabla" href="javascript:detalle(\'{1}\');" title="Ver detalle de {0}">{0}</a>');
