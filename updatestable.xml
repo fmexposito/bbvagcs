@@ -192,7 +192,7 @@
                                 dataAux.addColumn('string',""); // Si quiero coger el valor, en este caso "cliente" habria que colocar data.getValue(0,j)
                         }              
                 }
-        dataAux.setCell(1,1,data.getValue(1,1),data.getFormattedValue(1,1),data.getProperties(1, 1));
+        dataAux.setCell(1,1,data.getValue(0,1),data.getFormattedValue(0,1),data.getProperties(0, 1));
         /*
                 for (var fila=0; fila<total; fila++)
                 {      
