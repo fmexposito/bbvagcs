@@ -394,8 +394,8 @@ var blocks = 0;
                                                color = blanco;
                                             }
                                                                            
-                                         dataAux.setCell(fila,col,filteredJson[cont][0].name,filteredJson[cont][0].name,color);
-                                         dataAux.setCell(fila,col-1,filteredJson[cont][0].id,filteredJson[cont][0].id,color);
+                                         dataAux.setCell(fila,col,filteredJson[cont][0].anio,filteredJson[cont][0].anio,color);
+                                         dataAux.setCell(fila,col-1,filteredJson[cont][0].anio,filteredJson[cont][0].anio,color);
                                          cont++;
                                        }else{
                                        
