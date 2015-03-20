@@ -194,7 +194,7 @@
                 }
                 for (var fila=0; fila<total; fila++)
                 	{      
-dataAux.setCell(fila,col,data.getValue(fila,5),data.getFormattedValue(fila,1),data.getProperties(fila, 1));
+dataAux.setCell(fila,1,data.getValue(fila,5),data.getFormattedValue(fila,1),data.getProperties(fila, 1));
        				}
        
        /*
