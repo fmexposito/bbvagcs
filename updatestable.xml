@@ -233,11 +233,7 @@
                 tipo = $('#comboTipo').val();
                
          
-                        doTable(criti,tipo);
-               
-   
-       
-               
+                        doTable(criti,tipo);   
              
         }
        
@@ -294,7 +290,7 @@
                         'rowNumberCell': ''
                 };
          
-        var chart = new google.visualization.Table(document.getElementById('tablediv'));                
+      			  var chart = new google.visualization.Table(document.getElementById('tablediv'));                
                 var options = { 'page': 'enable', 'pageSize': numElePag, 'alternatingRowStyle': false, 'allowHtml': true, 'cssClassNames': cssClassNames};              
                 var dataAux = new google.visualization.DataTable();
                 //Create DataView
@@ -477,7 +473,7 @@ var blocks = 0;
                                                color = blanco;
                                             }
                                        
-                                         dataAux.setCell(fila,col,filteredJson[cont].name,filteredJson[cont].name,color);
+                                         dataAux.setCell(fila,col,filteredJson[cont].anio,filteredJson[cont].anio,color);
                                          dataAux.setCell(fila,col-1,filteredJson[cont].id,filteredJson[cont].id,color);
                                          cont++;
                                          
