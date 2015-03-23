@@ -178,7 +178,7 @@
 </select>
 </div>
 
-<span style="font-color:#3F78B2; font-size:75%; font-weight:bold;"> A&ntileo: </span>
+<span style="font-color:#3F78B2; font-size:75%; font-weight:bold;"> Año: </span>
  <select id="comboTipo" onChange="drawTable();">
         <option value="Todos" selected>Todos</option>
         <option value="2013">2013</option>
