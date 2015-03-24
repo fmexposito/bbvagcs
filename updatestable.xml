@@ -107,7 +107,7 @@
 <div id="divcombos" style="margin-left:515px;">
 <span style="font-color:#3F78B2; font-size:75%; font-weight:bold;"> Tipo de Criticidad: </span>
  <select id="combo" onChange="drawTable();" style="margin-right:10px;">
-        <option value="Todas" selected>Todas</option>
+        <option value="Todos" selected>Todas</option>
         <option value="Alta">Alta</option>
         <option value="Media">Media</option>
         <option value="Baja">Baja</option>
@@ -323,7 +323,7 @@
                                         var tipoCliente = data.getValue(aux,4);
                                         var anio1 = data.getValue(aux,3);
                                         aux++;      
-console.log(anio1);
+ 
                                         json = [];
                                                                                
                                                                                
@@ -459,7 +459,7 @@ var blocks = 0;
                                                color = blanco;
                                             }
                                                                            
-                                         dataAux.setCell(fila,col,filteredJson[cont][0].anio,filteredJson[cont][0].anio,color);
+                                         dataAux.setCell(fila,col,filteredJson[cont][0].name,filteredJson[cont][0].name,color);
                                          dataAux.setCell(fila,col-1,filteredJson[cont][0].id,filteredJson[cont][0].id,color);
                                          cont++;
                                        }else{
