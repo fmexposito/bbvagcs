@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+	<ModulePrefs title="Tabla desde docs Pruebas"
+	description="Tabla cargada con paginacion y parametrizada."
+	author_affiliation="Capgemini">
+	
+</ModulePrefs>
+  
+<Content type="html"><![CDATA[
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<style type="text/css">
+	  .filaPar {
+			background: white; 
+			border-bottom: 1px solid #E2E2E2; 
+			height: 45px; 
+			font-family:  Arial, Helvetica, sans-serif;
+			font-size:12px;
+			color: #00008B;
+	  }
+</style>
+<div id="content">
+	<table>
+		<tr>
+		  <td></td>
+		  <td class="filaPar">En curso</td>
+		  <td></td>
+		  <td class="filaPar">Implantado</td>
+		</tr>
+	</table>
+</div> 
+]]>
+</Content>
+</Module>
