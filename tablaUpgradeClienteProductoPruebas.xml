@@ -65,10 +65,7 @@
     var NUMCOL = 6;
     var years =['2013','2014','2015'];
     var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
-    var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];
-	
-	document.write("prueba");
-	
+    var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];	
     function creacionTablas(){
       for(var i = 0; i < years.length; i++) {
         cuerpo += "<h2>"+ years[i] +"</h2>"+
