@@ -70,8 +70,10 @@
         </tr>
       </table>
       <br>
+      <p>prueba</p>
   <script type="text/javascript"> 
-    var URL='https://www.googleapis.com/freebase/v1/text/en/bob_dylan';
+    //var URL='https://www.googleapis.com/freebase/v1/text/en/bob_dylan';
+    var URL='https://spreadsheets.google.com/feeds/list/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64/od6/public/values?alt=json';
     function Get(URL){
       var Httpreq = new XMLHttpRequest(); // a new request
       Httpreq.open("GET",URL,false);
@@ -79,7 +81,8 @@
       return Httpreq.responseText;          
     }
     var json_obj = JSON.parse(Get(URL));
-    document.write(json_obj.result);
+    //document.getElementById('prueba').innerHTML = json_obj.result;
+    document.getElementById('prueba').innerHTML = json_obj.feed.entry[0].title.$t;
   </script>
   </div> 
 ]]>
