@@ -71,7 +71,7 @@
         </tr>
       </table>
       <br>
-  <div id="tablediv"></div>
+  
   <script type="text/javascript"> 
     var cuerpo="";
     var urlTable = prefs.getString("_table_query_url");
