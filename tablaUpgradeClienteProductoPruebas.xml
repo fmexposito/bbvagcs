@@ -71,30 +71,15 @@
       </table>
       <br>
   <script type="text/javascript"> 
-    var cuerpo="";
-    var NUMCOL = prefs.getString("_NumElemPorFila");
-    var years =['2013','2014','2015'];
-    var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
-    var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];	
-    function creacionTablas(){
-      for(var i = 0; i < years.length; i++) {
-        cuerpo += "<h2>"+ years[i] +"</h2>"+
-                  "<hr>"+
-                    "<table class='marginTabla'>"+ 
-                      "<tr>";   
-        for(var j = 0; j < upgrades[i].length; j++) {
-            cuerpo +=   "<td><button class='registros "+ fase[i][j] +"'>"+ upgrades[i][j] +"</button></td>";
-            if((j+1)%NUMCOL == 0 ){
-            cuerpo += "</tr>"+
-                      "<tr>"; 
-            }
-        }
-          cuerpo +=   "</tr>"+
-                    "</table>";  
-      }
-      document.write(cuerpo);
+    var URL='https://www.googleapis.com/freebase/v1/text/en/bob_dylan';
+    function Get(URL){
+      var Httpreq = new XMLHttpRequest(); // a new request
+      Httpreq.open("GET",URL,false);
+      Httpreq.send(null);
+      return Httpreq.responseText;          
     }
-    creacionTablas();
+    var json_obj = JSON.parse(Get(URL));
+    document.write(json_obj.result);
   </script>
   </div> 
 ]]>
