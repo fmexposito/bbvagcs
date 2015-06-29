@@ -1,27 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
 <ModulePrefs title="Tabla Pruebas de Upgrade"
+	description="Tabla que visualiza los datos de upgrade producto del Cliente"
 	author_affiliation="Capgemini">
+	<Require feature="idi"/>
+	<Require feature="locked-domain" />
 </ModulePrefs>
 
-  <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
-
-  <Content type="html">
-      <![CDATA[
-  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-    <!-- Any non-google chart script tags can be loaded here as well -->
-
-    <div id="tablediv" style="overflow: auto;">Loading...5</div>
-	<div id="tabletest" style="overflow: auto;"></div>
-	<script type="text/javascript">   
-	
-		var urlTable = prefs.getString("_table_query_url");
-		
-		document.getElementById('tabletest').innerHTML += "funciona bien";
-		document.getElementById('tabletest').innerHTML += "funciona bien";
-		
-	</script>
-    
-	]]>
-  </Content>
+<UserPref name="_NumElemPorFila" default_value="" display_name="Numero de elementos por columna:" required="true" />
+  
+<Content type="html"><![CDATA[
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+  <style type="text/css">
+      .naranja{
+        background: #FF8C00;
+      }
+      button.naranja:hover {
+        background: orange;
+      }
+      .verde{
+        background: green;
+      }
+      button.verde:hover {
+        background: #22AA22;
+      }
+      .adjustRectangle{
+        width: 20px;
+      }
+      .marginRectangle {
+        width: 20px;
+      }
+      .marginTabla {
+        margin-left: 70px;
+      }
+      .rectangle {
+        width: 20px;
+        height: 20px;
+        border-radius: 3px; 
+        -webkit-border-radius: 3px; 
+        -moz-border-radius: 3px;
+      }
+      .registros{
+        font-family:arial, sans-serif; 
+        font-size:14px; 
+        color:#fff; 
+        text-decoration:none; 
+        font-weight:bold;
+        border: 0px;
+        margin: 10px;
+        width: 90px;
+        height: 50px;
+        padding: 0px;
+        border-radius: 5px; 
+        -webkit-border-radius: 5px; 
+        -moz-border-radius: 5px;
+      }
+      .upgradeState{
+        width: 400px;
+      }
+  </style>
+  <div id="content">
+	  <table class="upgradeState">
+        <tr>
+          <td><div class="marginRectangle"></div></td>
+          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
+          <td>En curso</td>
+          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
+          <td>Implantado</td>
+        </tr>
+      </table>
+      <br>
+  <script type="text/javascript"> 
+    var cuerpo="";
+    var NUMCOL = prefs.getString("_NumElemPorFila");
+    var years =['2013','2014','2015'];
+    var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
+    var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];	
+    function creacionTablas(){
+      for(var i = 0; i < years.length; i++) {
+        cuerpo += "<h2>"+ years[i] +"</h2>"+
+                  "<hr>"+
+                    "<table class='marginTabla'>"+ 
+                      "<tr>";   
+        for(var j = 0; j < upgrades[i].length; j++) {
+            cuerpo +=   "<td><button class='registros "+ fase[i][j] +"'>"+ upgrades[i][j] +"</button></td>";
+            if((j+1)%NUMCOL == 0 ){
+            cuerpo += "</tr>"+
+                      "<tr>"; 
+            }
+        }
+          cuerpo +=   "</tr>"+
+                    "</table>";  
+      }
+      document.write(cuerpo);
+    }
+    creacionTablas();
+  </script>
+  </div> 
+]]>
+</Content>
 </Module>
