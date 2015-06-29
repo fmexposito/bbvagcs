@@ -18,7 +18,19 @@
     <!-- Any non-google chart script tags can be loaded here as well -->
 
     <div id="tablediv" style="overflow: auto;">Loading...</div>
-	...
+	
+	<script type="text/javascript">
+		_IG_RegisterOnloadHandler(loadVisualizationAPI);
+	
+	    function loadVisualizationAPI() {
+		  google.load('visualization', '1', {'packages': ['table']});
+		  google.setOnLoadCallback(sendQuery);
+	    }
+	    function sendQuery{
+			document.write("funciona");
+		}    
+	</script>
+    
 	]]>
   </Content>
 </Module>
