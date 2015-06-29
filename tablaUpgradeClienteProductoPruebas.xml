@@ -17,23 +17,22 @@
   <script src="https://www.google.com/jsapi" type="text/javascript"></script>
     <!-- Any non-google chart script tags can be loaded here as well -->
 
-    <div id="tablediv" style="overflow: auto;">Loading...4</div>
+    <div id="tablediv" style="overflow: auto;">Loading...5</div>
 	<div id="tabletest" style="overflow: auto;"></div>
 	<script type="text/javascript">   
 		function drawChart() {
-		  var URL = "https://docs.google.com/spreadsheets/d/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64";
+		  var URL = "https://docs.google.com/spreadsheets/d/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64/gviz/tq?&range=A1:B4";
 		  var query = new google.visualization.Query(URL);
 		  query.send(handleQueryResponse);
 		}
 		
 		function handleQueryResponse(response) {
 		  var data = response.getDataTable();
-		  var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
-		  chart.draw(data, null);
+		  document.getElementById('tabletest').innerHTML += data;
 		}
-		document.getElementById('tabletest').innerHTML = "funciona bien";
+		document.getElementById('tabletest').innerHTML += "funciona bien";
 		drawChart();
-		document.getElementById('tabletest').innerHTML = "funciona bien";
+		document.getElementById('tabletest').innerHTML += "funciona bien";
 	</script>
     
 	]]>
