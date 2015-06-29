@@ -18,7 +18,7 @@
     <!-- Any non-google chart script tags can be loaded here as well -->
 
     <div id="tablediv" style="overflow: auto;">Loading...</div>
-	
+	<div id="tabletest" style="overflow: auto;"></div>
 	<script type="text/javascript">
 		_IG_RegisterOnloadHandler(loadVisualizationAPI);
 	
@@ -27,7 +27,7 @@
 		  google.setOnLoadCallback(sendQuery);
 	    }
 	    function sendQuery{
-			document.write("funciona bien");
+	    	document.getElementById('tabletest').innerHTML = "funciona bien";
 		}    
 	</script>
     
