@@ -21,15 +21,18 @@
 	<div id="tabletest" style="overflow: auto;"></div>
 	<script type="text/javascript">   
 		function drawChart() {
-  var query = new google.visualization.Query(URL);
-  query.send(handleQueryResponse);
-}
-
-function handleQueryResponse(response) {
-  var data = response.getDataTable();
-  var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
-  chart.draw(data, null);
-}
+		  var URL = "https://docs.google.com/spreadsheets/d/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64/edit#gid=0";
+		  var query = new google.visualization.Query(URL);
+		  query.send(handleQueryResponse);
+		}
+		
+		function handleQueryResponse(response) {
+		  var data = response.getDataTable();
+		  var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+		  chart.draw(data, null);
+		}
+		document.getElementById('tabletest').innerHTML = "funciona bien";
+		drawChart();
 		document.getElementById('tabletest').innerHTML = "funciona bien";
 	</script>
     
