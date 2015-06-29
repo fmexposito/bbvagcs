@@ -5,12 +5,6 @@
 </ModulePrefs>
 
   <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
-  <UserPref name="_table_query_refresh_interval" display_name="Data refresh interval (minutes)" default_value="0" datatype="enum" required="false">
-    <EnumValue value="0" display_value="Do not refresh"/>
-    <EnumValue value="60" display_value="1"/>
-    <EnumValue value="300" display_value="5"/>
-    <EnumValue value="1800" display_value="30"/>
-  </UserPref>
 
   <Content type="html">
       <![CDATA[
@@ -20,19 +14,12 @@
     <div id="tablediv" style="overflow: auto;">Loading...5</div>
 	<div id="tabletest" style="overflow: auto;"></div>
 	<script type="text/javascript">   
-		function drawChart() {
-		  var URL = "https://docs.google.com/spreadsheets/d/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64/gviz/tq?&range=A1:B4";
-		  var query = new google.visualization.Query(URL);
-		  query.send(handleQueryResponse);
-		}
+	
+		var urlTable = prefs.getString("_table_query_url");
 		
-		function handleQueryResponse(response) {
-		  var data = response.getDataTable();
-		  document.getElementById('tabletest').innerHTML += data;
-		}
 		document.getElementById('tabletest').innerHTML += "funciona bien";
-		drawChart();
 		document.getElementById('tabletest').innerHTML += "funciona bien";
+		
 	</script>
     
 	]]>
