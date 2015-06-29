@@ -19,16 +19,8 @@
 
     <div id="tablediv" style="overflow: auto;">Loading...2</div>
 	<div id="tabletest" style="overflow: auto;"></div>
-	<script type="text/javascript">
-		_IG_RegisterOnloadHandler(loadVisualizationAPI);
-	
-	    function loadVisualizationAPI() {
-		  google.load('visualization', '1', {'packages': ['table']});
-		  google.setOnLoadCallback(sendQuery);
-	    }
-	    function sendQuery{
-	    	document.getElementById('tabletest').innerHTML = "funciona bien";
-		}    
+	<script type="text/javascript">   
+		document.getElementById('tabletest').innerHTML = "funciona bien";
 	</script>
     
 	]]>
