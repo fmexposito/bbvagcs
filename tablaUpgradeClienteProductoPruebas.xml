@@ -17,7 +17,7 @@
   <script src="https://www.google.com/jsapi" type="text/javascript"></script>
     <!-- Any non-google chart script tags can be loaded here as well -->
 
-    <div id="tablediv" style="overflow: auto;">Loading...3</div>
+    <div id="tablediv" style="overflow: auto;">Loading...4</div>
 	<div id="tabletest" style="overflow: auto;"></div>
 	<script type="text/javascript">   
 		function drawChart() {
