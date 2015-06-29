@@ -49,13 +49,26 @@
         width: 400px;
       }
   </style>
+  <div id="content">
+	  <table class="upgradeState">
+        <tr>
+          <td><div class="marginRectangle"></div></td>
+          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
+          <td>En curso</td>
+          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
+          <td>Implantado</td>
+        </tr>
+      </table>
+      <br>
   <script type="text/javascript"> 
     var cuerpo="";
     var NUMCOL = 6;
     var years =['2013','2014','2015'];
     var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
     var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];
-
+	
+	document.write("prueba");
+	
     function creacionTablas(){
       for(var i = 0; i < years.length; i++) {
         cuerpo += "<h2>"+ years[i] +"</h2>"+
@@ -74,22 +87,8 @@
       }
       document.write(cuerpo);
     }
-    alert("funciona");
+    creacionTablas();
   </script>
-  <div id="content">
-	  <table class="upgradeState">
-        <tr>
-          <td><div class="marginRectangle"></div></td>
-          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
-          <td>En curso</td>
-          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
-          <td>Implantado</td>
-        </tr>
-      </table>
-      <br>
-      <script type="text/javascript"> 
-          creacionTablas();
-      </script>
   </div> 
 ]]>
 </Content>
