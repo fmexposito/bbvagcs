@@ -7,7 +7,6 @@
 	<Require feature="locked-domain" />
 </ModulePrefs>
 
-<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="_NumElemPorFila" default_value="" display_name="Numero de elementos por columna:" required="true" />
   
 <Content type="html"><![CDATA[
@@ -71,16 +70,9 @@
         </tr>
       </table>
       <br>
-  
   <script type="text/javascript"> 
     var cuerpo="";
-    var urlTable = prefs.getString("_table_query_url");
     var NUMCOL = prefs.getString("_NumElemPorFila");
-    
-    
-   
-    
-    
     var years =['2013','2014','2015'];
     var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
     var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];	
