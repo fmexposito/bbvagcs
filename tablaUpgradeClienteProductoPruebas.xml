@@ -1,102 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
 <ModulePrefs title="Tabla Pruebas de Upgrade"
-	description="Tabla que visualiza los datos de upgrade producto del Cliente"
 	author_affiliation="Capgemini">
-	<Require feature="idi"/>
-	<Require feature="locked-domain" />
 </ModulePrefs>
 
-<UserPref name="_NumElemPorFila" default_value="" display_name="Numero de elementos por columna:" required="true" />
-  
-<Content type="html"><![CDATA[
-<script src="https://www.google.com/jsapi" type="text/javascript"></script>
-  <style type="text/css">
-      .naranja{
-        background: #FF8C00;
-      }
-      button.naranja:hover {
-        background: orange;
-      }
-      .verde{
-        background: green;
-      }
-      button.verde:hover {
-        background: #22AA22;
-      }
-      .adjustRectangle{
-        width: 20px;
-      }
-      .marginRectangle {
-        width: 20px;
-      }
-      .marginTabla {
-        margin-left: 70px;
-      }
-      .rectangle {
-        width: 20px;
-        height: 20px;
-        border-radius: 3px; 
-        -webkit-border-radius: 3px; 
-        -moz-border-radius: 3px;
-      }
-      .registros{
-        font-family:arial, sans-serif; 
-        font-size:14px; 
-        color:#fff; 
-        text-decoration:none; 
-        font-weight:bold;
-        border: 0px;
-        margin: 10px;
-        width: 90px;
-        height: 50px;
-        padding: 0px;
-        border-radius: 5px; 
-        -webkit-border-radius: 5px; 
-        -moz-border-radius: 5px;
-      }
-      .upgradeState{
-        width: 400px;
-      }
-  </style>
-  <div id="content">
-	  <table class="upgradeState">
-        <tr>
-          <td><div class="marginRectangle"></div></td>
-          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
-          <td>En curso</td>
-          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
-          <td>Implantado</td>
-        </tr>
-      </table>
-      <br>
-  <script type="text/javascript"> 
-    var cuerpo="";
-    var NUMCOL = prefs.getString("_NumElemPorFila");
-    var years =['2013','2014','2015'];
-    var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
-    var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];	
-    function creacionTablas(){
-      for(var i = 0; i < years.length; i++) {
-        cuerpo += "<h2>"+ years[i] +"</h2>"+
-                  "<hr>"+
-                    "<table class='marginTabla'>"+ 
-                      "<tr>";   
-        for(var j = 0; j < upgrades[i].length; j++) {
-            cuerpo +=   "<td><button class='registros "+ fase[i][j] +"'>"+ upgrades[i][j] +"</button></td>";
-            if((j+1)%NUMCOL == 0 ){
-            cuerpo += "</tr>"+
-                      "<tr>"; 
-            }
-        }
-          cuerpo +=   "</tr>"+
-                    "</table>";  
-      }
-      document.write(cuerpo);
-    }
-    creacionTablas();
-  </script>
-  </div> 
-]]>
-</Content>
+  <UserPref name="_table_query_url" display_name="Data source url" required="true"/>
+  <UserPref name="_table_query_refresh_interval" display_name="Data refresh interval (minutes)" default_value="0" datatype="enum" required="false">
+    <EnumValue value="0" display_value="Do not refresh"/>
+    <EnumValue value="60" display_value="1"/>
+    <EnumValue value="300" display_value="5"/>
+    <EnumValue value="1800" display_value="30"/>
+  </UserPref>
+
+  <Content type="html"><![CDATA[
+
+     ... chart goes here...
+
+    ]]>
+ </Content>
 </Module>
