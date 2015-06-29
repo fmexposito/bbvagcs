@@ -27,7 +27,7 @@
 		  google.setOnLoadCallback(sendQuery);
 	    }
 	    function sendQuery{
-			document.write("funciona");
+			document.write("funciona bien");
 		}    
 	</script>
     
