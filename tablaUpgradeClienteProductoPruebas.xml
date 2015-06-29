@@ -21,7 +21,7 @@
 	<div id="tabletest" style="overflow: auto;"></div>
 	<script type="text/javascript">   
 		function drawChart() {
-		  var URL = "https://docs.google.com/spreadsheets/d/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64/gviz/tq?&range=A1:B4";
+		  var URL = "https://docs.google.com/spreadsheets/d/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64";
 		  var query = new google.visualization.Query(URL);
 		  query.send(handleQueryResponse);
 		}
