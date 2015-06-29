@@ -78,7 +78,7 @@
     var NUMCOL = prefs.getString("_NumElemPorFila");
     
     
-    _IG_RegisterOnloadHandler(loadVisualizationAPI);
+   /* _IG_RegisterOnloadHandler(loadVisualizationAPI);
 	
 	function loadVisualizationAPI() 
 	{
@@ -114,7 +114,7 @@
 			
 		document.getElementById('nombrecliente').innerHTML = data.getValue(0,1);	
 		chart.draw(view,options);	
-	}
+	}*/
     
     
     var years =['2013','2014','2015'];
