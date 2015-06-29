@@ -12,10 +12,13 @@
     <EnumValue value="1800" display_value="30"/>
   </UserPref>
 
-  <Content type="html"><![CDATA[
+  <Content type="html">
+      <![CDATA[
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <!-- Any non-google chart script tags can be loaded here as well -->
 
-     ... chart goes here...
-
-    ]]>
- </Content>
+    <div id="tablediv" style="overflow: auto;">Loading...</div>
+	...
+	]]>
+  </Content>
 </Module>
