@@ -6,23 +6,24 @@
 	<Require feature="idi"/>
 	<Require feature="locked-domain" />
 </ModulePrefs>
-
-<UserPref name="_NumElemPorFila" default_value="" display_name="Numero de elementos por columna:" required="true" />
   
 <Content type="html"><![CDATA[
+    
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
   <style type="text/css">
       .naranja{
         background: #FF8C00;
       }
       button.naranja:hover {
-        background: orange;
+        background: #FFBF00;
       }
       .verde{
-        background: green;
+        background: #84CC00;
       }
       button.verde:hover {
-        background: #22AA22;
+        background: #84FF00;
       }
       .adjustRectangle{
         width: 20px;
@@ -59,8 +60,86 @@
         width: 400px;
       }
   </style>
-  <div id="content">
-	  <table class="upgradeState">
+<script type="text/javascript"> 
+
+    ////////////LOGICA DE RECUPERACION DE DATOS//////////////
+
+
+    var value ="";
+    var cuerpo="";
+    var NUMCOL = 6;
+    var years =['2013','2014','2015'];
+    var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
+    var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];
+    //var URL='https://spreadsheets.google.com/feeds/list/1e43klusJ_9Nh18tHjUB_A7_Dr2IDrEI17_WdG-FPTs0/od6/public/basic?alt=json';
+    var URL='https://spreadsheets.google.com/feeds/list/17burpxVjuzFSow4mUQi9PkCc--BzEQd749PtofbJpmE/od6/public/values?alt=json';
+    var URL2='https://spreadsheets.google.com/feeds/list/1fwq1RnhzknVV4D3w3aS91nfdIWXWUU7p6tvvg06in7A/od6/public/values?alt=json';
+    function Get(URL){
+      var Httpreq = new XMLHttpRequest(); // a new request
+      Httpreq.open("GET",URL,false);
+      Httpreq.send(null);
+      return Httpreq.responseText;          
+    }
+    var json_obj = JSON.parse(Get(URL));
+    var json_obj2 = JSON.parse(Get(URL2));
+    value += json_obj.feed.title.$t;
+    value += '<br><br>';
+
+
+    var filas = json_obj.feed.entry.length;
+    var cols = 0;
+
+    function creacionConsulta(){
+      for(var i = 0; i < filas; i++) {
+        cuerpo += "<h2>"+ json_obj.feed.entry[i].title.$t +"</h2>"+
+                  "<hr>"+
+                    "<table class='marginTabla'>"+ 
+                      "<tr>";   
+        var fila = (json_obj.feed.entry[i].content.$t).split(' ');
+        var fila_color = (json_obj2.feed.entry[i].content.$t).split(' ');
+        cols = fila.length;
+        for(var j = 0; j < cols; j++) {
+          if(j%2 ==1){
+            var col = fila[j].replace(",", " ").replace("_"," ");
+            var col_color = fila_color[j].replace(",", " ").replace("_"," ");
+            cuerpo +=   "<td><button class='registros " + col_color + "'><a class='registros' href='///D:/Users/rpiquera/Documents/BBVA/modelos%20html%20de%20sites/upcp4.html'>"+ col +"</a></button></td>";
+            if((j+1)%(NUMCOL*2) == 0 ){
+            cuerpo += "</tr>"+
+                      "<tr>"; 
+            }
+          }   
+            
+        }
+          cuerpo +=   "</tr>"+
+                    "</table>";  
+      }
+      document.write(cuerpo);
+    }
+
+   /*for(i =0; i< filas ; i++){
+     for(j =0; j<filas[i].length; j++){
+         value += datos_ordenados[i][j];
+       }   
+     }
+     value += '<br>';
+   }*/
+
+
+    ////////////////////////Comprobacion de que el javascript se ha ejecutado entero
+    if(json_obj != null){
+      alert("prueba ok");
+    }else{
+      alert("prueba ko");
+    }
+
+  </script>
+  </head>
+  <body>
+   
+    <h1>Listado Upgrade Cliente Producto</h1>
+        
+    <div id="content">
+      <table class="upgradeState">
         <tr>
           <td><div class="marginRectangle"></div></td>
           <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
@@ -70,21 +149,11 @@
         </tr>
       </table>
       <br>
-      <p>prueba</p>
-  <script type="text/javascript"> 
-    //var URL='https://www.googleapis.com/freebase/v1/text/en/bob_dylan';
-    var URL='https://spreadsheets.google.com/feeds/list/1xronQYThfmJsNGsqG-blrFVAU15AXlbo80p2H3-GE64/od6/public/values?alt=json';
-    function Get(URL){
-      var Httpreq = new XMLHttpRequest(); // a new request
-      Httpreq.open("GET",URL,false);
-      Httpreq.send(null);
-      return Httpreq.responseText;          
-    }
-    var json_obj = JSON.parse(Get(URL));
-    //document.getElementById('prueba').innerHTML = json_obj.result;
-    document.getElementById('prueba').innerHTML = json_obj.feed.entry[0].title.$t;
-  </script>
-  </div> 
+      <!--<div id="tablediv"><img class="loading" width="100" src="https://bbvagcs.googlecode.com/svn/trunk/img/loading.gif"/></div>-->
+      <script type="text/javascript"> 
+          creacionConsulta();
+      </script>
+    </div>  
 ]]>
 </Content>
 </Module>
