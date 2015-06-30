@@ -71,8 +71,8 @@
     var years =['2013','2014','2015'];
     var upgrades =[['UPCP 4','UPCP 5.1'],['UPCP 5.2','UPCP 6','UPCP 7'],['UPCP 8']];
     var fase = [['verde','verde'],['verde','verde','naranja'],['naranja']];
-    var URL='https://spreadsheets.google.com/feeds/list/1e43klusJ_9Nh18tHjUB_A7_Dr2IDrEI17_WdG-FPTs0/od6/public/values?alt=json';
-    //var URL='https://spreadsheets.google.com/feeds/list/17burpxVjuzFSow4mUQi9PkCc--BzEQd749PtofbJpmE/od6/public/values?alt=json';
+    //var URL='https://spreadsheets.google.com/feeds/list/1e43klusJ_9Nh18tHjUB_A7_Dr2IDrEI17_WdG-FPTs0/od6/public/values?alt=json';
+    var URL='https://spreadsheets.google.com/feeds/list/17burpxVjuzFSow4mUQi9PkCc--BzEQd749PtofbJpmE/od6/public/values?alt=json';
     var URL2='https://spreadsheets.google.com/feeds/list/1fwq1RnhzknVV4D3w3aS91nfdIWXWUU7p6tvvg06in7A/od6/public/values?alt=json';
     function Get(URL){
       var Httpreq = new XMLHttpRequest(); // a new request
