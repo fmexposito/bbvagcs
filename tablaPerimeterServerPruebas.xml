@@ -20,20 +20,11 @@
       .magenta{
         background: #DC143C;
       }
-      button.magenta:hover {
-        background: #DC476F;
-      }
       .naranja{
         background: #FF8C00;
       }
-      button.naranja:hover {
-        background: orange;
-      }
       .verde{
-        background: green;
-      }
-      button.verde:hover {
-        background: #22AA22;
+        background: #84CC00;
       }
       .adjustRectangle{
         width: 20px;
@@ -54,11 +45,15 @@
         height: 20px;
       }
       .registros{
-        color: white;
+        font-family:arial, sans-serif; 
+        font-size:14px; 
+        color:#fff; 
+        text-decoration:none; 
+        font-weight:bold;
         border: 0px;
-        margin: 10px;
-        width: 90px;
-        height: 50px; 
+        margin: 5px;
+        width: 110px;
+        height: 50px;
         padding: 0px;
       }
       .upgradeState{
