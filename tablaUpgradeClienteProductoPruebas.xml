@@ -59,7 +59,8 @@
         width: 400px;
       }
   </style>
-  
+
+<script src="https://bbvagcs.googlecode.com/svn/trunk/js/jquery-1.js" type="text/javascript"></script>
 <script type="text/javascript"> 
 
     ////////////LOGICA DE RECUPERACION DE DATOS//////////////
