@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Tabla Pruebas de Upgrade"
+	description="Tabla que visualiza los datos de upgrade producto del Cliente"
+	author_affiliation="Capgemini">
+	<Require feature="idi"/>
+	<Require feature="locked-domain" />
+</ModulePrefs>
+  
+<Content type="html"><![CDATA[
+    
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+          <style type="text/css">
+      .magenta{
+        background: #DC143C;
+      }
+      button.magenta:hover {
+        background: #DC476F;
+      }
+      .naranja{
+        background: #FF8C00;
+      }
+      button.naranja:hover {
+        background: orange;
+      }
+      .verde{
+        background: green;
+      }
+      button.verde:hover {
+        background: #22AA22;
+      }
+      .adjustRectangle{
+        width: 20px;
+      }
+      .marginRectangle {
+        width: 20px;
+      }
+      .marginTabla {
+        margin-left: 70px;
+      }
+      .pais{
+        color: #1D44FF;
+        font-weight: bold;
+        padding-left: 20px;
+      }
+      .rectangle {
+        width: 20px;
+        height: 20px;
+      }
+      .registros{
+        color: white;
+        border: 0px;
+        margin: 10px;
+        width: 90px;
+        height: 50px;
+        padding: 0px;
+      }
+      .upgradeState{
+        width: 400px;
+      }
+  </style>
+  
+<script type="text/javascript"> 
+
+    ////////////LOGICA DE RECUPERACION DE DATOS//////////////
+
+    var cuerpo="";
+    var NUMCOL = 6;
+    var URL='https://spreadsheets.google.com/feeds/list/1hIUeKkNS6K_-vzKchpHUseFI8nCmi8tSAn0_nGSuCXQ/od6/public/values?alt=json';
+    var URL2='https://spreadsheets.google.com/feeds/list/168I9eMZlyEo-y-53qzHaL2TvpJ_y0pqYBfJ080ylBrE/od6/public/values?alt=json';
+    function Get(URL){
+      var Httpreq = new XMLHttpRequest(); // a new request
+      Httpreq.open("GET",URL,false);
+      Httpreq.send(null);
+      return Httpreq.responseText;          
+    }
+    var json_obj = JSON.parse(Get(URL));
+    var json_obj2 = JSON.parse(Get(URL2));
+
+    var filas = json_obj.feed.entry.length;
+    var cols = 0;
+
+    function creacionConsulta(){
+      for(var i = 0; i < filas; i++) {  
+        if(!isNaN(json_obj.feed.entry[i].title.$t)){  
+          cuerpo += "<h2>"+ json_obj.feed.entry[i].title.$t +"</h2>"+
+          "<hr>";     
+        }   
+        cuerpo += "<table class='marginTabla'>"+ 
+        "<tr>";
+        var fila = (json_obj.feed.entry[i].content.$t).split(' ');
+        var fila_color = (json_obj2.feed.entry[i].content.$t).split(' ');
+        cols = fila.length;
+        cuerpo += "<td class='pais'>"+ fila[1].replace(",", " ").replace("_"," ") +"</td>"+
+        "</tr>"+
+        "<tr>"; 
+        for(var j = 2; j < cols; j++) {
+          if(j%2 ==1){
+            var col = fila[j].replace(",", " ").replace("_"," ");
+            var col_color = fila_color[j].replace(",", " ").replace("_"," ");
+            cuerpo +=   "<td><button class='registros " + col_color + "'>"+ col +"</a></button></td>";
+            if((j-1)%(NUMCOL*2) == 0 ){
+              cuerpo += "</tr>"+
+              "<tr>"; 
+            }
+          }              
+        }
+        cuerpo += "</tr>"+
+        "</table>";   
+      }
+      document.write(cuerpo);
+    }
+
+  </script>
+  </head>
+  <body>
+       
+    <div id="content">
+      <table class="upgradeState">
+        <tr>
+          <td><div class="marginRectangle"></div></td>
+          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
+          <td>En curso</td>
+          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
+          <td>Implantado</td>
+        </tr>
+      </table>
+      <br>
+      <script type="text/javascript"> 
+          creacionConsulta();
+      </script>
+    </div>  
+]]>
+</Content>
+</Module>
