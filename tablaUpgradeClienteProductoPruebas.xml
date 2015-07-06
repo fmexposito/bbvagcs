@@ -7,12 +7,16 @@
 	<Require feature="locked-domain" />
 </ModulePrefs>
   
+<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+<UserPref name="_table_query_url2" default_value="" display_name="Data source url for status" required="true" />
+<UserPref name="_NumCols" default_value="" display_name="Número de elementos por fila:" required="true" />
+
 <Content type="html"><![CDATA[
     
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-      <style type="text/css">
+  <style type="text/css">
       .naranja{
         background: #FF8C00;
       }
@@ -59,12 +63,13 @@
 
     ////////////LOGICA DE RECUPERACION DE DATOS//////////////
 
-
     var value ="";
     var cuerpo="";
-    var NUMCOL = 6;
-    var URL='https://spreadsheets.google.com/feeds/list/17burpxVjuzFSow4mUQi9PkCc--BzEQd749PtofbJpmE/od6/public/values?alt=json';
-    var URL2='https://spreadsheets.google.com/feeds/list/1fwq1RnhzknVV4D3w3aS91nfdIWXWUU7p6tvvg06in7A/od6/public/values?alt=json';
+    var NUMCOL = prefs.getInt("_NumCols");
+    //var URL='https://spreadsheets.google.com/feeds/list/17burpxVjuzFSow4mUQi9PkCc--BzEQd749PtofbJpmE/od6/public/values?alt=json';
+    var URL=prefs.getString("_table_query_url");
+    //var URL2='https://spreadsheets.google.com/feeds/list/1fwq1RnhzknVV4D3w3aS91nfdIWXWUU7p6tvvg06in7A/od6/public/values?alt=json';
+    var URL2=prefs.getString("_table_query_url2");
     function Get(URL){
       var Httpreq = new XMLHttpRequest(); // a new request
       Httpreq.open("GET",URL,false);
