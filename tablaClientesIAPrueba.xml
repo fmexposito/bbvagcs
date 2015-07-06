@@ -9,7 +9,7 @@
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="_table_query_url2" default_value="" display_name="Data source url for status" required="true" />
-<UserPref name="_NumCols" default_value="" display_name="Número de elementos por fila:" required="true" />
+<UserPref name="_num_cols" default_value="" display_name="Número de elementos por fila:" required="true" />
 
 <Content type="html"><![CDATA[
     
@@ -67,7 +67,7 @@
 
     var cuerpo="";
     var prefs = new _IG_Prefs(); // User preferences
-    var NUMCOL = prefs.getInt("_NumCols");
+    var NUMCOL = prefs.getInt("_num_cols");
     //var URL='https://spreadsheets.google.com/feeds/list/1hIUeKkNS6K_-vzKchpHUseFI8nCmi8tSAn0_nGSuCXQ/od6/public/values?alt=json';
     var URL=prefs.getString("_table_query_url");
     //var URL2='https://spreadsheets.google.com/feeds/list/168I9eMZlyEo-y-53qzHaL2TvpJ_y0pqYBfJ080ylBrE/od6/public/values?alt=json';
