@@ -96,7 +96,7 @@
           if(j%2 ==1){
             var col = fila[j].replace(",", " ").replace("_"," ");
             var col_color = fila_color[j].replace(",", " ").replace("_"," ");
-            cuerpo +=   "<td><button class='registros " + col_color + "'><a href=&quot;http://www.marca.com&quot; class='registros'>"+ col +"</a></button></td>";
+            cuerpo +=   "<td><button class='registros " + col_color + "'><a class='registros' href='a/bbva.com/it-cib-gtb/soluciones-producto/roberto-prueba'>"+ col +"</a></button></td>";
             if((j+1)%(NUMCOL*2) == 0 ){
             cuerpo += "</tr>"+
                       "<tr>"; 
@@ -123,6 +123,7 @@
         </tr>
       </table>
       <br>
+      <a href="http://www.marca.com">MARCA</a>
       <script type="text/javascript"> 
           creacionConsulta();
           gadgets.window.adjustHeight();
