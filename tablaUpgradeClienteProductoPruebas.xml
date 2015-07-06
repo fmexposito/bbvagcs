@@ -9,7 +9,6 @@
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
 <UserPref name="_table_query_url2" default_value="" display_name="Data source url for status" required="true" />
-<UserPref name="_num_cols" default_value=6 display_name="Número de elementos por fila:" required="true" />
 
 <Content type="html"><![CDATA[
     
