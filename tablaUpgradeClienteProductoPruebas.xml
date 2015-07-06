@@ -109,7 +109,6 @@
       }
       document.write(cuerpo);
     }
-    gadgets.window.adjustHeight();
 
   </script>
        
@@ -126,6 +125,7 @@
       <br>
       <script type="text/javascript"> 
           creacionConsulta();
+          gadgets.window.adjustHeight();
       </script>
     </div>  
 ]]>
