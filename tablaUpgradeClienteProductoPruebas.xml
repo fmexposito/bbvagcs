@@ -12,7 +12,7 @@
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-  <style type="text/css">
+      <style type="text/css">
       .naranja{
         background: #FF8C00;
       }
@@ -37,9 +37,6 @@
       .rectangle {
         width: 20px;
         height: 20px;
-        border-radius: 3px; 
-        -webkit-border-radius: 3px; 
-        -moz-border-radius: 3px;
       }
       .registros{
         font-family:arial, sans-serif; 
@@ -48,18 +45,16 @@
         text-decoration:none; 
         font-weight:bold;
         border: 0px;
-        margin: 10px;
-        width: 90px;
+        margin: 5px;
+        width: 110px;
         height: 50px;
         padding: 0px;
-        border-radius: 5px; 
-        -webkit-border-radius: 5px; 
-        -moz-border-radius: 5px;
       }
       .upgradeState{
         width: 400px;
       }
   </style>
+  
 <script type="text/javascript"> 
 
     ////////////LOGICA DE RECUPERACION DE DATOS//////////////
@@ -114,22 +109,6 @@
                     "</table>";  
       }
       document.write(cuerpo);
-    }
-
-   /*for(i =0; i< filas ; i++){
-     for(j =0; j<filas[i].length; j++){
-         value += datos_ordenados[i][j];
-       }   
-     }
-     value += '<br>';
-   }*/
-
-
-    ////////////////////////Comprobacion de que el javascript se ha ejecutado entero
-    if(json_obj != null){
-      alert("prueba ok");
-    }else{
-      alert("prueba ko");
     }
 
   </script>
