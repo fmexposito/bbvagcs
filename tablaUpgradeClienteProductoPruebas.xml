@@ -57,6 +57,9 @@
       .upgradeState{
         width: 400px;
       }
+      a{
+      	color:white;
+      }
   </style>
   
 <script type="text/javascript"> 
