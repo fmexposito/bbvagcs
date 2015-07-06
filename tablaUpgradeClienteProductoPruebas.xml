@@ -95,7 +95,7 @@
           if(j%2 ==1){
             var col = fila[j].replace(",", " ").replace("_"," ");
             var col_color = fila_color[j].replace(",", " ").replace("_"," ");
-            cuerpo +=   "<td><button class='registros " + col_color + "' onclick=\"location.href = 'pagina.html'\">"+ col +"</button></td>";
+            cuerpo +=   "<td><button class='registros " + col_color + "' onclick="location.href = 'pagina.html'>"<a class='registros' href='http://www.marca.com'>"+ col +"</a></button></td>";
             if((j+1)%(NUMCOL*2) == 0 ){
             cuerpo += "</tr>"+
                       "<tr>"; 
