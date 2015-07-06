@@ -12,7 +12,7 @@
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-          <style type="text/css">
+  <style type="text/css">
       .magenta{
         background: #DC143C;
       }
@@ -50,10 +50,14 @@
         height: 20px;
       }
       .registros{
-        color: white;
+        font-family:arial, sans-serif; 
+        font-size:14px; 
+        color:#fff; 
+        text-decoration:none; 
+        font-weight:bold;
         border: 0px;
-        margin: 10px;
-        width: 90px;
+        margin: 5px;
+        width: 110px;
         height: 50px;
         padding: 0px;
       }
@@ -118,20 +122,22 @@
   <body>
        
     <div id="content">
-      <table class="upgradeState">
+      <table class='upgradeState'>
         <tr>
-          <td><div class="marginRectangle"></div></td>
-          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
-          <td>En curso</td>
-          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
-          <td>Implantado</td>
+          <td><div class='marginRectangle'></div></td>
+          <td class='adjustRectangle'><div class='rectangle magenta'></div></td>
+          <td>Pte. Migrar</td>
+          <td class='adjustRectangle'><div class='rectangle naranja'></div></td>
+          <td>En migración</td>
+          <td class='adjustRectangle'><div class='rectangle verde'></div></td>
+          <td>Migrado</td>
         </tr>
       </table>
       <br>
       <script type="text/javascript"> 
           creacionConsulta();
       </script>
-    </div>  
+    </div> 
 ]]>
 </Content>
 </Module>
