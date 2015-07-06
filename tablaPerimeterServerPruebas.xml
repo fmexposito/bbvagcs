@@ -85,9 +85,6 @@
     }
     var json_obj = JSON.parse(Get(URL));
     var json_obj2 = JSON.parse(Get(URL2));
-    value += json_obj.feed.title.$t;
-    value += '<br><br>';
-
 
     var filas = json_obj.feed.entry.length;
     var cols = 0;
