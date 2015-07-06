@@ -66,6 +66,7 @@
     ////////////LOGICA DE RECUPERACION DE DATOS//////////////
 
     var cuerpo="";
+    var prefs = new _IG_Prefs(); // User preferences
     var NUMCOL = prefs.getInt("_NumCols");
     //var URL='https://spreadsheets.google.com/feeds/list/1hIUeKkNS6K_-vzKchpHUseFI8nCmi8tSAn0_nGSuCXQ/od6/public/values?alt=json';
     var URL=prefs.getString("_table_query_url");
