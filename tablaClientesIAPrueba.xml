@@ -16,20 +16,11 @@
       .magenta{
         background: #DC143C;
       }
-      button.magenta:hover {
-        background: #DC476F;
-      }
       .naranja{
         background: #FF8C00;
       }
-      button.naranja:hover {
-        background: orange;
-      }
       .verde{
-        background: green;
-      }
-      button.verde:hover {
-        background: #22AA22;
+        background: #84CC00;
       }
       .adjustRectangle{
         width: 20px;
