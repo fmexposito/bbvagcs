@@ -147,24 +147,12 @@
       document.write(cuerpo);
     }
   </script>
-  </head>
-  <body>
-       
+      
     <div id="content">
-      <table class="upgradeState">
-        <tr>
-          <td><div class="marginRectangle"></div></td>
-          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
-          <td>En curso</td>
-          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
-          <td>Implantado</td>
-        </tr>
-      </table>
-      <br>
       <script type="text/javascript"> 
-          creacionConsulta();
+        creacionConsulta();
       </script>
-    </div>  
+    </div> 
 ]]>
 </Content>
 </Module>
