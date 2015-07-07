@@ -55,7 +55,7 @@
         height: 50px;
         padding: 0px;
       }
-      a{
+      a.registros{
       	color:white;
       }
       .upgradeState{
