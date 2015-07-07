@@ -15,8 +15,9 @@
 <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-  <style type="text/css">
+      <style type="text/css">
       .cabeceraTabla{
+      	font-size: .8em;
         background: #1D44AF;
         color: white;
         padding-top: 5px;
@@ -24,9 +25,11 @@
         text-align: center;
       }
       .datosTablaCentro{
+      	font-size: .8em;
         text-align: center;
       }
       .datosTablaIzquierda{
+      	font-size: .8em;
         padding-top: 5px;
         padding-bottom: 5px;
 
@@ -43,34 +46,34 @@
         vertical-align: text-top;
       }
       .requerimiento{
-        width: 140px;
+        width: 100px;
       }
       .descripcion{
-        width: 380px;
+        width: 340px;
       }
       .estado{
-        width: 90px;
+        width: 70px;
       }
       .redmine{
-        width: 90px;
+        width: 70px;
       }
       .analisis{
-        width: 90px;
+        width: 70px;
       }
       .diseno{
-        width: 90px;
+        width: 70px;
       }
       .construccion{
-        width: 90px;
+        width: 70px;
       }
       .pruebasFuncionales{
-        width: 90px;
+        width: 70px;
       } 
       .pruebasAceptacion{
-        width: 90px;
+        width: 70px;
       }   
       .implantacion{
-        width: 90px;
+        width: 70px;
       }     
   </style>
   
