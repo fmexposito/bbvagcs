@@ -16,8 +16,10 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
       <style type="text/css">
+      table{
+      	font-size: 0.8em;
+      }
       .cabeceraTabla{
-      	font-size: .8em;
         background: #1D44AF;
         color: white;
         padding-top: 5px;
@@ -25,11 +27,9 @@
         text-align: center;
       }
       .datosTablaCentro{
-      	font-size: .8em;
         text-align: center;
       }
       .datosTablaIzquierda{
-      	font-size: .8em;
         padding-top: 5px;
         padding-bottom: 5px;
 
