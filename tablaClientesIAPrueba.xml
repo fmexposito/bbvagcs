@@ -37,7 +37,7 @@
         margin-left: 70px;
       }
       .pais{
-        color: #1D44FF;
+        color: #00BFFF;
         font-weight: bold;
         padding-left: 20px;
       }
