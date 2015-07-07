@@ -22,13 +22,13 @@
         background: #FF8C00;
       }
       button.naranja:hover {
-        background: #FFBF00;
+        background: #FF6800;
       }
       .verde{
         background: #84CC00;
       }
       button.verde:hover {
-        background: #84FF00;
+        background: #5DBB00;
       }
       .adjustRectangle{
         width: 20px;
