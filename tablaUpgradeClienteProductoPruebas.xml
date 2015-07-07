@@ -55,6 +55,9 @@
         height: 50px;
         padding: 0px;
       }
+      a{
+      	color:white;
+      }
       .upgradeState{
         width: 400px;
       }
