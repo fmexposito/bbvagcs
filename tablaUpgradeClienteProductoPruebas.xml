@@ -67,7 +67,7 @@
       	color:white;
         display: block;
         margin: auto;
-        padding: 15px 0px;
+        padding: 16px 0px;
       }
       .upgradeState{
         width: 400px;
