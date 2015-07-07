@@ -57,6 +57,14 @@
         height: 50px;
         padding: 0px;
       }
+      hr{
+        margin-top: 0px;
+      }
+      .year{
+        color: #00BFFF;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
       .upgradeState{
         width: 400px;
       }
@@ -87,7 +95,7 @@
 
     function creacionConsulta(){
       for(var i = 0; i < filas; i++) {
-        cuerpo += "<h2>"+ json_obj.feed.entry[i].title.$t +"</h2>"+
+        cuerpo += "<h3 class='year'>"+ json_obj.feed.entry[i].title.$t +"</h3>"+
                   "<hr>"+
                     "<table class='marginTabla'>"+ 
                       "<tr>";   
