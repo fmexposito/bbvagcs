@@ -100,7 +100,7 @@
 
 	function cargaPagina() {
 		var direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcppruebaroberto";
-    	document.location.href = direccion;
+    	this.location.href = direccion;
 	}
 
     function creacionConsulta(){
