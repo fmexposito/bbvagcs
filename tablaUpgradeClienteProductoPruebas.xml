@@ -98,11 +98,6 @@
     var filas = json_obj.feed.entry.length;
     var cols = 0;
 
-	function cargaPagina() {
-		var direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcppruebaroberto";
-    	this.location.href = direccion;
-	}
-
     function creacionConsulta(){
       for(var i = 0; i < filas; i++) {
         cuerpo += "<h3 class='year'>"+ json_obj.feed.entry[i].title.$t +"</h3>"+
@@ -116,7 +111,11 @@
           if(j%2 == 1){
             var col = fila[j].replace(",", " ").replace("_"," ");
             var col_color = fila_color[j].replace(",", " ").replace("_"," ");
-            cuerpo += "<td><button onclick='cargaPagina()' target='_parent' class='registros " + col_color + "'>"+ col +"</button></td>";
+            var direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcpprueba";
+            if(j == 1){
+            	direccion += "roberto";
+            }
+            cuerpo +=   "<td><button class='registros " + col_color + "'><a class='registros' href='"+ direccion +"' target='_parent'>"+ col +"</a></button></td>";
             if((j+1)%(NUMCOL*2) == 0 ){
             cuerpo += "</tr>"+
                       "<tr>"; 
