@@ -116,9 +116,7 @@
           if(j%2 == 1){
             var col = fila[j].replace(",", " ").replace("_"," ");
             var col_color = fila_color[j].replace(",", " ").replace("_"," ");
-            cuerpo += "<td><button onclick='cargaPagina()'  class='registros " + col_color + "'>"+ col +"</button></td>";
-            //target='_parent'
-            
+            cuerpo += "<td><button onclick='cargaPagina()' target='_parent' class='registros " + col_color + "'>"+ col +"</button></td>";
             if((j+1)%(NUMCOL*2) == 0 ){
             cuerpo += "</tr>"+
                       "<tr>"; 
