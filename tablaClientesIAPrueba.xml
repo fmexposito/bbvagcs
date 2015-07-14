@@ -130,11 +130,11 @@
       <table class='upgradeState'>
         <tr>
           <td><div class='marginRectangle'></div></td>
-          <td class='adjustRectangle'><div class='rectangle magenta'></div></td>
+          <td class='adjustRectangle'><div class='rectangle pendiente'></div></td>
           <td>Pte. Migrar</td>
-          <td class='adjustRectangle'><div class='rectangle naranja'></div></td>
+          <td class='adjustRectangle'><div class='rectangle enmigracion'></div></td>
           <td>En migración</td>
-          <td class='adjustRectangle'><div class='rectangle verde'></div></td>
+          <td class='adjustRectangle'><div class='rectangle migrado'></div></td>
           <td>Migrado</td>
         </tr>
       </table>

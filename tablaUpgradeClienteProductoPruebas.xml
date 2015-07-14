@@ -27,7 +27,7 @@
       .implantado{
         background: #84CC00;
       }
-      button.implantado:hover {
+      button.implantadoimplantado:hover {
         background: #5DBB00;
       }
       .adjustRectangle{
@@ -135,9 +135,9 @@
       <table class="upgradeState">
         <tr>
           <td><div class="marginRectangle"></div></td>
-          <td class="adjustRectangle"><div class="rectangle naranja"></div></td>
+          <td class="adjustRectangle"><div class="rectangle encurso"></div></td>
           <td>En curso</td>
-          <td class="adjustRectangle"><div class="rectangle verde"></div></td>
+          <td class="adjustRectangle"><div class="rectangle implantado"></div></td>
           <td>Implantado</td>
         </tr>
       </table>
