@@ -18,13 +18,13 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <style type="text/css">
-      .magenta{
+      .pendiente{
         background: #DC143C;
       }
-      .naranja{
+      .enmigracion{
         background: #FF8C00;
       }
-      .verde{
+      .migrado{
         background: #84CC00;
       }
       .adjustRectangle{

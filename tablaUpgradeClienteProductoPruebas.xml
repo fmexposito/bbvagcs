@@ -18,16 +18,16 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <style type="text/css">
-      .naranja{
+      .encurso{
         background: #FF8C00;
       }
-      button.naranja:hover {
+      button.encurso:hover {
         background: #FF6800;
       }
-      .verde{
+      .implantado{
         background: #84CC00;
       }
-      button.verde:hover {
+      button.implantado:hover {
         background: #5DBB00;
       }
       .adjustRectangle{
