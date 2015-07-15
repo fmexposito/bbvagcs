@@ -142,8 +142,8 @@
     }
 
     function sortRows(a, b) {
-      var first =""
-      var second =""
+      var first ="";
+      var second ="";
       if(a.gsx$estado.$t === "migrado"){
         first = "1";
       }else{
