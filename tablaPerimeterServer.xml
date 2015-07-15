@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Tabla Pruebas de Upgrade"
+	description="Tabla que visualiza los datos de upgrade producto del Cliente"
+	author_affiliation="Capgemini" height="100">
+	<Require feature="idi"/>
+	<Require feature="locked-domain" />
+	<Require feature="dynamic-height" />
+</ModulePrefs>
+  
+<UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
+<UserPref name="_table_query_url2" default_value="" display_name="Data source url for status" required="true" />
+<UserPref name="_num_cols" default_value="" display_name="Número de elementos por fila:" required="true" />
+
+<Content type="html"><![CDATA[
+    
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <style type="text/css">
+      .pendiente{
+        background: #DC143C;
+      }
+      .enmigracion{
+        background: #FF8C00;
+      }
+      .migrado{
+        background: #84CC00;
+      }
+      .adjustRectangle{
+        width: 20px;
+      }
+      .marginRectangle {
+        width: 20px;
+      }
+      .marginTabla {
+        margin-left: 70px;
+      }
+      .pais{
+        color: #1D44FF;
+        font-weight: bold;
+        padding-left: 20px;
+      }
+      .rectangle {
+        width: 20px;
+        height: 20px;
+      }
+      .registros{
+        font-family:arial, sans-serif; 
+        font-size:14px; 
+        color:#fff; 
+        text-decoration:none; 
+        font-weight:bold;
+        border: 0px;
+        margin: 5px;
+        width: 110px;
+        height: 50px;
+        padding: 0px;
+      }
+      hr{
+        margin-top: 0px;
+      }
+      .year{
+        color: #00BFFF;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .upgradeState{
+        width: 400px;
+      }
+  </style>
+  
+<script type="text/javascript"> 
+
+    ////////////LOGICA DE RECUPERACION DE DATOS//////////////
+
+    var cuerpo="";
+    var prefs = new _IG_Prefs(); // User preferences
+    var NUMCOL = prefs.getInt("_num_cols");
+    //var URL='https://spreadsheets.google.com/feeds/list/17_OaQtqyye1BT99Mz2QeuRUkHO5jE197y3XVVt0oXfU/od6/public/values?alt=json';
+    var URL=prefs.getString("_table_query_url");
+    //var URL2='https://spreadsheets.google.com/feeds/list/1aJ_qYMrZRoYTxhBzZnmYmq-rZPTStfWlWZz-xa-ZpF4/od6/public/values?alt=json';
+    var URL2=prefs.getString("_table_query_url2");
+    function Get(URL){
+      var Httpreq = new XMLHttpRequest(); // a new request
+      Httpreq.open("GET",URL,false);
+      Httpreq.send(null);
+      return Httpreq.responseText;          
+    }
+    var json_obj = JSON.parse(Get(URL));
+    var json_obj2 = JSON.parse(Get(URL2));
+
+    var filas = json_obj.feed.entry.length;
+    var cols = 0;
+
+    function creacionConsulta(){
+      for(var i = 0; i < filas; i++) {
+        cuerpo += "<h3 class='year'>"+ json_obj.feed.entry[i].title.$t +"</h3>"+
+                  "<hr>"+
+                    "<table class='marginTabla'>"+ 
+                      "<tr>";   
+        var fila = (json_obj.feed.entry[i].content.$t).split(' ');
+        var fila_color = (json_obj2.feed.entry[i].content.$t).split(' ');
+        cols = fila.length;
+        for(var j = 0; j < cols; j++) {
+          if(j%2 ==1){
+            var col = fila[j].replace(",", " ").replace("_"," ");
+            var col_color = fila_color[j].replace(",", " ").replace("_"," ");
+            cuerpo +=   "<td><button class='registros " + col_color + "'>"+ col +"</a></button></td>";
+            if((j+1)%(NUMCOL*2) == 0 ){
+            cuerpo += "</tr>"+
+                      "<tr>"; 
+            }
+          }   
+            
+        }
+          cuerpo +=   "</tr>"+
+                    "</table>";  
+      }
+      document.write(cuerpo);
+    }
+
+  </script>
+       
+    <div id="content">
+      <table class='upgradeState'>
+        <tr>
+          <td><div class='marginRectangle'></div></td>
+          <td class='adjustRectangle'><div class='rectangle pendiente'></div></td>
+          <td>Pte. Migrar</td>
+          <td class='adjustRectangle'><div class='rectangle enmigracion'></div></td>
+          <td>En migración</td>
+          <td class='adjustRectangle'><div class='rectangle migrado'></div></td>
+          <td>Migrado</td>
+        </tr>
+      </table>
+      <br>
+      <script type="text/javascript"> 
+          creacionConsulta();
+          gadgets.window.adjustHeight();
+      </script>
+    </div> 
+]]>
+</Content>
+</Module>
