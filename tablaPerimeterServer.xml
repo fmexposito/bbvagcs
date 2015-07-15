@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="Tabla Pruebas de Upgrade"
+<ModulePrefs title="Tabla Perimeter Server"
 	description="Tabla que visualiza los datos de upgrade producto del Cliente"
 	author_affiliation="Capgemini" height="100">
 	<Require feature="idi"/>
@@ -74,6 +74,7 @@
     ////////////LOGICA DE RECUPERACION DE DATOS//////////////
 
     var cuerpo="";
+    var prefs = new _IG_Prefs(); // User preferences
     var NUMCOL = prefs.getInt("_num_cols");
     var URL= prefs.getString("_table_query_url");
     //var URL='https://spreadsheets.google.com/feeds/list/1oR4QUbvrTyH7zwHK4cQcnjOjOs26qTyv59LtSvhpWRM/od6/public/values?alt=json';
