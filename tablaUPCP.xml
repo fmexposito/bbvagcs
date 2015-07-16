@@ -92,9 +92,10 @@
     var filas = json_obj.feed.entry.length;
     
     function getGET(){
-    	target='_parent';
+    
         // capturamos la url
-        var loc = document.location.href;
+        var loc = SitesApp.getActivePage().getUrl();
+        //var loc = document.location.href;
         // si existe el interrogante
         if(loc.indexOf('?')>0)
         {
@@ -113,7 +114,6 @@
     var requerimiento ="";
     var cod_producto =getGET();
     alert(cod_producto);
-    alert("no");
     var cuerpo="";
 
     function creacionConsulta(){
