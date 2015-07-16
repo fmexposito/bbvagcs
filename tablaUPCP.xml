@@ -108,6 +108,7 @@
     var fechaimplantacion ="";
     var requerimiento ="";
     var cod_producto =getGET();
+    alert(cod_producto);
     var cuerpo="";
 
     function creacionConsulta(){
