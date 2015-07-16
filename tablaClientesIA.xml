@@ -23,7 +23,7 @@
       .enmigracion{
         background: #FF8C00;
       }
-      .migrado{
+      .amigrado{
         background: #84CC00;
       }
       .adjustRectangle{
@@ -99,6 +99,7 @@
 
     function creacionConsulta(){
 
+	  prepareData();
       data.sort(sortRows);
 
       if(filas>0){
@@ -159,34 +160,23 @@
 
       document.write(cuerpo);
     }
+	
+	function prepareData(){
+      for(var i = 0; i < filas; i++) {
+        data[i].gsx$nombrecliente.$t =(data[i].gsx$nombrecliente.$t).toUpperCase();
+        data[i].gsx$estado.$t =(data[i].gsx$estado.$t).toLowerCase();
+        if(data[i].gsx$estado.$t == "migrado"){
+          data[i].gsx$estado.$t ="amigrado";
+        }   
+        }
+    }
 
     function sortRows(a, b) {
-      var first =""
-      var second =""
-      if(a.gsx$estado.$t === "migrado"){
-        first = "1";
-      }else{
-        if(a.gsx$estado.$t === "enmigracion"){
-          first = "2";
-        }else{
-          first = "3";
-        }
-      }
-
-      if(b.gsx$estado.$t === "migrado"){
-        second = "1";
-      }else{
-        if(b.gsx$estado.$t === "enmigracion"){
-          second = "2";
-        }else{
-          second = "3";
-        }
-      }
-
-      if (a.gsx$anio.$t === b.gsx$anio.$t) {
-        if(a.gsx$pais.$t === b.gsx$pais.$t){
-          if(first === second){
-            if(a.gsx$nombrecliente.$t === b.gsx$nombrecliente.$t){
+      
+      if (a.gsx$anio.$t == b.gsx$anio.$t) {
+        if(a.gsx$pais.$t == b.gsx$pais.$t){
+          if(a.gsx$estado.$t == b.gsx$estado.$t){
+            if(a.gsx$nombrecliente.$t == b.gsx$nombrecliente.$t){
               return 0;
             }else{
               if(a.gsx$nombrecliente.$t < b.gsx$nombrecliente.$t){
@@ -196,7 +186,7 @@
               }
             }           
           }else{
-            if(first < second){
+            if(a.gsx$estado.$t < b.gsx$estado.$t){
               return -1;
             }else{
               return 1;
@@ -217,7 +207,7 @@
         }
       }
     }
-
+	
   </script>
        
     <div id="content">
@@ -228,7 +218,7 @@
           <td>Pte. Migrar</td>
           <td class='adjustRectangle'><div class='rectangle enmigracion'></div></td>
           <td>En migración</td>
-          <td class='adjustRectangle'><div class='rectangle migrado'></div></td>
+          <td class='adjustRectangle'><div class='rectangle amigrado'></div></td>
           <td>Migrado</td>
         </tr>
       </table>
