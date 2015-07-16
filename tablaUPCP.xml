@@ -92,7 +92,6 @@
     var filas = json_obj.feed.entry.length;
     
     function getGET(){
-    
         // capturamos la url
         var loc = document.location.href;
         // si existe el interrogante
@@ -113,7 +112,8 @@
     var requerimiento ="";
     var cod_producto =getGET();
     alert(cod_producto);
-    alert("no2");
+    alert("no3");
+    alert( SitesApp.getSite('example.com', 'mysite').getUrl());
     alert(SitesApp.getActiveSite().getUrl());
     var cuerpo="";
 
