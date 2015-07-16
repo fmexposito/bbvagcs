@@ -94,11 +94,7 @@
     function getGET(){
     
         // capturamos la url
-        var site = SitesApp.getActivePage();
-        alert("siin");
-        var loc = SitesApp.getActivePage().getUrl();
-        //var loc = document.location.href;
-        alert("siin2");
+        var loc = document.location.href;
         // si existe el interrogante
         if(loc.indexOf('?')>0)
         {
@@ -118,6 +114,7 @@
     var cod_producto =getGET();
     alert(cod_producto);
     alert("si");
+    alert(SitesApp.getActivePage().getUrl());
     var cuerpo="";
 
     function creacionConsulta(){
