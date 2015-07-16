@@ -115,16 +115,12 @@
     alert("funciona");
     var json_obj = JSON.parse(Get(URL));
     var filas = json_obj.feed.entry.length;
-    var descripcion ="";
+    var descripcionprod ="";
     var codigoiniciativa ="";
     var codigoproyecto ="";
     var fechaimplantacion ="";
     var requerimiento ="";
     var cuerpo="";
-	var descripcionprod="";
-	var codigoiniciativa="";
-	var codigoproyecto="";
-	var fechaimplantacion="";
 	
     function creacionConsulta(){
       
