@@ -136,6 +136,7 @@
                       "<tr>";    
         }else{
           if(pais != paiscli){
+            cont=0;
             pais = paiscli;
             cuerpo += "</tr>"+
                       "<tr>"+
