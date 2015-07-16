@@ -113,6 +113,7 @@
     var requerimiento ="";
     var cod_producto =getGET();
     alert(cod_producto);
+    alert("no");
     var cuerpo="";
 
     function creacionConsulta(){
@@ -184,8 +185,8 @@
                 }
       cuerpo +="</table>";
       document.write(cuerpo);
-      alert("si");
     }
+    
   </script>
       
     <div id="content">
