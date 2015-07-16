@@ -107,7 +107,11 @@
     var fechaimplantacion ="";
     var requerimiento ="";
     var cuerpo="";
-
+	var descripcionprod="";
+	var codigoiniciativa="";
+	var codigoproyecto="";
+	var fechaimplantacion="";
+	
     function creacionConsulta(){
       
       //Construcción de la cabecera
@@ -116,7 +120,7 @@
       for(var i = 0; i < filas; i++){
         producto =json_obj.feed.entry[i].gsx$producto.$t;
         if(cod_producto == producto){
-          descripcion =json_obj.feed.entry[i].gsx$descripcionprod.$t;
+          descripcionprod =json_obj.feed.entry[i].gsx$descripcionprod.$t;
           codigoiniciativa =json_obj.feed.entry[i].gsx$codigoiniciativa.$t;
           codigoproyecto =json_obj.feed.entry[i].gsx$codigoproyecto.$t;
           fechaimplantacion =json_obj.feed.entry[i].gsx$fechaimplantacion.$t;
@@ -124,7 +128,7 @@
         }
       }
       cuerpo +=     "<td class='nombreCampo'>Descripción:</td>"+
-                    "<td class='valorCampo'>"+ descripcion +"</td>"+
+                    "<td class='valorCampo'>"+ descripcionprod +"</td>"+
                   "</tr>"+
                   "<tr>"+
                     "<td class='nombreCampo'>Código PPM Iniciativa:</td>"+
