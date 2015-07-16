@@ -114,7 +114,7 @@
     var cod_producto =getGET();
     alert(cod_producto);
     alert("no");
-    alert(SitesApp.getActivePage());
+    alert(SitesApp.getActiveSite());
     var cuerpo="";
 
     function creacionConsulta(){
