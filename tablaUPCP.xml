@@ -90,32 +90,12 @@
     
     var json_obj = JSON.parse(Get(URL));
     var filas = json_obj.feed.entry.length;
-    
-    function getGET(){
-        // capturamos la url
-        var loc = document.location.href;
-        // si existe el interrogante
-        if(loc.indexOf('?')>0)
-        {
-            // cogemos la parte de la url que hay despues del interrogante
-            var getString = loc.split('?')[1];
-            // obtenemos un array con cada clave=valor
-            var GET = getString.split('=');
-            var get = GET[1]; 
-            return get;
-        }
-    }
     var descripcion ="";
     var codigoiniciativa ="";
     var codigoproyecto ="";
     var fechaimplantacion ="";
     var requerimiento ="";
-    var cod_producto =getGET();
-    alert(cod_producto);
-    alert("no3");
-    var page = SitesApp.getActivePage();
-    var url3 = page.getUrl();
-    alert(url3);
+    var cod_producto ="UPCP4";
     var cuerpo="";
 
     function creacionConsulta(){
