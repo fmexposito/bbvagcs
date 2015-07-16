@@ -113,8 +113,9 @@
     var cod_producto =getGET();
     alert(cod_producto);
     alert("no3");
-    alert( SitesApp.getSite('example.com', 'mysite').getUrl());
-    alert(SitesApp.getActiveSite().getUrl());
+    var page = SitesApp.getActivePage();
+    var url3 = page.getUrl();
+    alert(url3);
     var cuerpo="";
 
     function creacionConsulta(){
