@@ -94,6 +94,24 @@
       return Httpreq.responseText;          
     }
     
+    function getGET(){
+        // capturamos la url
+        var loc = parent.document.location.href;
+        // si existe el interrogante
+        if(loc.indexOf('?')>0)
+        {
+            // cogemos la parte de la url que hay despues del interrogante
+            var getString = loc.split('?')[1];
+            // obtenemos un array con cada clave=valor
+            var GET = getString.split('=');
+            var get = GET[1]; 
+            return get;
+        }
+    }
+
+    var codig_producto =getGET();
+    alert(codig_producto);
+    
     var json_obj = JSON.parse(Get(URL));
     var filas = json_obj.feed.entry.length;
     var descripcion ="";
