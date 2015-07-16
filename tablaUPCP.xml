@@ -113,8 +113,8 @@
     var requerimiento ="";
     var cod_producto =getGET();
     alert(cod_producto);
-    alert("no");
-    alert(SitesApp.getActiveSite());
+    alert("no2");
+    alert(SitesApp.getActiveSite().getUrl());
     var cuerpo="";
 
     function creacionConsulta(){
