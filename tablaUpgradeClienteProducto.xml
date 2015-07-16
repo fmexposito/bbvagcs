@@ -144,7 +144,7 @@
             cont=0;
           }
         }      
-        cuerpo +=   "<td><button onclick='pagina()' class='registros " + estadoprod + "'><a class='registros' href='"+direccion+"'>"+ nombreprod +"</a></button></td>";
+        cuerpo +=   "<td><button onclick='pagina()' class='registros " + estadoprod + "'><a class='registros' href='"+direccion+"' target='_parent'>"+ nombreprod +"</a></button></td>";
       }
 
       if(filas>0){
