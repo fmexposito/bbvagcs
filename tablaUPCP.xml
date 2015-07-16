@@ -93,7 +93,7 @@
       Httpreq.send(null);
       return Httpreq.responseText;          
     }
-    /*
+    
     function getGET(){
         // capturamos la url
         var loc = parent.document.location.href;
@@ -111,7 +111,7 @@
 
     var codig_producto =getGET();
     alert(codig_producto);
-    */
+    
     alert("funciona");
     var json_obj = JSON.parse(Get(URL));
     var filas = json_obj.feed.entry.length;
