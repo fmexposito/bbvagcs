@@ -9,7 +9,6 @@
 </ModulePrefs>
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
-<UserPref name="_table_query_url2" default_value="" display_name="Data source url for status" required="true" />
 <UserPref name="_num_cols" default_value="" display_name="Número de elementos por fila:" required="true" />
 
 <Content type="html"><![CDATA[
@@ -126,7 +125,7 @@
         anioprod =data[i].gsx$anio.$t;
         nombreprod =data[i].gsx$nombreproducto.$t;
         estadoprod =data[i].gsx$estado.$t;
-        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcpprueba?producto=" + nombreprod;
+        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcppruebaroberto?producto=" + nombreprod;
 
         if(anio != anioprod){
           cont=0;
