@@ -9,7 +9,6 @@
 </ModulePrefs>
 
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
-<UserPref name="_cod_producto" default_value="" display_name="Product code" required="true" />
 
 <Content type="html"><![CDATA[
     
@@ -85,7 +84,6 @@
 	var prefs = new _IG_Prefs(); // User preferences
     //var URL='https://spreadsheets.google.com/feeds/list/1zN6NBwwmXSC2EwPeemIrMzmvUt4ERJjhMXppsNMOvLA/od6/public/values?alt=json';
     var URL =prefs.getString("_table_query_url");
-    var cod_producto =prefs.getString("_cod_producto");
 
     function Get(URL){
       var Httpreq = new XMLHttpRequest(); // a new request
@@ -96,7 +94,7 @@
     
     function getGET(){
         // capturamos la url
-        var loc = document.location.href;
+        var loc = document.referrer;
         // si existe el interrogante
         if(loc.indexOf('?')>0)
         {
@@ -108,14 +106,8 @@
             return get;
         }
     }
-	var pagina = document.referrer;
-    var codig_producto =getGET();
-   	
-   	if(pagina!=null){
-    	alert(pagina);
-    }
     
-    alert("funciona4");
+    var cod_producto  =getGET();
     var json_obj = JSON.parse(Get(URL));
     var filas = json_obj.feed.entry.length;
     var descripcionprod ="";
