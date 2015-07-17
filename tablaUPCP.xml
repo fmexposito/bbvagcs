@@ -96,7 +96,7 @@
     
     function getGET(){
         // capturamos la url
-        var loc = parent.document.location.href;
+        var loc = parent.location.href;
         // si existe el interrogante
         if(loc.indexOf('?')>0)
         {
