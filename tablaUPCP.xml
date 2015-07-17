@@ -129,7 +129,10 @@
           codigoiniciativa =json_obj.feed.entry[i].gsx$codigoiniciativa.$t;
           codigoproyecto =json_obj.feed.entry[i].gsx$codigoproyecto.$t;
           fechaimplantacion =json_obj.feed.entry[i].gsx$fechaimplantacion.$t;
-          requerimiento +=json_obj.feed.entry[i].gsx$requerimiento.$t + " ";
+          requerimiento +=json_obj.feed.entry[i].gsx$requerimiento.$t + ", ";
+        }
+        if(i == filas-1){
+          requerimiento = requerimiento.substring(0, requerimiento.length-2);
         }
       }
       cuerpo +=     "<td class='nombreCampo'>Descripción:</td>"+
