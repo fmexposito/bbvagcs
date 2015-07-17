@@ -110,9 +110,9 @@
     }
 
     var codig_producto =getGET();
-    alert(codig_producto);
+    alert(document.referrer);
     
-    alert("funciona2");
+    alert("funciona3");
     var json_obj = JSON.parse(Get(URL));
     var filas = json_obj.feed.entry.length;
     var descripcionprod ="";
