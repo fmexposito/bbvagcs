@@ -26,12 +26,10 @@
         text-align: center;
       }
       .datosTablaCentro{
-        font-weight: bold;
       	font-size: .7em;
         text-align: center;
       }
       .datosTablaIzquierda{
-        font-weight: bold;
       	font-size: .7em;
         padding-top: 5px;
         padding-bottom: 5px;
