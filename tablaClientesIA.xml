@@ -30,7 +30,7 @@
         width: 20px;
       }
       .marginRectangle {
-        width: 35px;
+        width: 40px;
       }
       .marginTabla {
         margin-left: 70px;
