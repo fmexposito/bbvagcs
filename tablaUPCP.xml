@@ -38,13 +38,13 @@
         margin-left: 0px;
       }
       .nombreCampo{
-      	font-size: .7em;
+      	font-size: .75em;
         color: blue;
         width: 165px;
         vertical-align: text-top;
       }
       .valorCampo{
-      	font-size: .7em;
+      	font-size: .75em;
         vertical-align: text-top;
       }
       .requerimiento{
