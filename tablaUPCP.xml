@@ -17,6 +17,7 @@
 
       <style type="text/css">
       .cabeceraTabla{
+        font-weight: bold;
       	font-size: .7em;
         background: #1D44AF;
         color: white;
@@ -25,10 +26,12 @@
         text-align: center;
       }
       .datosTablaCentro{
+        font-weight: bold;
       	font-size: .7em;
         text-align: center;
       }
       .datosTablaIzquierda{
+        font-weight: bold;
       	font-size: .7em;
         padding-top: 5px;
         padding-bottom: 5px;
