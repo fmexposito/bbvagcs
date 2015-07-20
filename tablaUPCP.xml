@@ -38,12 +38,14 @@
         margin-left: 0px;
       }
       .nombreCampo{
+        font-weight: bold;
       	font-size: .7em;
         color: blue;
         width: 165px;
         vertical-align: text-top;
       }
       .valorCampo{
+        font-weight: bold;
       	font-size: .7em;
         vertical-align: text-top;
       }
