@@ -122,8 +122,10 @@
       for(var i = 0; i < filas; i++) {
         anioprod =data[i].gsx$anio.$t;
         nombreprod =data[i].gsx$nombreproducto.$t;
+        nombreprodurl = nombreprod.replace(/\s/g, "");
+        nombreprodurl = nombreprodurl.toUpperCase();
         estadoprod =data[i].gsx$estado.$t;
-        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcp?producto=" + nombreprod;
+        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcp?producto=" + nombreprodurl;
 
         if(anio != anioprod){
           cont=0;

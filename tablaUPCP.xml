@@ -127,6 +127,8 @@
                   "<tr>";
       for(var i = 0; i < filas; i++){
         producto =json_obj.feed.entry[i].gsx$producto.$t;
+        producto = producto.replace(/\s/g, "");
+       	producto = producto.toUpperCase();
         if(cod_producto == producto){
           descripcionprod =json_obj.feed.entry[i].gsx$descripcionprod.$t;
           codigoiniciativa =json_obj.feed.entry[i].gsx$codigoiniciativa.$t;
@@ -174,7 +176,9 @@
                     "<td class='implantacion cabeceraTabla'>Implantación</td>"+
                   "</tr>";
                 for(var i = 0; i < filas; i++) {
-                  producto =json_obj.feed.entry[i].gsx$producto.$t;   
+                  producto =json_obj.feed.entry[i].gsx$producto.$t; 
+                  producto = producto.replace(/\s/g, "");
+       			  producto = producto.toUpperCase();  
                   if(cod_producto == producto){               
                     cuerpo += "<tr>"+
                       "<td class='requerimiento datosTablaCentro'>"+ json_obj.feed.entry[i].gsx$requerimiento.$t +"</td>"+
