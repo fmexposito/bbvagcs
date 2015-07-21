@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Tabla Upgrade Producto"
+	description="Tabla que visualiza los datos de upgrade del producto seleccionado"
+	author_affiliation="Capgemini" height="100">
+	<Require feature="idi"/>
+	<Require feature="locked-domain" />
+	<Require feature="dynamic-height" />
+</ModulePrefs>
+
+<Content type="html"><![CDATA[
+    
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+  <style type="text/css">
+      .titulo{
+        font-weight: bold;
+      	font-size: .7em;
+        background: #1D44AF;
+        color: white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+      }
+    
+  </style>
+  
+  <script type="text/javascript"> 
+    
+    function getGET(){
+        // capturamos la url
+        var loc = document.referrer;
+        // si existe el interrogante
+        if(loc.indexOf('?')>0)
+        {
+            // cogemos la parte de la url que hay despues del interrogante
+            var getString = loc.split('?')[1];
+            // obtenemos un array con cada clave=valor
+            var GET = getString.split('=');
+            var get = GET[1]; 
+            return get;
+        }
+    }
+    
+    var titulo  =getGET();
+    var cuerpo="";
+	
+    function creacionTitulo(){    
+      //Construcción de la cabecera
+      cuerpo +="<h1>"+ titulo +"</h1>";
+      document.write(cuerpo);
+    }
+    
+  </script>
+    <div id="content">
+      <span style="color:#00bfff">Listado Upgrade Cliente Producto</span>
+      <script type="text/javascript"> 
+        creacionTitulo();
+      </script>
+    </div> 
+    
+]]>
+</Content>
+</Module>
