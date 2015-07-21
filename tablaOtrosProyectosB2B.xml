@@ -126,7 +126,7 @@
         nombreprodurl = nombreprod.replace(/\s/g, "");
         nombreprodurl = nombreprodurl.toUpperCase();
         estadoprod =data[i].gsx$estado.$t;
-        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/detalle?proyecto=" + nombreprodurl;
+        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/otros-proyectos-b2b/detalle?proyecto=" + nombreprodurl;
 
         if(anio != anioprod){
           cont=0;
