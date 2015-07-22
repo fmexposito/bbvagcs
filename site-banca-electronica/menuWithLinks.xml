@@ -25,7 +25,8 @@
 		float:left;
 		font-size:12px;
 		height:40px;
-		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/fondomenuhome38.png) no-repeat;
+		background:url(https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/img/fondomenuhome38.png) no-repeat;
+		
 	}
 	#dropline,
 	#dropline ul {
