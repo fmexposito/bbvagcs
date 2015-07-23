@@ -91,6 +91,8 @@
     var anio="";
     var anioprod="";
     var nombreprod="";
+    var nombreprodurl="";
+    var nombreprodpag="";
     var estadoprod="";
     var cont=0;
     
@@ -124,8 +126,10 @@
         nombreprod =data[i].gsx$nombreproducto.$t;
         nombreprodurl = nombreprod.replace(/\s/g, "");
         nombreprodurl = nombreprodurl.toUpperCase();
+        nombreprodpag = nombreprodurl.toLowerCase();
+        nombreprodpag = nombreprodpag.replace(".","-");
         estadoprod =data[i].gsx$estado.$t;
-        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/listadoupgrade/upcp?producto=" + nombreprodurl;
+        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/listadoupgrade/"+ nombreprodpag +"?producto=" + nombreprodurl;
 
         if(anio != anioprod){
           cont=0;
