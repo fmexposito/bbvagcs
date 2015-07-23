@@ -9,7 +9,6 @@
 </ModulePrefs>
   
 <UserPref name="_table_query_url" default_value="" display_name="Data source url" required="true" />
-<UserPref name="_table_query_url2" default_value="" display_name="Data source url for status" required="true" />
 <UserPref name="_num_cols" default_value="" display_name="Número de elementos por fila:" required="true" />
 
 <Content type="html"><![CDATA[
@@ -27,7 +26,7 @@
       .implantado{
         background: #84CC00;
       }
-      button.implantadoimplantado:hover {
+      button.implantado:hover {
         background: #5DBB00;
       }
       .adjustRectangle{
@@ -58,75 +57,142 @@
         text-decoration:none; 
         font-weight:bold;
         border: 0px;
-        margin: 5px;
+        margin: 0px;
         width: 110px;
         height: 50px;
         padding: 0px;
       }
       a.registros{
-      	color:white;
         display: block;
-        margin: auto;
-        padding: 16px 0px;
+        margin: 5px;
       }
       .upgradeState{
         width: 400px;
       }
-  </style>
+    </style>
 
 <script src="https://bbvagcs.googlecode.com/svn/trunk/js/jquery-1.js" type="text/javascript"></script>
 <script type="text/javascript"> 
+
+    ////////////LOGICA DE RECUPERACION DE DATOS//////////////
+	
+	</script>
+  
+   <script type="text/javascript"> 
 
     ////////////LOGICA DE RECUPERACION DE DATOS//////////////
 
     var cuerpo="";
     var prefs = new _IG_Prefs(); // User preferences
     var NUMCOL = prefs.getInt("_num_cols");
-    //var URL='https://spreadsheets.google.com/feeds/list/17burpxVjuzFSow4mUQi9PkCc--BzEQd749PtofbJpmE/od6/public/values?alt=json';
+    //var URL='https://spreadsheets.google.com/feeds/list/1eC3FUZEz6NPX6GuhSLkVUR4EDvpdaAtsXJKENuMpTCA/od6/public/values?alt=json';
     var URL=prefs.getString("_table_query_url");
-    //var URL2='https://spreadsheets.google.com/feeds/list/1fwq1RnhzknVV4D3w3aS91nfdIWXWUU7p6tvvg06in7A/od6/public/values?alt=json';
-    var URL2=prefs.getString("_table_query_url2");
+    var direccion="";
+    var anio="";
+    var anioprod="";
+    var nombreprod="";
+    var nombreprodurl="";
+    var nombreprodpag="";
+    var estadoprod="";
+    var cont=0;
+    
     function Get(URL){
       var Httpreq = new XMLHttpRequest(); // a new request
       Httpreq.open("GET",URL,false);
       Httpreq.send(null);
       return Httpreq.responseText;          
     }
+    
     var json_obj = JSON.parse(Get(URL));
-    var json_obj2 = JSON.parse(Get(URL2));
-
-    var filas = json_obj.feed.entry.length;
-    var cols = 0;
+    var data = json_obj.feed.entry;
+    var filas = data.length;
 
     function creacionConsulta(){
-      for(var i = 0; i < filas; i++) {
-        cuerpo += "<h3 class='year'>"+ json_obj.feed.entry[i].title.$t +"</h3>"+
+
+      prepareData();
+      data.sort(sortRows);
+
+      if(filas>0){
+        anio = data[0].gsx$anio.$t;
+        cuerpo +="<h3 class='year'>"+ anio +"</h3>"+
                   "<hr>"+
+                  "<table class='marginTabla'>"+ 
+                    "<tr>";   
+        cont=-1;
+      }
+
+      for(var i = 0; i < filas; i++) {
+        anioprod =data[i].gsx$anio.$t;
+        nombreprod =data[i].gsx$nombreproducto.$t;
+        nombreprodurl = nombreprod.replace(/\s/g, "");
+        nombreprodurl = nombreprodurl.toUpperCase();
+        nombreprodpag = nombreprodurl.toLowerCase();
+        nombreprodpag = nombreprodpag.replace(".","-");
+        estadoprod =data[i].gsx$estado.$t;
+        direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/listadoupgrade/"+ nombreprodpag +"?producto=" + nombreprodurl;
+
+        if(anio != anioprod){
+          cont=0;
+          anio =anioprod;
+          cuerpo += "</tr>"+
+                    "</table>"+ 
+                    "<h3 class='year'>"+ anio +"</h3>"+
+                    "<hr>"+
                     "<table class='marginTabla'>"+ 
                       "<tr>";   
-        var fila = (json_obj.feed.entry[i].content.$t).split(' ');
-        var fila_color = (json_obj2.feed.entry[i].content.$t).split(' ');
-        cols = fila.length;
-        for(var j = 0; j < cols; j++) {
-          if(j%2 == 1){
-            var col = fila[j].replace(",", " ").replace("_"," ");
-            var col_color = fila_color[j].replace(",", " ").replace("_"," ");
-            var direccion = "https://sites.google.com/a/bbva.com/it-cib-gtb/soluciones-producto/soluciones-2014-15/upcpprueba";
-            if(j == 1){
-            	direccion += "roberto";
-            }
-            cuerpo +=   "<td><button class='registros " + col_color + "'><a class='registros' href='"+ direccion +"' target='_parent'>"+ col +"</a></button></td>";
-            if((j+1)%(NUMCOL*2) == 0 ){
-            cuerpo += "</tr>"+
-                      "<tr>"; 
-            }
-          }   
-            
         }
-          cuerpo +=   "</tr>"+
-                    "</table>";  
+        else{
+          cont +=1;
+          if(cont == NUMCOL){
+            cuerpo +="</tr><tr>";
+            cont=0;
+          }
+        }      
+        cuerpo +=   "<td><a class='registros' href='"+direccion+"' target='_parent'><button class='registros " + estadoprod + "'>"+ nombreprod +"</button></a></td>";
       }
+
+      if(filas>0){
+        cuerpo += "</tr>"+
+                  "</table>"; 
+      }
+
       document.write(cuerpo);
+      
+    }
+
+    function prepareData(){
+      for(var i = 0; i < filas; i++) {
+        data[i].gsx$nombreproducto.$t =(data[i].gsx$nombreproducto.$t).toUpperCase();
+        data[i].gsx$estado.$t =(data[i].gsx$estado.$t).toLowerCase();  
+      }
+    }
+
+    function sortRows(a, b) {
+      if (a.gsx$anio.$t == b.gsx$anio.$t) {
+        if(a.gsx$estado.$t == b.gsx$estado.$t){
+          if(a.gsx$nombreproducto.$t == b.gsx$nombreproducto.$t){
+            return 0;
+          }else{
+            if(a.gsx$nombreproducto.$t < b.gsx$nombreproducto.$t){
+              return -1;
+            }else{
+              return 1;
+            }
+          }           
+        }else{
+          if(a.gsx$estado.$t > b.gsx$estado.$t){
+            return -1;
+          }else{
+            return 1;
+          }
+        }     
+      }else{
+        if(a.gsx$anio.$t < b.gsx$anio.$t){
+          return -1;
+        }else{
+          return 1;
+        }
+      }
     }
 
   </script>
