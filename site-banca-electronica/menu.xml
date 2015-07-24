@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-<ModulePrefs title="menú Site Banca Electrónica" >
+<ModulePrefs title="menÃº Site Banca ElectrÃ³nica" >
 	<Require feature="dynamic-height"/>   
 	<Require feature="setprefs" />  
 </ModulePrefs>  
@@ -55,7 +55,7 @@
 		position:relative; 
 		font-size:12px; 
 		height:38px; 
-		background:url(https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/img/fondomenuhome38.png) no-repeat;
+		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/fondomenuhome38.png) no-repeat;
 	}
 	#dropline, 
 	#dropline ul {
@@ -97,7 +97,7 @@
 	}
 	#dropline li a.down { 
 		color:#fff; 
-		background:url(https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/img/down.gif) no-repeat right center;
+		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/down.gif) no-repeat right center;
 	}
 	#dropline li ul li a.down {
 		font-size:14px; 
@@ -108,7 +108,7 @@
 		top:38px; 
 		left:-9999px; 
 		z-index:10; 
-		background:url(https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/img/fade.png);
+		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/fade.png);
 	}
 	#dropline li ul.floatRight li {
 		float:right;
@@ -146,7 +146,7 @@
 	}		
 </style>
 
-<script src="https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/js/jquery-1.js" type="text/javascript"></script>
+<script src="https://bbvagcs.googlecode.com/svn/trunk/js/jquery-1.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 
