@@ -25,7 +25,7 @@
 		float:left;
 		font-size:12px;
 		height:40px;
-		background:url(https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/img/fondomenuhome38.png) no-repeat;
+		background:url(https://bbvagcs.googlecode.com/svn/trunk/img/fondomenuhome38.png) no-repeat;
 	}
 	#dropline,
 	#dropline ul {
@@ -70,7 +70,7 @@
 	}
 	#dropline li a.down {
 		color:#fff;
-		background:url(https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/img/down.gif) no-repeat right center;
+		background:url(https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/img/down.gif) no-repeat right center;
 	}
 	#dropline li ul li a.down {
 		font-size:14px;
@@ -310,7 +310,7 @@ ul#comunicacionessub li a {
 	line-height:30px;
 }*/
 </style>
-<script src="https://raw.githubusercontent.com/TipplerPhysics/bbvagcs/master/js/jquery-1.js" type="text/javascript"></script>
+<script src="https://bbva-implantaciones-eyp.googlecode.com/svn/trunk/js/jquery-1.js" type="text/javascript"></script>
 <div id="content">
 	<div id="menu">
     <ul id="dropline">
